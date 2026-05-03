@@ -1,0 +1,25 @@
+---
+tags: [person]
+---
+
+# Sumit Gulwani
+
+Microsoft Research. Key collaborator on both [[wiki-kb-project|Wiki KB Project]] and [[spreadsheet-verification|Spreadsheet Verification]].
+
+## Intellectual Contributions
+
+Coined [[steerability|steerability]] to replace "granular feedback" in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]] — a reframing that changed the design direction of the spreadsheet tool.
+
+Identified [[views|Views]] as the unifying abstraction across both projects in the same meeting: "the big, big idea is not a step-by-step reveal — it is providing different kinds of views into the output of the agent."
+
+Proposed the self-referential presentation: "A Presentation About This Presentation" — using the wiki as the presentation medium for the talk about the wiki. See [[misc thoughts]] and [[Presentation]].
+
+Observed his own agent becoming "too smart" — self-organizing his KB in ways he hadn't asked for — and described it as "very, very surreal, almost as if the system had consciousness." Detailed in [[misc thoughts]] and [[Thursday demo]].
+
+## Distinctive Intellectual Move
+
+Sumit consistently finds the single abstraction that unifies superficially different problems. [[views]] unified the spreadsheet tool and the KB system. He also extended the simulation metaphor and the degree-of-separation framing of [[semi-private-mashing|semi-private mashing]] in [[Thursday demo]].
+
+## Appears In
+
+[[Thursday demo]], [[Presentation]], [[misc thoughts]], [[Transcripts]], [[GMT20260220-230118_Recording.transcript|Feb 20]], [[GMT20260316-200648_Recording.transcript|Mar 16]], [[Sadra-1May2026-Transcript|May 1]], [[Sadra-2May2026-TRANSCRIPT|May 2 morning]], [[Sadra-2May2026-TRANSCRIPT2|May 2 evening]]

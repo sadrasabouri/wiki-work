@@ -13,6 +13,13 @@ A personal knowledge base built on the LLM Wiki pattern. Raw sources (emails, me
 - `raw/` — immutable source files. Markdown extractions of each source (`.md`) are committed; binary originals (`.eml`, `.vtt`, `.docx`) are gitignored and local-only.
 - `wiki/` — your layer. All wiki pages live here. You create and maintain everything in this directory.
 
+## Wiki Directory Structure
+
+- `wiki/concepts/` — conceptual building blocks (views, workflows, steerability, etc.)
+- `wiki/people/` — person profiles
+- `wiki/projects/` — project overviews
+- `wiki/events/` — meeting summaries; one page per meeting, named `YYYY-MM-DD.md`, linking back to the raw transcript
+
 ## Raw Source Frontmatter
 
 ```yaml
@@ -27,8 +34,9 @@ tags: [extracted]
 
 - `wiki/index.md` — catalog of all wiki pages: one line per page with a link and summary, organized by category. Read this first when answering queries. Update it on every ingest.
 - `wiki/log.md` — append-only record of ingests, queries, and lint passes. Each entry: `## [YYYY-MM-DD] operation | title`.
-- All cross-references are inline wiki links `[[Page Name]]` within body text, not footnotes or lists.
+- All cross-references are inline wiki links `[[Page Name]]` within body text, not footnotes or lists. Every link must resolve to an existing `.md` file in `wiki/` or `raw/`.
 - Pages should be insightful — synthesize and connect ideas, don't just surface-level summarize.
+- Raw sources are linkable by filename: `[[Thursday demo]]` resolves to `raw/emails/Thursday demo.md`; `[[GMT20260316-200648_Recording.transcript|Mar 16 meeting]]` resolves to the corresponding transcript.
 
 ## Operations
 
