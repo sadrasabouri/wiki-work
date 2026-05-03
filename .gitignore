@@ -1,2 +1,4 @@
-raw/
+raw/emails/*.eml
+raw/meeting-transcripts/*.vtt
+raw/meeting-transcripts/*.docx
 .obsidian/
