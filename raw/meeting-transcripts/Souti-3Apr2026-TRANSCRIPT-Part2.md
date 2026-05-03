@@ -1,0 +1,831 @@
+---
+timestamp: "2026-05-03T15:20:47-07:00"
+source: "[[Souti-3Apr2026-TRANSCRIPT-Part2.docx]]"
+source_path: "raw/meeting-transcripts/Souti-3Apr2026-TRANSCRIPT-Part2.docx"
+source_type: "docx"
+tags:
+  - extracted
+---
+# Souti-3Apr2026-TRANSCRIPT-Part2
+
+Source: [[Souti-3Apr2026-TRANSCRIPT-Part2.docx]]
+
+SoutiSumit group sync - instance 1-20260403_151512-Meeting Transcript
+
+April 3, 2026, 10:15PM
+
+58m 6s
+
+Sumit Gulwani started transcription
+
+Sumit Gulwani   0:03
+My own personal consumption, right?
+
+Souti Chattopadhyay   0:04
+Absolutely.
+
+Sadra   0:05
+Okay.
+Yeah.
+
+Sumit Gulwani   0:08
+Yes, so as I looked through the video, I started writing down some notes, but didn't get time to send it, but I can quickly give feedback. I think Athena, probably you maybe shot that video or something, or the scenario, the different screenshots that are there. So I really loved it, you know, how you took time to put it together and send it to me. And I had an easy grasp of what was going on. So thank you so much for your efforts there.
+In the video, I felt that there was one place where it was not very clear what the user wrote. So make sure in that PDF, right? But make sure in the video it is very clear what the user is writing. But here is what I was thinking, right? I'll continue to challenge you folks about this. So let me make up a motivating example. So A,
+On one hand, it has to be simple enough that you can communicate the intent. So if it is a paper, you have to understand the person is going to look at it or read it, or if it is a video, but if it is a 5 or 10 minute video, you have an opportunity to say a little bit more. But on the other hand, it has to be non-trivial enough, right? Because if it is too simple, then it is all going to look a toy-ish here.
+And I will tell you that today, industry is so far ahead. Like every time I learn something, I feel I'm quite far behind. You know, these people are doing these things in a much better way. People are doing much, much more sophisticated tasks than what I can even imagine might be possible to do, but it is all possible today. So there you should try to do a more sophisticated task. And text filing was a much more sophisticated task.
+is good. The second thing that...
+
+Souti Chattopadhyay   1:35
+Sumit, Sumit, Sumit, we lost you for the last minute, so yeah.
+
+Sumit Gulwani   1:38
+Okay, okay, so maybe I will probably repeat here, right? So 2 things that you should take care of when you put together a motivating example today, one is it has to be non-trivial enough and sophisticated enough. So the text finding example is much better in the dimension than the early starting example that you started with. But that's how we start, right? We first have to start with something simple and then we make more sophisticated.
+But you are doing fine on the dimension. The dimension where I feel you have to think solidly about is that you have to show why this is surprising, right? You are saying that, okay, I'm building all this kind of tooling for a user to inspect, validate, and so on. Okay, show me your best possible case, right? What have you figured out? So is there an example where...
+you help the user figure out something non-trivial, something interesting, something surprising that would not have been evident immediately. Because if it is like, oh, I build a tool to the user, the user uses it, yeah, yeah, everything is correct and so on. Well, so it falls flat. So pick an example where something interesting comes up because of your tool that makes it easy for the user to steer it or to correct it, right? Maybe something was wrong, something was wrong in a way that.
+the user would not have easily figured out, but using your tool, the user actually figured out what was wrong. Or maybe the user knew that they had to steer this thing, but it's not clear how will they steer it and if they say something and the system starts all over again, maybe takes them in the wrong direction. And then you say no, but by making the user walk through these different steps, they're able to steer parts of it that makes it steerable.
+So what is a baseline here? So think about that kind of baseline, right? So if the goal is to steer, maybe, and maybe there are other baselines, but if the goal is to steer, one baseline might be that if you steer at the top level, it doesn't work as well. But if you steer at these more granular step-based level, maybe it steers well enough. So that can be a baseline.
+Or maybe think of other baselines. And then the other thing that you should think about is the verification part. If you want to focus on that, is that there was some kind of, you know, insidious bug which the user would not have realized before. But now with this tool, they are able to realize this thing. So that is something that the motivating example should actually showcase, right, in the video that you put together or something that you put together. So that was my thought feedback.
+that I thought I'd pass it on.
+
+Sadra   3:53
+Oh, what was the last part about the bug that that user would like some some mistakes that agent did and and with the baseline it it wouldn't catch advice.
+
+Sumit Gulwani   4:05
+Yes, so some mistake the agent, the agent says that you owe like, you know, $2500 of taxes. Okay, what should I do? Should I just not pay $2500 to the IRS? Or they use your tool, they go and check, you know, things one by one, but then they figure out when they're looking at these different steps, then it occurs to them, aha, you know, this part is wrong, they should not be like this, and then they're able to fix it.
+Right, so maybe the agent did the wrong computation and using your tool, the user is able to figure out where things probably went wrong.
+
+Sadra   4:33
+And.
+
+Sumit Gulwani   4:33
+Right, or maybe let me just make up an example, right? So let's say there's some calculation that looks, you know, all correct, and then you know, it's very much in the same ballpark figure and so on, so it's not a mistake that's very evident, but when the user goes through those things, they figure out, aha, the agent is adding up all the cells from A2 to A13, but it should really be A2 to A12.
+A13 is a different kind of row that should not be added or something like that.
+
+Souti Chattopadhyay   4:56
+Mhm.
+
+Sadra   4:56
+Yeah.
+
+Sumit Gulwani   4:59
+Or whatever, right? But basically you have to show what was the problem, right? So in the video, it cannot be just a good Rosie story, right? There's no story. If everything is good and Rosie, then there's no story. So you have to show what was wrong there, essentially, right? That can be one of the motivating examples.
+
+Souti Chattopadhyay   5:19
+Yeah.
+
+Sumit Gulwani   5:19
+Right, or maybe here's another one, right? So let's say, you know, you make up a research report. I hope you did not make this mistake in the paper, but you make up a research report and one of the URLs is a non-real URL, right? One of the references is a hallucinator in our reference. Everything looks good, right? But you know, one thing is actually wrong. So how do you make it easy to figure out, you know, those hallucinations?
+
+Sadra   5:42
+I see.
+
+Sumit Gulwani   5:44
+Did you verify all your references in the paper?
+
+Souti Chattopadhyay   5:46
+The.
+
+Sadra   5:47
+Uhh...
+Well, whatever I put there, I at least read the abstract, so that there is a paper there and they have abstract, and what's more than that? I'm not sure.
+
+Sumit Gulwani   5:54
+Okay.
+Okay, good.
+
+Sadra   6:05
+So I tried to make like a few slides for today. The first one, I send a link here. I can also present.
+
+Sumit Gulwani   6:14
+Okay, so one other random thought, you know, before I forget. So as I was looking at those PDF, you know, story that you folks had, what I also felt was that maybe some of these interactions are best done on the grid as opposed to in the chat. So when the user is editing or asking something and the grid has lots of objects, you can imagine some view, some chat experience gets created next to the object.
+
+Souti Chattopadhyay   6:38
+Yeah.
+
+Sadra   6:39
+Yeah, so you should have that.
+
+Sumit Gulwani   6:40
+I told Google.
+Yes, looks like my internet is having problems here. So what I'm saying is that the interactive experience with the user can potentially be done on the grid as well as opposed to just the chat. But I'm not sure how easy or difficult is it to automate the system.
+
+Souti Chattopadhyay   6:43
+I think.
+
+Sadra   6:51
+Yeah.
+
+Souti Chattopadhyay   6:51
+Who?
+Yeah.
+
+Sadra   6:58
+I think I think it is doable, like, if if in one step we have a minor change that, or like any change that that user has on on the on the sheet, and then go goes after that, this will also show that this interaction can can happen not only.
+from agents but also from user as well.
+
+Souti Chattopadhyay   7:20
+I remember we started our project with trying to make the interaction on the grid itself and not using chat. I think there were some engineering problems in the sense we were not able to recreate something on top of the grid. Grid comes always on top. But I mean, I'm sure there would be.
+
+Sadra   7:29
+Yeah.
+
+Souti Chattopadhyay   7:39
+if we can try harder to circumvent that. An interesting question to think of is what matters in context versus what matters, what demands a longer conversation? So you can maybe differentiate decisions from operations.
+operation related things go on context on the grid, decision related things go on the chat or some kind of separator between these two.
+
+Sumit Gulwani   8:07
+That's a very fascinating thing. So I do see people thinking about these two different words where we do more.
+conversational style and larger level things in the chat, but when you're trying to do smaller things or trying to keep users in the workflow than you do on the grid. But I feel, Rini, you are talking about a very fascinating aspect here, that there are some aspects of computation which probably are more related to this specific artifacts and some aspects of the overall computation which are maybe around reasoning, planning, that are best suited in the chat.
+Chat, so I, I like that.
+
+Souti Chattopadhyay   8:43
+Yeah.
+Yeah, it would be similar to breaking up design decisions versus implementation decisions, right? Something along those lines, similar to that. How that boils down is something we have to trial and error and see where the boundaries are.
+
+Sadra   9:02
+Yeah.
+
+Souti Chattopadhyay   9:06
+Yeah, but.
+
+Sumit Gulwani   9:07
+I feel HCI is going to become so very important now, right? I think this is the most going to be the most happening field now.
+
+Souti Chattopadhyay   9:13
+Yeah.
+Well, until Claude starts doing that.
+Ohh.
+
+Sumit Gulwani   9:20
+There is so much, so much food, right? Maybe you know the topic for another day, right? But maybe let's get to your slides, Sadra, yeah.
+
+Souti Chattopadhyay   9:24
+I.
+Yes, Sadra, before the slides also, I was sorry, Sadra, we keep pushing back the slides, so we'll get to that. We wanted to the...
+
+Sadra   9:30
+Sumit.
+
+Souti Chattopadhyay   9:34
+The making the subject of the paper as a framework versus as a tool, that was the conversation, so...
+We tried to get the discussion to sort of establish this as like, there is an interesting framework here, which we haven't really, we didn't name it. We thought about something like, you know, stop, see, steer, S3 framework, be creative about it and stuff.
+But I think there is definitely something where, you know, in the next step, we should have the framework as the first object and then show how the framework instantiates in Excel. And if needed, in another field as well, we can show a smart, small aspect.
+
+Sumit Gulwani   10:09
+Yes.
+Yes, yes, yes. So there, I think I like the name Agent Lens because it looks generic and from the name of it, people can understand. And then you will actually cite about the paper only from the name of the paper as well, actually. So think of something like that, that looks general enough and will resonate, you know, has the term agent with it and then you put it next to it.
+
+Souti Chattopadhyay   10:18
+Mm.
+Yes, yeah.
+Okay.
+
+Sumit Gulwani   10:34
+So, and then you can say that agent lens, you know, and then you define it like that, right? That stop sees in and does these things. So that would be a good expansion for what agent lens is. But the other aspect around the graph-based view is also very important. So letting the user understand what the agent overall did. So you show them a graph-based view of computation, computation graph, basically the computational graph.
+
+Souti Chattopadhyay   10:46
+Yeah, yeah, yeah.
+
+Sumit Gulwani   10:59
+Of what the agent did, because the linear sequence is not as important, right? The agent might have done things in a specific order, but that's not as important.
+And there, the exposing the computation graph would be useful.
+
+Souti Chattopadhyay   11:14
+Mhm.
+Yeah.
+
+Sadra   11:17
+Yeah.
+
+Souti Chattopadhyay   11:18
+Good.
+
+Sadra   11:19
+For sharing the screen, it says that I should reopen the application. I've sent the link. I will quickly refresh the page so I can share it too.
+
+Sumit Gulwani   11:31
+Sure, we can do that. I can open it on the side. You can just tell me, you know, move to the next slide. I'll do that, yeah.
+
+Souti Chattopadhyay   11:37
+Guys, can you see?
+
+Sadra   11:37
+That's it.
+Yeah, so the the the first assignment was was for reflections, if if you if you have like any idea of of how to like the the actual first slide.
+
+Souti Chattopadhyay   11:51
+Mhm.
+
+Sadra   11:51
+Oh.
+
+Sumit Gulwani   11:54
+Yes, so when is the opportunity for this video though? What are you thinking for this video? So I'm leaving on Thursday and if I have to send out this, so either we plan it before then or otherwise you take an extra week off so you can decide on what you want to do. But if we want to do it soon, if I should do it soon, then I think the next couple of days are important. Probably I can iterate on it with you.
+
+Sadra   11:55
+Two.
+Mm.
+So that.
+
+Sumit Gulwani   12:17
+So how far are you away from the video though?
+
+Sadra   12:20
+There, there, there's something that we need a video for you for you is too, and I think there are completely two two different videos. I I was I was planning to work on the US video 1st and then work on the Microsoft video because it has deadline probably.
+
+Sumit Gulwani   12:34
+Sounds good. Sounds good. Okay.
+
+Sadra   12:39
+It's going to be after your trip, but I will try to at least go the first round of iteration before your trip, before Tuesday.
+
+Sumit Gulwani   12:45
+Okay, sounds good. Okay, okay.
+
+Sadra   12:47
+Yeah.
+So that that was for videos. These are some doing writing the paper, like working on the paper, I...
+Like, but inspired by some of the other works, and this is something that I was thinking as like a next project idea. It's not necessarily at the like tailgating the this project, but I was thinking of proposing the idea.
+of when agents need supervision as the API call for agents. So instead of having agents decide where to get back to human based on ambiguity of the prompts, based on uncertainty of the prompts, this is another one.
+If you can just...
+Stay in this slide three.
+Yeah, so the idea was to define a human as an API, and whenever...
+agents needs to call human for supervision based on the expertise of human as the API description, based on the API cost as the willingness of human to be called for supervision. It can basically solve this optimization problem by its reasoning itself, similar to how it solves this by knowing when to call a
+web search API for example. So this was the like the very preliminary idea that I think can be interesting to be applied and see like how these agents calls are different. If you have any comments. No.
+
+Sumit Gulwani   14:30
+So I'll see something more I have a lot to say here, but let me understand the second sub-bullet here down there. So what is a positive friction problem?
+
+Sadra   14:38
+This idea of AG for the interaction between human and computer, there should be a friction happening in this interaction, so that let's let's user let's user think about the what's happening and also.
+when the supervision needs to be happen. If it's too much friction, it is going to be annoying. If you like it's, I just said it, it gets back to, it's going to be annoying. Maybe like this is the case that is happening in our tool sheet check now. If it's no friction, it's going to be current situation basically, which is, or like.
+Current extreme current situation with with with code assistance or like any agents which doesn't get back to human until the end.
+So, knowing when to apply this friction, which is positive for the communication, is important and is a problem.
+
+Sumit Gulwani   15:33
+I see, I see. And the next slide is a different idea, right? So maybe we should first talk about talk about this thing. Okay, so using humans, human supervision as a tool call or as an API is something that that is a bit old. So I have known this for the past.
+
+Sadra   15:36
+Yeah, this make make sizes different, yeah.
+
+Sumit Gulwani   15:52
+at least two years, maybe three years. And that's the way many people thought about incorporating human interaction in the system. So if an agent, if there's an agent that has a bunch of tools, and then you say that one of the tools will be a human call. Now, the novelty that I...
+Feel.
+is around in what are the tricks that you use to have the agent ask the right question at the right time.
+Because we don't want to be asking too many questions of the user.
+And this is where there might be some interesting connections to be drawn from cognitive science. So there was one paper which we published in AI stats, probably it was a new conference that was started. It was the first version of the conference.
+Or maybe I don't remember which conference exactly it was. Maybe it was this one or something or two years ago, right? It even got a best paper award.
+So, there.
+What we talked about was...
+So we are working on our debugger agent for Visual Studio. And the agent will always come back with an answer, even if it was not confident. So our trick was that if you're not confident, then investigate more, you know, use the tools that are available to you. And if those tools are not sufficient.
+
+Sadra   17:11
+Yeah.
+
+Sumit Gulwani   17:19
+use human as a tool. So this is what we wrote in the prompt.
+That.
+And then when you use human as a tool, we also have some guidance on how to interact with human. So we looked into principles of effective communication.
+Apparently, we figured out that there is some philosopher, Paul Grice, who came up with maxims of effective communication. And they're quite common sense principles, 4 principles, maxim of quality, quantity, relevance. And there was one other, I forget.
+But what we did was we specialized these principles to the underlying domain at hand, which was that of debugging. And then we got a bunch of rubrics and we put those rubrics down in the prompt. And apparently what we showed was that, okay, now the system is working much better. In a user study we did, I had never seen this kind of big leap. We went from like 25% to 88% for whatever the metric of success was.
+for debugging software. So this is 2 years old work, but I like this work so much that I still keep talking about it in my talks there, just as an example of the importance of human agency. And secondly, as an example of...
+leveraging principles from human sciences, cognitive science here. So that's as much as I kind of, you know, understand this field. But the new thing that I will add here is that especially if you think about
+Maybe especially about Excel right now, as we stand right now, the audience, the user base is very diverse. Some people are experts, some people are naive users, and also they have different personalities. Some people will like, oh, make sure you discuss everything with me before you go ahead and do things. And some people will be like, don't bother me, man, just do whatever you can and then come back to me and then I will look at it.
+So, for the same task, one dimension might be, you know, what is the style of the user?
+
+Sadra   19:23
+Yeah.
+
+Sumit Gulwani   19:30
+So when you talk about human supervision as an API, I feel there's an opportunity to go deeper into kinds of humans and counts of human interaction patterns. Who knows? Maybe Athena will tell us that this is the place where you also need to look at brain signals to understand if this style is working with this user or not.
+On what style should we actually use, you know, with this person? So, humans might be very different varieties, and...
+Yeah, maybe, maybe that's probably what I will say, right? How do you cater to different kinds of humans?
+
+Sadra   20:08
+Yeah.
+Yeah, I think that the second path is is what I was actually more interested in, to how to define that API and that API cost, so that the interaction with human is better in terms of not annoying and also more.
+Agent, it it gives more agency to human at the same time.
+
+Sumit Gulwani   20:33
+Maybe another thing I'll add here is this side. So one is that do we fine-tune models to become better at it? So the question is that when you will be coming up with some theory, right? So let's you develop some kind of theory here. How will you implement that theory? So one is that, oh, let's make the model better at it.
+So that is already doing a good job, great job at it. So let's fine tune a model. But the other more realistic solution, which is I think what you should be doing is, okay, let's change the system prompt instructions. And this was the example that I was giving you. So we wrote this in the system prompt that, oh, if you don't know, you know, use tools. And if tools are not sufficient, then use human as a tool.
+But when you chat with human, then follow these principles of effective communication, right? So that was a system level problem. However, what I'm saying right now is that no, humans are different. It's not about the same thing that you follow with every human, and that would be an interesting thing to capture. But how do you capture that? So maybe after all, what you do is you realize these different dimensions.
+
+Sadra   21:16
+Okay.
+
+Sumit Gulwani   21:33
+AG.
+dimensions through more and more interaction with the user. So if a user uses your system, then you get to know more about the user.
+
+Souti Chattopadhyay   21:38
+Ohh.
+Sumit.
+Did you repeat? We lost you from different dimensions.
+
+Sadra   21:46
+Yeah.
+
+Sumit Gulwani   21:51
+Yeah.
+
+Souti Chattopadhyay   21:53
+Maybe what you need are these different dimensions.
+
+Sumit Gulwani   21:58
+Okay, so let me see what I was saying, right?
+So when you, so one way to improve the system is to fine-tune the model, but that's not what we are after here. The other way to improve the system would be to say that I am trying to now improve the system prompt.
+
+Sadra   22:08
+Yes.
+Yes.
+To support.
+Mm.
+
+Sumit Gulwani   22:17
+And one kind of innovation that you can do is that you just write down these instructions once and for all, which is what we did in the debugging project for Visual Studio. But the other fascinating thing that you can do is that you can learn about the user across different tasks, and you see what their personality is, what they like, but then you slowly start adapting.
+
+Sadra   22:32
+Yeah.
+
+Sumit Gulwani   22:38
+to their style.
+
+Sadra   22:39
+Yes, yes, this is this is interesting. Yeah, so, like, similar to how Claude, for example, saves a skill at MD, we can have like the interaction at MD that learns about, like, get signals of how a user likes this interaction and what user likes this interaction, and the next time that we're prompting.
+A user for the for his so revision, this is gonna be better in terms of.
+
+Sumit Gulwani   23:03
+So that's a very fascinating thing, right? I think let me let me latch on to this new idea that you mentioned interaction dot M. So from these trajectories or these traces that these agents have, you can draw different shapes of knowledge.
+So one kind of thing that you can draw is, oh, these are the human preferences. You know, human likes, you know, these kinds of colors in their charts.
+The other kind of thing that you can draw out of these conversations is, in fact, the overall specification of the task.
+So that if you were to take that specification and give it to another agent, it can produce the same kind of artifact because the user maybe didn't specify everything at the beginning and it came through different, you know, interactions with the user. So you can infer the interaction or you can infer the specification which is just relevant to this task.
+or you can infer user preferences, but what you can also infer is this interaction style. So let's say you do this research on cognitive science and communication theory as to what are the very interesting, fascinating dimensions, and that is the vocabulary you use to understand that user.
+
+Sadra   24:03
+Yeah.
+
+Sumit Gulwani   24:15
+and the kind of interaction that they prefer in this interaction.md file that you will end up creating.
+
+Sadra   24:20
+Yes.
+
+Souti Chattopadhyay   24:25
+This is a very out there idea. I'm trying to find the paper, but I can't find it. But there's this paper recently out which learned a lot of different user preferences. Similar to what persona studies used to be back in the day. And
+When making choice decisions, like, you know, how should we proceed with the particular analysis? What statistical test should we use? What should be the colors in the chart? They would, so this paper talked about running many instances of LLMs, each having different personalities derived from these personas.
+to figure out what would be like the good decision, the correct decision to make. And this isn't like a social dynamic choice, but I can think of a similar.
+architecture for, you know, you figuring out the different dimensions of interactions important for the model to make a choice. You are maybe competing with aesthetics, simplicity of the formulas, or how complex your calculation needs to be and blah, blah, blah. And then you just run like this simulation
+that the agents compete among themselves to figure out like what is the optimum or the best way forward to present or continue with this analysis. So if you have something like each agent is or there are skill and skill dot MD kind of things, prioritizing 1 dimension over the other, we can run some simulations to see.
+how it all comes together.
+
+Sumit Gulwani   26:02
+So that's very fascinating. So what you're talking about, Rini, is that when we build such a system, how will we even evaluate it automatically if we want to do that? And there what you're saying is that this idea of personas might come in very useful, where we define different kinds of words and this world will define.
+the persona of the person, you know, their life, what do they do, how do they typically work and so on. And we will manufacture that. And that is a personal description that the simulator will actually use to evaluate this. Now this reminds me of the idea that we discussed when you were driving, which I think probably comes even before this one, which is that how are the user even going to specify the task.
+
+Souti Chattopadhyay   26:27
+Yeah.
+Yeah.
+
+Sumit Gulwani   26:42
+that we are trying to do. Forget about the interaction, you're already getting to the next step. How do they even start? How do they even start to describe what they have? And there, you might also want to think more about.
+
+Souti Chattopadhyay   26:49
+Mhm.
+
+Sumit Gulwani   26:54
+the different problem solving strategies that people are using as they are trying to describe the task. So let me, and maybe that would be even more fascinating to study beforehand, right? Before you even even go there, right? I would say you've probably even first study users. So maybe now I have a very strong opinion here, right? That before you get to this multi-step interactivity thing.
+The first step is even studying users. How are they interacting with these agents on their side? Right? So not the other way round. The other way round will come later. So let me give you an example. So I'm not sure if Rini has made you participate in these graduate student admissions up until now, but this used to be one of the service that all UC Berkeley PhD students would have to do.
+do so when their advisor will become the...
+The graduate student committee, even though we have two or three professors, they will solicit lots of graduate students to read through the applications and so on. So now your goal is to, you have a spreadsheet, you have a spreadsheet of people who have applied for HCI at your university and you have all the information that have been submitted, you know, it's all their GPA, their status scores.
+maybe their websites, a list of publications. And now your goal is to help Rini provide a recommendation of whom should we extend an offer for graduate school. So you have a spreadsheet and you want to do something there. Maybe there is no unique ground truth here, but it would be very fascinating to see how do different graduate students go about
+approaching this task. So in some sense, this is a little bit of an open-ended task.
+and different users will approach it very differently. So now we are looking at people who have pretty much the same skill level, but very diverse in their own backgrounds. And how do they even go about solving this? So I recently had something very similar, and maybe Rini I mentioned this to you, this particular example.
+
+Souti Chattopadhyay   28:42
+Just.
+
+Sumit Gulwani   28:51
+So I definitely recall the other example I mentioned to you, which I will mention to this group as well. But one of the examples that I was recently coming across was that we had to select our research fellows. So I run a very special program in India, two year appointment where we train these people for pre-doctoral program, right? Then they apply to, you know, graduate school. So we have 800 applicants.
+And there were 10 people. So I'm coordinating the, I'm organizing the program and so on. I don't get any of these slots, but you know, other people get and I'm trying to just be the organizer there. So the initial inclination was that we'll ask each of those 10 people to look at 80 students.
+I said, no, every person will look at all the students, so let them figure out how they're going to do it, because they won't be able to do it manually. They'll have to use AI. Some person use Excel agent, some person use, you know, Claude agent, some person use Claude CLI.
+And some person even started doing very fancy things with respect to how we do evals. So we defined lots of rubrics and so on. So they started defining lots of rubrics for this to evaluate these gadget students and then to calculate the metrics along along those. I even went to the extent of suggesting people that look.
+The same pool is being looked at by other teams across Microsoft, especially Microsoft Research India, to select these candidates. So you don't want to be wasting time on someone who is very good, because there are 50 other researchers, 100 other researchers who would be bidding on those candidates. So you want to figure out a person.
+who you will be have a unique story to share. So what you should do is you should give all your, you know, recent public, your own publications and your own assets to the agent and say that one of the metrics I want to compute for this student is whose work connects to the background that we have and the kind of problems that we work on and it uniquely connects there and we will be able to tell a unique story.
+this story. So you see, it's not just about ranking the candidates, right? We also, we have to also appear sound impressive to the candidate also so that they pick us and we want to invest into those kinds of engagements. So so many different criteria is going in here, right? And this is probably going to be the word of.
+How people will be using these things, right? So, so it is not the tasks are not going to be as much as you know, file taxes. Well, you can get very creative there, right? I don't know that kind of word, right? But apparently, as I understand, you know, people who are rich and then they get these, you know, different tax accountants and so on, they come up with very creative ways on how to.
+
+Sadra   31:17
+But.
+
+Sumit Gulwani   31:23
+and white taxes. So that might be a different thing, right? But again, for ordinary people like us, you know, it's a unique ground truth, right? It's a tag that you need to pay to the government. But the real interesting tasks that happen in real life are going to be messy like this, messy and open-ended tasks. So on these messy open-ended tasks is where you will have the best chance to study users and to guide the conversation with the user.
+So how are different users even going to approach it? And then how should the agent respond to exactly your project ideas? Are the right? How should the agent actually respond in dealing with these people? So there what I would say is that before you even come up with a solution, again, a formative study is at works here, where you study how different people are interacting with the system.
+So the way they will interact is they will say something and then something will happen and then they will maybe use your tool, you know, agent lens, to study that output and then they will say something else. Maybe in the edit pane or ask pane or maybe continuation of the chat and you watch that. But then when you study this system, maybe you want to do something simple or something, you know, low hanging fruit you already take care of, right? So you, so whatever your interesting ideas are, how...
+How should agent perform an intelligent conversation with the user? You already, you know, put that in the agent, right? That low-hanging fruit you already take care of.
+
+Sadra   32:39
+Yeah.
+
+Sumit Gulwani   32:41
+Happening, and...
+
+Sadra   32:41
+Yeah.
+Yeah, and we we have this data of this, like, uh, evaluative say that that that can also serve as, uh, as a...
+But the task wasn't open-ended, but I think that they can serve as a starting point, maybe.
+
+Sumit Gulwani   32:59
+So come again, Sadra did not hear you. The task was open ended, but...
+
+Sadra   33:03
+The task was not open-ended, but we have this.
+Data from people who were interacting with our tool in evaluative study that we can use, or the formative study that we have, we can we can reuse that formative study to, because that that's more open-ended, yeah.
+
+Sumit Gulwani   33:19
+I see, I see, I see, I see. Okay. So let me give you another example, right? A very different example. And here, so now this is the example that I currently gave you there was I was telling you that there's a lot to learn about how different users approach the same problem, right? Because I'm not going to tell my agent, okay, you know, study all this and rank the candidates. Well, maybe you know, some lazy person even did that, probably, right?
+But every person at least, you know, because this is a thing that matters. Like you are going to be stuck with that person for two years. And if you select the wrong person, it is going to be a huge drain on you. So there are a lot of stakes in this situation. And people are motivated to be creative. And it was fascinating to watch, you know, how people were doing it.
+
+Sadra   33:57
+Yeah.
+
+Sumit Gulwani   34:04
+Now, let me give another example, and this came from someone, some peer of mine who went to some, you know, customer studying. So, a user has a large piece of text.
+In each cell in a column.
+
+Sadra   34:17
+Yeah.
+
+Sumit Gulwani   34:17
+And they tell the agent, replace each cell by a short summary of the text.
+So that it can fit in nicely.
+But when I hover over it, I get to see the full text.
+
+Sadra   34:31
+Mm.
+
+Sumit Gulwani   34:33
+Or maybe add some hyperlinks to the full text.
+And now the agent and the user go down a rabbit hole that does not succeed because apparently there is no easy way to do this hover or hyperlink and the agent makes up all kinds of icons and then trying to fix the code around icons and so on and they go down this rabbit hole.
+what the agent should have actually done.
+Was to challenge the user's assumption and say.
+Looks like your goal is really to make it easy for you to see the larger text. Why don't we just use the comment feature in Excel?
+You'll have to click on this small color that occurs next to the cell, which means that the cell has a comment, and then you will see the comment. So no hovering, no hyperlink, but I think your essential purpose is solved.
+That would have been the best thing, right? But what kind of problem solving strategy is this, right? This is like challenging assumptions. The user over specified.
+And the system is smart enough to see through what the user really wants and then help them.
+But this was a real, real incident that someone went through, where they were struggling with EXCEL agent and they didn't succeed, like going down the rabbit hole.
+So this is what I mean by understanding how different people are approaching problems, problem solving, and then using that as a basis to design your agent to help these people, right? So in this case, what was happening? So what I noticed is in the problem solving thing that the user is over specifying things. Is this a nive user or we do not know, right? Maybe, maybe I, maybe this person, when I, when I heard this case study.
+This person was being described as a naive user. I will probably not go to the extent of saying this user was naive, right? But I will probably go to the extent of saying this user assumed lots of things and overspecified this thing to the system.
+Does this thing happen commonly? In what forms does it happen? What are other examples of this? And how can we design an agent and build an agent to see through this and to be able to suggest something? And what would that look like? But when you do that, does it mess up other things? We do not know. Those are the kinds of things we'll have to probably study. Then the other set of examples that I gave was, you know, selecting the top list of candidates, you know, top 10 candidates.
+
+Sadra   36:42
+Yeah.
+
+Sumit Gulwani   36:49
+This was a very open-ended task, and this was under-specified as to how to do it, but then different people are coming up with their own creative strategy, right? It was a very interactive thing that they were trying to do, even things like, you know, go to the Google Scholar record, you know, see their, you know, mostly cited paper and so on, how many, you know, first author papers that they have, so all those interesting things people are trying to figure out.
+
+Sadra   37:13
+Yeah.
+
+Sumit Gulwani   37:19
+So if we can collect some tasks like this, and if we can have a study where we just observe different people, that would be fascinating, right? Because then our goal would be to actually see if we can build solutions that...
+I mean, equally, you know, very interesting thing that's happening. And I noticed this thing even when I...
+attended some forum where they invited me to give a keynote where it was not an academic venue, it was like, you know, different startups, CEOs and CTOs from different startups have come there. So there's something called forward deployment engineering, where these different frontier companies or these, you know, big venture companies who own these, you know, these mid-sized companies.
+They have a very elite team of people who go on site to study the use cases that these different people have and how are they using, let's say, Excel agent or how are they using some other agent and so on. And they will study these customers, they will look at their problems, and then we'll give them suggestions on how to best use AI or Excel agent.
+Or they will bring back, you know, problem definitions to Microsoft or to other frontier companies that, look, you know, our customers want this and we don't have this capability, so let's invest in this capability. So there's a lot of investment energy being to this so-called FDEs, you know, forward deployment engineering.
+And maybe what we are saying is, you know, to kind of do something like that. So we pick some tasks, slightly open-ended. We have a lot of people try to approach solving the task and we just watch them, right? How are they engaging with AI? Are they engaging the most effective way? What are the different ways that they're engaging with AI? Classify them. Maybe there's a nomenclature around that that we come through.
+Right, what are the, because what has been studied out in the past is, you know, problem solving strategies that we should look at. But how do people engage in those problem solving strategies with AI is very fascinating. And then once we have a sense of that, the model of the users, what kind of problem solving strategies that they use, then this AI in terms of interaction, right? So this is to your idea when you're saying that you use human as a tool.
+So we understand what the different mental models are, how do they approach problem solving, and then the agent will be much more grounded in terms of asking users the right kind of questions or giving them feedback.
+
+Sadra   39:35
+Sneaker.
+
+Sumit Gulwani   39:36
+Right, so that can be some novel angle there.
+
+Souti Chattopadhyay   39:38
+Mhm.
+
+Sadra   39:39
+Thank you.
+
+Sumit Gulwani   39:42
+So, do you want to talk about the second second thing or?
+
+Souti Chattopadhyay   39:42
+Yeah, I...
+
+Sadra   39:42
+Yeah.
+
+Souti Chattopadhyay   39:44
+Yeah, yeah, yeah, I was gonna say that I think Athena and I were discussing, and there are some questions to figure out, and you know, I think Athena has some like stuff, but I wanna I wanna bring in something before we get into that conversation is, so there is this paper by...
+
+Sadra   39:44
+Uh, yeah.
+
+Sumit Gulwani   39:47
+Yes.
+
+Souti Chattopadhyay   40:04
+I think Subramaniam from Stanford talking about how when, so when you're interacting with something like a software that's deterministic, that doesn't have AI, user over time formulate mental models because it continues to act in the same way.
+But when you have an agentic system, it doesn't act in the same way. So the user cannot formulate a mental model. It has an abstract version of a mental model. So here it becomes two problems, right, Sumit, that you were mentioning. One is they don't know how to prompt.
+because they don't know how this will turn out, right? It's not deterministic. Sometimes it's good, sometimes it's bad, sometimes it's closer to what they're expecting, sometimes it's not. So this data on this thing is like, I forgot, was it from instruction gap, something like that, that, you know, they have this gap.
+in understanding how to prompt, what, where to start.
+And the second is like, if they don't have a mental model of an agentic system, how are we going to derive this mental model for something, someone like Sadra to then start formulating it? So we are in this, there's this concern.
+
+Sumit Gulwani   41:24
+So, this is very fascinating. Please, you know, let me see if I understood the first point, and then you explain the second one again, right? The first part is that the...
+
+Souti Chattopadhyay   41:29
+Yeah.
+
+Sumit Gulwani   41:36
+So actually going to repeat even the first point again, I think I am missing, I missed that.
+
+Souti Chattopadhyay   41:40
+So the idea is like in a deterministic system, but there is no AI. Yeah.
+
+Sumit Gulwani   41:44
+Yes, it is, so, so, yes, so, so the user does not have a mental model of how the AI is, so there is instruction gap, right? Like, even this task, should I tell the agent that, oh, figure out the top students, will the agent be able to do everything, because it apparently knows a lot of things about me, and then I've been working with this agent for long and so on, or should I be as much detailed instructions as, you know, oh, figure out the Google Scholar record, figure out the publication record, figure out...
+
+Souti Chattopadhyay   42:02
+Yeah.
+That.
+
+Sumit Gulwani   42:09
+out whether the first authors are there or not. Or should I expect the agent have already learned about these kinds of important rubrics and so on? I do not know, right? So even if, let's say, I kind of have a sense of what is it I'm looking for, how much detail do I have to be with the agent in terms of describing things? I do not know.
+
+Souti Chattopadhyay   42:11
+Yes.
+Yes.
+Exactly, yes.
+
+Sumit Gulwani   42:28
+And maybe this is a mental model I tried to develop of this, but it keeps changing. Who knows, the agent is already getting smarter. So if you look at this, you know, the cloud harness that got leaked out. By the way, have you looked at the cloud harness thing?
+
+Souti Chattopadhyay   42:35
+No.
+
+Sadra   42:40
+Yes.
+
+Sumit Gulwani   42:40
+Yes, okay. So, yes, so I have done looked only at party, right? But maybe what I was telling was that, you know, we all should look at it and so on. But it will give us some insights into how it was kind of improving, or self-improving. So to Rini's point, the models keep evolving, but does the user know about it or not, or how should they be informed about it is very, very fascinating.
+
+Souti Chattopadhyay   42:41
+I have not.
+Yeah.
+
+Sumit Gulwani   43:00
+Right. So, so again, I'll say, right? So as a user, even a sophisticated user, I do not know what the AI already knows or not know what it will do or not do. So there is some kind of gap there into how precise I should be or how weak can I be. Because on one hand, I don't want to be too precise as well. And the reason being, on one hand, it might be that why should I be there precise, the AI already understands me. But on the other hand, I'm sometimes doing it because of intentionality.
+
+Souti Chattopadhyay   43:00
+Mhm.
+Yeah.
+
+Sumit Gulwani   43:23
+Because I want to leave the little bit of vagueness for the model to even hallucinate or try to be creative and surprise me, for example. But should I be doing that? Should I not be doing that? And so on. So very fascinating point. So that was one point, right? And is there another point or Rini that you are also saying?
+
+Souti Chattopadhyay   43:39
+So it's a, I mean, with Sadra, we are trying to say that, oh, maybe we can figure out the mental models of the users and then understand like using that when to surface questions to the user. But we need to figure out the mental model, shifting mental model problem first before we try to.
+harness the mental models because right now they don't have mental models seems like.
+Or, at least, the mental model keeps moving.
+
+Sumit Gulwani   44:10
+Yes, so there what I would say is that if I'm putting something close to very final document, then I need the agent to ask me lots of questions and things that might be wrong. But if I'm just putting a rough draft, I don't want all of that thing to actually happen. So same kind of document being produced, but this is the first draft that I...
+
+Souti Chattopadhyay   44:23
+Mhm.
+
+Sumit Gulwani   44:30
+Just want to share with you know some people quickly versus this is close to the final draft that I want to publish. That should lead to different kinds of interaction from the system. Is latency important or not? Okay, do I need to get this draft like within the next hour or with it I have a week to work on it and so on. This should also probably determine how these interactions actually happen.
+
+Souti Chattopadhyay   44:36
+Play.
+Mhm.
+Yes.
+The context, yeah.
+
+Sumit Gulwani   44:52
+And...
+
+Souti Chattopadhyay   44:55
+Yeah, but it's I just wanted to bring this up, this gap of instruction and lack of mental model because AI keeps moving is a very, I mean, I read the paper and I was like, that's actually, you remember the two gulfs, the gulf of execution, the gulf of evaluation that Norman had. So Norman had.
+So this, they tried to propose that with LLMs, there is a different gap, the gulf of envisioning, where you can't envision how the system will behave. You can't, you don't know the full capabilities. And as a result, you're always trying to estimate what's going to happen and act accordingly.
+So...
+
+Sumit Gulwani   45:35
+So one thing that you said, Rini, I'll go back to what you were saying before this, right? So I think you had an interesting idea there. So what you are saying is that context, if the agent has more context, it will be able to behave better in terms of the interaction that it will do the users. So the context can be about the overall task, but the context can also be the interaction or MD file as to what kind of interaction.
+
+Souti Chattopadhyay   45:52
+Yeah.
+
+Sumit Gulwani   45:54
+And does this user like?
+
+Souti Chattopadhyay   45:56
+Yes, yeah, and there is a lot to lot to, like you said, latency, right? And figuring out like what are these and just from the interaction or history is a very interesting task. I think there's a lot to do, there's a lot to think about there, but yeah, yes.
+
+Sumit Gulwani   46:12
+Yes, so the models are both ways in the sense that what we are saying is that the AI has enough context about the user and understand the user's model, but you are also saying the other thing also, right? And the user has enough context, right? Because when conversation happened between two people and two people are smart, you know, both are trying to play this game, right? Both are trying to understand what is the motivation of the other person.
+
+Souti Chattopadhyay   46:24
+Yes.
+Yes.
+Yeah, no.
+
+Sumit Gulwani   46:33
+What do they already know, and so on, and that is a good conversation, you know, between two people.
+
+Souti Chattopadhyay   46:38
+Yeah, you move from like this prompt to base to actually bilateral, like a dialogue, right? A2 dialogue would be when a model comes up and says, no, you're wrong. I don't think you should be doing this. You should be, as well as the human.
+
+Sumit Gulwani   46:50
+You see, it's kind of a little bit funny there, because when we started, you know, when this AI evolution started happening, what we noticed was that the initial models were very, very sensitive to prompts, like even a white space, extra white space here and there will make it give different output, and then people will start saying that, you know, please, thank you.
+or emotionally, you know, pleading. Maybe it is still there, probably I do not know. I still sometimes do it. I'm not sure if it makes a difference. And then the rhetoric was that, yeah, this is just a matter of time. And as these models become smarter, you know, this will start to matter less. That is true. But on the other hand, we are already discussing things like these that I do not know really the AI's model.
+
+Souti Chattopadhyay   47:25
+Mhm.
+
+Sumit Gulwani   47:36
+And how should I be really expressing my task? So this thing about hovering versus hyperlink or not or staying silent about it makes huge difference. Because on one end, the model is really being the true servant and trying to figure out how to hover in hyperlink and not challenging, you know, what the person actually said.
+
+Souti Chattopadhyay   47:45
+Mhm.
+Okay.
+
+Sumit Gulwani   47:55
+So there's a lot to be said about the importance of asking the right question the right way.
+And this all happens in a small number of instructions and sentences. And there's so much creativity that can go there. So the fact that these systems are very sensitive to prompting, I think still stays to be true. Even though we have moved aside from.
+
+Souti Chattopadhyay   48:06
+Yeah.
+Right, yeah.
+
+Sumit Gulwani   48:21
+This white space, you know, adjustments.
+And maybe that's a good thing because this is what leaves us space for creativity and good for us because we have something interesting to study here.
+
+Souti Chattopadhyay   48:34
+Yeah, but then we assume that, well, we don't assume because I mean, the thing happens to us as well. When the model is asking us questions, we are biased too. We get biased by the specific question the model asks. We assume that the human is going to make a rational choice, but humans are not good.
+
+Sadra   48:48
+And.
+
+Souti Chattopadhyay   48:53
+national decision makers. So all these like, you know, automation bias where the first solution that comes to you, your brain kind of latches onto it and remembers it longer and all these small like neuroscience things that happen. So it's a bi-directional. It's not just how we are framing our prompts, but also how they are framing their LLMs, not they.
+The models are framing the questions also kind of, it's a complicated thing.
+Yeah, but...
+
+Sumit Gulwani   49:22
+So, one interesting thing that will be possible here, you know, just miss, you know, thing to write that.
+So, did I did I lose you again? I think my network is behaving very bad today. OK, OK.
+
+Souti Chattopadhyay   49:35
+Can.
+
+Sadra   49:35
+Just a second.
+
+Souti Chattopadhyay   49:37
+Just one sentence, yeah, one interesting that's possible, yeah.
+
+Sumit Gulwani   49:40
+Okay, is to just try to set up these different worlds and personas and do a lot of simulation experiments, use different kinds of models to act as a human. So when you set up these different worlds, have different agents in your drive that, or different kinds of models drive that.
+And this would be one way for you to collect a lot of synthetic data. Now, I'm not sure how reflective the reality would it be and so on, but we'll get lots of trajectories, traces, and see, you know, what you find.
+
+Souti Chattopadhyay   50:01
+Mm.
+
+Sadra   50:07
+But.
+
+Sumit Gulwani   50:14
+Right, so for example, even this problem, right, that you express, so you set up an agent and you say that, look, the real problem is this, that the user has a large text in a cell in a column and they want some way easy way to be able to see it and replace it by a small one. Do you see different people are going to say things differently?
+
+Souti Chattopadhyay   50:14
+Yep.
+
+Sumit Gulwani   50:33
+They might say it wrong, they might say it under-specified, they might over-specify it, and here are some examples. So your job is now to act like different people and come up with all different kinds of specifications that can actually, that you can conjure it up, right? And maybe you ask two different model families to do that, right?
+
+Souti Chattopadhyay   50:49
+No.
+
+Sumit Gulwani   50:52
+And then you simulate that against EXCEL Agent and see how it behaves. And then let the interactivity happen. So we set up a system where both Claude and OpenAI, so maybe let's just say right, Claude and OpenAI are the simulating as the users, whereas Gemini model is the one.
+
+Souti Chattopadhyay   51:00
+Mhm.
+
+Sumit Gulwani   51:13
+that is powering the EXCEL agent and is doing things and you keep doing the simulations and see what you find. But of course, you know, there is nothing that beats, you know, what you can get from real users, but that data will be small. On the other hand, you can do an infinite amount of simulations, you know, with this and see if that leads to anywhere.
+
+Souti Chattopadhyay   51:20
+Mhm.
+Okay.
+Um...
+But it's interesting to see because there is already a lot of world models with some preferences that are there. We're doing like this large scale social opinion dynamics kind of research. I wonder if, how difficult will that be to adapt them to?
+
+Sadra   51:32
+No.
+
+Souti Chattopadhyay   51:52
+To more specific tasks, like you know, what would matter for Excel or feeding additional dimensions? Yeah, we'd have to see, but we can we can definitely borrow from existing world models and add.
+
+Sumit Gulwani   52:05
+So, so then I'm not sure if I've fully blocked what you said, right? But here is a thought that comes to my mind after listening to what you just said.
+
+Souti Chattopadhyay   52:11
+Mhm.
+
+Sumit Gulwani   52:12
+Which is?
+The biggest consumer for this research and this work will actually be classroom education, AI education. So one of the AI courses or one of the many AI courses that needs to be created is around how should we be prompting these models? What does the word model?
+
+Souti Chattopadhyay   52:22
+Mhm.
+Mhm.
+
+Sumit Gulwani   52:32
+of these agents look like? How do humans normally approach problem solving? And how should that combination now work together? And there should be case studies on, look, you know, this was a problem to be solved, and this is how different people approach it, and this is what it leads to. And there's nothing right or wrong here, but showing people the possibility that you need to learn the art of asking the right question. So you have a very different computation.
+
+Souti Chattopadhyay   52:49
+Yeah.
+
+Sumit Gulwani   52:57
+substrate here, right? It's not like the high-level language of programming that we had before. You had a very powerful tool here, and the way you ask the question makes all the difference in how you drive the tool. It also influences the experience, if it is a delightful experience or not. And secondly, it leads to so many different outputs and so on.
+
+Souti Chattopadhyay   53:17
+Mhm.
+
+Sumit Gulwani   53:19
+That's, I think, what will probably come out of this here. And then the second thing that I would say is, okay, given that we have figured out this wisdom and this knowledge, what can agents more proactively do to help users towards some of the, you know, best practices?
+
+Souti Chattopadhyay   53:30
+Mhm.
+Yeah, yeah, this is going to go, sorry, Sadra, go for it.
+
+Sadra   53:36
+Yeah.
+Yes, just send this, this work, this work by opening how people use ChatGPT. Maybe this is a good starting point of learning this different dimensions that different prominent dimensions that we can change the personnel of user agents on.
+Let's say, and then one more dimension to simulate the, or like change them in in the in the dimension that the B wants to.
+For for seen in the in the in the user, like trying to get the best diversity out of them.
+
+Sumit Gulwani   54:16
+Yes, yes. So maybe this and let's start think of complete structure. Like if you folks are excited about it, so I'm very excited about it. So if you folks want to pursue this and so on, maybe this is a mini experiment that you can do, which is you define some words about a problem that needs to be solved. You state that word. So maybe here each word will correspond to a problem that needs to be solved.
+And then maybe you create a separate set of words. So I think we have two set of words that we create. One set of words is the problem tasks, task specifications, and the other set of words is defining these different personas. And then we get a quadratic, you know, combination here. So when you combine the word that describes each person,
+To the world that describes the problem, then we know, then we have a sense of, you know, what is the kind of way tolerance.
+You know, make sure that that you understand, or you have a right hypothesis about over specification, under specification, you know, wrong specification, and so on, and we even give some examples of this to this agent, but this agent will will take up a bunch of, so we'll define a bunch of words.
+which again may be created using an agent, right? So we define a bunch of words created using an agent of tasks. We define a bunch of words created again using an agent of personas. Then we have another agent which picks up a task, which picks up a persona to describe how would that be said. Maybe we'll pick up a task and we'll pick all the personas that will describe that kind of task.
+And then we run it through Excel agent, we run it through Claude agent, or whatever the agent is, researcher agent, or whatever PowerPoint agent, you know, whatever you want to study and see how it works and what the differences are. But then there will also be interactivity that we'll have to think about how will you simulate the interactivity. But the interactivity will also come from the persona agent or the persona world that are defined.
+And the agent will have to accordingly issue the next step in the process.
+
+Souti Chattopadhyay   56:17
+Mmh.
+Yeah, it's a nice, I mean it's...
+Yeah, so it's a some with some part of this is possible feasible to put together pretty pretty quickly, so we should think more about now.
+
+Sumit Gulwani   56:34
+And maybe one other thing that you can consider doing is, you know, just doing some deep research on this. So you set up an agent where you describe all the discussion, right, the transcript that we have, I'll send it over to you. And you say, okay, now that we understand what you're trying to do, what wisdom can we gain from cognitive science and principles of communication? So do all the research as you can, figure out all the general articles that are there over the past 50 years.
+
+Souti Chattopadhyay   56:39
+Yeah.
+Mm.
+
+Sumit Gulwani   56:55
+maybe 100 years, go through them. The older the better. You know, we want to look into the wisdom of, you know, these old philosophers. And what do we learn from there about this, you know, that will be actionable, that will help us create the models of AI, mental models for AI, that will help us create the mental models of humans, that will help us understand how humans think of AI.
+even the other way round. So what would be the relevant piece of information there and see what you find.
+
+Souti Chattopadhyay   57:20
+And.
+
+Sumit Gulwani   57:21
+I think the same kind of exercise we did for this paper also, right? Remember I sent you this, which you also seem to like when I draw the related work section, right? The way I came up with the related work section, yes.
+
+Sadra   57:30
+Yeah.
+
+Souti Chattopadhyay   57:31
+Yeah, yeah.
+Should we talk a little bit about the creative workflows part? Athena, you want to basically, I think Sumit already shared, should we do we move to the other meeting? Do we just continue here? Sumit, what do you prefer?
+
+Sumit Gulwani   57:34
+The.
+Yeah.
+Yes, maybe let's take a 5 minute break and then we'll join another meeting. Yes. Shall we do that? Yes. Okay, so I'll start the call in 5 minutes. Okay, then. See you then.
+
+Souti Chattopadhyay   57:49
+Yeah.
+That sounds good. Yes.
+If.
+
+Sadra   57:54
+But.
+
+Souti Chattopadhyay   58:02
+Okay.
+Yeah.
+
+Sumit Gulwani stopped transcription

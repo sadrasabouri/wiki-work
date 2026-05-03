@@ -1,0 +1,739 @@
+---
+timestamp: "2026-05-03T15:20:47-07:00"
+source: "[[Sadra-2May2026-TRANSCRIPT.docx]]"
+source_path: "raw/meeting-transcripts/Sadra-2May2026-TRANSCRIPT.docx"
+source_type: "docx"
+tags:
+  - extracted
+---
+# Sadra-2May2026-TRANSCRIPT
+
+Source: [[Sadra-2May2026-TRANSCRIPT.docx]]
+
+SadraSumit-20260502_104448-Meeting Transcript
+
+May 2, 2026, 5:44PM
+
+41m 24s
+
+Sumit Gulwani started transcription
+
+Sumit Gulwani   0:03
+So let me see, but that screen that I wanted to share with you is on Teams and I hope I can still create that screen and then share that with you. Just give me a moment, I'm trying to see if I can bring up that screen again.
+
+Sadra   0:15
+Yeah.
+
+Sumit Gulwani   0:28
+So, I see that screen.
+So, do you see this screen as well, Sadra?
+
+Sadra   0:41
+Yes, yes.
+
+Sumit Gulwani   0:43
+So this is the.
+Knowledge-based management that Teams offers me.
+
+Sadra   0:50
+Ohh.
+
+Sumit Gulwani   0:51
+So what do you see here? You see all my different meetings that I participated in that were on my calendar.
+And they were recorded.
+Some of them are recorded and most of them are getting recorded today. So why are meetings being recorded? Because in each meeting there are like, you know, 10, 20 people from different time zone. Not everyone is able to participate. People have conflicts. They can go and watch this later.
+
+Sadra   1:17
+Yes.
+
+Sumit Gulwani   1:18
+So whenever you see view recap, it means it is recorded.
+And whenever you see this video thing there, it means it's also video recorded, right? Transcribed and video recorded.
+
+Sadra   1:28
+The.
+
+Sumit Gulwani   1:33
+Now let's go on to our meeting yesterday. So this was our yesterday meeting. Do you recall this one?
+
+Sadra   1:39
+Yes, and the the check marks, the check 4 and check one, and missed.
+
+Sumit Gulwani   1:45
+What will happen if I check these things, right?
+
+Sadra   1:47
+No, the one in the in the middle, see in the in the middle column, you have a check for.
+
+Sumit Gulwani   1:56
+In the middle column, so in the left column, there is the check mark box, then in the middle column is the name of the meeting. Oh, these check marks, these ones. Okay, very good question. So these are four tasks for people to follow up on.
+
+Sadra   2:02
+Yes, yes, yeah.
+
+Sumit Gulwani   2:09
+Think that's coming.
+
+Sadra   2:09
+Wait, what is this?
+
+Sumit Gulwani   2:11
+A?
+
+Sadra   2:11
+But what was missed then, like the in the chat?
+
+Sumit Gulwani   2:16
+Yes, miss means I did not attend this meeting, probably.
+
+Sadra   2:20
+Ohh.
+Okay.
+
+Sumit Gulwani   2:22
+Three means there were three mentions of me in the meeting.
+
+Sadra   2:27
+I see, and then when when when you search the meeting, like there's this search over there, does it search on in transcripts or what what are you searching?
+
+Sumit Gulwani   2:36
+Yes, so let's explore it together, right? I may not even know everything. I may know something. But as we do this, we should understand that the key goal of each of these things is that there is one meeting that is happening and there's a group of people, some participated, some did not participate. We talked about different things and so on, right? However...
+
+Sadra   2:39
+Okay.
+
+Sumit Gulwani   2:56
+It is not very far away from what we are also thinking and it gives us a good idea of the visualization of view, management view that we can put on. I do not know what happens if I click this, right? Will I click? Because the thing that I suspect is not happening, but may actually be happening.
+
+Sadra   3:06
+No.
+
+Sumit Gulwani   3:17
+is that we cannot mash up this information easily.
+But maybe if I were to click these three things and if I click on audio recap, what will happen? I do not know. We should think about it. We'll combine those things for it. I do not know, right? Why is it allowing me to select these things? I do not know. We'll see. But let's go back to the first the view recap thing, right? This is the meeting yesterday. So if I click on view recap.
+And then I should now change, stop sharing, and I will bring you to the different screen that opened up. So it popped up a different window, and let me share the window that it popped up.
+So do you see this window that popped up further? Okay. Now in this window, what you see is that there were two parts to our conversations. Because first I talked about the logistics for Monday, and there was nothing interesting technical there. So I said, let me stop this recording, and I'll create a new recording. And that was part.
+
+Sadra   3:58
+Yes.
+Listen.
+
+Sumit Gulwani   4:16
+Good.
+Okay, now yesterday when I was looking at part 2, it was not showing me the summary.
+But now it is showing me the right, you know, summary. So I could not send it to you because somebody was not coming up yesterday. I tried long and so on and maybe something was buggy or something.
+But here is an interesting part.
+The custom summary.
+So there are two custom views that are predefined. One is the speaker summary.
+And one is the executive report.
+I do not know the prompts for this.
+
+Sadra   4:59
+Can I can I try to create some place? Maybe from there we can understand.
+
+Sumit Gulwani   5:02
+Yes, I know, right? So, there are lots of things, but let me go one by one because I lose my chain of thought. So, you're asking good questions. I'm getting to that. There are many questions, right? But let's go one by one because I lose my chain of thought of the message.
+
+Sadra   5:05
+Yeah.
+So.
+
+Sumit Gulwani   5:13
+So, if I look at the...
+Custom summary.
+There is a bug here in the system.
+It still shows me the speaker summary of part one. This was not discussed in part 2. Part 2 was all technical. This is still talking about the Monday meeting. So there's a bug in the system because this is part 2 and the speaker summary is showing it.
+I got to this part yesterday, so AI summary was not generating, but this summary was getting generated, but I didn't send it to you because it was buggy. It was still showing me the speaker summary for part 2.
+But what we can do is we can actually try to, because the transcript is there and it is not giving me this noisy speaker notes because it is buggy. Or sometimes what happens is that when I go to transcript, I can download this transcript and that's how I send it to you.
+But in many cases, I cannot even download the transcript if the meeting was not created by me. And these rules keep changing.
+So last night when I was trying to put together what transcripts am I missing, I sent requests to different people, please download and send me the transcript.
+But I didn't have the patience to wait for it, so I got to experiment with what can I do with custom summary. Because custom summary will do whatever I ask it to do based upon the transcript that it is not allowing me to download.
+OK.
+
+Sadra   6:39
+Yeah.
+
+Sumit Gulwani   6:40
+So then I created a simple prompt, refined the transcript. Let's see what happens. I've not tried this set. I want to try it in front of you. I just created this prompt. This prompt simply says, it's interesting that it's not showing me the...
+Uh, it's not it's not showing me the...
+the prompt that I had for the refined transcript. But the prompt that I had was...
+That switch continue to generate right? The problem that I had was that recreate the transcript after fixing grammatical errors.
+
+Sadra   7:15
+Yeah.
+
+Sumit Gulwani   7:15
+This is the prompt I wrote for refined transcript.
+
+Sadra   7:21
+So, just can I ask a question?
+
+Sumit Gulwani   7:24
+And now I can download it easily. Yes, go ahead.
+
+Sadra   7:27
+Uh, so...
+
+Sumit Gulwani   7:27
+Yes.
+
+Sadra   7:29
+For a meeting that you don't have access to a transcript, can you make a prompt saying that we generate the transcript?
+
+Sumit Gulwani   7:30
+Yeah.
+Yeah, so there's a bug here, right? Because on one end, it's not allowing me to generate the transcript, but then it allows me to do anything with the transcript. And then I can download it. Now, I know I'm a little bit, you know, not very accurate when I say does not allow me to download the transcript. Because what happens is if I go to the transcript, I can see that transcript always if I'm part of that meeting. But the download button is activated.
+
+Sadra   7:43
+Okay.
+Only when you are.
+
+Sumit Gulwani   7:57
+Only when I hold a meeting.
+And then what happens is that when I try to copy paste this transcript, it does not copy paste properly. They have forced it to contain a very narrow window. So if I will copy paste and copy the entire thing, it will appear that I copy the entire thing in my clipboard, but in my clipboard, only a small part will come. So it fools me. So it wastes a lot of time. I cannot just copy paste, right? So I request people that, but anyways, what are the reason I'm telling you some of these distractions is that there is going to be huge issues around, you know, access management and privacy.
+
+Sadra   8:06
+I don't know, yeah.
+
+Sumit Gulwani   8:25
+and so on and all these bugs will need to be resources. It's A non-trivial thing, right? But the new constructed thing I'm trying to tell you is the custom summary. So how did I get around it? I was very easily able to get around it by saying, just give me the, I could have said, you know, copy the transcript, I'm not sure what would have happened. So I said, copy the transcript after removing grammatical errors. So it gives me this particular form.
+
+Sadra   8:32
+Play song.
+
+Sumit Gulwani   8:45
+But we can do other things also. So let's go, let's create a template, right? So let's say generate speaker level node.
+Okay, maybe this is probably the prompt as simple as this. And then I can try to create a preview of what it would look like. Because you see the speaker level nodes exist and I find them more useful in the AI summary.
+And that's what I sent you yesterday, but by creating using Claude in my own Claude CLI and so on, right? But here, I'm generating speaker level notes, and you can see that they have been generated. They look related to what Teams Excel generates, but Teams also generate some kind of topic before each.
+
+Sadra   9:28
+Yeah.
+
+Sumit Gulwani   9:28
+Your notes, and maybe I can change my prompt and try that. I can save and apply this prompt, so in some sense it is letting me explain view and save that view.
+
+Sadra   9:35
+Sorry.
+So sorry, this shared understanding alignment, this one is a bug, you're saying, because this is not a viewer, this is not a speaker, right? Because as I was saying, like it was Sadra Sumit Souti and then shared understanding alignment.
+
+Sumit Gulwani   9:52
+Maybe it is still the bug here, right? When I'm trying to, when I, okay, maybe this is a bug in Teams, that when there are two parts to the transcript, all the processing is happening on part one. So maybe that bug is still persist even through this, it will not help me avoid this thing, right? So that's what we learned, right? But what I want, but the, but forget about the bug, right? The point is that now you can create your own views.
+Of what you want.
+Here, so you go to custom summary in Teams and you can create your own template and you can decide how you want to filter that transcript out.
+So this kind of view.
+is what we have been talking about, that we should have, that people should be able to define a view, but not only one transcript or a collection of artifacts. And the view has two interesting characteristics, like this can, you can have two interesting characteristics. One is that I own everything and I define the view. The other thing is that I can also do is I can say a transcript which no one else has, and this is a semi-private information, right? Then I can say that only extract those parts.
+that are relevant to this rest of the knowledge base. So that is a view that we also want to define.
+So, but you see what happens here, right? This, I can decide by summary format, but the generalization of this idea is that this is a view. And I can save and apply this view, which means that every time another recap happens, another meeting ends, I will be able to easily run this prompt on that with a click of a button. I don't have to write the prompt again, right? So it is letting me define the view and save the view.
+
+Sadra   11:02
+Yes.
+
+Sumit Gulwani   11:19
+So that this is what this is doing, which I think is very forward looking. I mean, I'm not sure how many people are using it, but I noticed it because we've been thinking more ideas that are aligned with this, even more general than this, but other people are catching up, right? Teams is catching up, right? This is an idea that is coming up. So custom summary, I think is very powerful. So how do you define custom summary? So they create 2 custom summaries by default.
+
+Sadra   11:21
+Awesome.
+
+Sumit Gulwani   11:40
+I do not know what their prompts are. I have never even looked at what executive report looks like. We can look at it. But speaker summary, I think, is very nice. It characterizes the points, you know, for each person and so on.
+And this is the executive report. And then there was this, you know, AI summary that always exists. So the one curiosity that I have is that what difference does it make if you have different kinds of prompts for computing summary or teams notes and so on? I do not know. We should try to experiment with it to say different.
+Small variations, you know, do they make a difference or maybe they do not?
+The other thing that I that I noticed was.
+that when I run the same prompt twice, like the same thing, if I regenerate the speaker somebody the next time around, I close my teams, I go back, then it will rerun the prompt. It does not save these things apparently.
+It will regenerate it and then it turns out to be different. It's not same token by token, right? We know that when you run these agents 2 times, they will give you different outputs. So how significant the difference between there is? Is there any difference? Those are the good things to probably know about at some point of time. They are not the most important thing for us, but it would be good to interest you. Are you at an airport or something?
+
+Sadra   12:45
+Yeah.
+Yeah.
+Yeah, sorry, I mean, I put, there's some noise and and and I and I mute the the the thing so that you don't get buttered.
+
+Sumit Gulwani   13:07
+How much time is your flight boarding?
+
+Sadra   13:10
+Ohh.
+
+Sumit Gulwani   13:10
+Mat.
+
+Sadra   13:13
+Have.
+Two hours.
+
+Sumit Gulwani   13:17
+Where are you going?
+
+Sadra   13:20
+So I'm visiting one of my family member who had like, we had someone, my grandmother passed away recently. So I'm going there to like show them the condolences. I'm going to Oklahoma. But right now, I mean, I'm in Denver. I had a 10 hour layover.
+I put them last night.
+
+Sumit Gulwani   13:42
+Sorry to hear about your grandma.
+
+Sadra   13:45
+K.
+
+Sumit Gulwani   13:47
+Um...
+Okay, so getting back to this, so if I go back, one thing that I was saying was that you can define different views in some sense, because Teams is today allowing that. You can go to custom, somebody can create your template, and you can define the view you want, and you can save and apply. So that thing is happening. In fact, you can even give examples of it, I feel.
+It says, like, follow the format in this node, or maybe it is giving another is giving you a family of templates, right? Giving you a suggestion of a family of templates, say, follow the format in this, right, in this sample node.
+
+Sadra   14:09
+I...
+
+Sumit Gulwani   14:19
+summarize the speaker's key point, create an executive report, and we created our own, you know, you can even create your own views, right? Okay. Then let's go back to the previous screen. Sadra, yeah, go ahead.
+
+Sadra   14:26
+Yes.
+Can you?
+I, I, I tried, like, more complex things, for example, some something that we will be sure if you fail, so, so, so, so, for example.
+
+Sumit Gulwani   14:43
+Okay.
+
+Sadra   14:45
+For each speaker, guess what were the points that they didn't mention, but they wanted to mention something like that, something like none.
+Non-trivial, or like the places where very short they they wanna hallucinate, I I wanna see how they hallucinate.
+
+Sumit Gulwani   14:58
+Okay.
+To select the prompt again, so what is the selection then? What is the prompt I should write?
+The.
+
+Sadra   15:10
+For each speaker, creates plus points, it creates points that they wanted to mention, but they didn't.
+
+Sumit Gulwani   15:20
+But then we should do this on some good transcript, because this one apparently is buggy because of these two parts. It always runs the part part one. Let me let me see if I can run this on a different one.
+
+Sadra   15:25
+Yeah.
+Yeah.
+
+Sumit Gulwani   15:36
+Like to close this.
+
+Sadra   15:36
+Gonna put.
+A simpler one could be like, show the contradictions between people, they will they will pay us.
+
+Sumit Gulwani   15:45
+This is an interesting one. Let's try that, okay? So I'll do this other one, which I think was more good. So here I interviewed the person yesterday whose prompt I shared with you on grounded theory. So this is that one. So this discussion was nice. So let's go to custom summary.
+And...
+Yeah, so this is all all issues, right? Because I have generated something like two or three times now, every time it generates a game, so caching is not happening, it is regenerating all of it and it's wasting tokens, right? You know, huge wastage of tokens.
+So just for you to understand what this conversation was on, you can just look at my, so here, the nice thing about this speaker summary is that it has this, you know, header for each thing. So you can just look at my top level notes here, minimal specifications, creative workflows.
+A connection to human sciences, proposals for distillation methods, distinction between different forms of distal knowledge, right? So, this sounds like Sumit, right? This is what probably I said, you already probably know. Now, let's go and try to create a different summary.
+So, generate for each speaker.
+Generate a list of things they should have said, but they did not say.
+
+Sadra   17:16
+Yes, they wanted to say, or they should have said that they did that.
+
+Sumit Gulwani   17:17
+Yeah.
+You wanted to say what they say.
+And then another one you said was for each speaker.
+or generate any contradictions you find.
+
+Sadra   17:29
+Athena speakers, yeah.
+
+Sumit Gulwani   17:34
+Any constructive contradictions?
+Alright, move the word constructed.
+
+Sadra   17:44
+We should define it, I think we should, we should, let's let it decide, or or the word, yeah, I think for now we can do this, it's constraining.
+
+Sumit Gulwani   17:55
+Excellent.
+I hope it doesn't generate my secrets or something.
+
+Sadra   18:02
+And
+So, did these tests I usually do, because...
+
+Sumit Gulwani   18:05
+The.
+Yeah.
+
+Sadra   18:10
+Usually, these systems are optimized to, like, satisfy you. I want to see how the hallucination is. How good is the hallucination?
+
+Sumit Gulwani   18:26
+We let you get the contradictions.
+Nikhil described workflows as highly automated, yet repeatedly emphasizes the necessity of human critique and intervention.
+Nikhil presents grounded theory in spite analysis as useful and insightful, but simultaneously questions its correctness and rigor, suggesting it can be flawed or naive.
+
+Sadra   18:49
+I think on additional bit, bit, bit.
+
+Sumit Gulwani   18:49
+Though that one, I don't agree that I think one thing that happened.
+Then the third one is...
+
+Sadra   18:55
+Vu.
+Uh, listen, but between people are more interesting than than than than to themselves.
+
+Sumit Gulwani   18:58
+Yeah.
+
+Sadra   19:02
+So, condition between you and for example.
+
+Sumit Gulwani   19:07
+No, come again, so say again: contradictions between two people, right? Not for the speaker, but for two people. OK, you should define the prompt, right? Any contradictions you've find?
+
+Sadra   19:12
+Yeah.
+
+Sumit Gulwani   19:17
+Between the two speakers.
+But it is doing that, right? It is doing whatever you want. And that's what you really wanted to check.
+
+Sadra   19:32
+Hello.
+It's gonna do, like, I guess that's like whatever you say it should do, but like the quality I think is becoming more important.
+
+Sumit Gulwani   19:46
+I see, okay, so this is interesting, right? It's not really a contradiction, right? So what happened was that I emphasized control experiments, yes, I did, and Nikhil prioritizes rapid exploration. It is not really prioritized, he just didn't even think about it. So Nikhil was talking about his exploration, what he did, what he did without the strict validation, and Sumit said that, oh, maybe let's try to do a control experiment to see.
+Was it really useful and how useful it was?
+Uhh...
+So, I'm not sure whether this contradiction or not, but it's still interesting, right? System is trying to do a good job as it can.
+Just in intermediate representations.
+Yes, so I would not really trust it. That's why like this human role optimization is a good one. Sumit highlights the importance of human oversight and structured evaluation in improving agents. Nikhil experiments with fully automated optimization too. Not necessarily, he kept emphasizing the fact that, you know, human intervention is important, but after we learn from past human interaction traces, then less would be needed.
+So I disagree with this sentiment. Interpretation of agent outputs.
+
+Sadra   20:55
+Right.
+It.
+
+Sumit Gulwani   21:02
+So this is interesting. This is a good one.
+So Nikhil said that, oh, the system kept flattering and so on. I said, well, that's what you view, but you are a good, really a good driver of the AI agents. Think about, like, say, my child. I am wanting to do this analysis. I don't think so the agent should be producing that kind of flattery for him because he may not be using these technologies correctly. So those was different point of views.
+It should not necessarily contractions, but where the two speakers had different points of views. This is a good one, this is a correct one.
+
+Sadra   21:33
+Sorry, just out of curiosity, is it the Nikhil from Colorado border? Was it then there is a we have a collaborator and this is not a direct collaborator, but we have a collaborator that works on grounding conversations.
+
+Sumit Gulwani   21:34
+Yeah.
+This is works on generating trusted software systems. That's what he works on.
+
+Sadra   21:49
+Like.
+
+Sumit Gulwani   21:55
+He does interactive to generate implementations of Quicksort and so on.
+
+Sadra   21:55
+So, no, I think.
+I think that this is not perfect.
+
+Sumit Gulwani   22:05
+But I find connections even with such people because I know that they're doing very non-trivial work. And I told him, I'm not interested in what you're doing Nikhil. I'll be very upfront, but I'm interested in how you're doing what you're doing because you're doing something non-trivial. I don't care about that. I care about how you're doing your non-trivial stuff. And that's where I found a connection with him.
+
+Sadra   22:20
+The.
+No.
+
+Sumit Gulwani   22:23
+Okay, so let's go back here. Let me go back to this screen, which I think, you know, where we started with.
+So what you see here on this screen is a list of all of my raw artifacts.
+That is the correspondence to the knowledge base that you have, right? So you also showed the logs. If you go to your Wikipedia, you also show the logs, right? But this is a much nicer view for a very specific kind of logs. It lets me see a summary, it lets me generate a summary, different kinds of summaries, you know, different views and so on.
+
+Sadra   22:50
+Yes.
+
+Sumit Gulwani   23:03
+And then you are very rightly asking what are these other things? So these are some interesting tags that someone might have defined. So the generalization of this column I think would be interesting tags that make sense for the overall context of my knowledge base.
+So it also says I joined late, right? So that one is also shows what I missed because these meetings happened when I was on vacation or I had conflict I didn't attend.
+These many times I was referenced in these meetings.
+And I don't know how long they go, how deep they go, but at some point in time, I don't think so they recorded more, right? They automatically get deleted after like two months or something like that. Okay, I can actually search between these things, right? I can, I can, I can restrict it to only few meetings. So let's say if I type your name, what happens there? I do not know what will happen, but we can see.
+Yeah, this is not good because I think it's going to now search for everything. So let's just go back.
+And now I don't even know how can I get back to that view.
+How do I get back to the view of the meetings on that? So I was clicking here.
+
+Sadra   24:16
+Can you go like you use a flashback to go back the?
+
+Sumit Gulwani   24:26
+I don't even know how to get to this view, but anyways, so we are here. You see this, all these things. Now, one thing that I'm very curious about is, as I said, the real thing comes when you start mashing up information.
+
+Sadra   24:29
+Yeah.
+
+Sumit Gulwani   24:39
+Is that allowed? Is that not allowed? What is this generate audio recap? Let's see what is this audio recap. Customize, style executive, apply.
+So, if I were to, let's say...
+Combine these meetings.
+What would this mean? Generate audio recap if I click on it.
+
+Sadra   25:12
+Well...
+My concern is that...
+
+Sumit Gulwani   25:14
+Okay.
+
+Sadra   25:16
+Cool.
+
+Sumit Gulwani   25:18
+Yes, so interesting, right? So what happens is that it organizes this into chapters and it translates. Let me show you what's happening.
+So let me stop sharing and then I'll share.
+Can you also hear what's happening?
+
+Sadra   25:44
+No.
+
+Sumit Gulwani   25:46
+I started hearing something like, you know, some music and executives, some, you know, polished voice. It was like, oh, Sumit, I need to catch you upon three meetings. And then it started, you know, something like that, right? So in some sense, let's say I'm driving, I have missed a few meetings, it will catch me upon these meetings. So it is still not mashing up the information.
+
+Sadra   25:56
+Ohh.
+
+Sumit Gulwani   26:04
+It just does, but you don't see my screen right?
+
+Sadra   26:05
+Exactly.
+Yeah, I think that the merging is happening very, like, the merging is not happening. It's basically like putting it, putting them together.
+
+Sumit Gulwani   26:19
+Yes, I think there is something that happened in the outro, right? Outro might characterize probably few common points and so on. I would kind of, you know, understand.
+
+Sadra   26:19
+But then.
+Yes.
+
+Sumit Gulwani   26:29
+But it's all very interesting, right? I can probably even say, I don't know how much customization was there. There was some customization there. Let's see how much customization was there probably.
+But in the customization, I would change, you know, I do not know what the settings were, but anyways, but one of the customizations can probably be do a 10 minute thing, right? You know, you have to mash every, I only have 10 minutes to catch up, so catch me only in 10 minutes, those kind of stuff and so on, right? But interesting things are happening, so I wanted to share this, you know, with you essentially, right? In Teams, what it is offering you, but we want to do this for our own knowledge base.
+our documents, our defined documents, prevalence tracking. So that's one thing I wanted to tell you. The other thing I wanted to tell you was...
+
+Sadra   27:01
+Yes.
+
+Sumit Gulwani   27:08
+then the temporal aspect is going to become extremely important, Sadra, extremely important, right? So the way it differs from the traditional old knowledge bases is that the speed at which the information becomes old. Or maybe information does not really become old as much. Truth stays truth. You know, this bridge was constructed in this year and it doesn't matter, it will always remain that, right?
+
+Sadra   27:30
+So, interesting anymore.
+
+Sumit Gulwani   27:30
+But information about the ideas that we are talking about, ideas are going to evolve. And there we actually need to make sure that there's no pollution from old ideas. Actually no pollution from old ideas, right? So for example, I might believe that the job of radiologist is going to be over.
+
+Sadra   27:43
+No.
+
+Sumit Gulwani   27:50
+But then at some point in time I might realize that no, I was so wrong in my thinking and that's not what I should be speaking.
+But if in my future, you know, distillations, I still get those examples of, oh, job of legal knowledge is over, you know, that's bad. That's not capturing my current belief, state of the affairs and so on. So when we talk about these conversations, ideas, meetings, most things are subjective.
+
+Sadra   28:02
+Is it?
+
+Sumit Gulwani   28:16
+Or many things are subjective and that's how we are evolving. That's why your opinions and these opinions are changing and they're changing very rapidly.
+So being able to maintain the right temporal aspect with it is going to be very important. So something is truth.
+Something is my style, which also changes though, but maybe changes much more slowly as I advance through life.
+Uh, and...
+There is this other thing about, at least in today's environment, project planning and design documents, maybe even with you. Like today I have a new belief, which is that earlier yesterday I told you that oh, our project has these three or four ideas. And I didn't emphasize the temporal aspect as much. But now today I wanted to tell you.
+
+Sadra   28:56
+Yeah.
+
+Sumit Gulwani   28:57
+this thing that one of the most important components also is going to be the temporal aspect. And this is what Michael told me, I was reading out this exchange with you yesterday, that my colleague told me that, oh, but these things continue to change and evolve. So we have to make sure that this knowledge base, it's just not a flat collection of documents. As you say, it's a time stand evolution.
+
+Sadra   29:03
+I think.
+Yes.
+
+Sumit Gulwani   29:17
+And we have to be very smart about how we manage this, manage this.
+So you cannot, for example, have a process that from each transcript, you know, computers part of this.
+What are you talking to?
+
+Sadra   29:34
+Soares.
+So, you, you, you, I couldn't hear you, but can can you repeat the last?
+
+Sumit Gulwani   29:40
+I think the people who just be back in the stocks in the car.
+
+Sadra   29:45
+Ohh, so I think I think it's a problem in my side.
+
+Sumit Gulwani   29:48
+Ohh.
+
+Sadra   29:53
+Ohh.
+Can you, can you hear me now?
+
+Sumit Gulwani   29:56
+That is that.
+
+Sadra   29:57
+Okay.
+I, I still, I, I still hear you like more modulated. I don't know why it was happening like this, and then I changed my microphone. It's like noisy.
+
+Sumit Gulwani   30:25
+I.
+I think you can only see.
+Is this better?
+
+Sadra   30:47
+Yes, yes, that was good.
+
+Sumit Gulwani   30:49
+Okay, okay. So what I'm saying is that...
+
+Sadra   30:54
+If.
+
+Sumit Gulwani   30:54
+We cannot just process all transcripts in parallel. Linear aspect is going to be tremendously important. And we have to have a way where what was later timestamped is given more priority preference. And then whenever there's a doubt, the agent actually seeks clarification.
+maybe in a prioritized list of questions that it will have. Because you have to kind of assume that it will not have all the knowledge, tested knowledge, and it is probably not going to be as intelligent in terms of resolving even conflicts. Even I might say 2 contrary to things on the same day, maybe, who knows? But then it may not be able to fully resolve it and it should seek clarification.
+
+Sadra   31:15
+Ask questions.
+
+Sumit Gulwani   31:34
+So temporal aspect and the realization that it can make errors and some human intervention in helping generate some of those summaries will probably be very useful. And that should be an important part of the thing. And what you are saying about deleting information, treating information, I think all blogs in that category or bucket.
+Or?
+
+Sadra   31:54
+Yeah, yeah, and uh, like, when you were telling me, when you were telling me, I was thinking, um...
+This agent is basically, so one naive way to update our graph is to go through all the nodes and see if this is the new transcript changed this or the relation of this to other nodes. This is a very naive way. But I think this works good at.
+all the time and then we can learn.
+I don't know, but, but, but, but, I don't mean machine learning, but like, I mean like heuristic learnings, that's how updating one.
+Part of a graph subgraph should should be propagated to to others as well, so I was thinking of...
+these agents learning from that trivial, that deterministic way of going through all the nodes and updating everything.
+And like having like a like a trade-off.
+
+Sumit Gulwani   33:00
+So this is another perspective I will I will give you maybe a little bit inspired by what you said.
+Is that think about?
+What would it take to simulate the word?
+And.
+Maybe we already have enough to start simulating the word.
+So how is Word operating?
+So every individual, you know, is trying to change the word. Something is happening in their mind, their thoughts, and so on. But at a very sharp level of approximation, I'm always combining ideas, like idea one, idea 2, putting it together to produce another idea. And maybe there are a few other building blocks that I might be using.
+But a lot of what I'm doing is also choices, right? And this is where the real discretion comes in, that I can do so many things, but I'm choosing to do some very specific things. And this is the reason why AI cannot simulate me. But AI can make the process very efficient because it can ask me those questions and ask for those choices and for my judgment.
+Because today, yesterday, I spent so much time just trying to curate my knowledge base, you know, collect transcripts that are not there, you know, here and there, and that's how I figured out, you know, my ways around, you know, Teams, and I'm learning what Teams is also doing, which is very impressive.
+All of that is mundane. I think if AI can do all of that and then AI can quickly get down to me the choices. Okay, now these five topics, can you rank them in order of, you know, importance that you want to go and solve them or put your time into, for example. Right. But then the other way the word works.
+is by people communicating with each other.
+Everyone has the six, you know, separation, right? The distance of separation between every two people on the planet is 6, but this takes time to percolate, so I will tell you something, I will inspire you with something, you will go and inspire you with someone else, you know, with something they will inspire, but this can take months.
+Even if you are in the same organization at the same university, right, it may take weeks. Even in your group, it may take days.
+And that is the opportunity that AI can do. This is what you were talking about in terms of percolation, right? You know, one change here, you know, how should it change and affect, you know, that thing. So I feel as we think about curating this knowledge base.
+It is not very far-fetched to think that you are also trying to build a simulation system for the planet.
+Again, a very philosophical rant there.
+
+Sadra   35:26
+Yeah.
+No.
+
+Sumit Gulwani   35:28
+But there are going to be two aspects of this.
+choice making for an individual, which is what interactively would help, and then the percolation of information, essentially. So those can be two interesting aspects, two interesting algorithmic things that you can add on it. But the better we become at doing this, the more we do this, the more we are trying to improve not just the productivity of 1 individual.
+But an entire organization, and we are getting closer and closer to simulating ourselves.
+
+Sadra   36:02
+By choosing, you meant that choosing which ideas to make to combine to make a new idea.
+
+Sumit Gulwani   36:08
+Yes, yes, yes. Otherwise, what role are we playing otherwise? Right? You know, I'm a like I have all my knowledge that I have, right? And I'm using that to move forward in life. But AI cannot simulate me. Like, like if I, if you were to create a clone of me, as you know, with all the knowledge that I have, and even if it's a perfect clone and if you let it run.
+It might end up doing different things than what I will do because of the choices that I will make.
+
+Sadra   36:31
+Yeah.
+This is the action, the philosophy, what they call it, we have this in Islam, that you have this notion of free wheel, and then you have like, yeah, this is basically this is philosophy of free wheel.
+
+Sumit Gulwani   36:51
+So let me have a thought experiment, right? So let's say you feed my one year of transcripts right into a system and then you let an agent sit in a meeting and I'm also sitting in that meeting and you ask the agent that pretend like Sumit, right? Raise your hand at the right time and make the right commentary, right question, right comment at the right time.
+And then it will be very good, interesting to see, right? How does that agent work and how would I work?
+Um...
+Alright.
+And that will show the difference between free will, you know, choice, and so on, judgment.
+Okay, so good, right? So 2 things, again, summarizing it, let's summarize it. One was the views. Interesting work is already happening in Teams. Hope that was inspiring for us. And the second one is the temporal aspect is very important.
+But these are the two ideas I wanted to share with you when I started the meeting, but the idea that I am learning as we move forward around is...
+this notion of simulation, which is, I was thinking a little bit about it earlier in the morning when I got up, but I'm articulating it for the first time with you right now. And the idea that you mentioned about propagating effects, I think really hones that for me.
+Is.
+that the word moves from individual creativity.
+and communication between and influence between people.
+And these two things map down to...
+
+Sadra   38:30
+Google.
+
+Sumit Gulwani   38:31
+a knowledge base or wiki curation in the following sense, that whenever we are currently getting these summaries or creating new ideas, sometimes there might be an opportunity to make it interactive. And the other one is propagating these things, you know, in the graph to discover new ideas and so on. That would be very interesting too.
+But again, getting back to Thursday, right? You know, there are too many ideas. We have to make sure we have a crisp message that we land. But defining these views and the workflows for generating summaries might be interesting. And the second part that we talked about was mashing it up with private information. That's where I feel the big, you know, differentiation. It's also very dangerous. It needs a lot of more work because of all those privacy things and so on, not easy.
+
+Sadra   38:53
+St.
+Yes.
+
+Sumit Gulwani   39:16
+But I do want to impress upon people is that there is a lot of value to it, and this problem is important and should be studied appropriately.
+
+Sadra   39:24
+Yeah, yeah, I I already worked on the presentation for Monday, and I think that that will be done either by not to tonight or the like tomorrow morning, and then by the end of tomorrow I will have a starting draft after that presentation. I already.
+
+Sumit Gulwani   39:40
+Yeah, Sadra, I am again telling you, right? Monday thing is not like Monday thing you have already nailed. You just need to put the materials together and so on and let that discussion go. Over preparation is not going to help much. It is only going to return minimal returns, right? That's it, right? So there's just you put the information together. Thursday thing is very, very important, right? So because time is very less.
+
+Sadra   39:46
+OK.
+What?
+Hello, Gupta.
+
+Sumit Gulwani   40:00
+And if this thing gets attention and goes forward, then I might be able to bring you in for a very different purpose.
+And you will get access to the kind of knowledge graph that does not exist otherwise, right? The organization, so that's the biggest stake at hand here.
+
+Sadra   40:13
+Yeah.
+We'll focus on that. Yeah, I think again, yeah, I can start working on that, because yeah, as you said, the presentation is more discussion-based, and we have 20 minutes for that, so I think...
+Yeah.
+
+Sumit Gulwani   40:28
+already created, it's great. Now people, it's people's chance to ask us questions, right? That's what I think we should think about this meeting. In fact, if you just could speak up, finish up speaking very quickly, which is you tell them about the implementation. Make sure you have some pictures and so on that you can still show. Let's just assume that even if someone has seen a video, they might have forgotten it or maybe someone does not see a video. So just have some visuals.
+
+Sadra   40:34
+Okay.
+Okay.
+
+Sumit Gulwani   40:48
+In your presentation, if you want to show, you know, what it is about very quickly, but then focus the time on a little bit on how was it implemented and some user studies, right? And then we'll open it for discussion and then we ask the question.
+
+Sadra   41:01
+Okay.
+
+Sumit Gulwani   41:02
+Okay.
+
+Sadra   41:03
+Yeah, yeah.
+Talk.
+
+Sumit Gulwani   41:06
+OK, Sadra, have a safe trip and hope you know that is meaningful for you. When do you get back?
+
+Sadra   41:10
+Okay.
+I will get back Wednesday, but I will, yeah, we'll work from there as well.
+
+Sumit Gulwani   41:20
+OK, then take care and something. OK, bye bye.
+
+Sadra   41:22
+Thank you.
+Play.
+
+Sumit Gulwani stopped transcription

@@ -1,0 +1,626 @@
+---
+timestamp: "2026-05-03T15:20:47-07:00"
+source: "[[Souti-3Apr2026-TRANSCRIPT-Part1.docx]]"
+source_path: "raw/meeting-transcripts/Souti-3Apr2026-TRANSCRIPT-Part1.docx"
+source_type: "docx"
+tags:
+  - extracted
+---
+# Souti-3Apr2026-TRANSCRIPT-Part1
+
+Source: [[Souti-3Apr2026-TRANSCRIPT-Part1.docx]]
+
+SoutiSumit group sync - instance 2-20260403_162644-Meeting Transcript
+
+April 3, 2026, 11:26PM
+
+35m 18s
+
+Sumit Gulwani started transcription
+
+Souti Chattopadhyay   0:03
+This chain of thought thing, because that was not transcribed.
+
+Sadra   0:05
+Yeah, I'm writing it off. Thank you.
+
+Sumit Gulwani   0:08
+Do you want to quickly summarize it here, Sadhar, for AI?
+
+Sadra   0:12
+Yes, hi. The idea was to, after we have these simulations and finding a reward signal in a way to show how preferred is 1 output compared to either for user, trying to come up or answer agents or like find, explore.
+a way to change the prompt in a way to generate that preferred output. One idea was to ask agents themselves, which was referred to as like reverse chain of thought or like reverse engineering of agents to get the prompt that can make the preferred output.
+
+Sumit Gulwani   0:51
+Yes, and I think I also want to capture this, because I think this is a good, good idea, or maybe this is a different kind of idea that came up in our discussion here. So, what we were discussing was, we were...
+Looking at comparing the process with fine tuning, we are typically in reinforcement learning, we generate multiple trajectories on the same task instance, which often happens because of the non-determinism in the model or agented workflow. And then we give preferences as in reinforcement learning. And what this does is this tries to change the weights in the model so that preferred trajectories are more likely to be generated.
+Can we change the way the task was specified so that some trajectory is more likely to be produced than the others? So we will still need a process to generate diverse outputs. Maybe the models not determinism is enough, or we can use some tricks that Sadra had identified, like you put some random words at the beginning of a prompt, some random words at the end of a prompt, and it leads to, you know, interesting diverse solutions.
+creative solutions and that can be one of the ways. But once we figure out a trajectory we prefer, we can also ask a different question. Instead of changing the model weights, can we change the prompt or how should the prompt have been said so that this kind of trajectory was generated? So that's an interesting twist to instead of changing the model weights, can we change the prompt or how things are set?
+
+Athena Saghi   2:10
+Mhm.
+
+Sadra   2:11
+Yeah.
+
+Souti Chattopadhyay   2:12
+Yeah.
+Cool. OK, so Athena, do you wanna?
+
+Athena Saghi   2:19
+Could we move to creativity?
+
+Souti Chattopadhyay   2:20
+Lead us, yeah.
+
+Athena Saghi   2:22
+I think we already moved, like at the end of last session, there were talks about creativity and even a little critical thinking there. When Sumit mentioned maybe the AI should challenge the user, maybe this is not something you're doing. And that reminded me, we have this study of developers doing one hour coding.
+with the code generation tool, anything basically, ChatGPT or Gemini. And we were trying to annotize critical thinking with that, but with a different angle. I guess we were trying to see like how much of this critical thinking is offloaded to AI.
+But what you mentioned, I think it's an important perspective that in each interaction, see what the AI could have done instead to make user more critical. Yeah. About creativity, I talked to Rini, but there are some like questions I want to talk about or some concerns I have.
+So creativity, I have read a lot of literature, and they are usually on a set of common tasks, tasks that are easy to evaluate from the sense of creativity. So here, if you are talking about creativity in Excel, we need to know how we want to evaluate that.
+If there is a like a legit way to...
+Like, evaluate the answer that participants were writing the Excel.
+Can you hear me, Sumit?
+Oh, you're on mute.
+
+Sumit Gulwani   4:00
+Yes, I did lose you. I was hoping the transcript would have captured that, but apparently not. It still says that. So the thing that I see here is that if you're talking about creativity in Excel, we need to know how we want to evaluate that. Is that the question that you had, Athena?
+
+Athena Saghi   4:04
+Gupta.
+Yes, yeah.
+Nice, yeah.
+
+Souti Chattopadhyay   4:17
+Can I ask a question before that? Sumit, why do we care about how creative people are when using Excel?
+
+Sumit Gulwani   4:33
+So Excel is just a tool, and we can also pick up other tools, but Excel is an interesting tool that provides both data computation, you know, visualization. Maybe we can even look at PowerPoint probably, if we would want. But some IW worker kind of tool would actually be good, as opposed to just looking at software development tasks.
+
+Souti Chattopadhyay   4:35
+Oh.
+Mm.
+And.
+
+Sumit Gulwani   4:54
+The.
+By end users, as well, and I think the word is really, really moving into convergence of IW and developer workflows. So, so mind this sentence, and this is something that you will do so much, you know, deeper meaning here, but my sense is that looking at IW workers, IW tasks, information worker tasks, I think probably would give us a rich background, because if you think about like making slides, making pictures.
+
+Souti Chattopadhyay   4:58
+Mhm.
+Mhm.
+Mm.
+
+Sumit Gulwani   5:21
+making charts, how do you tell the message, how do you tell a story? I think these are very inherently very creative tasks. The other kind of creativity might come inside, maybe trying to solve some or invent a drug and so on, but that those would be, you know, of the more, you know, niche population may not be very easy to study.
+
+Souti Chattopadhyay   5:22
+Mhm.
+Mhm.
+
+Sumit Gulwani   5:41
+Also, we need to have implications about education. This is something that needs to be figured out rather soon. How does creativity and critical thinking needs to be continued to be taught, should be taught inside classrooms now that AI is there? So I feel staying in the frontier of relatively simpler tasks, but everyday tasks
+
+Souti Chattopadhyay   5:57
+Mm.
+
+Sumit Gulwani   6:02
+which we deem to be creative, would be worthwhile. The stakes had a huge, no stakes in education and the stakes around many end users trying to be creative.
+
+Souti Chattopadhyay   6:14
+Just workforce, yeah, just workforce, yeah.
+
+Sumit Gulwani   6:16
+The workforce, yes.
+Yes, now, yeah, go, go, Athena.
+
+Souti Chattopadhyay   6:19
+So.
+No, no, finish your thought and then I'll simmer.
+
+Sumit Gulwani   6:22
+Vu.
+No, I was mostly done, yeah.
+
+Souti Chattopadhyay   6:26
+Okay, so the reason I was asked, Athena and I stumbled upon this, is we were trying to figure out which one is sort of the primary objective, right? So one objective could be, for instance, that we want to understand given something like Excel, where features could be used in many, many different ways.
+People are using it from like planning room architecture to games, right? There's the huge space. One objective could be we are studying where the barriers of creativity are when we are asking people to use these features in unconventional ways.
+And the reason we want to learn about this is we have AI now. So we want to understand how AI can then teach these users these, like what is the optimal way of using it. So going back to your example of over specifying that long term text in the cell where they wanted it to be clickable or something like that.
+It was because this gap, right? They couldn't figure out, or there was some barrier, like they couldn't figure out what would be the most optimal way of doing it. And one, by giving, observing these creative workflows, we can figure out like, okay, what's the boundary? Where does the AI need to be supported? Where does the AI need to be contrastive and give them like alternate ways, et cetera, et cetera. So that could be.
+be one objective. It could go the other way, where we are looking at skill gap and trying to understand how AI can fill the skill gap by asking people to be creative. The objective there would not be to study creative workflows, but to understand if AI can detect skill gap and supplement it.
+
+Athena Saghi   8:10
+Mhm.
+
+Souti Chattopadhyay   8:14
+So that's, yeah, that's what we wanted to learn more from you.
+
+Sumit Gulwani   8:22
+Ohh.
+So let me understand the second part. So the first part was like, does the most, like, like even this task that maybe I can get back to the previous question, right? There's this task of figuring out the top 10 students out of 800 students. With this kind of task.
+
+Souti Chattopadhyay   8:36
+Hmm.
+
+Sumit Gulwani   8:44
+And now many people will want to be that kind of creative because earlier they were blocked by being able to do these tasks in the 1st place. Like even if they had a creative idea, implementing that would be very challenging. Maybe they will have to pick one and then just go in that direction.
+
+Souti Chattopadhyay   8:53
+Mhm.
+I.
+Yeah.
+Mhm.
+
+Sumit Gulwani   9:01
+But now people can come up with really truly creative ideas and they can then get it implemented using AI. In fact, AI, like this task is so, so interesting, like top 10 students, because everyone with their own very unique background, their own diversity, they're bringing to the table, they might have their completely own ways of looking at candidates.
+
+Souti Chattopadhyay   9:08
+Mhm.
+
+Sumit Gulwani   9:20
+Like how do you even figure out diverse candidates, for example? So it would be very interesting to study the creative workflows of people here if we want to see how different people approach problem solving. So maybe the assumption that I'm making here is that people are already very creative. And now is that time, or now we have opportunity to let them be creative and exercise their creativity and bring that to life.
+
+Souti Chattopadhyay   9:20
+Mhm.
+Mm.
+
+Sumit Gulwani   9:41
+And let's just see, you know, how people are, you know, brilliantly creative and so on. So that's one part, right? So they are just using as an AI as a tool to implement their creative ideas. But AI is not providing as much of A creativity, but people are creative. AI is providing an environment to give license to people to be creative. So that is probably in one perspective. And now we get to study even more, you know, creative, you know, ideas, problem solving, you know, from people.
+
+Souti Chattopadhyay   9:50
+Mhm.
+
+Sumit Gulwani   10:05
+I'm not sure any if you are saying this thing is part of your, you're contrasting two things, right? I'm not even sure if this was even one of the things that you meant or you mentioned.
+
+Souti Chattopadhyay   10:14
+Yeah, so the contrast I'm trying to bring is 1 objective that we have is to understand how AI can support the creative process that the humans have naturally. The other would be for AI to sort of look for where the human is falling behind or doing
+Or making suboptimal decisions and then, you know, supporting them, yeah.
+
+Sumit Gulwani   10:38
+Got it.
+I see. So very good point, right? It's a very great articulation actually. So I'll just repeat what Rini said. So one option is, or one role that AI plays is that AI supports the creative process of humans today much more in an easier way, less friction. And the second thing is that AI actually helps
+close the creativity gap for people, maybe something that they did not think about, like reversing assumptions, something that they were there, blind spots and so on. Both are fascinating, fascinating topics. In fact, these two examples that we had are belonging to, you know, those camps as well. So even being able to articulate this, what you just did, Rini, I think is beautiful.
+
+Souti Chattopadhyay   11:14
+Mhm.
+Yeah, yeah, but, but so that's fair. Sorry, Athena, go for it.
+
+Athena Saghi   11:30
+Sorry, I, so you're saying that AI is complementing creativity and is helping right now humans to identify those gaps?
+
+Sumit Gulwani   11:41
+So I think it is both, right? AI is both. So on one hand, I feel that I'm quite creative in terms of the ideas that I have and I want AI to execute. So that's my creativity. But then on the other hand, when it comes to place things that I don't have expertise in, such as picking, even just picking the right coloring scheme.
+So if you ask me to make a PowerPoint deck, I struggle to pick that. I have no idea, no background in this kind of thing. How should I even lay out things in a way that it is not cluttered, you know, simple? And this is the place where I would be looking forward to AI to helping me with this. But I need to ask the right question at least. At least I have the sensibility that color choice makes a difference. How you position things on the slides makes a difference.
+Like people will always, always write the headings of the slides in the biggest font. But what does that do? It takes away all the attention from the entire content and what we are speaking just to that part. Is that what we really want the user to focus on? I do not know what the typical size should be, what the relative size should be. No, I'm not saying that the heading should actually be smaller font than the rest of the text, but I've seen this thing somewhere.
+But I don't still know what to do. So being able to ask the right question, you know, is my pre-regulative. But how AI fills in that gap, this skill gap, how AI fills in this skill gap is also the opportunity there. So in some sense, I'm going to be using AI for both those things. One is that I had my creative ideas, AI, please go and implement it.
+And the other one is, I have some directionality, some known skill gap that I know of, and I'm going to be driving AI towards that. But as Juni is saying that maybe AI can itself proactively think about what the user lacks and can provide inputs there. So it can work both phases.
+
+Souti Chattopadhyay   13:26
+Mhm.
+
+Athena Saghi   13:30
+Yeah.
+
+Souti Chattopadhyay   13:30
+Yeah, so the conversation we were having is like depending on which objective we try, like we can try both sequentially or maybe it's just one study which can give us both, but it was seeming to us that if we want to study creative workflows and how AI is supporting those creative workflows.
+that requires a specific set of tasks, right? You know, some open-ended, but there is more space to be creative where we measure how unique the use of a feature is. For example, like using a graph to draw a picture or something like that. So Athena will tell you about this very interesting test of.
+
+Sumit Gulwani   14:07
+OK.
+
+Souti Chattopadhyay   14:09
+The circle thing, Athena, do you want to talk about it a little? Like this creativity test thing?
+
+Athena Saghi   14:13
+Yeah.
+Yeah, so there's Torrance test. It's one of those old psychology tests that measures creativity. It's, I mean, I think it was initially designed for children. The task is simple. It looks into divergent thinking and convergent thinking in three steps.
+The first one I think is that they give a concept like a draw a house and then they ask the and they ask the participant or the child to use circles and squares, give them something initial and then they have to do divergent thinking and come up with as much as different shapes they can.
+
+Sumit Gulwani   14:39
+Inc.
+
+Athena Saghi   14:54
+The second part is conversion thinking. They give them an already existing sketch, but it's incomplete. And they ask them to complete it. And I think the third step is a blank page, which they don't give them any initial shapes or ideas. And basically they have to come up with the whole thing and do the conversion thinking at the same time.
+There is something similar for writing as well. I don't know about that one, but it's Torrance writing and drawing skill. And I was talking to Rini that, so if you want to run an experiment even with Excel, we can do something similar. Have like different phases of with different small tasks, participants working with Excel.
+
+Souti Chattopadhyay   15:24
+Yeah.
+
+Athena Saghi   15:37
+to measure divergent and conversion thinking more specifically. Yeah.
+
+Sumit Gulwani   15:44
+So, so just again thinking, building out on your thought here, that that fitting all the interesting task, you know, would be important here. So, how do people, let's say, build up pictures for their title slide that they have in their presentation? You know, can be interesting.
+So I might have shared in one paper with you where we applied divergent thinking and convergent thinking to picture creation, but I think much more is possible there. So let's say, let's forget about our tool, right, that existed, but just, you know, going.
+
+Souti Chattopadhyay   16:10
+Yeah, yeah, yeah.
+Mhm.
+
+Sumit Gulwani   16:25
+Save some conference, people have some papers, so there's just one step paper accepted at conference, right now they're putting up their slide together. We might actually want to study what process are they using to figure out the right visuals, if at all, that they have for their deck. You know, that would be very fascinating to study, or maybe you can make up tasks like...
+
+Souti Chattopadhyay   16:32
+And.
+Mm.
+
+Sumit Gulwani   16:44
+Oh, this is the 50th year anniversary of Excel. Let's try to make some pixel art, you know, in Excel. How do different people would go about, you know, creating that?
+
+Souti Chattopadhyay   16:54
+Mhm.
+
+Sumit Gulwani   16:56
+Charts is probably what I would think. Maybe people expect the system to be able to do it on its own, but maybe there is something interesting there. But how will you try to go about figuring out or making some good dashboards? The place where I felt that a lot of creative potential was there in terms of just visualizing.
+
+Souti Chattopadhyay   17:02
+Mhm.
+
+Sumit Gulwani   17:13
+the artifacts that are produced by an agent. So I'm trying to build up some app, whether it is in a health app, in a finance app, vacation app, but whatever I have interacted with the system, how do I actually visualize all of that? I feel that there's a rich space for creativity there and this is where people, where their systems are not as good at it automatically.
+
+Athena Saghi   17:16
+If.
+
+Sumit Gulwani   17:32
+And now the user has to really work with the agent or drive the agent in coming up with the right visualization, the right layout of things. And there is a lot of creativity possible there. I just like the website design and so on, or I'm building an app. So how do I design the view over the assets that I have?
+
+Souti Chattopadhyay   17:44
+Mhm.
+Yeah.
+
+Athena Saghi   17:50
+Yeah, true. So what we are looking here is, because we have an idea phase when you come up with the idea and then an implementation phase. And what we are looking at is both of them, because if you want to just look at implementation, it would be very hard to find all, like very creative people.
+In my study for programming, I was hoping that I might see some like novel or very less common solutions, but given the time I gave them, I think it was almost impossible to see those like creative algorithms that I had in mind. So I guess we...
+Here, we need to focus on ideas, unless we can find filter participants with high creative abilities, creativity abilities.
+
+Sumit Gulwani   18:38
+Yeah, so I'm not sure how much this applies, right? But the place where I did spend some time thinking is about this vacation thing, like even this vacation that I planned. So I had my own way of doing things in the past because I get very limited time, you know, with my kids when the kids' schedules match and then I can take off and...
+you know, for me, the limited time that I get, I also want to travel to India to see my mom. So I get very little time, you know, with kids and family when I can go out. So I do make sure that I plan it well. And I used to have my old way of planning it, but now I have, you know, planned it, you know, with Claude CLI. But I feel that there's so much really space, but I'm not sure if many people will resonate with this or not, right? But.
+I'm kind of assuming that people like to travel. Now, some people will say that I don't care about it. I decide, you know, each day where I'm going to even spend the night, you know, that day. Some people are in that mood. Maybe this is not going to work for them. But for people who plan their vacation, maybe, let's say, you know, one week in Rio, just watching their process.
+And how do they even put together the information in a layout, in a PDF or an app, you know, for them to see over their phone when they're traveling would be fascinating.
+
+Souti Chattopadhyay   19:49
+Mhm.
+
+Athena Saghi   19:50
+I see.
+
+Souti Chattopadhyay   19:51
+Yeah.
+
+Sumit Gulwani   19:53
+So there's both idea and implementation phase. The idea is at the very top level, how do they decide to even figure out which part of the city or what would they be doing, you know, each day? And then the implementation is, you know, getting into more details about how do they decide to travel between places or...
+
+Athena Saghi   20:03
+Vu.
+
+Sumit Gulwani   20:11
+how do they even visualize the layout of that thing and share it with friends? So think about a task like that, right? I think thinking about a task which resonates with people, where they would be willing to spend time as opposed to like, you know, oh, we'll pay you for one hour and then you know, you do it and we watch you. That is the place where I think a lot of interesting stuff gets lost.
+
+Souti Chattopadhyay   20:16
+Yeah.
+
+Athena Saghi   20:26
+Yeah.
+
+Souti Chattopadhyay   20:30
+Yeah.
+
+Sumit Gulwani   20:30
+But if you pick tasks that people have a stake in it, you will actually, you know, get to see a lot. So for example, if Vini can be a participant here, if she has to pick a graduate student, you'll see how much work she's going to put into the plan because it depends five years, right? She'll be stuck with that student for five years. So you will really see the creative, you know, juices coming out, you know.
+
+Souti Chattopadhyay   20:49
+Okay.
+The.
+Vu.
+
+Athena Saghi   20:54
+Oh.
+
+Sumit Gulwani   20:56
+like that where people have a stake and this is an asset that is useful to them. This is not just for a study that they're doing it for you. If you can figure out tasks like maybe that's my biggest idea and message here, right? Whatever you are trying to study.
+
+Athena Saghi   21:07
+Mhm.
+
+Sumit Gulwani   21:10
+Try not to do a user study today. Pick a task which matters to people, and they will be able to do it with the power of AI today. And request them to allow you to watch them while they do it.
+
+Athena Saghi   21:22
+I see.
+So if I wanted to like write some research questions here to aggregate what you're talking, I guess the first question is how people...
+
+Souti Chattopadhyay   21:25
+Yeah.
+
+Athena Saghi   21:36
+How we will engage that in creativity process, what they do to.
+So, basically, let's assume we have a we have a task. Our first question is to understand how they use it, how they use the tool to come up with that.
+
+Sumit Gulwani   21:51
+Yes, yes, like even slides, right? Everyone is making slides.
+
+Athena Saghi   21:54
+Yeah.
+
+Sumit Gulwani   21:56
+presentations. Now pick those people who have high stake presentations. Maybe they're doing a job talk or maybe they're putting together a conference, you know, talk to your conference presentation and just see, you know, maybe you know, pick some part of it and so on. How are they making these slides today? Like people have so many different ways of making slides today and I'm hoping that they're really using the using AI.
+
+Athena Saghi   22:01
+Mhm.
+
+Sumit Gulwani   22:15
+But will be surprised as to what are the different ways that they are using it. Or maybe you can pick some parts of it, such as, okay, are you caring about visuals? Do you make good visuals in your slide? Okay, what is the process that you're using to make visuals?
+
+Souti Chattopadhyay   22:27
+Mhm.
+
+Athena Saghi   22:30
+And this is this is like we ask them to be creative or we just want to see naturally how creative they can be without prompting them.
+
+Sumit Gulwani   22:35
+But...
+Yes, so this is what my hope is that if you study them in their natural environment, you will watch, you know, some some real, you know, truth, you know, coming out there.
+
+Athena Saghi   22:52
+You see?
+
+Souti Chattopadhyay   22:52
+And some people are not creative, Sumit.
+
+Sadra   22:55
+So, I think it does. So, you're saying that we want to observe their natural behavior and we want to see different unconventional ways that people do the same thing, right?
+
+Sumit Gulwani   23:10
+Yes, yes, exactly, yes, yes.
+
+Souti Chattopadhyay   23:12
+Mm.
+That's a, we need to find. So one of the ideas we had, maybe this is, we need to sort of create this environment because it's difficult to tap into. I mean, I like the slide or paper writing or these kinds of ideas because you'll find a lot of people Athena here who are working on it. But another option could be.
+Sumit, so at this year, we were trying to, we were thinking of putting together a workshop on creativity and AI, and one of the workshop activities could just be like, we ask them to try to use Excel agent to.
+do something creative in Excel, maybe build an app application in Excel, like, you know, your personal website in Excel or something like that, which is uncommon. And we can observe how people are sort of going about trying to do this differently. Everyone will have different ideas, some limited by how good they are at Excel, which will limit them as to.
+how weirdly EXCEL can be used, whereas others might not be right.
+
+Sumit Gulwani   24:19
+So, yes, yes, so, so I will give you an example right, and if you run it, so...
+So at least the environment that I grew up in India, I don't see any, like people don't have good enough financial savviness around things. You know, that's what I learned, you know, you save some money, put it into fixed deposits and...
+
+Souti Chattopadhyay   24:39
+Yeah.
+
+Sumit Gulwani   24:41
+It had made my life miserable even today, because up until a little while ago, you folks would not believe it, but my bank balance was close to 0. And I made, you know, some big, you know, financial, you know, bad decisions in my life. I, you know, all, you know, my sort of stock at $25 that I would get, you know, I would sell it all, you know, send it to India.
+investment fixed deposits and so on, very poor and bad financial choices.
+And now I am a very aggressive investor, and it's a high risk and reward thing. But all the people have been left behind. In fact, I know some very smart people from my college, you know, setting up now some financial, you know, services here. But anyway, so here is the point.
+So I want to encourage the people in my neighborhood in India to invest in, to make investments, invest in the stock market.
+
+Souti Chattopadhyay   25:36
+Mhm.
+
+Sumit Gulwani   25:36
+Today I saw a very creative LinkedIn post around it, right? And these are the kinds of things which are very easy to actually create in Excel spreadsheets and so on, very easy, right? So what this person did was, so she said,
+that let's imagine the life of a worst possible investor. So what this investor does is if this investor has spent like 30 years and every year they invest 1 lakh rupees.
+But what do they do? They invest 1 lakh rupees when the stock market...
+point in that year and then it you know falls after that. So they are the most unlucky people. So in a given year they invest at the time when the stock market is the highest.
+
+Souti Chattopadhyay   26:15
+Mhm.
+
+Sumit Gulwani   26:16
+So this is the story of the worst possible investor. And they say that if every year you are so unlucky to invest in 1 lakh rupees at the worst possible stock price, this is what you end up making after 30 years. So you get like something close to like, you know, 11% no return.
+
+Souti Chattopadhyay   26:35
+No.
+
+Sumit Gulwani   26:38
+Whereas, you know, these FDs, you know, would have given you an average 6% return and you pay taxes on top of it and so on. I thought that was a very creative, you know, thing. But once you have this creative idea, you can easily, you know, get this automated, you know, the cloud CLI. So what I'm saying is, you know, make up a table, but table is to be nicely formatted, it should appeal and so on. So the idea is creative.
+
+Souti Chattopadhyay   26:44
+Yeah.
+
+Sumit Gulwani   26:58
+and then you need to implement it, make sure there's no hallucination, everything is, you know, extracted rightly and so on. And there's a lot of stake here. Like I have a lot of stake in giving the right messaging to my folks about finance, education. And this is a creative idea that I could have actually implemented and so on. So think of something like that, right? Like vacation, finance, health, you know, these are all the things that many people care about.
+
+Souti Chattopadhyay   27:04
+No.
+
+Sumit Gulwani   27:21
+If you can think of some tasks in these domains and presentations as well, right, and everyone, you know, makes these presentations and so on. If you can think about some common task here that will get different people excited and see how they, and maybe it's an Excel, right, and it's a spreadsheet that they do and so on, but you specify an open-ended task and you study their creative workflows, how they go about, you know, doing.
+
+Souti Chattopadhyay   27:43
+Mhm.
+Yeah, pretty cool.
+
+Athena Saghi   27:45
+Yes.
+
+Sumit Gulwani   27:47
+Right, so, so maybe why we get into the distraction, right? So maybe you are asking that, okay, what will you ask these people to do, right? And I just gave you an example from my life, right? But to these people, maybe, let's say the audience here is, you know, conference organizers, maybe they want to do some interesting statistics around, okay, you know, how is the graph changing in terms of where are more interesting HCI papers coming from, which countries, and how has the graph changed over the...
+years. And are more people coming into HCI now? Is it really becoming a more hot field? Or what is the earlier area of some of the people that is out there? Or whatever, right? Maybe there are some fascinating, interesting questions that they can come up with. But then how do they go about implementing their creative ideas is what we probably want to watch.
+
+Souti Chattopadhyay   28:15
+Mhm.
+Mhm.
+Yeah, yeah.
+Yeah, that's it. It's interesting. Yeah, health, finance, conference organizers, so they're...
+Yeah, it's a, we can, we can think of some Athena, and I can think of some, and then if the OS workshop does come together, then that will give us a nice location to like have everybody kind of do this hands-on experiment at an interesting, oh, I mean, you know, your slide of the pencil bucket, what was it, associated theory, right?
+So if we do something like creative workflows, it would be great to sort of also give them something back as to be how to do creative thinking. And so something like your presentation that you were giving to the speakers, something of that would also be helpful. I mean.
+It's an open-ended thing, would have to, would love to have, if you have, it's in the US, so you don't have to travel outside, it's in Michigan. If we put it together and manage to get in, then it would be awesome to have you give a talk. Also, we can come collect data, we can plan some other stuff as well. So that's been going on in my mind in the back end.
+which they are not aware of.
+
+Sumit Gulwani   29:43
+So, when, when is this raining?
+
+Souti Chattopadhyay   29:46
+When is the list guys? Do you guys know October or something?
+
+Sumit Gulwani   29:46
+Yeah.
+
+Souti Chattopadhyay   29:51
+Always 2026 is in.
+November 2 to 5.
+
+Athena Saghi   29:55
+November.
+
+Sumit Gulwani   29:59
+You said November 25th.
+
+Souti Chattopadhyay   30:01
+November 2 to November 5, 2nd to 5th.
+
+Sumit Gulwani   30:04
+I see. Okay, so I will definitely keep that, mark that on my calendar for now and we'll see how things go along.
+
+Souti Chattopadhyay   30:16
+Of course, they have to accept our workshop proposal first to be able to, for us to do any of this. So it's a long shot, but just floating it around, definitely a nice place to gather data, but then also a nice place to promote some of the stuff that you want to promote. Yeah.
+
+Sumit Gulwani   30:20
+Yes.
+
+Athena Saghi   30:28
+Mhm.
+
+Sumit Gulwani   30:31
+Yes, so one opportunity that we may have around this is that, so I'm helping out someone.
+
+Souti Chattopadhyay   30:42
+Mm.
+
+Sumit Gulwani   30:43
+to start a new AI university in India.
+
+Souti Chattopadhyay   30:46
+Hmm.
+
+Sumit Gulwani   30:47
+And right now I am trying to see if Satya would like to sponsor that or invest into it. So some internal Microsoft blogging I'm trying to do here. But they open define the courses and getting the right data.
+
+Souti Chattopadhyay   30:58
+Mhm.
+Mm.
+Mm.
+
+Sumit Gulwani   31:09
+as part of this.
+So one difference is that the person who will be running this.
+Like, so, so, so, whatever if she says, you know, do X and then X happens, right? In the sense that there's no not much bureaucracy, so one person will be the head of this. So, if you have some thoughts, some ideas on what any interesting course around AI would be, should be, then...
+
+Souti Chattopadhyay   31:20
+Mm.
+Mhm.
+
+Sumit Gulwani   31:37
+then one can consider floating that idea and or maybe even like, you know, a few weeks of projects or something. But you can imagine a few hundreds of students doing that over four months and then this keeps getting repeated and the audience would be and what I'm also encouraging them is to open this university to also professionals who are late in their careers and they want to make a switch or returning professionals, right? So let's say
+
+Souti Chattopadhyay   31:39
+Mhm.
+
+Sumit Gulwani   32:01
+someone took a career break to raise their family, but now they want to come back and now they can probably, you know, with the power of AI. So that can be the kind of audience for that. But anyway, some random thought. But if you have some interesting course, the purpose of that can be to experiment and do data collection.
+
+Souti Chattopadhyay   32:04
+Mhm.
+Mmh.
+Mhm.
+Yeah, absolutely.
+Mhm.
+
+Sumit Gulwani   32:21
+in an unprecedented manner, because there will be no bureaucracy here. And if this person says, you know, this should be done, it will be done.
+
+Souti Chattopadhyay   32:21
+Mhm.
+Mm.
+Yeah, the best things about Monarchy.
+That's great. Yeah, that's a very good idea too. I mean, I think more, I have a few courses I teach here. One is about like intelligent interactions. So that's more human centered AI kind of stuff. I'll float, I'll give you some summary ideas and then you can pick like which sounds more.
+Sort of aligned to what you have in mind.
+
+Sumit Gulwani   32:56
+Yes, so they have been continuing to, you know, iterate with me on the course curriculum and so on. But if you personally would be interested, I can even connect you there. You can consider doing a course in person. You can consider doing a course remotely or part of a course in whichever way you would like to contribute. But then your opportunity here might be to build some connections and do, you know, tons of user studies.
+
+Souti Chattopadhyay   33:13
+Mhm.
+Yes.
+Yeah, that will be great. Yeah.
+Awesome. Well, thank you so much for such great conversations. There was this piece of opinion perspective paper that I'm trying to write. Creativity is the new productivity. And I'd love your
+
+Sumit Gulwani   33:27
+Yeah.
+Yeah.
+
+Souti Chattopadhyay   33:45
+You know, love to have you involved, so I'll flood the draft to you, see what you think, what we can write about it, but...
+
+Sumit Gulwani   33:51
+Yes, yes, so I used to use that phrase in some of my talks before, which creativity is a new productivity, so I would love to love to, you know, contribute here.
+
+Souti Chattopadhyay   33:56
+Yeah.
+Awesome.
+Awesome, that's great.
+Cool, thanks Sumit. We'll stay in touch. Of course, we'll probably in a, once you're back from your trip, you're back on.
+
+Sumit Gulwani   34:11
+So 20th, 21st, I'll get back to office 21st.
+
+Souti Chattopadhyay   34:12
+Me.
+Twenty-first. OK, I'll be back 20th, so that's perfect. Um, so then...
+
+Sumit Gulwani   34:20
+So Sadra, one thing that I do plan to do is that even if we are not sharing the video with Microsoft this time around, but once even if you have the VIST video prepared, you know, send that to me. But at least we can do one iteration on the Microsoft video and then I can give you a feedback.
+
+Sadra   34:28
+I was 17, yeah.
+Yeah.
+
+Souti Chattopadhyay   34:34
+Yeah.
+
+Sadra   34:34
+Yes, definitely, yeah.
+
+Souti Chattopadhyay   34:35
+I think make a, if your fork, if your the videos are different, make a fork early on until the point that they are common, and then you know, wherever you fork, you can send that to Sumit for iterations for the Microsoft, and then you have the 9th deadline for waste anyway, so the video has to be done before that.
+
+Sadra   34:54
+Yeah, they're pretty much different, but yeah, I'll try to try to make it work now.
+
+Souti Chattopadhyay   35:00
+Okay, thanks guys. Yeah, enjoy your vacation. Stay safe and it sounds scary now that you have shared all the stories. Stay safe.
+
+Sumit Gulwani   35:01
+Okay, great chatting with you all. Enjoy your weekend. Yes.
+
+Sadra   35:03
+Yeah, bye.
+
+Athena Saghi   35:05
+Thanks, Sumit.
+
+Sumit Gulwani   35:06
+Yes, yes, thanks.
+
+Athena Saghi   35:07
+Kick.
+
+Sumit Gulwani   35:09
+Six.
+Yeah.
+Okay, then. Take care, folks. Yeah. Bye-bye.
+
+Souti Chattopadhyay   35:13
+Yeah, yeah.
+What?
+
+Sadra   35:15
+Bye.
+
+Athena Saghi   35:16
+Bye.
+
+Sumit Gulwani stopped transcription
