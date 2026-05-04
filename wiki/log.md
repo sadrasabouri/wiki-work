@@ -24,3 +24,9 @@ Sources ingested (13 files):
 **Pages created:** 18 concepts, 5 people, 2 projects, 7 events, index, log
 
 ## [2026-05-03] view:query | can you create a summary of all information for a 5 years old?
+
+## [2026-05-03] view:timeline | views
+
+## [2026-05-03] view:contribution-map | views
+
+## [2026-05-03] view:open-questions | all
