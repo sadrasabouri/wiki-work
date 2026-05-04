@@ -1,0 +1,204 @@
+name: Publish Quartz Branch Sites
+
+on:
+  push:
+    branches:
+      - "**"
+    paths:
+      - "**/*.md"
+      - ".github/quartz-branches.txt"
+      - ".github/quartz-content-paths.txt"
+      - ".github/workflows/publish-quartz-branches.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out vault repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build configured branches with Quartz
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          ROOT="$GITHUB_WORKSPACE"
+          REPO_NAME="${GITHUB_REPOSITORY#*/}"
+          OWNER="$GITHUB_REPOSITORY_OWNER"
+          QUARTZ_DIR="$RUNNER_TEMP/quartz"
+          SITE_DIR="$RUNNER_TEMP/quartz-pages"
+          WORKTREE_ROOT="$RUNNER_TEMP/wiki-worktrees"
+
+          mapfile -t BRANCHES < <(sed -e 's/[[:space:]]*#.*$//' -e '/^[[:space:]]*$/d' "$ROOT/.github/quartz-branches.txt")
+          mapfile -t CONTENT_PATHS < <(sed -e 's/[[:space:]]*#.*$//' -e '/^[[:space:]]*$/d' "$ROOT/.github/quartz-content-paths.txt")
+
+          if [ "${#BRANCHES[@]}" -eq 0 ]; then
+            echo "::error::.github/quartz-branches.txt does not contain any branches to publish."
+            exit 1
+          fi
+
+          if [ "${#CONTENT_PATHS[@]}" -eq 0 ]; then
+            echo "::error::.github/quartz-content-paths.txt does not contain any content paths to publish."
+            exit 1
+          fi
+
+          mkdir -p "$SITE_DIR" "$WORKTREE_ROOT"
+          touch "$SITE_DIR/.nojekyll"
+
+          git -C "$ROOT" fetch --all --prune
+          git clone --depth 1 https://github.com/jackyzha0/quartz.git "$QUARTZ_DIR"
+
+          cd "$QUARTZ_DIR"
+          npm ci
+
+          declare -A SEEN_SLUGS=()
+          declare -a BUILT_BRANCHES=()
+          declare -a BUILT_SLUGS=()
+
+          for branch in "${BRANCHES[@]}"; do
+            slug="$(printf '%s' "$branch" | sed 's#[^A-Za-z0-9._-]#-#g')"
+
+            if [ -n "${SEEN_SLUGS[$slug]:-}" ]; then
+              echo "::error::Branches produce the same URL folder: '${SEEN_SLUGS[$slug]}' and '$branch' both map to '$slug'."
+              exit 1
+            fi
+            SEEN_SLUGS[$slug]="$branch"
+
+            if ! git -C "$ROOT" show-ref --verify --quiet "refs/remotes/origin/$branch"; then
+              echo "::error::Configured branch '$branch' was not found on origin."
+              exit 1
+            fi
+
+            echo "Building branch '$branch' into /$slug/"
+            worktree="$WORKTREE_ROOT/$slug"
+            git -C "$ROOT" worktree add --detach "$worktree" "origin/$branch"
+
+            rm -rf "$QUARTZ_DIR/content"
+            mkdir -p "$QUARTZ_DIR/content"
+
+            for content_path in "${CONTENT_PATHS[@]}"; do
+              source_path="$worktree/$content_path"
+
+              if [ ! -e "$source_path" ]; then
+                echo "::warning::Path '$content_path' does not exist on branch '$branch'; skipping."
+                continue
+              fi
+
+              mkdir -p "$QUARTZ_DIR/content/$(dirname "$content_path")"
+              rsync -a "$source_path" "$QUARTZ_DIR/content/$(dirname "$content_path")/"
+            done
+
+            if ! find "$QUARTZ_DIR/content" -type f -name '*.md' -print -quit | grep -q .; then
+              echo "::error::No Markdown files were copied for branch '$branch'."
+              exit 1
+            fi
+
+            if [ ! -f "$QUARTZ_DIR/content/index.md" ]; then
+              if [ -f "$QUARTZ_DIR/content/wiki/index.md" ]; then
+                cp "$QUARTZ_DIR/content/wiki/index.md" "$QUARTZ_DIR/content/index.md"
+              else
+                {
+                  echo "# $branch"
+                  echo
+                  echo "Published from branch \`$branch\`."
+                } > "$QUARTZ_DIR/content/index.md"
+              fi
+            fi
+
+            export QUARTZ_BASE_URL="$OWNER.github.io/$REPO_NAME/$slug"
+            export QUARTZ_PAGE_TITLE="$REPO_NAME: $branch"
+            node <<'NODE'
+          const fs = require("node:fs")
+
+          const configPath = "quartz.config.ts"
+          let config = fs.readFileSync(configPath, "utf8")
+
+          config = config.replace(
+            /pageTitle:\s*["'`][^"'`]*["'`]/,
+            `pageTitle: ${JSON.stringify(process.env.QUARTZ_PAGE_TITLE)}`,
+          )
+
+          config = config.replace(
+            /baseUrl:\s*["'`][^"'`]*["'`]/,
+            `baseUrl: ${JSON.stringify(process.env.QUARTZ_BASE_URL)}`,
+          )
+
+          fs.writeFileSync(configPath, config)
+          NODE
+
+            npx quartz build -d content -o "$SITE_DIR/$slug"
+            git -C "$ROOT" worktree remove "$worktree" --force
+
+            BUILT_BRANCHES+=("$branch")
+            BUILT_SLUGS+=("$slug")
+          done
+
+          {
+            cat <<HTML
+          <!doctype html>
+          <html lang="en">
+            <head>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <title>$REPO_NAME branch sites</title>
+              <style>
+                body { font-family: system-ui, sans-serif; max-width: 720px; margin: 64px auto; padding: 0 24px; line-height: 1.5; }
+                h1 { font-size: 1.8rem; }
+                a { color: #0b63ce; }
+                li { margin: 0.35rem 0; }
+              </style>
+            </head>
+            <body>
+              <h1>$REPO_NAME branch sites</h1>
+              <ul>
+          HTML
+
+            for index in "${!BUILT_BRANCHES[@]}"; do
+              printf '        <li><a href="./%s/">%s</a></li>\n' "${BUILT_SLUGS[$index]}" "${BUILT_BRANCHES[$index]}"
+            done
+
+            cat <<HTML
+              </ul>
+            </body>
+          </html>
+          HTML
+          } > "$SITE_DIR/index.html"
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/quartz-pages
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+

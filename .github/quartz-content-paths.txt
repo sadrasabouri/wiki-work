@@ -1,0 +1,5 @@
+# Paths copied from each branch into the Quartz content folder.
+# Keep raw/ out of this list unless those source files are safe to publish.
+wiki
+views
+

@@ -1,0 +1,6 @@
+# One branch per line. Each branch is built as a separate Quartz site.
+# Example output paths:
+#   main -> https://<owner>.github.io/<repo>/main/
+#   demo -> https://<owner>.github.io/<repo>/demo/
+main
+
