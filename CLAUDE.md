@@ -4,44 +4,39 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Is
 
-A personal knowledge base built on the LLM Wiki pattern. Raw sources (emails, meeting transcripts) live in `raw/` — immutable, never modified. The wiki is a separate layer of LLM-maintained markdown files that synthesizes those sources into structured, interlinked knowledge. You write and maintain the wiki; the human curates sources and asks questions.
+Personal knowledge base on the LLM Wiki pattern. **Domain:** AI-powered knowledge management (Sadra Sabouri, Sumit Gulwani, Souti Chattopadhyay).
 
-**Domain:** Research on AI-powered knowledge management (Sadra Sabouri, Sumit Gulwani, Souti Chattopadhyay).
-
-## Layers
-
-- `raw/` — immutable source files. Markdown extractions of each source (`.md`) are committed; binary originals (`.eml`, `.vtt`, `.docx`) are gitignored and local-only.
-- `wiki/` — your layer. All wiki pages live here. You create and maintain everything in this directory.
-
-## Wiki Directory Structure
-
-- `wiki/concepts/` — conceptual building blocks (views, workflows, steerability, etc.)
-- `wiki/people/` — person profiles
-- `wiki/projects/` — project overviews
-- `wiki/events/` — meeting summaries; one page per meeting, named `YYYY-MM-DD.md`, linking back to the raw transcript
-
-## Raw Source Frontmatter
-
-```yaml
----
-timestamp: "ISO-8601"
-source_type: "eml | docx | vtt"
-tags: [extracted]
----
-```
+- `raw/` — immutable sources. Markdown extractions committed; binaries (`.eml`, `.vtt`, `.docx`) gitignored.
+- `wiki/` — LLM-maintained pages. `concepts/` `people/` `projects/` `events/` hold canonical knowledge.
+- `views/` — generated artifacts from view commands, stored at the root (blue in Obsidian).
+- `.claude/commands/` — slash command implementations (full step-by-step instructions live there).
 
 ## Wiki Conventions
 
-- `wiki/index.md` — catalog of all wiki pages: one line per page with a link and summary, organized by category. Read this first when answering queries. Update it on every ingest.
-- `wiki/log.md` — append-only record of ingests, queries, and lint passes. Each entry: `## [YYYY-MM-DD] operation | title`.
-- All cross-references are inline wiki links `[[Page Name]]` within body text, not footnotes or lists. Every link must resolve to an existing `.md` file in `wiki/` or `raw/`.
-- Pages should be insightful — synthesize and connect ideas, don't just surface-level summarize.
-- Raw sources are linkable by filename: `[[Thursday demo]]` resolves to `raw/emails/Thursday demo.md`; `[[GMT20260316-200648_Recording.transcript|Mar 16 meeting]]` resolves to the corresponding transcript.
+- Read `wiki/index.md` first on any query; update it on every ingest.
+- Append to `wiki/log.md` on every operation: `## [YYYY-MM-DD] operation | title`.
+- Every `[[wikilink]]` must resolve to an existing file in `wiki/` or `raw/`. Raw sources link by filename: `[[Thursday demo]]` → `raw/emails/Thursday demo.md`.
+- Pages must be insightful — synthesize and connect, don't summarize.
 
-## Operations
+## Slash Commands
 
-**Ingest** — when a new source is added to `raw/`: read it, discuss key takeaways, write a summary page in `wiki/`, update `wiki/index.md`, update any relevant existing wiki pages, append to `wiki/log.md`.
+### Operations
 
-**Query** — read `wiki/index.md` to find relevant pages, synthesize an answer with `[[page]]` citations. File valuable answers back into the wiki as new pages.
+| Command | Usage | What it does |
+|---------|-------|--------------|
+| `/ingest` | `/ingest raw/emails/new.md` | Read source → write wiki pages → update index, log, and regenerate relevant views |
+| `/purge` | `/purge GMT20260316...transcript` | Supersede claims from a meeting → update wiki pages → regenerate affected views |
+| `/lint` | `/lint [scope]` | Audit: broken links, orphans, contradictions, stale claims, index gaps |
 
-**Lint** — periodically check for: contradictions between pages, stale claims superseded by newer sources, orphan pages, missing cross-references, concepts mentioned but lacking their own page.
+### Views — output saved to `views/` (blue in Obsidian)
+
+| Command | Argument | Output |
+|---------|----------|--------|
+| `/query` | question | Markdown answer with `[[citations]]` — **default** |
+| `/timeline` | concept or project | Chronological table of how the idea evolved across meetings |
+| `/design-doc` | concept or project | Problem / Motivation / Approach / Open Questions |
+| `/contribution-map` | concept or project | Attribution table: who introduced what, when, from which source |
+| `/open-questions` | concept, project, or `all` | Grouped: design questions, tensions, missing pages, stale claims |
+| `/person-brief` | `Person: topic` | Narrative on a person's position and how it evolved |
+| `/presentation` | `topic for audience` | Slide outline with speaker notes; closes with Open Questions |
+| `/digest` | `YYYY-MM-DD` | ≤10 insight-bullets on what is new since that date |

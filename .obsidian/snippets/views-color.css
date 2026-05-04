@@ -1,0 +1,7 @@
+/* Color root views/ folder and all files within it blue */
+.nav-folder-title[data-path="views"] .nav-folder-title-content {
+  color: #4a9eff !important;
+}
+.nav-file-title[data-path^="views/"] .nav-file-title-content {
+  color: #4a9eff !important;
+}

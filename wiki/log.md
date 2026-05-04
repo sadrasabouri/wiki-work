@@ -22,3 +22,5 @@ Sources ingested (13 files):
 - [[Souti-3Apr2026-TRANSCRIPT-Part2|Apr 3 Part 2]] — human-as-API, Grice's maxims, interaction.md, forward deployment, Gulf of Envisioning
 
 **Pages created:** 18 concepts, 5 people, 2 projects, 7 events, index, log
+
+## [2026-05-03] view:query | can you create a summary of all information for a 5 years old?
