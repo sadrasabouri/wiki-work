@@ -12,7 +12,7 @@ As articulated in [[Thursday demo]] and refined in [[Sadra-1May2026-Transcript|t
 
 1. **[[views|Views]]** — declarative specs (prompts/templates) applied to raw sources to produce purpose-specific outputs. User-definable, hierarchical, saveable. The unifying abstraction across both this project and [[spreadsheet-verification|Spreadsheet Verification]].
 2. **[[semi-private-mashing|Semi-private mashing]]** — filtering private exchanges (1:1 meetings) to extract only parts relevant to a shared KB, while preserving privacy. Key differentiator from existing KB tools.
-3. **Efficiency via intermediate summaries** — applying views to summaries rather than raw sources; reduces latency and cost of view generation; discussed in [[Sadra-1May2026-Transcript|May 1 sync]].
+3. **Efficiency via intermediate summaries** — applying views to summaries rather than raw sources; reduces latency and cost of view generation; discussed in [[Sadra-1May2026-Transcript|May 1 sync]]. This contribution is structurally identical to Tiago Forte's "Intermediate Packets" in [[second-brain-code-method|BASB]] — both identify reuse as the leverage point, not raw production.
 
 ## Intellectual Lineage
 

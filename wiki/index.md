@@ -21,6 +21,7 @@
 - [[self-referential-kb|Self-Referential KB]] — the KB contains transcripts about building the KB; "presentation about itself"
 - [[bidirectional-collaboration|Bidirectional Collaboration]] — gap: current AI is unidirectional (human instructs); ideal is mutual proposal
 - [[llm-wiki-landscape|LLM-Wiki Landscape]] — ecosystem of wiki-from-notes projects; Karpathy origin; wiki vs. RAG efficiency; known critics (lossiness, scaling, no benchmark)
+- [[second-brain-code-method|Second Brain / CODE Method]] — Tiago Forte's pre-LLM PKM framework (Capture, Organize, Distill, Express); the intellectual precedent that LLM wikis automate
 
 ## People
 
@@ -29,6 +30,7 @@
 - [[souti-chattopadhyay|Souti Chattopadhyay]] — Sadra's advisor; digital twins, human-as-API, creativity research angle
 - [[sujay-maladi|Sujay Maladi]] — collaborator on Spreadsheet Verification; must-haves vs. nice-to-haves rubric
 - [[athena-saghi|Athena Saghi]] — creativity study researcher; productivity-creativity tradeoff findings and four collaboration modes
+- [[tiago-forte|Tiago Forte]] — creator of Building a Second Brain / CODE method / PARA; intellectual predecessor to Karpathy's LLM-wiki pattern
 
 ## Projects
 

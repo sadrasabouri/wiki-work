@@ -6,6 +6,12 @@ tags: [concept]
 
 The broader ecosystem of projects that use LLMs to convert raw notes into connected, queryable wikis. Surveyed by [[sadra-sabouri|Sadra]] in [[LLM-Wiki Related Works]].
 
+## Historical Roots: The Second Brain Vision
+
+Before LLMs, Tiago Forte's [[second-brain-code-method|Building a Second Brain]] (BASB) methodology laid out the same workflow that LLM wiki tools now automate: **Capture → Organize → Distill → Express** (the CODE method). The core insight — that human brains are for having ideas, not storing them, and that an external digital repository should handle the storage — predates the Karpathy pattern by years.
+
+LLM wikis are best understood as LLM-native implementations of the CODE vision: they automate the organizing and distilling steps that were previously manual and therefore bottlenecked adoption. The Karpathy X post was the triggering demo that made this automation feel tractable, not the origin of the underlying idea.
+
 ## Origin: Karpathy's Pattern
 
 The pattern originates from Andrej Karpathy's X post, which shared a prompt for converting fleeting notes into entity-based wikis: extract entities, connect them by relations, form a navigable graph. This one-prompt demonstration seeded an ecosystem of downstream applications.

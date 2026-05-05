@@ -35,3 +35,8 @@ Sources ingested (13 files):
 - Pages created: wiki/concepts/llm-wiki-landscape.md
 - Pages updated: wiki/projects/wiki-kb-project.md, wiki/index.md
 - Views regenerated: none (no matching target frontmatter)
+
+## [2026-05-05] ingest | LLM-Wiki Related Works (updated) + Building a Second Brain
+- Pages created: wiki/concepts/second-brain-code-method.md, wiki/people/tiago-forte.md
+- Pages updated: wiki/concepts/llm-wiki-landscape.md (historical roots section added), wiki/projects/wiki-kb-project.md (Intermediate Packets connection), wiki/index.md
+- Views regenerated: none (no matching target frontmatter)
