@@ -35,6 +35,6 @@ End with a one-paragraph synthesis: where did this concept start, how did it evo
 
 ## Save Output
 
-Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `views/timeline-<slug>.md`.
+Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `wiki/timeline-<slug>.md`.
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:timeline | $ARGUMENTS`

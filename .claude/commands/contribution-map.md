@@ -33,6 +33,6 @@ Produce a Contribution Map for: $ARGUMENTS
 
 ## Save Output
 
-Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `views/contribution-map-<slug>.md`.
+Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `wiki/contribution-map-<slug>.md`.
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:contribution-map | $ARGUMENTS`

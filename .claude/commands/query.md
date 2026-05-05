@@ -25,6 +25,6 @@ Answer this question using the wiki: $ARGUMENTS
 
 ## Save Output
 
-Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `views/query-<slug>.md`.
+Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `wiki/query-<slug>.md`.
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:query | $ARGUMENTS`

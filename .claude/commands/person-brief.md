@@ -37,6 +37,6 @@ Parse the argument as `<person>: <topic>`. If no topic separator is present, pro
 
 ## Save Output
 
-Slugify the argument (lowercase, spaces → hyphens, `:` → `-`). Save the complete output as-is to `views/person-brief-<slug>.md`.
+Slugify the argument (lowercase, spaces → hyphens, `:` → `-`). Save the complete output as-is to `wiki/person-brief-<slug>.md`.
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:person-brief | $ARGUMENTS`

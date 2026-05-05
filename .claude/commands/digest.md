@@ -37,6 +37,6 @@ Keep the entire digest under 10 bullets. Density over completeness — if two en
 
 ## Save Output
 
-Save the complete output as-is to `views/digest-<YYYY-MM-DD>.md` (using the argument date, or today's date if none given).
+Save the complete output as-is to `wiki/digest-<YYYY-MM-DD>.md` (using the argument date, or today's date if none given).
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:digest | since $ARGUMENTS`

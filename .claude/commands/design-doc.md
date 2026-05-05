@@ -21,7 +21,7 @@ Generate a Design Document for: $ARGUMENTS
 
 ## Save Output
 
-Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `views/design-doc-<slug>.md`.
+Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `wiki/design-doc-<slug>.md`.
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:design-doc | $ARGUMENTS`
 

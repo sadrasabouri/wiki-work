@@ -44,6 +44,6 @@ End with a prioritized top-3: which open questions most need resolution before t
 
 ## Save Output
 
-Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `views/open-questions-<slug>.md`.
+Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `wiki/open-questions-<slug>.md`.
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:open-questions | $ARGUMENTS`

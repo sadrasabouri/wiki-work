@@ -24,8 +24,8 @@ Ingest the raw source at: $ARGUMENTS
 
 6. Scan all existing wiki pages for concepts or people mentioned in the new source that are not yet cross-referenced. Update those pages with inline `[[wikilinks]]` where relevant.
 
-7. Regenerate stale views in `views/`:
-   - List all files in `views/` whose `target` frontmatter matches any concept, person, or project touched in steps 4–6.
+7. Regenerate stale views in `wiki/`:
+   - List all files in `wiki/` whose `target` frontmatter matches any concept, person, or project touched in steps 4–6.
    - Re-run the view logic for each match and overwrite the file with updated content and a refreshed `generated` date.
 
 8. Append to `wiki/log.md`:
