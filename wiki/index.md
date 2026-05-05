@@ -20,6 +20,7 @@
 - [[purge-operation|Purge Operation]] — removing obsolete information to maintain temporal integrity; requires provenance
 - [[self-referential-kb|Self-Referential KB]] — the KB contains transcripts about building the KB; "presentation about itself"
 - [[bidirectional-collaboration|Bidirectional Collaboration]] — gap: current AI is unidirectional (human instructs); ideal is mutual proposal
+- [[llm-wiki-landscape|LLM-Wiki Landscape]] — ecosystem of wiki-from-notes projects; Karpathy origin; wiki vs. RAG efficiency; known critics (lossiness, scaling, no benchmark)
 
 ## People
 

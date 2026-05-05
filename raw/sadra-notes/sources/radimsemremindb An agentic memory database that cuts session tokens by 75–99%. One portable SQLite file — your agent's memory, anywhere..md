@@ -1,0 +1,305 @@
+---
+title: "radimsem/remindb: An agentic memory database that cuts session tokens by 75–99%. One portable SQLite file — your agent's memory, anywhere."
+source: "https://github.com/radimsem/remindb"
+author:
+published:
+created: 2026-05-04
+description: "An agentic memory database that cuts session tokens by 75–99%. One portable SQLite file — your agent's memory, anywhere. - radimsem/remindb"
+tags:
+  - "clippings"
+---
+[![remindb logo](https://github.com/radimsem/remindb/raw/main/assets/logo.png)](https://github.com/radimsem/remindb/blob/main/assets/logo.png)
+
+## remindb
+
+Agentic memory in a single SQLite file.  
+Stop letting your agent re-read the same notes every session.
+
+---
+
+[![remindb architecture](https://github.com/radimsem/remindb/raw/main/assets/arch.svg)](https://github.com/radimsem/remindb/blob/main/assets/arch.svg)
+
+## Why I built this
+
+Coding agents already have memory. `CLAUDE.md`, `AGENTS.md`, your notes folder, that growing pile of project READMEs. Stuff persists just fine.
+
+The problem is *how* the agent consumes it. Every session starts by re-reading the whole pile from scratch — every `Read`, every `Grep`, scanning raw prose the agent has already processed dozens of times. Big context windows don't fix it. A 1M-token window is still paid per call, and still can't tell yesterday's stale note from today's relevant one.
+
+Raw markdown is the wrong shape for memory. Not because it can't hold the words — it can — but because it forces the agent to pay full freight on every read.
+
+`remindb` is a single SQLite file your agent treats as long-term memory. It parses your notes (Markdown, JSON, YAML, [TOON](https://github.com/toon-format/toon)) into a structured tree, hashes every node, encodes repetitive structures compactly when it saves tokens, and surfaces the whole thing through a tight MCP tool suite.
+
+### What you get
+
+**A tree the agent can index, not skim.** Instead of `ls` -ing a folder and reading every file to orient, the agent calls `MemoryTree` once. Each entry is a typed node — `[heading]`, `[list]`, `[kv]`, `[table]`, `[preamble]`, `[text]`, `[code]` — with an ID, a short label, a temperature, and a token count. Think of it as `ls -la` for memory: one call, a scannable index, hot stuff floats up.
+
+A real slice (from `remindb inspect --tree`):
+
+```
+[preamble] Preamble: framework, language, project (id=3kGXxidmWBp file=CLAUDE.md temp=0.50 tok=14)
+[heading] Project Instructions (id=6EuIVj5zt5j file=CLAUDE.md temp=0.75 tok=5)
+  [heading] Architecture (id=603qfsg4qd2 temp=0.88 tok=3)
+    [text] Next.js 15 conventions with a clear separation of data… (id=3GGuLAq3yNP temp=0.82 tok=111)
+    [list] 7-item list: app/, components/, lib/, db/, hooks/, types… (id=ITAKw5NVNPt temp=0.71 tok=228)
+  [heading] Data Model (id=FQwpXL4bm6Y temp=0.62 tok=3)
+    [list] 7-item list: products, variants, orders, carts, users, s… (id=Il8jcgTJOGt temp=0.55 tok=155)
+  [heading] Payment Integration (id=LTQZLSkPsDW temp=0.30 tok=5)
+    [text] Stripe Payment Intents; not legacy Checkout Sessions… (id=GLbXrUYs32G temp=0.24 tok=35)
+  [heading] Observability (id=2wkOdf47OjR temp=0.08 tok=4)
+    [list] 4-item list: Sentry · Vercel logs · OTel tracing · Prom… (id=C1HCYSAOkpu temp=0.08 tok=90)
+```
+
+A fresh compile starts every node at `temp=0.50`. The spread above is what an agent sees after a few sessions of reading. *Architecture* is hot because the agent keeps coming back to it. *Observability* has gone cold and will get flagged for summarization on the next nudge.
+
+**Hot vs. cold, like a real cache.** Each node has a temperature that rises when the agent reads it and decays over time. Hot nodes rank higher in search. Cold nodes don't disappear — they just stop crowding the top of results.
+
+**Summarization that happens when it should.** When a node crosses the cold threshold, the MCP server pushes a notification straight to the agent: *this has gone cold, consider compacting it.* The agent calls `MemorySummarize` with a shorter rewrite. The node shrinks in place, keeps its anchor in the tree, keeps its version history. No cron, no external worker — it happens in-band, driven by how the memory actually gets used.
+
+**Git-style versioning, free.** Every compile or write lands a snapshot. Linear parent chain, fingerprinted by a `cursor_hash`. Per-node diffs (`add` / `mod` / `rem`, with old and new content) sit alongside. `MemoryDelta` hands the agent only what changed since its last cursor — a tiny resync instead of a whole-file re-read.
+
+**TOON encoding where it pays off.** Arrays of uniform objects (configs, tables, list-of-dicts) store ~40% smaller in TOON than in YAML or JSON. The parser tries both shapes per node, keeps whichever wins by ≥15%, and records the choice in a `format` column. Irregular prose stays as plain text — TOON has nothing to offer there, so we don't pretend.
+
+**FTS5 search, not grep.** Search runs on SQLite's FTS5 virtual table, built at write time with a porter tokenizer over labels, content, and types. `MemorySearch` returns ranked anchors in milliseconds — no file rescans, no regex timeouts — and trims to whatever token budget you pass. Ask for 500 tokens of matches, get exactly 500.
+
+**Portable by design.** The whole memory is one `.db` file. Copy it to another machine, hand it to another agent, commit it into a repo, sync it across devices. No server, no daemon, no external state. Any MCP-capable agent — Claude Code, Codex, Gemini CLI, OpenCode, OpenClaw — can point `serve` at the same file and share the same knowledge.
+
+## Install
+
+### One-line install
+
+**Linux / macOS:**
+
+```
+curl -fsSL https://raw.githubusercontent.com/radimsem/remindb/main/install.sh | bash
+```
+
+By default the binary lands at `~/.local/bin/remindb`. Pick a different prefix:
+
+```
+curl -fsSL https://raw.githubusercontent.com/radimsem/remindb/main/install.sh | bash -s -- --prefix ~/.cargo
+```
+
+**Windows (PowerShell 5.1+):**
+
+```
+iwr -useb https://raw.githubusercontent.com/radimsem/remindb/main/install.ps1 | iex
+```
+
+Lands at `%LOCALAPPDATA%\Programs\remindb\bin\remindb.exe`. Override with `-Prefix`:
+
+```
+./install.ps1 -Prefix C:\tools\remindb
+```
+
+### From source (Go 1.23+)
+
+```
+git clone https://github.com/radimsem/remindb.git
+cd remindb
+go build -o ~/.local/bin/remindb ./cmd/remindb
+```
+
+Verify:
+
+```
+remindb --version
+```
+
+## How it's put together
+
+Two phases, one SQLite file in between. The compiler turns source files into versioned nodes at ingest time. The MCP runtime answers the agent in milliseconds on every call. The `.db` is the entire handoff — copy it, commit it, sync it.
+
+| Layer | Responsibility |
+| --- | --- |
+| **Parser** | One dispatcher, format-specific stages for Markdown, YAML, JSON/JSONL, TOON. Emits a unified `[]*ContextNode` tree with `id`, `parent_id`, `label`, `content`, `node_type`, `depth`, `token_count`, `content_hash`. |
+| **Transformer** | Generates 11-char base62 IDs (xxhash64), estimates cl100k-base tokens, compresses whitespace, decides plain vs. TOON per node. |
+| **Diff Engine** | Compares the fresh AST against the last snapshot, produces `add` / `mod` / `rem` deltas, hashes the full state into a new `cursor_hash`. |
+| **Emitter** | Writes nodes, diffs, and the new snapshot in one transaction; maintains the FTS5 index via triggers. |
+| **Store** | SQLite with WAL mode. Tables: `nodes`, `snapshots`, `diffs`, `cursors`, plus the `nodes_fts` virtual table. |
+| **Query Engine** | Token-budgeted context assembly. Walks ancestors and descendants via `parent_id`, ranks by relevance weighted by temperature, formats output. |
+| **Temperature** | Boosts on read, decays on a tick. Cold nodes get flagged for summarization. |
+| **MCP Server** | `modelcontextprotocol/go-sdk` over stdio. Registers the `Memory*` tool suite, dispatches to the query engine, and notifies clients when nodes go cold. |
+| **Rescan Loop** | Optional background goroutine that polls the source directory and triggers incremental recompilation without bringing the server down. |
+
+## CLI
+
+Four subcommands, one shared flag (`--db`). Skip `--db` on a directory and remindb derives `./<dirname>.db` automatically.
+
+```
+remindb compile <path>   Ingest files or a directory into the database
+remindb serve            Start the MCP server (stdio)
+remindb inspect          Dump DB stats; optionally render the node tree
+remindb bench            Measure token savings vs. raw-file baselines
+```
+
+### compile
+
+One-shot ingestion of a file or directory. Creates a new snapshot and records diffs against the previous one.
+
+```
+remindb compile ./notes # → ./notes.db
+remindb compile ./notes --db memory.db -m "add Q2 notes"
+remindb compile ./docs/architecture.md --db project.db
+```
+
+| Flag | Purpose |
+| --- | --- |
+| `--db PATH` | Target database. Default: derived from the source directory name, else `memory.db`. |
+| `-m, --message` | Snapshot message (defaults to `compile:<path>`). |
+
+#### Filtering with.remindb.ignore
+
+Drop a `.remindb.ignore` at the source root to exclude paths from `compile`, the `serve` rescan loop, the `MemoryCompile` tool, and `bench`. Gitignore-style minimal subset — patterns, comments, blank lines.
+
+```
+# .remindb.ignore
+*.jsonl              # session logs are large and unhelpful
+sessions/            # any directory called sessions, at any depth
+**/cache/**          # nested cache trees
+cache/scratch.md     # exact relative path
+```
+
+Supported: literal basenames, `*` wildcards, trailing `/` for dir-only, `**` for any-segment-count, `#` comments. Anything else (`!negation`, `[char ranges]`, `?`, leading `/`, `\` escapes) fails the command at startup with a line-numbered error.
+
+### serve
+
+Starts the MCP server on stdio. With `--source` set, remindb runs an initial compile (if the DB is empty) and keeps a background rescan loop running.
+
+```
+remindb serve --db ./notes.db --source ./notes
+remindb serve --db ./notes.db --source ./notes --rescan-interval 30s -v
+```
+
+| Flag | Env | Purpose |
+| --- | --- | --- |
+| `--db` | `REMINDB_DB` | Database file. |
+| `--source` | `REMINDB_SOURCE` | Source directory to watch and incrementally recompile. |
+| `--rescan-interval` | `REMINDB_RESCAN_INTERVAL` | e.g. `30s`, `5m`. `0` keeps the tracker's default. |
+| `-v, --verbose` | — | Debug-level logs. Default is info. |
+
+### inspect
+
+Read-only snapshot of what's in a database. Without `--tree` it prints stats; with `--tree` it renders the node hierarchy, temperatures colour-coded blue (cold) → red (hot).
+
+```
+remindb inspect --db ./notes.db
+remindb inspect --db ./notes.db --tree --depth 6
+```
+
+| Flag | Purpose |
+| --- | --- |
+| `--tree` | Render the node tree. |
+| `--depth N` | Maximum depth when rendering. Default: `10`. Requires `--tree`. |
+
+`NO_COLOR=1` disables the ANSI palette.
+
+### bench
+
+Runs the scenario suite — tree · search · fetch · delta — against one database and prints token savings compared to a naive *list + read + grep* baseline.
+
+```
+remindb bench \
+  --db ./notes.db --dir ./notes --budget 1000 \
+  --query "WebSocket idempotency" --query "Snowflake COPY INTO"
+```
+
+| Flag | Purpose |
+| --- | --- |
+| `--dir` | Source directory (inferred from the DB path if omitted). |
+| `--budget` | Token budget for search and fetch scenarios. Default: `1000`. |
+| `--query` | Repeatable. Skips the search scenario when empty. |
+
+## MCP tools
+
+A `Memory*` tool suite, registered once, surfaced to any MCP-capable agent (Claude Code, Codex, Gemini CLI, OpenCode, OpenClaw, …).
+
+| Tool | Purpose |
+| --- | --- |
+| **`MemoryTree`** | Renders the full node hierarchy with labels, types, IDs, temperatures, and token counts. The agent's cheap orientation call. |
+| **`MemorySearch`** | FTS5 full-text search over labels and content. Returns ranked anchors within a token budget. |
+| **`MemoryFetch`** | Returns one anchor plus its ancestors and children, trimmed to a token budget. The "read just this region" call. |
+| **`MemoryWrite`** | Writes or updates content at an anchor. Creates a new snapshot and a per-node diff. |
+| **`MemoryDelta`** | Returns only the nodes that changed since a given snapshot cursor. Lets agents resync with a tiny payload instead of re-reading files. |
+| **`MemoryHistory`** | Browses the version history of a node — who/when/how it changed, rollback-capable via stored old content. |
+| **`MemorySummarize`** | Replaces a node's content with a shorter summary the agent provides. Used when the temperature tracker flags a cold node. |
+| **`MemoryCompile`** | Compiles source files or a directory into the database from inside a session. Same engine as the `compile` CLI. |
+
+### Agent integrations
+
+Five plugin folders ship with the repo, one per supported coding agent. Each has a manifest matching that agent's spec, an MCP stanza, and a README with install commands, env-var conventions, and a worked example that compiles the agent's own memory folder into remindb.
+
+| Agent | Folder | Install docs |
+| --- | --- | --- |
+| Claude Code | [`plugins/claude-code/`](https://github.com/radimsem/remindb/blob/main/plugins/claude-code) | [plugins/claude-code/README.md](https://github.com/radimsem/remindb/blob/main/plugins/claude-code/README.md) |
+| Gemini CLI | [`plugins/gemini-cli/`](https://github.com/radimsem/remindb/blob/main/plugins/gemini-cli) | [plugins/gemini-cli/README.md](https://github.com/radimsem/remindb/blob/main/plugins/gemini-cli/README.md) |
+| Codex | [`plugins/codex/`](https://github.com/radimsem/remindb/blob/main/plugins/codex) | [plugins/codex/README.md](https://github.com/radimsem/remindb/blob/main/plugins/codex/README.md) |
+| OpenCode | [`plugins/opencode/`](https://github.com/radimsem/remindb/blob/main/plugins/opencode) | [plugins/opencode/README.md](https://github.com/radimsem/remindb/blob/main/plugins/opencode/README.md) |
+| OpenClaw | [`plugins/openclaw/`](https://github.com/radimsem/remindb/blob/main/plugins/openclaw) | [plugins/openclaw/README.md](https://github.com/radimsem/remindb/blob/main/plugins/openclaw/README.md) |
+
+> [!tip] Tip
+> **Pair the plugin with the two companion skills** — [`remind`](https://github.com/radimsem/remindb/blob/main/skills/remind) (read path) and [`memoize`](https://github.com/radimsem/remindb/blob/main/skills/memoize) (write path). They teach the agent the MCP tool suite so you don't re-explain it each session. Per-agent install instructions live in [`skills/README.md`](https://github.com/radimsem/remindb/blob/main/skills).
+
+For any other MCP-capable agent, add this to its MCP config by hand:
+
+```
+{
+  "mcpServers": {
+    "remindb": {
+      "type": "stdio",
+      "command": "remindb",
+      "args": ["serve", "--db", "/absolute/path/to/memory.db", "--source", "/absolute/path/to/notes"],
+      "env": {}
+    }
+  }
+}
+```
+
+On startup the agent sees the full `Memory*` tool suite alongside its usual toolbox. A reasonable first prompt:
+
+```
+Call MemoryTree to orient. Then call MemorySearch for "<topic>" with budget 1000
+and MemoryFetch on the top hit. Explain what you learned and which files it came from.
+```
+
+## Benchmarks
+
+Token counts are measured against the naive baseline an agent falls back to without a memory layer: list the directory, read every matching file, grep through it. Numbers come from `./scripts/bench-agents.sh` over the five plugin fixtures in `testdata/`, plus a one-off compile of a real Obsidian vault (~100 markdown files across AI concepts, market briefs, security notes, and MOCs — ~600k naive tokens end-to-end).
+
+The scenario suite (tree · 3 searches · fetch · delta) rolls up into three workflow categories:
+
+- **context window** — a single `MemoryTree` orientation call.
+- **context gathering** — 3 × `MemorySearch` + `MemoryFetch` + `MemoryDelta`, token-weighted.
+- **total session** — sum of both.
+
+> [!note] Note
+> **Corpus size moves the numbers in remindb's favour.** The plugin fixtures are ~3k–20k tokens each; the vault is ~600k. As the corpus grows, the naive baseline scales linearly (more files to list, more bytes to grep, more prose to re-read), while remindb's answers stay bounded by the token budget you pass. That's why the vault's context-gathering row hits **99.3%** — every search still returns ~800 tokens, but the baseline is now 15–20× larger.
+> 
+> The scenario list is also intentionally short. A real 30-minute agent session does dozens of orient/search/fetch/write/re-orient cycles, and the same search often fires three or four times as the agent loops on a problem. Each of those calls compounds toward **90%+ full-session savings** on realistic corpora.
+
+[![remindb token savings by scenario category](https://github.com/radimsem/remindb/raw/main/assets/bench.svg)](https://github.com/radimsem/remindb/blob/main/assets/bench.svg)
+
+<sub>The <code>obsidian vault</code> row is a real vault: ~100 markdown files, ~600k naive tokens.</sub>
+
+Reproduce the table yourself:
+
+```
+./scripts/bench-agents.sh
+```
+
+## Contributing
+
+This is a project I maintain between classes — patches, bug reports, and ideas are genuinely welcome, and an extra pair of eyes goes a long way. The full guide lives in [`CONTRIBUTING.md`](https://github.com/radimsem/remindb/blob/main/CONTRIBUTING.md): branch naming, the pre-PR checklist, the doc-update map, and how the AI-assisted workflow is wired up. If you want to start small, the "First-time contributors" section there has good entry points.
+
+## License
+
+MIT — see [`LICENSE`](https://github.com/radimsem/remindb/blob/main/LICENSE).
+
+## Support
+
+I'm a college student building agentic AI tooling in the evenings and weekends between classes. `remindb` is free, MIT-licensed, and will stay that way — no telemetry.
+
+If this saved you tokens (or saved you from reading the same 100 files for the hundredth time), even a small tip helps a lot.
+
+Or send BTC to `bc1qwyxsx7sledl4pru8y5ykd54fevsklytrv95ual`.
+
+Thanks for reading this far. If you end up using `remindb` in anger, I'd love to hear what you built — open an issue with a short story, or drop a star. Both matter more than you'd think.

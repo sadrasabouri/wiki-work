@@ -30,3 +30,8 @@ Sources ingested (13 files):
 ## [2026-05-03] view:contribution-map | views
 
 ## [2026-05-03] view:open-questions | all
+
+## [2026-05-04] ingest | LLM-Wiki Related Works
+- Pages created: wiki/concepts/llm-wiki-landscape.md
+- Pages updated: wiki/projects/wiki-kb-project.md, wiki/index.md
+- Views regenerated: none (no matching target frontmatter)
