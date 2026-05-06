@@ -26,6 +26,8 @@ Personal knowledge base on the LLM Wiki pattern. **Domain:** AI-powered knowledg
 | `/ingest` | `/ingest raw/emails/new.md` | Read source → write wiki pages → update index, log, and regenerate relevant views |
 | `/purge` | `/purge GMT20260316...transcript` | Supersede claims from a meeting → update wiki pages → regenerate affected views |
 | `/lint` | `/lint [scope]` | Audit: broken links, orphans, contradictions, stale claims, index gaps |
+| `/trim` | `/trim [scope]` | Remove deprecated concepts, superseded definitions, and outdated framings; distinct from purge (source-targeted) and lint (non-destructive) |
+| `/clarify` | `/clarify [concept or "all"]` | Generate critical questions about definitions and concept relationships → user answers → wiki updated |
 
 ### Views — output saved to `wiki/` root (blue in Obsidian)
 

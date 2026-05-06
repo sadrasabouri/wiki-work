@@ -63,6 +63,8 @@ Answers come with `[[citations]]` back to source files.
 | `/ingest` | `/ingest raw/meeting-2026-05.md` | Read source, write wiki pages, update index |
 | `/purge` | `/purge raw/old-transcript.md` | Remove superseded claims when a source is retracted |
 | `/lint` | `/lint` | Find broken links, orphan pages, stale claims |
+| `/trim` | `/trim` or `/trim views` | Remove deprecated concepts and superseded definitions; keeps only the latest framing of each idea |
+| `/clarify` | `/clarify` or `/clarify views` | Audit concept definitions and relationships: generates critical questions, you answer, wiki updates |
 
 ### Query and explore
 
