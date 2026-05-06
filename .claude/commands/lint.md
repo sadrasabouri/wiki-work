@@ -1,30 +1,37 @@
 ---
-description: Lint the wiki for consistency issues — broken links, orphan pages, contradictions, stale claims, and missing concept pages. Run periodically to keep the KB healthy.
+description: Lint the wiki for consistency issues, update stale pages to reflect the latest iteration of ideas, and ask clarification questions when concepts are ambiguous or underdefined. Run periodically to keep the KB healthy.
 argument-hint: [scope]  optional — a subdirectory or concept name to limit the check
 ---
 
 Lint the wiki${ $ARGUMENTS ? " — scope: $ARGUMENTS" : " — full scan" }.
 
-## Checks to Run
+## Steps
 
-### 1. Broken wikilinks
-For every `[[link]]` in every wiki page, verify a file with that name exists in `wiki/` or `raw/`. List all broken links with the page they appear in.
+1. **Structural fixes** (auto-fix, don't ask):
+   - Broken `[[links]]` — verify each resolves to a file in `wiki/` or `raw/`; fix obvious mismatches
+   - Orphan pages — add cross-references where the connection is clear
+   - Index gaps — add missing entries to `wiki/index.md`
 
-### 2. Orphan pages
-Find wiki pages not referenced by any other wiki page or by `wiki/index.md`. List them — they may need cross-references added or may be deletable.
+2. **Semantic updates** (update pages in place, preserve source citations):
+   - Stale claims — find claims from early sources on topics refined in later meetings; update to reflect the latest iteration; keep earlier framing as a dated note rather than deleting it
+   - Contradictions — resolve using the most recent source; if genuinely contested, reframe as an explicit tension
+   - Concept drift — find pages whose description no longer matches how the concept is used in recent event pages; update to the current framing and note when it shifted
 
-### 3. Missing concept pages
-Find concept names mentioned inline in wiki pages (capitalized noun phrases used as if they should have pages) that don't have a corresponding file in `wiki/concepts/`. List candidates.
+3. **Clarification questions** — collect all ambiguous cases first, then ask them together before writing:
+   - A concept used with subtly different meanings across sources (one concept or two?)
+   - A proposed idea with no clear record of adoption or rejection
+   - Attribution conflicts where source priority is unclear
+   - Concept stubs with too little context to write accurately
 
-### 4. Contradictions
-Look for claims that conflict between pages — same concept described differently, dates that don't match, people attributed differently. Flag each pair with the two conflicting statements.
+   Format: `I need your input before updating these: 1. [page] — [question] ...`
+   After receiving answers, apply them.
 
-### 5. Stale claims
-Find claims in wiki pages that cite only early sources (before 2026-04) on topics that were actively discussed in later meetings. These may have been refined or superseded without the page being updated. Flag them.
-
-### 6. Index completeness
-Compare `wiki/index.md` against all `.md` files in `wiki/concepts/`, `wiki/people/`, `wiki/projects/`, `wiki/events/`. List any pages missing from the index.
-
-## Output
-
-Produce a report with one section per check. Use ✅ for clean, ⚠️ for warnings, ❌ for errors. End with a prioritized fix list: which issues to address first and why.
+4. **Report and log:**
+   - One section per check: ✅ clean / ⚠️ updated / ❌ open
+   - Append to `wiki/log.md`:
+     ```
+     ## [YYYY-MM-DD] lint | [scope or "full scan"]
+     - Pages fixed: <list>
+     - Pages updated: <list>
+     - Open issues: <list>
+     ```
