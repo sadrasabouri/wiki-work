@@ -92,6 +92,8 @@ Sources ingested (13 files):
 - Pages updated: wiki/concepts/views.md (FlashFill analogy added to vibe sessions section), wiki/concepts/llm-wiki-landscape.md (Karpathy gist 700-comment mining; wiki vs. RAG compression reframe), wiki/people/sumit-gulwani.md (May 6 contributions + appearances), wiki/people/sadra-sabouri.md (May 6 appearances), wiki/index.md
 - Views regenerated: none (no matching target frontmatter)
 
+## [2026-05-06] view:presentation | templates/sumit-lightning.md → presentation-sumit-lightning.md (restructured around three features: live views, organizational brain, semi-private mashing)
+
 ## [2026-05-05] ingest | Personal Private Knowledge Management, matvellosoknowledge
 - Pages created: wiki/concepts/local-first-kb.md
 - Pages updated: wiki/concepts/llm-wiki-landscape.md (matvellosoknowledge as RAG-based alternative; MY PREFERENCES.md skill analogue), wiki/concepts/semi-private-mashing.md (PR model as concrete local→shared filter mechanism), wiki/concepts/kb-as-codebase.md (local branch model: personal KB as fork), wiki/concepts/skills.md (MY PREFERENCES.md as independently discovered real-world skills analogue), wiki/index.md
