@@ -1,50 +1,25 @@
 ---
-description: Render the KB as a presentation slide outline. This is the self-referential view — the wiki generates the talk about itself. Specify a topic and audience; each slide title is a sub-view prompt drawn from the wiki.
-argument-hint: <topic> for <audience>  e.g. "wiki-kb-project for new collaborators" or "views for stakeholder demo"
+description: Generate a presentation by filling a template file with content synthesized from the wiki.
+argument-hint: <path-to-template>  e.g. ".claude/templates/sumit-lightning.md"
 ---
 
-Generate a Presentation for: $ARGUMENTS
-
-Parse the argument as `<topic> for <audience>`. If no audience is specified, assume a technically fluent new collaborator.
+Generate presentation from template: $ARGUMENTS
 
 ## Steps
 
-1. Read `wiki/index.md`. Identify all pages relevant to `<topic>`.
+1. **Load the template.** Read `$ARGUMENTS`. Extract frontmatter parameters (audience, concepts, duration, etc.). The section headings and their `> fill:` prompts define the slide structure.
 
-2. Read the most relevant concept, project, and event pages. If a specific raw source should be cited verbally, note it.
+2. **Read the wiki.** Read `wiki/index.md`. Then read all pages listed under the frontmatter `concepts` key, plus any pages those link to that are relevant. If no `concepts` key is set, read all concept and project pages.
 
-3. Define the narrative arc: what 5–8 points must land for `<audience>` to leave understanding `<topic>`? These become the slide titles — each one is a sub-view prompt (e.g. "Why existing KB tools fall short" rather than "Background").
+3. **Fill each section.** For every `## Section` in the template, execute its `> fill:` prompt against the wiki content. Each section becomes one slide:
+   - Write 3–5 bullets drawn from specific wiki pages — concrete and grounded, not generic
+   - Cite the wiki source inline: `*[[source]]*`
+   - Add a `> speaker note:` line with what to say aloud (1–2 sentences max)
+   - Preserve any static content in the template that is not inside a `> fill:` block
 
-4. For each slide:
-   - Write 3–5 bullets drawn directly from wiki pages — concrete, specific, not generic
-   - Add a `> speaker note:` line: what to say verbally, which raw source to reference by name
+4. **Save output.** Derive the output slug from the template filename (basename without extension). Write to `wiki/presentation-<slug>.md`. Append to `wiki/log.md`:
+   ```
+   ## [YYYY-MM-DD] view:presentation | $ARGUMENTS
+   ```
 
-5. The final slide must be an **Open Questions** slide — run a focused `open-questions` scan on the topic and use the top-3 results.
-
-## Output Format
-
-```markdown
-# Presentation: $ARGUMENTS
-
-## [Slide 1 Title]
-- bullet
-- bullet
-- bullet
-> speaker note: [what to say; cite [[source]] if relevant]
-
-## [Slide 2 Title]
-...
-
-## Open Questions
-- <top question 1>
-- <top question 2>
-- <top question 3>
-```
-
-After the outline, add a one-paragraph **presenter brief**: what to emphasize, what to skip if short on time, and what question the audience is most likely to ask.
-
-## Save Output
-
-Create a short slug: **at most 3 words** from `<topic>`, lowercase, joined with hyphens (e.g. `views-workflows`, `wiki-kb`, `agent-lens`). Drop stop words, articles, and audience from the filename. Save to `wiki/presentation-<slug>.md`.
-
-Append to `wiki/log.md`: `## [YYYY-MM-DD] view:presentation | $ARGUMENTS`
+5. **Report back:** the slide titles and a one-sentence presenter brief.

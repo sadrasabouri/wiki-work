@@ -39,5 +39,5 @@ Personal knowledge base on the LLM Wiki pattern. **Domain:** AI-powered knowledg
 | `/contribution-map` | concept or project | Attribution table: who introduced what, when, from which source |
 | `/open-questions` | concept, project, or `all` | Grouped: design questions, tensions, missing pages, stale claims |
 | `/person-brief` | `Person: topic` | Narrative on a person's position and how it evolved |
-| `/presentation` | `topic for audience` | Slide outline with speaker notes; closes with Open Questions |
+| `/presentation` | `<path-to-template>` | Fill a template file with wiki content; e.g. `/presentation .claude/templates/sumit-lightning.md` |
 | `/digest` | `YYYY-MM-DD` | ≤10 insight-bullets on what is new since that date |

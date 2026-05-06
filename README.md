@@ -77,7 +77,7 @@ Answers come with `[[citations]]` back to source files.
 | `/person-brief` | `/person-brief Alice: security` | What one person thinks about a topic |
 | `/design-doc` | `/design-doc caching layer` | Problem / approach / open questions doc |
 | `/digest` | `/digest 2026-04-01` | What's new since a date — useful before meetings |
-| `/presentation` | `/presentation onboarding for new engineers` | Slide outline generated from the KB |
+| `/presentation` | `/presentation .claude/templates/sumit-lightning.md` | Fill a slide template with wiki content; pass any template path directly |
 
 ---
 
