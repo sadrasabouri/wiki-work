@@ -12,6 +12,8 @@ Produced the [[productivity-creativity-tradeoff|Productivity-Creativity Tradeoff
 
 Defined the four human-AI collaboration modes: brainstormer, verifier, implementer, co-pilot. The gap between the current state (modes 1–3 well-supported) and the ideal (mode 4: co-pilot / bidirectional) became a key motivating problem — see [[bidirectional-collaboration]].
 
+Co-authored [[Auditing and Controlling AI Agent Actions in Spreadsheets|the Pista paper]] (arxiv 2604.20070) as a primary contributor alongside [[sadra-sabouri|Sadra]], [[sumit-gulwani|Sumit]], and [[souti-chattopadhyay|Souti]]. Her creativity research (above) and the Pista project represent the two empirical threads of the group's work.
+
 ## Appears In
 
-[[GMT20260220-230118_Recording.transcript|Feb 20]], [[GMT20260304-191231_Recording.transcript|Mar 4]]
+[[GMT20260220-230118_Recording.transcript|Feb 20]], [[GMT20260304-191231_Recording.transcript|Mar 4]], [[Auditing and Controlling AI Agent Actions in Spreadsheets]]

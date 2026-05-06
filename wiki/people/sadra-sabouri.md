@@ -4,7 +4,7 @@ tags: [person]
 
 # Sadra Sabouri
 
-USC PhD student in [[souti-chattopadhyay|Souti Chattopadhyay]]'s lab. Leading both the [[wiki-kb-project|Wiki KB Project]] (with Sumit and Souti) and the [[spreadsheet-verification|Spreadsheet Verification]] tool.
+USC PhD student in [[souti-chattopadhyay|Souti Chattopadhyay]]'s lab. Leading both the [[wiki-kb-project|Wiki KB Project]] (with Sumit and Souti) and the [[agent-traceability-steerability|Spreadsheet Verification]] tool.
 
 ## Intellectual Contributions
 
@@ -14,9 +14,11 @@ Drew the KB-as-codebase analogy in [[Thursday demo]]: PRs, refactoring, deprecat
 
 ## Role in Both Projects
 
-In [[spreadsheet-verification|Spreadsheet Verification]], Sadra is the primary implementer — running formative studies, building the prototype, and presenting results. In [[wiki-kb-project|Wiki KB Project]], Sadra bridges [[sumit-gulwani|Sumit]]'s high-level vision and [[souti-chattopadhyay|Souti]]'s research framing into a concrete system.
+In [[agent-traceability-steerability|Spreadsheet Verification]], Sadra is the primary implementer — running formative studies, building the prototype, and presenting results. In [[wiki-kb-project|Wiki KB Project]], Sadra bridges [[sumit-gulwani|Sumit]]'s high-level vision and [[souti-chattopadhyay|Souti]]'s research framing into a concrete system.
 
 In [[Sadra-3May2026-TRANSCRIPT|the May 3 sync]], demoed the wiki live to Sumit for the first time and applied the system to his cousin's chemistry PhD emails as a scaling test beyond the research project. Proposed knowledge graph (typed edges: source→relation→target) and event log as alternative foundational infrastructure views alongside wiki, in [[Sadra-4May2026-TRANSCRIPT3|May 4]].
+
+First author of [[Auditing and Controlling AI Agent Actions in Spreadsheets|the Pista paper]] (arxiv 2604.20070) — the published output of the [[agent-traceability-steerability|Spreadsheet Verification]] project. His Sadra-notes document ([[Agent's Traceability and Steerability Project]]) frames the core problem: users are passive observers meeting agent output at end of execution, leading to a re-prompting loop.
 
 ## Appears In
 

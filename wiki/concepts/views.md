@@ -6,7 +6,7 @@ tags: [concept, core]
 
 A **view** is a template with holes, where each hole is filled by executing a prompt against an optional specification of input sources. Each prompt can optionally be associated with a [[skills|skill]] that describes a better way to compute that piece. This is the most precise definition, settled in [[Sadra-5May2026-TRANSCRIPT2|the May 5 evening sync]]: "A view is a template. Its holes are filled by executing prompts against an optional specification of input sources. Each prompt can optionally be associated with a skill."
 
-Views define WHAT to show, not HOW to produce it (that's [[skills|Skills]] for per-prompt methodology and [[workflows|Workflows]] for data dependencies). Views are the central unifying concept across both [[wiki-kb-project|Wiki KB Project]] and [[spreadsheet-verification|Spreadsheet Verification]]; Sumit drew this connection explicitly in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]].
+Views define WHAT to show, not HOW to produce it (that's [[skills|Skills]] for per-prompt methodology and [[workflows|Workflows]] for data dependencies). Views are the central unifying concept across both [[wiki-kb-project|Wiki KB Project]] and [[agent-traceability-steerability|Spreadsheet Verification]]; Sumit drew this connection explicitly in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]].
 
 ## Structure
 
@@ -33,7 +33,7 @@ Every paragraph of a document can be a prompt in a view. Sumit articulated this 
 
 ## Why Views Bridge Both Projects
 
-In [[spreadsheet-verification|Spreadsheet Verification]], views render agent computation differently for different audiences. In the [[wiki-kb-project|Wiki KB Project]], views render knowledge differently for different purposes (presentation, onboarding, deep dive). The self-referential case from [[Presentation]]: using the wiki as a live presentation ("presentation about this presentation") is itself a view.
+In [[agent-traceability-steerability|Spreadsheet Verification]], views render agent computation differently for different audiences. In the [[wiki-kb-project|Wiki KB Project]], views render knowledge differently for different purposes (presentation, onboarding, deep dive). The self-referential case from [[Presentation]]: using the wiki as a live presentation ("presentation about this presentation") is itself a view.
 
 ## Analogy to Database Views
 

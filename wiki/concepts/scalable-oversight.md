@@ -4,7 +4,7 @@ tags: [concept]
 
 # Scalable Oversight
 
-How humans maintain meaningful oversight of AI agents as AI capability grows beyond human ability to verify each step. The academic framing of the [[spreadsheet-verification|Spreadsheet Verification]] problem, discussed in [[GMT20260220-230118_Recording.transcript|the Feb 20 meeting]].
+How humans maintain meaningful oversight of AI agents as AI capability grows beyond human ability to verify each step. The academic framing of the [[agent-traceability-steerability|Spreadsheet Verification]] problem, discussed in [[GMT20260220-230118_Recording.transcript|the Feb 20 meeting]].
 
 ## The Core Tension
 
@@ -22,3 +22,7 @@ The primary application context was data labelers reviewing AI-annotated spreads
 ## Connection to [[agent-lens|Agent Lens]]
 
 The [[agent-lens|Agent Lens]] / [[dag-of-computation|DAG]] approach is a third strategy: make the computation *transparent* so humans can focus oversight at the steps most likely to fail, rather than reviewing the final output blindly. [[steerability|Steerability]] is the intervention mechanism that makes transparency actionable.
+
+## Empirical Result: Participation Over Review
+
+[[Auditing and Controlling AI Agent Actions in Spreadsheets|The Pista paper]] provides the clearest statement of the principle: **meaningful human oversight of AI agents in knowledge work requires not improved post-hoc review mechanisms, but active participation in decisions as they are made.** Reviewing a finished output places the entire burden of oversight on a single moment of inspection — by then, errors that were legible at the step where they occurred have become invisible in the aggregate. The scalable oversight problem, in this framing, is fundamentally a *timing* problem: oversight must happen during execution, not after.

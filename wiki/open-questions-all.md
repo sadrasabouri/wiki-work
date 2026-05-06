@@ -8,7 +8,7 @@
 
 - **How are semi-private mashing filters specified and enforced?** — [[semi-private-mashing]] describes filtering as "a first-class operation" but no design exists. The [[Thursday demo]] email mentions "differential privacy norms" as relevant but this thread was never developed. The [[Sadra-1May2026-Transcript]] shows the team agreeing to "talk about it to sell the idea" while acknowledging Sadra cannot implement it in time.
 
-- **What is the summative study design for Spreadsheet Verification?** — the formative study (8 sessions) is done; the summative study is the next step, but no design for participant selection, tasks, or evaluation metrics appears anywhere. [[spreadsheet-verification]] says "Active Feb–March 2026" but the summative study is still planned as of May.
+- **What is the summative study design for Spreadsheet Verification?** — the formative study (8 sessions) is done; the summative study is the next step, but no design for participant selection, tasks, or evaluation metrics appears anywhere. [[agent-traceability-steerability]] says "Active Feb–March 2026" but the summative study is still planned as of May.
 
 - **What provenance scheme should the KB use?** — [[provenance-tracking]] lists three options (frontmatter flags, git blame, inline citations) with no decision between them. The current wiki uses inline wikilinks as citations but this is not systematically enforced; there are claims on several pages without citations.
 
@@ -52,7 +52,7 @@
 
 ### Potentially Stale Claims
 
-- [[spreadsheet-verification]] states "Active Feb–March 2026" — the summative study is actively planned as of May 2026; the project is not concluded. The status description is stale.
+- [[agent-traceability-steerability]] states "Active Feb–March 2026" — the summative study is actively planned as of May 2026; the project is not concluded. The status description is stale.
 
 - [[wiki-kb-project]] states "The presentation on Thursday is planned to be generated from the KB itself" — today is Thursday May 3, 2026 (the day of ingestion). This is now a past event, not a future plan. The page should be updated to reflect whether this was done and what the outcome was.
 

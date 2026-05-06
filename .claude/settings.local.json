@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(git status *)",
-      "Bash(xargs -I{} basename {} .md)"
+      "Bash(xargs -I{} basename {} .md)",
+      "Bash(git mv *)",
+      "Bash(xargs sed -i '' 's/spreadsheet-verification/agent-traceability-steerability/g')"
     ]
   }
 }

@@ -62,3 +62,8 @@ Sources ingested (13 files):
 - Pages created: wiki/events/2026-05-05.md, wiki/concepts/skills.md, wiki/concepts/context-base.md
 - Pages updated: wiki/concepts/views.md (template-with-holes definition; document-as-view), wiki/concepts/workflows.md (narrowed to data dependencies; skills rename noted), wiki/concepts/living-system.md (three anchor examples: dashboards, Excel formulas, Equals Copilot), wiki/people/sumit-gulwani.md (May 5 contributions + appearances), wiki/people/sadra-sabouri.md (May 5 appearances), wiki/index.md
 - Views regenerated: wiki/presentation-views-workflows.md (renamed to 3-word slug; audience updated to "distinguished AI practitioners"; restructured to 3 slides per Sumit's feedback)
+
+## [2026-05-05] ingest | Agent's Traceability and Steerability Project, Auditing and Controlling AI Agent Actions in Spreadsheets
+- Pages created: wiki/concepts/semantic-diff.md
+- Pages updated: wiki/projects/agent-traceability-steerability.md (full rewrite: Pista paper details, 7 features, two studies, 3 theoretical contributions), wiki/concepts/agent-lens.md (7 features F1–F7 added), wiki/concepts/steerability.md (calibrated trust empirical finding), wiki/concepts/gulf-of-envisioning.md (persistent envisioning support throughout execution), wiki/concepts/scalable-oversight.md (participation over review), wiki/people/athena-saghi.md (Pista co-author role), wiki/people/sadra-sabouri.md (first author of Pista paper), wiki/index.md
+- Views regenerated: none (no matching target frontmatter)

@@ -27,6 +27,7 @@
 - [[embedded-views|Embedded Views]] — Option 2: views as prompt-powered holes inside existing applications (Word, PPT, Excel) vs. standalone CLI generation
 - [[skills|Skills]] — per-prompt creative methodology (HOW to fill a view hole); renamed from "creative workflows"; includes a gallery / community library
 - [[context-base|Context Base vs. Knowledge Base]] — applied compute paper's agent-focused architecture (Remember→Refine→Retrieve) vs. this project's human-centered knowledge base
+- [[semantic-diff|Semantic Diff]] — design primitive for inspectable agents: surface the computational unit (formula, rule), not the artifact surface (highlighted cells); generalizes across spreadsheet, code, document agents
 
 ## People
 
@@ -41,7 +42,7 @@
 ## Projects
 
 - [[wiki-kb-project|Wiki KB Project]] — AI-powered KB research; contributions: views, semi-private mashing, intermediate summaries
-- [[spreadsheet-verification|Spreadsheet Verification]] — Agent Lens tool; stop/see/steer; DAG of computation; scalable oversight
+- [[agent-traceability-steerability|Agent Traceability and Steerability in Spreadsheets]] — Pista; stop/see/steer; 7 features; calibrated trust through participation; semantic diff primitive
 
 ## Events
 

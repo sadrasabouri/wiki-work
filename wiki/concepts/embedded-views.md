@@ -38,4 +38,4 @@ Sadra's reaction: "this is gonna work with existing applications" — Option 2 i
 - Can the "edit mode / render mode" distinction be surfaced gracefully without disrupting normal document editing?
 - How does provenance work when a view is embedded in a document the user may edit manually?
 
-See [[views]] for the general views concept and [[spreadsheet-verification]] for an existing example of views embedded in Excel.
+See [[views]] for the general views concept and [[agent-traceability-steerability]] for an existing example of views embedded in Excel.

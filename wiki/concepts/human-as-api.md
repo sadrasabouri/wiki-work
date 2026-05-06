@@ -24,6 +24,6 @@ The `interaction.md` concept from the same meeting: an agent accumulates a file 
 
 Human-as-API is steerability from the agent's side: the agent creates steer points proactively by calling the human at the right moments, rather than waiting for the human to interrupt. This turns steerability from a user behavior into a jointly-designed protocol.
 
-## In [[spreadsheet-verification|Spreadsheet Verification]]
+## In [[agent-traceability-steerability|Spreadsheet Verification]]
 
 The spreadsheet tool used human-as-API at [[dag-of-computation|DAG]] checkpoints: the agent pauses, presents the current computation step, and asks the human to confirm or correct before continuing. This was validated in the formative study described in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]].

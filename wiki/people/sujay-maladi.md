@@ -4,7 +4,7 @@ tags: [person]
 
 # Sujay Maladi
 
-Collaborator on [[spreadsheet-verification|Spreadsheet Verification]]. Participated in early project meetings and contributed to defining the must-haves vs. nice-to-haves rubric for the verification interface — a core component of the [[scalable-oversight|scalable oversight]] approach.
+Collaborator on [[agent-traceability-steerability|Spreadsheet Verification]]. Participated in early project meetings and contributed to defining the must-haves vs. nice-to-haves rubric for the verification interface — a core component of the [[scalable-oversight|scalable oversight]] approach.
 
 ## Appears In
 

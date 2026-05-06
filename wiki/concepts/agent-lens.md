@@ -4,7 +4,19 @@ tags: [concept]
 
 # Agent Lens
 
-The framework name for the [[spreadsheet-verification|Spreadsheet Verification]] tool, named in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]]. The three verbs: **stop** (pause execution), **see** (the [[dag-of-computation|DAG of computation]]), **steer** (correct a step before it propagates).
+The framework name for the [[agent-traceability-steerability|Spreadsheet Verification]] tool (published as Pista — from Italian/Spanish *pista*: path, trail, clue), named in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]]. The three verbs: **stop** (pause execution), **see** (the [[dag-of-computation|DAG of computation]] and [[semantic-diff|semantic diff]]), **steer** (correct a step before it propagates).
+
+## Seven Features (F1–F7)
+
+Three design goals map to seven concrete features in the published system ([[Auditing and Controlling AI Agent Actions in Spreadsheets]]):
+
+- **F1** Decomposing Agent Execution — pause at steps that modify data/logic or affect downstream decisions
+- **F2** In-Situ Explanations — what the agent did and why, with proactive suggestions embedded
+- **F3** Surfacing Computation Logic — formulas, dependencies, data ranges displayed upfront (the [[semantic-diff|semantic diff]])
+- **F4** Localized Editing — corrections scoped to the current step only; no full re-prompt needed
+- **F5** Branching Exploration — edits fork into a new branch; original preserved; displayed as a tree. *Most adopted: 94% of participants, median 3 uses.*
+- **F6** Scaffolded Task Formulation — editable requirements list inferred from the prompt before execution begins
+- **F7** Scaffolding Questions — proactive follow-up and edit suggestions at each step to close the [[gulf-of-envisioning|envisioning gap]]
 
 ## Why "Lens"
 

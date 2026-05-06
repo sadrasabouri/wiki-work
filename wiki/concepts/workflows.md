@@ -21,4 +21,4 @@ In the [[living-system|living system]] model formalized in [[Sadra-4May2026-TRAN
 
 ## Steerability at Workflow Boundaries
 
-Workflows are where [[steerability|Steerability]] is most meaningful. Each step is a potential intervention point — the user can redirect before output propagates downstream. A workflow without steerability is a black box; with steerability it is a collaborative pipeline. This was the design goal articulated for [[spreadsheet-verification|Spreadsheet Verification]] in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]].
+Workflows are where [[steerability|Steerability]] is most meaningful. Each step is a potential intervention point — the user can redirect before output propagates downstream. A workflow without steerability is a black box; with steerability it is a collaborative pipeline. This was the design goal articulated for [[agent-traceability-steerability|Spreadsheet Verification]] in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]].

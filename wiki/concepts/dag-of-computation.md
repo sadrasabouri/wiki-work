@@ -4,7 +4,7 @@ tags: [concept]
 
 # DAG of Computation
 
-Visualizing AI agent computation as a directed acyclic graph where nodes are individual operations and edges are data dependencies between them. The key visual contribution of [[spreadsheet-verification|Spreadsheet Verification]] / [[agent-lens|Agent Lens]].
+Visualizing AI agent computation as a directed acyclic graph where nodes are individual operations and edges are data dependencies between them. The key visual contribution of [[agent-traceability-steerability|Spreadsheet Verification]] / [[agent-lens|Agent Lens]].
 
 Proposed by [[sumit-gulwani|Sumit]] in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]] as a second view alongside step-by-step reveal: "show the entire thing as a DAG, where each card talks about each step the agent did."
 

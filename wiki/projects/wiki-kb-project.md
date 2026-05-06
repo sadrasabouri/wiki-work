@@ -10,7 +10,7 @@ Research project on AI-powered knowledge management. The central claim: a KB str
 
 As articulated in [[Thursday demo]] and refined in [[Sadra-1May2026-Transcript|the May 1 sync]]:
 
-1. **[[views|Views]]** — declarative specs (prompts/templates) applied to raw sources to produce purpose-specific outputs. User-definable, hierarchical, saveable. The unifying abstraction across both this project and [[spreadsheet-verification|Spreadsheet Verification]].
+1. **[[views|Views]]** — declarative specs (prompts/templates) applied to raw sources to produce purpose-specific outputs. User-definable, hierarchical, saveable. The unifying abstraction across both this project and [[agent-traceability-steerability|Spreadsheet Verification]].
 2. **[[semi-private-mashing|Semi-private mashing]]** — filtering private exchanges (1:1 meetings) to extract only parts relevant to a shared KB, while preserving privacy. Key differentiator from existing KB tools.
 3. **[[information-knowledge-pipeline|Efficiency via the information→knowledge→views pipeline]]** — views run on wiki (processed knowledge), not raw data; intermediate summaries are precomputed once and reused. Reduces latency and cost of view generation. Discussed in [[Sadra-1May2026-Transcript|May 1 sync]] and formalized as the full pipeline in [[Sadra-3May2026-TRANSCRIPT|May 3]]. Structurally identical to Tiago Forte's "Intermediate Packets" in [[second-brain-code-method|BASB]] — both identify reuse as the leverage point.
 

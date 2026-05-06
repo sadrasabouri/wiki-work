@@ -4,7 +4,7 @@ tags: [person]
 
 # Sumit Gulwani
 
-Microsoft Research. Key collaborator on both [[wiki-kb-project|Wiki KB Project]] and [[spreadsheet-verification|Spreadsheet Verification]].
+Microsoft Research. Key collaborator on both [[wiki-kb-project|Wiki KB Project]] and [[agent-traceability-steerability|Spreadsheet Verification]].
 
 ## Intellectual Contributions
 
