@@ -7,7 +7,7 @@ Generate presentation from template: $ARGUMENTS
 
 ## Steps
 
-1. **Load the template.** Read `$ARGUMENTS`. Extract frontmatter parameters (audience, concepts, duration, etc.). The section headings and their `> fill:` prompts define the slide structure.
+1. **Load the template.** Read `$ARGUMENTS`. Extract frontmatter parameters (audience, concepts, duration, etc.). Substitute every `{{var}}` placeholder in the template body — including inside `> fill:` prompts and section headings — with the matching frontmatter value before doing anything else. The section headings and substituted `> fill:` prompts define the slide structure.
 
 2. **Read the wiki.** Read `wiki/index.md`. Then read all pages listed under the frontmatter `concepts` key, plus any pages those link to that are relevant. If no `concepts` key is set, read all concept and project pages.
 
