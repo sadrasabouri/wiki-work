@@ -67,3 +67,5 @@ Sources ingested (13 files):
 - Pages created: wiki/concepts/semantic-diff.md
 - Pages updated: wiki/projects/agent-traceability-steerability.md (full rewrite: Pista paper details, 7 features, two studies, 3 theoretical contributions), wiki/concepts/agent-lens.md (7 features F1–F7 added), wiki/concepts/steerability.md (calibrated trust empirical finding), wiki/concepts/gulf-of-envisioning.md (persistent envisioning support throughout execution), wiki/concepts/scalable-oversight.md (participation over review), wiki/people/athena-saghi.md (Pista co-author role), wiki/people/sadra-sabouri.md (first author of Pista paper), wiki/index.md
 - Views regenerated: none (no matching target frontmatter)
+
+## [2026-05-05] view:presentation | grounded transcript examples → presentation-grounded-examples.md
