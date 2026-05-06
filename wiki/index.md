@@ -26,7 +26,7 @@
 - [[living-system|Living System]] — always-live recalc model (Excel formula analogy); automated raw data generation; everything-is-a-DAG; temporal source filtering
 - [[embedded-views|Embedded Views]] — Option 2: views as prompt-powered holes inside existing applications (Word, PPT, Excel) vs. standalone CLI generation
 - [[skills|Skills]] — per-prompt creative methodology (HOW to fill a view hole); renamed from "creative workflows"; includes a gallery / community library
-- [[context-base|Context Base vs. Knowledge Base]] — applied compute paper's agent-focused architecture (Remember→Refine→Retrieve) vs. this project's human-centered knowledge base
+- [[context-base|Context Base vs. Knowledge Base]] — Applied Compute's Remember→Refine→Retrieve architecture (empirically: 16.9% APEX improvement, reasoning-effort amortization); three structural gaps between code and knowledge work; contrast with this project's human-centered KB
 - [[semantic-diff|Semantic Diff]] — design primitive for inspectable agents: surface the computational unit (formula, rule), not the artifact surface (highlighted cells); generalizes across spreadsheet, code, document agents
 - [[local-first-kb|Local-First KB]] — personal KB as local branch; private processing on-device; PR model for contributing to org KB; matvellosoknowledge as concrete RAG-based instantiation
 - [[workiq|Work IQ]] — Microsoft's org-scale context base (Data + Context + Skills/Tools); closest incumbent to the wiki project; gap: surface-level indexing, no knowledge layer, no semi-private contribution model
