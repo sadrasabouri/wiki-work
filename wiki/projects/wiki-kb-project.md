@@ -12,11 +12,11 @@ As articulated in [[Thursday demo]] and refined in [[Sadra-1May2026-Transcript|t
 
 1. **[[views|Views]]** — declarative specs (prompts/templates) applied to raw sources to produce purpose-specific outputs. User-definable, hierarchical, saveable. The unifying abstraction across both this project and [[spreadsheet-verification|Spreadsheet Verification]].
 2. **[[semi-private-mashing|Semi-private mashing]]** — filtering private exchanges (1:1 meetings) to extract only parts relevant to a shared KB, while preserving privacy. Key differentiator from existing KB tools.
-3. **Efficiency via intermediate summaries** — applying views to summaries rather than raw sources; reduces latency and cost of view generation; discussed in [[Sadra-1May2026-Transcript|May 1 sync]]. This contribution is structurally identical to Tiago Forte's "Intermediate Packets" in [[second-brain-code-method|BASB]] — both identify reuse as the leverage point, not raw production.
+3. **[[information-knowledge-pipeline|Efficiency via the information→knowledge→views pipeline]]** — views run on wiki (processed knowledge), not raw data; intermediate summaries are precomputed once and reused. Reduces latency and cost of view generation. Discussed in [[Sadra-1May2026-Transcript|May 1 sync]] and formalized as the full pipeline in [[Sadra-3May2026-TRANSCRIPT|May 3]]. Structurally identical to Tiago Forte's "Intermediate Packets" in [[second-brain-code-method|BASB]] — both identify reuse as the leverage point.
 
 ## Intellectual Lineage
 
-The LLM-wiki pattern originates with Andrej Karpathy's X post (a prompt for extracting entities from fleeting notes) and has since been applied across finance, management, and personal tracking — see [[llm-wiki-landscape|LLM-Wiki Landscape]] for the full ecosystem. This project inherits the core pattern and extends it with [[views]], [[semi-private-mashing|semi-private mashing]], and temporal integrity — addressing the lossiness and scaling critiques identified by Anatoly Krasnovsky as known limitations of the approach.
+The LLM-wiki pattern is rooted in the [[second-brain-code-method|Building a Second Brain]] tradition (Tiago Forte's CODE method) and was popularized as an LLM-native workflow by Andrej Karpathy's X post — see [[llm-wiki-landscape|LLM-Wiki Landscape]] for the full ecosystem. The key differentiator from Karpathy's personal KB pattern: this project targets team/organizational knowledge, not personal notes — confirmed explicitly in [[Sadra-3May2026-TRANSCRIPT|the May 3 sync]] ("we never call it a personal knowledge base"). [[semi-private-mashing|Semi-private mashing]] is the mechanism that makes organizational scope possible.
 
 ## External Positioning
 
@@ -32,4 +32,4 @@ The project is its own best use case — see [[self-referential-kb]]. The raw so
 
 ## Sources
 
-Emails: [[Thursday demo]], [[Presentation]], [[misc thoughts]], [[Transcripts]]. Meetings: [[Sadra-1May2026-Transcript|May 1]], [[Sadra-2May2026-TRANSCRIPT|May 2 morning]], [[Sadra-2May2026-TRANSCRIPT2|May 2 evening]].
+Emails: [[Thursday demo]], [[Presentation]], [[misc thoughts]], [[Transcripts]]. Meetings: [[Sadra-1May2026-Transcript|May 1]], [[Sadra-2May2026-TRANSCRIPT|May 2 morning]], [[Sadra-2May2026-TRANSCRIPT2|May 2 evening]], [[Sadra-3May2026-TRANSCRIPT|May 3]], [[Sadra-4May2026-TRANSCRIPT2|May 4a]], [[Sadra-4May2026-TRANSCRIPT3|May 4b]].

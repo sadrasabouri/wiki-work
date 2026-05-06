@@ -1,5 +1,10 @@
 # Wiki Log
 
+## [2026-05-05] lint | full scan
+- Pages fixed: sadra-sabouri.md (added May 3-4 appearances), second-brain-code-method.md (tiago-forte link), wiki-kb-project.md (sources, Karpathy framing, contribution 3 link)
+- Pages updated: workflows.md (DAG edge framing + upstream data-gathering), information-knowledge-pipeline.md (event page cross-ref), living-system.md (event page cross-ref)
+- Open issues: see clarification questions below
+
 ## [2026-05-03] ingest | Initial build from all raw sources
 
 Sources ingested (13 files):

@@ -4,7 +4,7 @@ tags: [concept, core]
 
 # Information → Knowledge → Views Pipeline
 
-The three-layer architecture of the [[wiki-kb-project|Wiki KB Project]], crystallized in [[Sadra-3May2026-TRANSCRIPT|the May 3 three-way sync]]:
+The three-layer architecture of the [[wiki-kb-project|Wiki KB Project]], crystallized in [[2026-05-03|the May 3 three-way sync]] ([[Sadra-3May2026-TRANSCRIPT]]):
 
 ```
 Raw Data (Information)  →  Wiki (Knowledge)  →  Views (Rendered Output)

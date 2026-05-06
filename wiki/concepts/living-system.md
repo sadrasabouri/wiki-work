@@ -4,7 +4,7 @@ tags: [concept]
 
 # Living System
 
-The KB as an always-current, self-updating system that recomputes whenever new data arrives — like Excel formulas, not Excel values. Articulated by [[sumit-gulwani|Sumit]] in [[Sadra-4May2026-TRANSCRIPT3|the May 4 morning sync]].
+The KB as an always-current, self-updating system that recomputes whenever new data arrives — like Excel formulas, not Excel values. Articulated by [[sumit-gulwani|Sumit]] across two late-night syncs in [[2026-05-04|May 4]] ([[Sadra-4May2026-TRANSCRIPT2]], [[Sadra-4May2026-TRANSCRIPT3]]).
 
 ## The Excel Formula Analogy
 

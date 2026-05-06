@@ -15,6 +15,8 @@ A **workflow** is a constructive specification of HOW to populate a [[views|View
 
 Workflows can be empty (just run the view's prompt) or elaborate. Crucially, workflows are *creative artifacts* — the insight that grounded theory applies to transcript summarization is itself a contribution, per [[Sadra-1May2026-Transcript|the May 1 sync]].
 
+In the [[living-system|living system]] model formalized in [[Sadra-4May2026-TRANSCRIPT3|May 4]], workflows are the **edges** in the full computation DAG: every transformation between data nodes — including upstream data-gathering processes — is a workflow. This extends the concept beyond "how to process existing data into views" to also cover "how to collect raw data in the first place." A search query ("get top 5 Twitter posts matching X") is itself a workflow whose output becomes raw data for the next stage.
+
 ## Steerability at Workflow Boundaries
 
 Workflows are where [[steerability|Steerability]] is most meaningful. Each step is a potential intervention point — the user can redirect before output propagates downstream. A workflow without steerability is a black box; with steerability it is a collaborative pipeline. This was the design goal articulated for [[spreadsheet-verification|Spreadsheet Verification]] in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]].

@@ -40,5 +40,5 @@ BASB's PARA organizing method (Projects, Areas, Resources, Archive) organizes by
 
 ## Sources
 
-- [[Building a Second Brain The Definitive Introductory Guide]] — Tiago Forte, Forte Labs (2023)
+- [[Building a Second Brain The Definitive Introductory Guide]] — [[tiago-forte|Tiago Forte]], Forte Labs (2023)
 - [[LLM-Wiki Related Works]] — Sadra's note situating BASB as the historical antecedent of LLM-wiki tools
