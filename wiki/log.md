@@ -69,3 +69,8 @@ Sources ingested (13 files):
 - Views regenerated: none (no matching target frontmatter)
 
 ## [2026-05-05] view:presentation | grounded transcript examples → presentation-grounded-examples.md
+
+## [2026-05-05] ingest | Personal Private Knowledge Management, matvellosoknowledge
+- Pages created: wiki/concepts/local-first-kb.md
+- Pages updated: wiki/concepts/llm-wiki-landscape.md (matvellosoknowledge as RAG-based alternative; MY PREFERENCES.md skill analogue), wiki/concepts/semi-private-mashing.md (PR model as concrete local→shared filter mechanism), wiki/concepts/kb-as-codebase.md (local branch model: personal KB as fork), wiki/concepts/skills.md (MY PREFERENCES.md as independently discovered real-world skills analogue), wiki/index.md
+- Views regenerated: none (no matching target frontmatter)

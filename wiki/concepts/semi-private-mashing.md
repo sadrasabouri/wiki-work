@@ -17,3 +17,9 @@ Deciding what is "relevant to share" is itself a [[views|View]] — a declarativ
 ## Privacy Implications
 
 The filtering must happen *before* the content enters the shared KB. The raw private source never enters the shared layer; only the extracted, filtered output does. This was discussed in [[Sadra-1May2026-Transcript|the May 1 three-way sync]] as a concern Souti raised about privacy.
+
+## The PR Model as Concrete Mechanism
+
+[[local-first-kb|Local-First KB]] makes this operational: the user runs a private KB locally (all processing on-device), then contributes selected distilled knowledge units to the shared org KB via a pull request. The PR boundary *is* the filter — only what the user explicitly includes in the PR crosses from the private layer to the shared one. [[Personal Private Knowledge Management]]
+
+This inverts the current failure mode documented in [[Sadra-5May2026-TRANSCRIPT2|the May 5 evening sync]]: Sumit's agent accidentally pulled three sentences of a colleague's unpublished work because no privacy boundary existed. The PR model makes the boundary structural, not dependent on the user catching the violation manually.

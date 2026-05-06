@@ -33,6 +33,8 @@ Skills encode the creative insight — the recognition that grounded theory appl
 
 A community library of skills is a natural extension: practitioners share skills for knowledge distillation the way developers share libraries. Sumit's call-to-action in his draft post: "stand up a community pattern library, because many of us are distilling information in our own creative ways." The grounded theory prompt from this project is one example of a skill worth sharing.
 
+**Real-world analogue in the wild:** [[matvellosoknowledge]] implements a skills-equivalent called **MY PREFERENCES.md** — a plain markdown file where users encode domain-specific extraction rules and hard constraints (e.g., "always extract action items from work emails," "never include prices in shopping summaries"). The agent uses it as part of the system prompt. This confirms the skills pattern is independently discoverable: when you build a serious personal KB, you end up needing a user-configurable methodology layer. [[Personal Private Knowledge Management]]
+
 ## Relation to Workflows
 
 Skills and [[workflows]] are distinct. Skills = methodology per prompt (HOW to compute a given hole). Workflows = data dependency graph across prompts and sources (WHEN to recompute). A view template has holes, each hole has a prompt, each prompt may specify a skill. The workflow determines which prompts rerun when a source changes.

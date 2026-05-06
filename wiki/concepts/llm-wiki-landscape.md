@@ -26,6 +26,12 @@ The pattern has been picked up across domains:
 
 The commonality: unstructured input → LLM-extracted entities + relations → browsable, queryable graph.
 
+## A Documented RAG-Based Alternative: matvellosoknowledge
+
+[[matvellosoknowledge]] (Eduardo Mello, open source) is the most fully documented local-first personal KB in the ecosystem. It connects Gmail and Outlook, runs inference locally via Ollama, and builds To Do, shopping, and reading lists alongside a knowledge graph — all without cloud API calls. Its **MY PREFERENCES.md** file lets users declare domain-specific extraction rules in plain markdown, functioning as a [[skills|skills]] analogue.
+
+Retrieval is embeddings + cosine similarity (standard RAG). Sadra's critique in [[Personal Private Knowledge Management]]: "this makes the dependency uninterpretable compared to a graph structure." The project validates the market and privacy-first design direction while illustrating the architectural ceiling of RAG — the system can surface relevant chunks but cannot traverse typed relations or provide interpretable provenance chains. See [[local-first-kb|Local-First KB]] for the full comparison.
+
 ## Wiki vs. RAG
 
 A structurally important distinction, documented in [[LLM-Wiki Related Works]]: wiki-based memory outperforms RAG for grounded agent tasks.
