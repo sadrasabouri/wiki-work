@@ -34,6 +34,10 @@ Articulated the **Satya pitch**: "Satya, imagine your power when the Microsoft b
 
 Sumit consistently finds the single abstraction that unifies superficially different problems. [[views]] unified the spreadsheet tool and the KB system. He also extended the simulation metaphor and the degree-of-separation framing of [[semi-private-mashing|semi-private mashing]] in [[Thursday demo]].
 
+In [[Sadra-6May2026-Notes|the May 6 sync]], shared his **document generation workflow** for the pre-read: start from the desired content outline (template), have an agent fill in each section (holes), merge short sections for balance. Introduced the **FlashFill analogy** for view authoring: accumulating input-output revision examples narrows the agent's hypothesis space toward the right output, the same way FlashFill converges on a transformation from examples. This is [[views|document-as-view]] instantiated in practice. Proposed applying the same approach to Sadra's presentation.
+
+Also offered a reframe of the wiki vs. RAG distinction: **data compression** is the more fundamental concern, not interpretability — a RAG index is a compressed corpus, and the question is whether compression preserves downstream task semantics. Encouraged Sadra to develop the interpretability argument further. [[Sadra-6May2026-Notes]]
+
 ## Appears In
 
-[[Thursday demo]], [[Presentation]], [[misc thoughts]], [[Transcripts]], [[GMT20260220-230118_Recording.transcript|Feb 20]], [[GMT20260316-200648_Recording.transcript|Mar 16]], [[Sadra-1May2026-Transcript|May 1]], [[Sadra-2May2026-TRANSCRIPT|May 2 morning]], [[Sadra-2May2026-TRANSCRIPT2|May 2 evening]], [[Sadra-5May2026-TRANSCRIPT|May 5 morning]], [[Sadra-5May2026-TRANSCRIPT2|May 5 evening]]
+[[Thursday demo]], [[Presentation]], [[misc thoughts]], [[Transcripts]], [[GMT20260220-230118_Recording.transcript|Feb 20]], [[GMT20260316-200648_Recording.transcript|Mar 16]], [[Sadra-1May2026-Transcript|May 1]], [[Sadra-2May2026-TRANSCRIPT|May 2 morning]], [[Sadra-2May2026-TRANSCRIPT2|May 2 evening]], [[Sadra-5May2026-TRANSCRIPT|May 5 morning]], [[Sadra-5May2026-TRANSCRIPT2|May 5 evening]], [[Sadra-6May2026-Notes|May 6]]

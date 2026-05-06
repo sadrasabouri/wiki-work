@@ -57,3 +57,4 @@
 - [[2026-05-03|May 3]] — Three-way sync; wiki demo to Sumit; semantic index framing; raw→knowledge→views pipeline; embedded views; Karpathy differentiator
 - [[2026-05-04|May 4]] — Two 1:1s; full-system provenance DAG; temporal source filtering; living system; everything-is-a-DAG; knowledge graph as alternative foundation
 - [[2026-05-05|May 5]] — AI slop diagnosis; workflows→skills rename; view = template with holes; workflow = data dependencies; context base vs. knowledge base; document as view; Satya pitch
+- [[2026-05-06|May 6]] — task division (Sadra: presentation, Sumit: pre-read); FlashFill analogy for view authoring; Karpathy gist 700-comment mining (3 categories); WorkIQ action item; wiki vs. RAG compression reframe

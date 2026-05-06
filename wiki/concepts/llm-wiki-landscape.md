@@ -49,6 +49,22 @@ All three critiques come from Anatoly Krasnovsky's public commentary on the llm-
 2. **No RAG benchmark** — wiki-based systems have not been rigorously benchmarked against RAG. The efficiency and quality claims are anecdotal, not experimentally established.
 3. **Scaling** — as the graph grows, maintaining it becomes non-trivial. Edge consistency, orphan detection, and contradiction resolution all get harder at scale.
 
+## Karpathy Gist Comment Mining
+
+The Karpathy GitHub gist — the origin post for the LLM-wiki pattern — has accumulated ~700 public comments from practitioners. Sadra mined these in [[Sadra-6May2026-Notes|May 6]], categorizing related implementations into three groups:
+
+1. **Software engineering** — teams applying the wiki pattern to code-adjacent knowledge work (architecture decisions, incident postmortems, design docs)
+2. **Researchers and ideators** — individual practitioners building personal research KBs from papers, notes, and transcripts
+3. **Teams** — organizational-scale deployments where multiple people ingest into a shared graph
+
+This is the most direct empirical survey of where the ecosystem has gone from Karpathy's original prompt. The three-category split maps loosely onto the [[wiki-kb-project|Wiki KB Project]]'s three target audiences: personal KB (researchers), team KB (teams), and the broader org brain (organizational-scale).
+
+## Wiki vs. RAG: Compression as the Central Concern
+
+Sadra's interpretability argument — that wiki edges are typed and traversable while RAG similarity scores are opaque — received a refinement from Sumit in [[Sadra-6May2026-Notes|May 6]]: **data compression** is the more fundamental concern in RAG, not interpretability. A RAG index is a compressed representation of a corpus; the quality question is whether the compression preserves the semantics needed for downstream tasks.
+
+The synthesis: the wiki's advantage is that its compression model (entity extraction + typed relations) is *declarative* — inspectable, correctable, extensible. An embedding is not directly editable. The interpretability argument and the compression argument are the same point at different levels of abstraction.
+
 ## How the Wiki KB Project Differentiates
 
 The Karpathy pattern produces a generic entity graph. The [[wiki-kb-project|Wiki KB Project]] goes further on three axes:

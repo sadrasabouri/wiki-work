@@ -39,9 +39,11 @@ In [[agent-traceability-steerability|Spreadsheet Verification]], views render ag
 
 A database view is a saved query over mutable data; a wiki view is a saved prompt over an evolving corpus. Both hide underlying complexity behind a purpose-specific lens. Views are user-definable and hierarchical — a "design doc" view can compose with a "topic summary" view.
 
-## View Definition UX: Vibe Sessions
+## View Definition UX: Vibe Sessions and the FlashFill Analogy
 
 Sumit noted in [[Sadra-3May2026-TRANSCRIPT|the May 3 sync]] that defining the right view requires iteration: "the real experience is going to be that I'm trying to create some view, and it will take a lot of iteration before I land onto something that I like." The natural UX is a **vibe session** — an interactive back-and-forth that explores the right prompt and workflow. After the session, the user should be able to distill it into a reusable view definition. The current CLI lacks this facility.
+
+In [[Sadra-6May2026-Notes|the May 6 sync]], Sumit made the convergence mechanism concrete via the **FlashFill analogy**: FlashFill narrows a large space of possible transformation functions by accumulating input-output examples. The same principle applies to view authoring — each revision is a new example, narrowing the hypothesis space until the agent produces the right output. You don't specify the skill upfront; you accumulate examples until the view converges. This is a practical workflow for authoring both the template structure and the per-hole prompts.
 
 ## Embedded Views
 
