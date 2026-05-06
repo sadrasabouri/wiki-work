@@ -35,6 +35,6 @@ End with a one-paragraph synthesis: where did this concept start, how did it evo
 
 ## Save Output
 
-Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `wiki/timeline-<slug>.md`.
+Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `views`, `wiki-kb`, `steerability`). Drop stop words and articles. Save to `wiki/timeline-<slug>.md`.
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:timeline | $ARGUMENTS`

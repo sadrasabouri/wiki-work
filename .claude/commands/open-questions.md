@@ -44,6 +44,6 @@ End with a prioritized top-3: which open questions most need resolution before t
 
 ## Save Output
 
-Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `wiki/open-questions-<slug>.md`.
+Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `views`, `wiki-kb`, `all`). Drop stop words and articles. Save to `wiki/open-questions-<slug>.md`.
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:open-questions | $ARGUMENTS`

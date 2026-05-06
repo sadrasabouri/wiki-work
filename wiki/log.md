@@ -30,7 +30,7 @@ Sources ingested (13 files):
 
 **Pages created:** 18 concepts, 5 people, 2 projects, 7 events, index, log
 
-## [2026-05-03] view:query | can you create a summary of all information for a 5 years old?
+## [2026-05-03] view:query | can you create a summary of all information for a 5 years old? → query-five-year-old.md
 
 ## [2026-05-03] view:timeline | views
 
@@ -61,4 +61,4 @@ Sources ingested (13 files):
 ## [2026-05-05] ingest | Sadra-5May2026-TRANSCRIPT, Sadra-5May2026-TRANSCRIPT2
 - Pages created: wiki/events/2026-05-05.md, wiki/concepts/skills.md, wiki/concepts/context-base.md
 - Pages updated: wiki/concepts/views.md (template-with-holes definition; document-as-view), wiki/concepts/workflows.md (narrowed to data dependencies; skills rename noted), wiki/concepts/living-system.md (three anchor examples: dashboards, Excel formulas, Equals Copilot), wiki/people/sumit-gulwani.md (May 5 contributions + appearances), wiki/people/sadra-sabouri.md (May 5 appearances), wiki/index.md
-- Views regenerated: presentation-views-and-workflows-... (audience updated to "distinguished AI practitioners"; restructured to 3 slides per Sumit's feedback)
+- Views regenerated: wiki/presentation-views-workflows.md (renamed to 3-word slug; audience updated to "distinguished AI practitioners"; restructured to 3 slides per Sumit's feedback)

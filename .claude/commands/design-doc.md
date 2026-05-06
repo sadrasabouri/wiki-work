@@ -21,7 +21,7 @@ Generate a Design Document for: $ARGUMENTS
 
 ## Save Output
 
-Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `wiki/design-doc-<slug>.md`.
+Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `views`, `wiki-kb`, `agent-lens`). Drop stop words and articles. Save to `wiki/design-doc-<slug>.md`.
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:design-doc | $ARGUMENTS`
 

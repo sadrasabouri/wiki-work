@@ -33,6 +33,6 @@ Produce a Contribution Map for: $ARGUMENTS
 
 ## Save Output
 
-Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `wiki/contribution-map-<slug>.md`.
+Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `views`, `wiki-kb`, `sumit`). Drop stop words and articles. Save to `wiki/contribution-map-<slug>.md`.
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:contribution-map | $ARGUMENTS`

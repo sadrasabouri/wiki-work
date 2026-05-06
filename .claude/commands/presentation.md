@@ -45,6 +45,6 @@ After the outline, add a one-paragraph **presenter brief**: what to emphasize, w
 
 ## Save Output
 
-Slugify the argument (lowercase, spaces → hyphens). Save the complete output as-is to `wiki/presentation-<slug>.md`.
+Create a short slug: **at most 3 words** from `<topic>`, lowercase, joined with hyphens (e.g. `views-workflows`, `wiki-kb`, `agent-lens`). Drop stop words, articles, and audience from the filename. Save to `wiki/presentation-<slug>.md`.
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:presentation | $ARGUMENTS`
