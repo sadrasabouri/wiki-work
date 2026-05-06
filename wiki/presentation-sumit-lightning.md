@@ -4,6 +4,7 @@ target: views, skills, workflows, semi-private-mashing, llm-wiki-landscape, work
 audience: distinguished AI practitioners and AI leaders at Microsoft
 duration: 10min
 generated: 2026-05-06
+prompt: /presentation templates/sumit-lightning.md
 ---
 
 # Microsoft Lightning Talk — for distinguished AI practitioners and AI leaders at Microsoft

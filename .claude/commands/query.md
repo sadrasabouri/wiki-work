@@ -25,6 +25,14 @@ Answer this question using the wiki: $ARGUMENTS
 
 ## Save Output
 
-Create a short slug: **at most 3 words** from the core subject of the question, lowercase, joined with hyphens (e.g. `views-definition`, `sumit-steerability`, `rag-vs-wiki`). Drop stop words, articles, and question words from the filename. Save to `wiki/query-<slug>.md`.
+Create a short slug: **at most 3 words** from the core subject of the question, lowercase, joined with hyphens (e.g. `views-definition`, `sumit-steerability`, `rag-vs-wiki`). Drop stop words, articles, and question words from the filename. Save to `wiki/query-<slug>.md` with this frontmatter:
+
+```yaml
+---
+tags: [view, query]
+prompt: /query $ARGUMENTS
+generated: YYYY-MM-DD
+---
+```
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:query | $ARGUMENTS`

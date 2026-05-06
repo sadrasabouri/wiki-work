@@ -2,6 +2,7 @@
 tags: [view, presentation]
 target: views, workflows, skills, semi-private-mashing
 audience: distinguished AI practitioners (Satya's office)
+prompt: /presentation create a example list grounded with examples from transcript
 generated: 2026-05-06
 ---
 

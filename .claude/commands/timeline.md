@@ -35,6 +35,14 @@ End with a one-paragraph synthesis: where did this concept start, how did it evo
 
 ## Save Output
 
-Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `views`, `wiki-kb`, `steerability`). Drop stop words and articles. Save to `wiki/timeline-<slug>.md`.
+Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `views`, `wiki-kb`, `steerability`). Drop stop words and articles. Save to `wiki/timeline-<slug>.md` with this frontmatter:
+
+```yaml
+---
+tags: [view, timeline]
+prompt: /timeline $ARGUMENTS
+generated: YYYY-MM-DD
+---
+```
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:timeline | $ARGUMENTS`
