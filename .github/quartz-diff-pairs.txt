@@ -1,0 +1,7 @@
+# Diff pairs to publish, one per line. Each line is "BASE...HEAD".
+# A diff site is built at /<base_slug>...<head_slug>/ that contains the union
+# of files from both branches, with graph nodes colored by status:
+#   added (green), changed (orange), deleted (red), unchanged (gray)
+# Pairs whose branches are missing on origin are skipped with a warning.
+main...v1
+v1...v2

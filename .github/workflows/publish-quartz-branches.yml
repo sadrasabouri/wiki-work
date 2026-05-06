@@ -8,6 +8,7 @@ on:
       - "**/*.md"
       - ".github/quartz-branches.txt"
       - ".github/quartz-content-paths.txt"
+      - ".github/quartz-diff-pairs.txt"
       - ".github/workflows/publish-quartz-branches.yml"
   workflow_dispatch:
 
@@ -208,6 +209,358 @@ jobs:
             BUILT_SLUGS+=("$slug")
           done
 
+          # === Build diff sites ===
+          DIFF_PAIRS_FILE="$ROOT/.github/quartz-diff-pairs.txt"
+          declare -a DIFF_PAIRS=()
+          if [ -f "$DIFF_PAIRS_FILE" ]; then
+            mapfile -t DIFF_PAIRS < <(sed -e 's/[[:space:]]*#.*$//' -e '/^[[:space:]]*$/d' "$DIFF_PAIRS_FILE")
+          fi
+
+          declare -A SEEN_DIFF_SLUGS=()
+          declare -a BUILT_DIFF_PAIRS=()
+          declare -a BUILT_DIFF_SLUGS=()
+
+          DIFF_PATHS_FILE="$RUNNER_TEMP/diff-content-paths.txt"
+          printf '%s\n' "${CONTENT_PATHS[@]}" > "$DIFF_PATHS_FILE"
+
+          for pair in "${DIFF_PAIRS[@]}"; do
+            if [[ "$pair" != *...* ]]; then
+              echo "::error::Diff pair '$pair' is malformed; expected 'BASE...HEAD'."
+              exit 1
+            fi
+
+            base_branch="${pair%%...*}"
+            head_branch="${pair#*...}"
+
+            if [ -z "$base_branch" ] || [ -z "$head_branch" ]; then
+              echo "::error::Diff pair '$pair' is malformed; both BASE and HEAD must be non-empty."
+              exit 1
+            fi
+
+            base_slug="$(printf '%s' "$base_branch" | sed 's#[^A-Za-z0-9._-]#-#g')"
+            head_slug="$(printf '%s' "$head_branch" | sed 's#[^A-Za-z0-9._-]#-#g')"
+            diff_slug="${base_slug}...${head_slug}"
+
+            if [ -n "${SEEN_DIFF_SLUGS[$diff_slug]:-}" ]; then
+              echo "::error::Diff pairs produce the same URL folder: '${SEEN_DIFF_SLUGS[$diff_slug]}' and '$pair' both map to '$diff_slug'."
+              exit 1
+            fi
+            SEEN_DIFF_SLUGS[$diff_slug]="$pair"
+
+            missing_branch=""
+            for b in "$base_branch" "$head_branch"; do
+              if ! git -C "$ROOT" show-ref --verify --quiet "refs/remotes/origin/$b"; then
+                missing_branch="$b"
+                break
+              fi
+            done
+
+            if [ -n "$missing_branch" ]; then
+              echo "::warning::Diff '$pair' skipped: branch '$missing_branch' not found on origin."
+              continue
+            fi
+
+            echo "Building diff '$pair' into /$diff_slug/"
+
+            base_worktree="$WORKTREE_ROOT/diff-${diff_slug}-base"
+            head_worktree="$WORKTREE_ROOT/diff-${diff_slug}-head"
+
+            git -C "$ROOT" worktree add --detach "$base_worktree" "origin/$base_branch"
+            git -C "$ROOT" worktree add --detach "$head_worktree" "origin/$head_branch"
+
+            rm -rf "$QUARTZ_DIR/content"
+            mkdir -p "$QUARTZ_DIR/content"
+
+            status_json="$RUNNER_TEMP/diff-status-$diff_slug.json"
+
+            export DIFF_BASE_DIR="$base_worktree"
+            export DIFF_HEAD_DIR="$head_worktree"
+            export DIFF_OUT_DIR="$QUARTZ_DIR/content"
+            export DIFF_STATUS_JSON="$status_json"
+            export DIFF_CONTENT_PATHS_FILE="$DIFF_PATHS_FILE"
+            export DIFF_BASE_BRANCH="$base_branch"
+            export DIFF_HEAD_BRANCH="$head_branch"
+
+            node <<'NODE'
+          const fs = require("node:fs")
+          const path = require("node:path")
+          const crypto = require("node:crypto")
+
+          const baseDir = process.env.DIFF_BASE_DIR
+          const headDir = process.env.DIFF_HEAD_DIR
+          const outDir = process.env.DIFF_OUT_DIR
+          const statusPath = process.env.DIFF_STATUS_JSON
+          const contentPaths = fs
+            .readFileSync(process.env.DIFF_CONTENT_PATHS_FILE, "utf8")
+            .split("\n")
+            .map(s => s.trim())
+            .filter(Boolean)
+
+          function collect(root, contentPath) {
+            const out = new Map()
+            const start = path.join(root, contentPath)
+            if (!fs.existsSync(start)) return out
+            const stat = fs.statSync(start)
+            if (stat.isFile()) {
+              out.set(contentPath, start)
+              return out
+            }
+            const stack = [start]
+            while (stack.length > 0) {
+              const cur = stack.pop()
+              for (const entry of fs.readdirSync(cur, { withFileTypes: true })) {
+                const p = path.join(cur, entry.name)
+                if (entry.isDirectory()) {
+                  stack.push(p)
+                } else if (entry.isFile()) {
+                  out.set(path.relative(root, p), p)
+                }
+              }
+            }
+            return out
+          }
+
+          function hashFile(p) {
+            return crypto.createHash("sha256").update(fs.readFileSync(p)).digest("hex")
+          }
+
+          function slugFromRel(rel) {
+            const noExt = rel.replace(/\.[^./\\]+$/, "")
+            return noExt.split(path.sep).join("/")
+          }
+
+          function injectBanner(filePath, status, baseBranch, headBranch) {
+            if (!filePath.endsWith(".md")) return
+            const labels = {
+              added: `> [!success] Added in \`${headBranch}\`\n> This page is new in this diff.\n\n`,
+              changed: `> [!info] Changed between \`${baseBranch}\` and \`${headBranch}\`\n> This page differs between the two branches; the rendered version is from \`${headBranch}\`.\n\n`,
+              deleted: `> [!warning] Deleted in \`${headBranch}\`\n> This page existed on \`${baseBranch}\` but was removed on \`${headBranch}\`.\n\n`,
+            }
+            const banner = labels[status]
+            if (!banner) return
+            const src = fs.readFileSync(filePath, "utf8")
+            const m = src.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/)
+            if (m) {
+              fs.writeFileSync(filePath, m[0] + banner + src.slice(m[0].length))
+            } else {
+              fs.writeFileSync(filePath, banner + src)
+            }
+          }
+
+          function copyFile(src, dest) {
+            fs.mkdirSync(path.dirname(dest), { recursive: true })
+            fs.copyFileSync(src, dest)
+          }
+
+          const baseBranch = process.env.DIFF_BASE_BRANCH
+          const headBranch = process.env.DIFF_HEAD_BRANCH
+          const status = {}
+
+          for (const cp of contentPaths) {
+            const baseFiles = collect(baseDir, cp)
+            const headFiles = collect(headDir, cp)
+            const allRel = new Set([...baseFiles.keys(), ...headFiles.keys()])
+
+            for (const rel of allRel) {
+              const baseFile = baseFiles.get(rel)
+              const headFile = headFiles.get(rel)
+              const dest = path.join(outDir, rel)
+              let s
+
+              if (headFile && !baseFile) {
+                copyFile(headFile, dest)
+                s = "added"
+              } else if (!headFile && baseFile) {
+                copyFile(baseFile, dest)
+                s = "deleted"
+              } else if (headFile && baseFile) {
+                copyFile(headFile, dest)
+                s = hashFile(headFile) === hashFile(baseFile) ? "unchanged" : "changed"
+              } else {
+                continue
+              }
+
+              injectBanner(dest, s, baseBranch, headBranch)
+
+              if (rel.endsWith(".md")) {
+                status[slugFromRel(rel)] = s
+              }
+            }
+          }
+
+          fs.writeFileSync(statusPath, JSON.stringify(status, null, 2))
+          NODE
+
+            export CLAUDE_COMMANDS_DIR="$QUARTZ_DIR/content/.claude/commands"
+            node <<'NODE'
+          const fs = require("node:fs")
+          const path = require("node:path")
+
+          const commandsDir = process.env.CLAUDE_COMMANDS_DIR
+          if (commandsDir && fs.existsSync(commandsDir)) {
+            const markdownFiles = []
+            const stack = [commandsDir]
+
+            while (stack.length > 0) {
+              const current = stack.pop()
+              for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+                const entryPath = path.join(current, entry.name)
+                if (entry.isDirectory()) {
+                  stack.push(entryPath)
+                } else if (entry.isFile() && entry.name.endsWith(".md")) {
+                  markdownFiles.push(entryPath)
+                }
+              }
+            }
+
+            for (const file of markdownFiles) {
+              const source = fs.readFileSync(file, "utf8")
+              const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/)
+              if (!match) continue
+
+              const body = source.slice(match[0].length)
+              const renderedFrontmatter = `\`\`\`yaml\n${match[1]}\n\`\`\`\n\n`
+              fs.writeFileSync(file, renderedFrontmatter + body)
+            }
+          }
+          NODE
+
+            if ! find "$QUARTZ_DIR/content" -type f -name '*.md' -print -quit | grep -q .; then
+              echo "::error::No Markdown files were assembled for diff '$pair'."
+              exit 1
+            fi
+
+            if [ ! -f "$QUARTZ_DIR/content/index.md" ]; then
+              if [ -f "$QUARTZ_DIR/content/wiki/index.md" ]; then
+                cp "$QUARTZ_DIR/content/wiki/index.md" "$QUARTZ_DIR/content/index.md"
+              else
+                {
+                  echo "# $base_branch...$head_branch"
+                  echo
+                  echo "Diff between \`$base_branch\` and \`$head_branch\`."
+                } > "$QUARTZ_DIR/content/index.md"
+              fi
+            fi
+
+            export QUARTZ_BASE_URL="$OWNER.github.io/$REPO_NAME/$diff_slug"
+            export QUARTZ_PAGE_TITLE="$REPO_NAME: $base_branch...$head_branch"
+            node <<'NODE'
+          const fs = require("node:fs")
+
+          const configPath = "quartz.config.ts"
+          let config = fs.readFileSync(configPath, "utf8")
+
+          config = config.replace(
+            /pageTitle:\s*["'`][^"'`]*["'`]/,
+            `pageTitle: ${JSON.stringify(process.env.QUARTZ_PAGE_TITLE)}`,
+          )
+
+          config = config.replace(
+            /baseUrl:\s*["'`][^"'`]*["'`]/,
+            `baseUrl: ${JSON.stringify(process.env.QUARTZ_BASE_URL)}`,
+          )
+
+          fs.writeFileSync(configPath, config)
+          NODE
+
+            npx quartz build -d content -o "$SITE_DIR/$diff_slug"
+
+            export DIFF_OUTPUT_SITE_DIR="$SITE_DIR/$diff_slug"
+            node <<'NODE'
+          const fs = require("node:fs")
+          const path = require("node:path")
+
+          const siteDir = process.env.DIFF_OUTPUT_SITE_DIR
+          const status = JSON.parse(fs.readFileSync(process.env.DIFF_STATUS_JSON, "utf8"))
+
+          const colorScript = `
+          (function() {
+            if (window.__quartzDiffColorAttached) return;
+            window.__quartzDiffColorAttached = true;
+            var COLORS = { added: "#22c55e", changed: "#f97316", deleted: "#ef4444", unchanged: "#9ca3af" };
+            function getStatus() {
+              var el = document.getElementById("quartz-diff-status");
+              if (!el) return {};
+              try { return JSON.parse(el.textContent); } catch (e) { return {}; }
+            }
+            function colorSvg(svg, statuses) {
+              var circles = svg.querySelectorAll("circle");
+              for (var i = 0; i < circles.length; i++) {
+                var c = circles[i];
+                var datum = c.__data__;
+                var id = datum && (datum.id || datum.slug);
+                if (!id) continue;
+                var s = statuses[id] || "unchanged";
+                var color = COLORS[s];
+                if (color) {
+                  c.style.fill = color;
+                  c.setAttribute("fill", color);
+                }
+              }
+            }
+            function applyAll() {
+              var statuses = getStatus();
+              var svgs = document.querySelectorAll("svg");
+              for (var i = 0; i < svgs.length; i++) colorSvg(svgs[i], statuses);
+            }
+            function setup() {
+              applyAll();
+              var obs = new MutationObserver(function(muts) {
+                var needs = false;
+                for (var i = 0; i < muts.length && !needs; i++) {
+                  var added = muts[i].addedNodes;
+                  for (var j = 0; j < added.length; j++) {
+                    var n = added[j];
+                    if (n.nodeType !== 1) continue;
+                    if (n.tagName === "svg" || n.tagName === "SVG" || (n.querySelector && n.querySelector("svg"))) {
+                      needs = true;
+                      break;
+                    }
+                  }
+                }
+                if (needs) requestAnimationFrame(applyAll);
+              });
+              obs.observe(document.body, { childList: true, subtree: true });
+            }
+            if (document.readyState === "loading") {
+              document.addEventListener("DOMContentLoaded", setup);
+            } else {
+              setup();
+            }
+          })();
+          `;
+
+          const statusJson = JSON.stringify(status).replace(/</g, "\\u003c")
+          const inject =
+            `<script type="application/json" id="quartz-diff-status">${statusJson}</script>` +
+            `<script>${colorScript}</script>`
+
+          function walk(dir) {
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              const p = path.join(dir, entry.name)
+              if (entry.isDirectory()) walk(p)
+              else if (entry.isFile() && p.endsWith(".html")) {
+                let html = fs.readFileSync(p, "utf8")
+                if (html.includes('id="quartz-diff-status"')) continue
+                if (html.includes("</body>")) {
+                  html = html.replace("</body>", inject + "</body>")
+                } else {
+                  html += inject
+                }
+                fs.writeFileSync(p, html)
+              }
+            }
+          }
+          walk(siteDir)
+          NODE
+
+            git -C "$ROOT" worktree remove "$base_worktree" --force
+            git -C "$ROOT" worktree remove "$head_worktree" --force
+
+            BUILT_DIFF_PAIRS+=("$base_branch...$head_branch")
+            BUILT_DIFF_SLUGS+=("$diff_slug")
+          done
+
           {
             cat <<HTML
           <!doctype html>
@@ -219,8 +572,11 @@ jobs:
               <style>
                 body { font-family: system-ui, sans-serif; max-width: 720px; margin: 64px auto; padding: 0 24px; line-height: 1.5; }
                 h1 { font-size: 1.8rem; }
+                h2 { font-size: 1.2rem; margin-top: 2rem; }
                 a { color: #0b63ce; }
                 li { margin: 0.35rem 0; }
+                .legend { font-size: 0.9rem; color: #555; margin-top: 0.5rem; }
+                .legend span { display: inline-block; width: 0.7rem; height: 0.7rem; border-radius: 50%; vertical-align: middle; margin-right: 0.25rem; }
               </style>
             </head>
             <body>
@@ -234,6 +590,30 @@ jobs:
 
             cat <<HTML
               </ul>
+          HTML
+
+            if [ "${#BUILT_DIFF_SLUGS[@]}" -gt 0 ]; then
+              cat <<HTML
+              <h2>Diff sites</h2>
+              <p class="legend">
+                <span style="background:#22c55e"></span>added
+                <span style="background:#f97316"></span>changed
+                <span style="background:#ef4444"></span>deleted
+                <span style="background:#9ca3af"></span>unchanged
+              </p>
+              <ul>
+          HTML
+
+              for index in "${!BUILT_DIFF_SLUGS[@]}"; do
+                printf '        <li><a href="./%s/">%s</a></li>\n' "${BUILT_DIFF_SLUGS[$index]}" "${BUILT_DIFF_PAIRS[$index]}"
+              done
+
+              cat <<HTML
+              </ul>
+          HTML
+            fi
+
+            cat <<HTML
             </body>
           </html>
           HTML

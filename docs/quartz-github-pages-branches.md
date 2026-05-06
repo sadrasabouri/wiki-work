@@ -8,6 +8,7 @@ branch is built with Quartz and deployed under its own URL folder.
 - `.github/workflows/publish-quartz-branches.yml` builds and deploys the site.
 - `.github/quartz-branches.txt` lists the branches to publish.
 - `.github/quartz-content-paths.txt` lists the paths copied into Quartz.
+- `.github/quartz-diff-pairs.txt` lists branch pairs to publish as diff sites.
 
 ## GitHub Setup
 
@@ -79,3 +80,39 @@ public publishing repository.
 If an older branch was created before this workflow existed, pushes to that
 branch may not trigger the workflow automatically. You can either merge the
 workflow files into that branch or manually run the workflow from GitHub Actions.
+
+## Diff Sites
+
+A diff site renders the union of two branches' Markdown content with each page
+labelled by its diff status, similar to a GitHub `BASE...HEAD` compare view.
+List branch pairs in `.github/quartz-diff-pairs.txt`, one per line in
+`BASE...HEAD` form:
+
+```text
+main...v1
+v1...v2
+```
+
+For each listed pair the workflow publishes a site at:
+
+```text
+https://sadrasabouri.github.io/wiki-work/main...v1/
+https://sadrasabouri.github.io/wiki-work/v1...v2/
+```
+
+The site is a normal Quartz build (search, backlinks, navigation all work).
+On top of that, the graph view colors every node by its status:
+
+- green  — added on `HEAD`
+- orange — changed between `BASE` and `HEAD`
+- red    — deleted on `HEAD` (the page is still clickable; `BASE`'s content is shown with a banner)
+- gray   — unchanged
+
+Status is decided by SHA-256 byte-level comparison of file contents. Pages
+shown for `added`, `changed`, and `deleted` files start with a callout banner
+identifying their status. Coloring is applied client-side from a JSON map
+embedded into each generated HTML page; the rest of the Quartz output is
+untouched.
+
+If either branch in a pair does not exist on origin, the workflow logs a
+warning and skips that pair instead of failing.
