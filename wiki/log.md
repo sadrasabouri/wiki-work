@@ -57,3 +57,8 @@ Sources ingested (13 files):
 - Pages created: wiki/concepts/second-brain-code-method.md, wiki/people/tiago-forte.md
 - Pages updated: wiki/concepts/llm-wiki-landscape.md (historical roots section added), wiki/projects/wiki-kb-project.md (Intermediate Packets connection), wiki/index.md
 - Views regenerated: none (no matching target frontmatter)
+
+## [2026-05-05] ingest | Sadra-5May2026-TRANSCRIPT, Sadra-5May2026-TRANSCRIPT2
+- Pages created: wiki/events/2026-05-05.md, wiki/concepts/skills.md, wiki/concepts/context-base.md
+- Pages updated: wiki/concepts/views.md (template-with-holes definition; document-as-view), wiki/concepts/workflows.md (narrowed to data dependencies; skills rename noted), wiki/concepts/living-system.md (three anchor examples: dashboards, Excel formulas, Equals Copilot), wiki/people/sumit-gulwani.md (May 5 contributions + appearances), wiki/people/sadra-sabouri.md (May 5 appearances), wiki/index.md
+- Views regenerated: presentation-views-and-workflows-... (audience updated to "distinguished AI practitioners"; restructured to 3 slides per Sumit's feedback)

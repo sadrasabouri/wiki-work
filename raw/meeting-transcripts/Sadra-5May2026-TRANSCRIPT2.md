@@ -1,0 +1,1322 @@
+---
+timestamp: "2026-05-05T21:25:33-07:00"
+source: "[[Sadra-5May2026-TRANSCRIPT2.docx]]"
+source_path: "raw/meeting-transcripts/Sadra-5May2026-TRANSCRIPT2.docx"
+source_type: "docx"
+tags:
+  - extracted
+---
+# Sadra-5May2026-TRANSCRIPT2
+
+Source: [[Sadra-5May2026-TRANSCRIPT2.docx]]
+
+SadriSumit - meet 2-20260505_190516-Meeting Transcript
+
+May 5, 2026, 2:05AM
+
+1h 11m 24s
+
+Sumit Gulwani started transcription
+
+Sadra Sabouri   1:37
+Yeah.
+
+Sumit Gulwani   1:44
+Yeah, hi, how are you? Can we check now? Yeah.
+
+Sadra Sabouri   1:45
+All right, good. Thank you. Yes, yes.
+
+Sumit Gulwani   1:52
+Because I was trying to push through the paperwork for your case earlier today. At least the ball is no longer in my court.
+But let's see how fast they can do it. And I also told them that maybe, you know, let's make sure that if they just seem to have some extra money for the next quarter, then we should be able to extend it and so we'll see what happens. But right now, don't count on it. But let's see how fast they can quickly do the contract.
+
+Sadra Sabouri   2:12
+Okay.
+Okay, good.
+Thank you.
+
+Sumit Gulwani   2:20
+Okay, so you wanted to show me some presentations, so let's definitely talk about it. I think that's now on top of my mind now.
+
+Sadra Sabouri   2:27
+Okay.
+And let me.
+And the link that I copied.
+
+Sumit Gulwani   2:33
+This is our second meeting today, our first meeting today.
+
+Sadra Sabouri   2:34
+Link.
+Second, we just talked 15 minutes ago.
+
+Sumit Gulwani   2:40
+No, okay, this is the third meeting or the second meeting.
+
+Sadra Sabouri   2:43
+This is the second meeting.
+Sorry, sorry, yeah, say anything.
+
+Sumit Gulwani   2:48
+Big.
+From this labeling files, this checking.
+
+Sadra Sabouri   2:53
+Yes.
+It also sent, I think sending the link to you is better because you can scroll over it easier. I sent it in.
+
+Sumit Gulwani   3:07
+Yes, yes, send the link to me, yes, yes.
+OK, so how will I be doing the presentation, right? Maybe, maybe let's go over your pitch, right, so that I can see, you know, how it sounds like and what needs to be improved here.
+
+Sadra Sabouri   3:33
+Yes, so this is in a format of markdown, but it has a speaker notes and then high one title and then bullet points, which is like.
+
+Sumit Gulwani   3:46
+So we are looking at this presentation.
+So, but how do I get here at the very top level, like presentation views and so on, right? So you see one problem with this, the left side, whatever you have in the wiki is that it is not clear, like is it one item, multiple items, and then since the name is so big, then you know, where does it even end? So maybe putting some bullet points there might probably help or whatever if you can render it.
+Is there a different way to render it so that you see what I am trying to say, right?
+
+Sadra Sabouri   4:10
+Nothing.
+Yes, yes, yes.
+
+Sumit Gulwani   4:14
+Again, these are small details, but they're so confusing that they just distract the viewer, even a presenter, you know, from it.
+
+Sadra Sabouri   4:18
+Yes.
+
+Sumit Gulwani   4:22
+And also give them some good names, right? You need to have some proper names here because this name is not readable at all.
+
+Sadra Sabouri   4:28
+Yeah.
+
+Sumit Gulwani   4:28
+Again, you see, you might think that these are the small little things and this is not the meat of the essence. This is not the essence, right? But the point is I have only two minutes. And we cannot distract people even for half a second with this. And this is already so distracting. So it's not clear, it's overflowing. And the name is also not so representative of what this view is, right? So we should give some good names.
+
+Sadra Sabouri   4:42
+Yes, yes.
+Yeah.
+So, this is the reason I I didn't change it because it is like a raw output of agent, and I and I wanted to decrease my like edits, but for the final presentation, if you are going to...
+
+Sumit Gulwani   5:02
+No, no, it's not a log, right? You have to tell it, right? You have to tell it that think of, you know, names that fit there in two or three words. Think of representative names. That's a skill that you are adding there. And when you think about a wiki, people are not going to create all the skills for creating a good wiki. In fact, we'll be supplying that, you know, we'll be like, as I said, that if the purpose of a knowledge base is.
+
+Sadra Sabouri   5:08
+Okay.
+Yeah.
+
+Sumit Gulwani   5:21
+to help a software developer, to help a personal, you know, wiki, personal knowledge base, then we will have some predefined wikis that will come with those things.
+
+Sadra Sabouri   5:33
+Okay.
+
+Sumit Gulwani   5:43
+You can even try it, right? Let's do the real audience. Real audience is not manager level decision maker, because the real audience is Satya and the elite AI audience at Microsoft.
+
+Sadra Sabouri   5:53
+Hmm.
+
+Sumit Gulwani   6:03
+Or you can even call it right for distinguished AI practitioners, right? That's the audience.
+
+Sadra Sabouri   6:12
+Well, what is the difference between a uh, Satya's office and Satya himself? He he he's a CEO, right?
+
+Sumit Gulwani   6:17
+Yes, but his office contains his technical advisors.
+
+Sadra Sabouri   6:21
+Oh.
+
+Sumit Gulwani   6:24
+Now, let me also...
+share with you a little bit about the...
+The post that I'm writing and tell you the main section headings there. It would be good if we can try that out.
+
+Sadra Sabouri   6:39
+Yes.
+
+Sumit Gulwani   6:41
+But I'm not sure you know what the view would already be, but the first part is the motivating story, but maybe we don't need to probably say that. I can probably just call it out.
+Um...
+The second part, so this is the motivating story I told you that there was this person who wanted to design documents and smart, right? So that's the overall story.
+Then the second part of the document is to define the notion of views. Again, it's not there, right? It's very rough, right? But it's just starting with the definitions that we want views, not documents.
+
+Sadra Sabouri   7:14
+OK.
+
+Sumit Gulwani   7:22
+So then this section defines views and workflow and wiki.
+And then I'm using a metaphor of this mineral mining, right? I mentioned that.
+
+Sadra Sabouri   7:28
+Oh.
+Okay.
+So, if I understand correctly, here you're after presenting views on workflow, you're presenting Viki as an efficient way of mining information from raw data to construct views.
+And workflows are basically different.
+
+Sumit Gulwani   7:49
+Yes, it's just one and two sentences, so these are just the definitions. So, essentially, the at least now I even write it up, yeah, I wrote it up, but I'm still defining right. It starts with directly the definitions at the very top of section 2. So, section one is just about the story.
+
+Sadra Sabouri   7:53
+Okay.
+
+Sumit Gulwani   8:06
+with one paragraph at the end. So again, let me actually go through it, and then you can also think how will this be translated into the presentation, if at all, right? So first is the story in the writer, then it is the...
+Again, I don't even know how it connects, but it generally gives a very high level view of the entire thing that we have a knowledge base is knowledge base for the agent data is not a document is tool.
+OK, now I'm worried about reading A.I. slop and see back into A.I.
+
+Sadra Sabouri   8:33
+Mm.
+
+Sumit Gulwani   8:38
+It is a time-stamped stream of raw IP with the structured views automatically maintained on top, views that read write themselves as the stream grows. That's the basic definition. So maybe what it is doing is it's trying to define on a launch basis. Okay, now I get it, what it is trying to do, right? After the story, it defines a knowledge base and a knowledge base is saying.
+
+Sadra Sabouri   8:41
+Okay.
+
+Sumit Gulwani   8:57
+is not a document stored. And as you know that AI typically writes things like this, not X, but Y, right? So it is saying it's not a document stored, but it is a timestamped stream of raw IP.
+with structured views automatically maintained on top.
+views that rewrite themselves as the stream grows.
+Which I think is a good definition. Then it say the definition again, because I have given it some fancy words to use. It says a view is a living document, a living story told by humans and AI drawn from the odds substrate.
+
+Sadra Sabouri   9:34
+K.
+
+Sumit Gulwani   9:35
+I...
+And then it goes into the second section.
+Where I asked you to focus on, so I told you to focus on three key ideas, and two key ideas are about applications, and one key idea is about the overall machinery of it.
+At least for this audience, I thought, you know, I will probably write something like this. So application number one, which we focus on is views, not documents. That's the title of the section, views, not documents.
+But to explain it, it quickly defines what a view is, whatever flow is, whatever the key is.
+And then it gives a metaphor, the mining metaphor.
+
+Sadra Sabouri   10:14
+Mhm.
+
+Sumit Gulwani   10:15
+The.
+Okay, wiki is the gold and silver bars and views are the jewelry. What is workflow? Maybe I should need to workflow is just a just a representation of the data dependencies between views that a workflow is.
+
+Sadra Sabouri   10:32
+But, like, you mean, like, what is workflow in this analogy, right? Because you, yeah.
+
+Sumit Gulwani   10:35
+I don't know; that's what I was thinking. What is our?
+
+Sadra Sabouri   10:38
+When you, when you mine.
+Okay, mining is constructing the wiki view. What is view?
+
+Sumit Gulwani   10:49
+So view is, okay, let's see what the different is. View is a template. Its holes are filled by executing prompts against an optional specification of input sources. Each prompt can optionally be associated with a skill that describes a better way to compute that piece rather than letting the agent run the prompt.
+
+Sadra Sabouri   11:00
+No.
+Yeah.
+
+Sumit Gulwani   11:08
+Cold right, so this was your you came up with this thing, right? That we can call this a skill, so workflow is nothing, workflow is just a data dependency between views, but workflow is nothing, right? A view is a template with holes.
+
+Sadra Sabouri   11:10
+Yes.
+Them.
+Yes.
+
+Sumit Gulwani   11:22
+Each hole is associated with a prompt and optionally a skill which tells us how to better populate that prompt or give some more guidance. Because that's what things typically are, right? That's how we use print and prompt and exclusive extra guidance.
+
+Sadra Sabouri   11:35
+I meant, what is viewing this analogy of mining? Is it jewelry?
+
+Sumit Gulwani   11:39
+Yes, so view on this is a very good point, right? Uh, and maybe the it does not hold. I do not want to think about it, but views are the jewelry that someone actually wears.
+The Vicky is that.
+
+Sadra Sabouri   11:52
+I think it's not a good, I think it's not a good, I don't like it at least.
+Raw information would be.
+
+Sumit Gulwani   12:01
+So.
+So raw information is the Earth's crust, abundant but unsorted. Wiki is the gold and silver bars, the fine intermediaries that the knowledge owner has decided are worth keeping ready. Views are the jewelry that someone actually wears.
+
+Sadra Sabouri   12:21
+Okay.
+Well, what if you use the like database analogy, because view for database analogy is is more is like easier to understand if you have the same mind good structured database from probably raw data, and then you SQL it with.
+Different views, and you see it differently, but the...
+The underlying structure is the same.
+
+Sumit Gulwani   12:52
+So in case of database analogy, what are the three things? Like here we have raw data, there will be key, and then the documents, right? Final views. So in the database, we have the tables, and then we just have a view, right? Tables and a view.
+
+Sadra Sabouri   13:02
+The thing.
+I would say the tables are the wiki. It should be similar to wiki and could be.
+Now, now we should think, what, what, what is draw data?
+
+Sumit Gulwani   13:19
+But there is no data there, right? You start with the table, you just get the tables, and that's where database comes in. You don't store all data in database.
+
+Sadra Sabouri   13:24
+Yeah.
+Yeah.
+
+Sumit Gulwani   13:30
+Okay, so we can think about it. Maybe this is one place to remove it and to shorten it. That's a good point. Then I give examples of wiki, which is where I was saying that let's think of good examples of wikis. I don't have any other good examples of it.
+
+Sadra Sabouri   13:41
+So far.
+
+Sumit Gulwani   13:46
+No.
+
+Sadra Sabouri   13:46
+I think, for this, I will, I will look, I will look into the Karpali's comments and try to come up with interesting ones, and probably first the ones that are being used for teams and software engineers and writers.
+
+Sumit Gulwani   14:01
+Yes, yes, let's think about it, right? Because that would be very good, because if we are suggesting this is a general, you know, infrastructure and we're talking about wikis, we better have, you know, very good examples of wikis for different use cases, and that's what will differentiate us, right? Because thing is about personal thing, and we are saying, no, we are producing presenting them with general framework and the knowledge map would be different.
+For these different, you know, things.
+Now, and then I also say in this section that views can be quite creative.
+Do these are examples that read out the creative views that it can surface contradictions across a thread, it can list the questions a careful listener would have asked, but no one in the room did. So it is all taking it from a transcript here, right? But maybe if I were to think about how I'm generating this write up.
+from the transcript, then maybe one can think of in some sense a one small delay. Each paragraph can be a prompt I can imagine here in my write up and the prompt for this paragraph would be to describe creative use.
+And then, and they they are spread, you know, throughout that transcript, right?
+
+Sadra Sabouri   15:05
+Sorry, I lost you for a second.
+
+Sumit Gulwani   15:07
+Okay, so what I'm trying to do right now is this. So as I told you, I'm also trying to write a document which I will share internally, right? That's the per my purpose. It would be great if the presentation and the document can mimic each other.
+
+Sadra Sabouri   15:11
+Okay.
+
+Sumit Gulwani   15:19
+but it's not clear whether we will be able to do it. Let's try, let's give it a shot. Time is very less, but let's give it a shot.
+
+Sadra Sabouri   15:19
+Okay.
+
+Sumit Gulwani   15:24
+Now, when I think about mimicking the document and the presentation together, in some sense, I have to think about each part of my document as a view, and I have to think about what prompt would give me that, right?
+Because I want this document to emerge automatically. I want this document also to be a view in some sense.
+
+Sadra Sabouri   15:45
+Yes, yes, that's better, yeah.
+
+Sumit Gulwani   15:46
+So what I'm trying to think with you is that can each paragraph in my document or each section of my document be a prompt? That's what I'm trying to think, think out loud. Because the first part of the document would be to come up with some motivating story. So that's what I write. And then maybe there's other motivating stories and so on, but start with the story. That's what I say.
+
+Sadra Sabouri   16:01
+Yes.
+
+Sumit Gulwani   16:06
+Like.
+
+Sadra Sabouri   16:06
+So let's put it this way. Making that document is a view, and then these different parts of what I want to come first, this is how I structure the data. This is the workflow for that view.
+
+Sumit Gulwani   16:23
+It's not, yes, it's a kind of workflow, right? Maybe why don't you also try this other, right? That try to see if you can create this document. So, actually, that's a very nice thing, right? So, let's try to, because I'm in some sense trying to communicate a minimalist specification to you of the document like this, right? That's what I'm trying to do right now.
+
+Sadra Sabouri   16:27
+Yeah.
+Yeah.
+
+Sumit Gulwani   16:43
+And I will not surprise this, right? But you sure sure is. So what I'm saying is, and maybe the same distance, right? There is not much difference between the presentation and the document, right? But what you're saying is first we tell a motivating story.
+If it is a presentation, maybe there is no slide, or there is just one sentence, and I say the story as a presenter, but if it is a written document, then the story gets printed in the in the page, so...
+
+Sadra Sabouri   17:06
+Yeah.
+
+Sumit Gulwani   17:12
+So then the first thing we say is, you know, tell some story, right? In the transcript, there are many stories, many, many motivating use cases. Start with some kind of story. Maybe I can even say that it started with a story that relates to organizational knowledge.
+Right, because it's the corporate organization in all organizational knowledge, I started student, then the then the second section is about the definitions of the core concepts that I would need to describe various things. I need to talk about view, it's important. I need to talk about a wiki, that's important, and workflow.
+
+Sadra Sabouri   17:29
+Yeah.
+
+Sumit Gulwani   17:47
+But do we need more? Do we need all three? Let me read you the definition of the workflow. A workflow is a representation of the data dependencies between views and the raw sources.
+
+Sadra Sabouri   17:58
+Mhm.
+
+Sumit Gulwani   18:00
+When a raw source updates, the workflow tells us which prompt needs to reader and in what order.
+Is as simple as that.
+
+Sadra Sabouri   18:07
+Yeah.
+
+Sumit Gulwani   18:10
+Another realization that I had, and this is the internal connection I'm trying to make, is that these workflows may not be very different from these power automated workflows. Maybe that's something that you should also look at because many of these companies, what are they doing is they allow you to automate some workflows inside the company.
+So, I would kind of imagine that this workflow can just fit as part of that automation story, right? So, any company that tries to develop this product can just look at whatever in-house, you know, technology they have for automating workflows, right? That's a common thing that has been being talked about for the past two or three years. Yes, they have action, exactly right. That's a very good analogy, right? Maybe that's another example you should use. So, AI, please take note.
+
+Sadra Sabouri   18:39
+Is an action, right?
+Yeah.
+
+Sumit Gulwani   18:48
+that to connect our workflows with existing technology, we can use the example of GitHub Actions as well.
+
+Sadra Sabouri   18:56
+Yeah.
+
+Sumit Gulwani   19:00
+Then there is a metaphor, but we're not sure whether the metaphor is good or not.
+And then I talk about...
+The creative views that can be.
+Actually, before that, I talk about the most important, the documenting. I think that's the most important. The most important application is that. Let's talk about that. That a presentation about a topic is a view, a design document is a view. Current open questions for project X is a view.
+Contribution summary for person X is a view.
+
+Sadra Sabouri   19:35
+So, it's basically, yeah, we're trying to map the needs to views, showing that how their needs are.
+
+Sumit Gulwani   19:36
+Hey.
+Yes, needs to use. Yes, yes, yes. And the system is generated smartly. It's talking about presentation, it's talking about a Word document, it is talking about open questions, it is talking about contributions of people, which is something that we have also talked about, right? In the sense, but this is very relevant to this organization. So it's like, you know, know your audience.
+
+Sadra Sabouri   19:56
+Yeah.
+
+Sumit Gulwani   19:59
+That's another important storytelling principle. By the way, did I give you the storytelling talk or not yet?
+
+Sadra Sabouri   20:01
+Yeah.
+Not yet.
+
+Sumit Gulwani   20:06
+Okay, okay, after Thursday, the first thing you should do, Sadra, is to watch the storytelling talk, right? And watch it like one time, two times, three times. You know, if you don't hear, if you don't remember, just watch it again. It's gold. I spent so much of time, you know, making it 200 hours I put to make my talk.
+But I did because I wanted others to benefit from it. It's a very personal talk, but you will learn a huge thing. You will learn these things. Please, you know, watch that talk very carefully. Maybe even watch it again after one week, one month, and so on, so that you can live those things.
+
+Sadra Sabouri   20:32
+Okay, sure.
+Okay.
+
+Sumit Gulwani   20:39
+So what I'm now, so getting back to this site, so know your audience, right? So these examples are good for this audience. So tomorrow if I give a presentation to someone else, so this is how you see the beautiful thing would be. If the same document can be instantiated to different audiences. So let's say if you have to give this presentation to an academic audience.
+
+Sadra Sabouri   20:59
+Yes.
+
+Sumit Gulwani   21:00
+If I'm giving this presentation to, you know, AI architects in a company like Microsoft, or if I'm giving this presentation to just Satya by himself.
+then the nature of the examples, the nature of the story that it picks from the transcripts can be different, or it can even make something up. That would be very cool, right? That's something that we can try out. So that's where the audience thing comes into play, right? So for the entire document, we say who the audience is, and then it gets populated.
+
+Sadra Sabouri   21:17
+Yeah.
+Yeah.
+
+Sumit Gulwani   21:27
+No.
+Views can be quite creative. Then I talk about creative views as examples. We have seen that. So first I talk about views that are relevant to this audience. Then I talk about some creative views.
+Probably again relevant to this audience, but something that they would not normally think about because the first kind of views are more about the typical documents like PowerPoint, presentation and Word and so on.
+Um...
+Then I am talking about here.
+The most useful frame for our audience is the coding analogy. A knowledge base treated this way behaves like a code base.
+Adding a personal observation to the shared knowledge base is a PR.
+Reorganizing entries to make retrieval more efficient is a refactoring.
+The skill files we write for our agents are readme style entries.
+I'm not sure about that.
+
+Sadra Sabouri   22:28
+Um...
+Yeah, I think that with the current status of software development, the skill MD file is itself, yeah, so maybe we can say like the skills are the skill MD file, the skill MD file or like agent pod file is something that is known as a, I think we should remove that one.
+
+Sumit Gulwani   22:35
+At the skill only.
+
+Sadra Sabouri   22:49
+Yeah.
+
+Sumit Gulwani   22:49
+Maybe skills are, this is the skills, right? We don't have to probably say that, right? Workflows are the build scripts. That is interesting, that's good, right? Or are the build scripts.
+
+Sadra Sabouri   22:51
+Yeah, it's coming.
+A what?
+
+Sumit Gulwani   22:59
+Workflows are the build scripts, build a script.
+
+Sadra Sabouri   23:00
+Beat escapes.
+This gives all.
+
+Sumit Gulwani   23:05
+Or maybe GitHub actions, probably.
+
+Sadra Sabouri   23:09
+I think this is this contradicts with the, I can't see the connection between what we said for how workflows connect to views versus now.
+This thing.
+
+Sumit Gulwani   23:22
+So, workflows are the data dependencies, right? And, and if it's not a data dependency, then name workflow is a builder script. I do not know.
+Is it, is it not?
+
+Sadra Sabouri   23:33
+No, I think it's not a good, good connection.
+
+Sumit Gulwani   23:36
+It's not a good connection, AP.
+
+Sadra Sabouri   23:38
+I don't think it's a good functional. What is more important is that what is the view in this analogy?
+
+Sumit Gulwani   23:40
+Okay.
+The view is a rendered output. I think the view is probably, so you're right, right? The view, what would view be? That's not clear to me.
+And...
+But you see what is very interesting, fascinating about this is that...
+And...
+This applied compute is talking about this.
+So did you read the article of the applied compute that I shared with you? So applied compute is talking about exactly the same thing, but this is not a knowledge base, it's a context base they are saying. And their goal is to make it something that is useful for an agent to work on.
+
+Sadra Sabouri   24:08
+Yes, yes, really good, yeah.
+Oh, sorry, is it the link that you said, the C.O.D.E. thing or no different thing?
+
+Sumit Gulwani   24:24
+No, no, there are three things. There are three different related pieces of work.
+One is the...
+The second dream.
+
+Sadra Sabouri   24:32
+Yes.
+
+Sumit Gulwani   24:33
+COD, where I feel that my big understanding is that they were proposing this thing before the era of AI.
+
+Sadra Sabouri   24:40
+Yes, it is a 2023, yeah.
+
+Sumit Gulwani   24:41
+Right, and now, now, uh, in some sense, what I'm always doing is applying you know, AI to this.
+
+Sadra Sabouri   24:46
+Yes.
+
+Sumit Gulwani   24:47
+But this was is that right, right? That's what is probably happening, right? So these two are talking about a personal knowledge base and what Andre is doing, so Andre is what subsumes this, I would I would think second second brain or...
+
+Sadra Sabouri   24:50
+Yes, exactly.
+Yes, exactly. This is the Andre called LMV key, but people are calling a second burn, yeah.
+
+Sumit Gulwani   25:05
+But maybe he's not he's not focusing on all the important pieces there in terms of like the four different steps and so on. Is there a difference or not really? Andre is talking about it or maybe he's not focusing as much.
+
+Sadra Sabouri   25:12
+Yes.
+Uh, Andrea is not talking about this, no, but they did not.
+
+Sumit Gulwani   25:16
+Okay, so maybe maybe maybe the second brain is established framework and I'm just talking about the most interesting part of that framework and automating it using AI essentially.
+
+Sadra Sabouri   25:25
+Yes, yes.
+
+Sumit Gulwani   25:28
+But then the third link is very interesting. The other one that I sent you, which is talking about not knowledge base, but context base.
+And it is talking about putting all together your context in such a way that agents can do a good job.
+But then it is all talking about a reinforcement learning loop to improve things.
+
+Sadra Sabouri   25:48
+So, we are very decent. I, I, I can't, I can't find it. Is it the LinkedIn post?
+
+Sumit Gulwani   25:53
+No, no, you should actually look at that. Let me, let me select.
+
+Sadra Sabouri   26:03
+Oh, I click on, and I now see it.
+
+Sumit Gulwani   26:05
+Do you see it now?
+
+Sadra Sabouri   26:06
+Yeah, I think I, yes, yes, I missed it. Yeah, I think I should. Oh, yeah, this is this is related work, as I, yeah, I didn't read this, yeah, okay.
+
+Sumit Gulwani   26:18
+You should actually look at this exactly what you're doing, but it is doing it, it is calling it context-based and mostly for agents.
+
+Sadra Sabouri   26:20
+Yeah.
+Yeah.
+
+Sumit Gulwani   26:29
+And it is talking about the relationship with code. So that's very interesting.
+
+Sadra Sabouri   26:35
+As an analogy.
+
+Sumit Gulwani   26:37
+So, yeah, so it's saying...
+How can we create context bases that encode the nuances behind an enterprise's tasks, preferences, procedures?
+
+Sadra Sabouri   26:51
+Mhm.
+
+Sumit Gulwani   26:51
+And since they are, and they are probably talking about this more of a memory construction kind of thing, I would say. Right, that you start with something, you have some sources, you do some tasks, and then you figure out what worked well, what did not work well, and then, and then try to.
+Repeat that thing, I think.
+
+Sadra Sabouri   27:15
+Yeah.
+
+Sumit Gulwani   27:17
+So remember, so there are three phases. Remember, refine and retrieve. Remember, ingest the raw sources. Refine, run, send, curation agent that processes new sources and extracts, links, resolves conflicting information, prepares indexes for retrieval and so on, which is what we are calling as Wiki.
+
+Sadra Sabouri   27:35
+Yes.
+
+Sumit Gulwani   27:36
+and then retrieve with a set of APIs that your agent calls at runtime to search this.
+
+Sadra Sabouri   27:41
+Yeah, it's very similar, yeah.
+
+Sumit Gulwani   27:44
+But we are saying that the goal of our wiki is not necessarily to for an agent to use, but more for.
+Users to build on top of.
+
+Sadra Sabouri   27:57
+But then one will ask that users also are using agents to do that.
+
+Sumit Gulwani   28:01
+agents, right? But it's a human interactivity involved there in terms of them defining, but in some sense here also, you know, users are defining tasks that agents are executing.
+
+Sadra Sabouri   28:03
+Yeah.
+
+Sumit Gulwani   28:11
+So here is what an enterprise looks like on day zero. There is an existing documentation, there is completed work, and there is secondary data.
+like databases, meeting notes, emails.
+And they're ingesting these sources directly without requiring teams to migrate data, blah blah blah.
+And.
+And then they are checking whether agents can complete long horizon cross application tasks.
+And they present, you know, a lot of, you know, results.
+But they don't seem to talk about why are they, how are they doing it? Probably, maybe this is just the architecture diagram.
+
+Sadra Sabouri   29:05
+They did, they tried to make it like a generalization of of under's work, because they didn't use.
+
+Sumit Gulwani   29:11
+So I think I understand what is happening, right? I understand what is happening. So in their raw sources, they are talking about not just meeting transcripts, but also documents and previous runs of the agent.
+
+Sadra Sabouri   29:23
+could be seen.
+
+Sumit Gulwani   29:31
+So let me just check it again, right? So enterprise has existing documentation. It has completed work and secondary. Secondary data is like all the raw sources that we are talking about. We're focusing on these transcripts and so on. So that is secondary data for them. But then the primary data for them is the existing documentation, which is process stuff like wikis and completed work.
+
+Sadra Sabouri   29:32
+And thank you, please.
+And.
+
+Sumit Gulwani   29:51
+which is completed what is like ticket histories or even exemplars of the work done by subject matter expert. So they ingest all of this.
+And then based upon this, their agent works. But when the agent works.
+Every rollout becomes a candidate for the next refinery pass.
+So, now the output of the agent, the way the agent did the work, you know, gets back into the raw sources to learn from, to read from, and so on, and they will mind that also, so we are not we are not focused on that as much, so we are so we are really focused on knowledge work, right? We are building a knowledge base for knowledge work, they are building a context base for...
+AI agent automation in the enterprise. So related, but maybe still a little bit different, right? But then the part that hits me is with they were to say that why knowledge of context is hard to build.
+And this is where they are saying.
+that coding agents are remarkable at utilizing context gathered from the code base. But the same is not true for knowledge work. Because code is centralized in version control systems, knowledge work is scattered.
+Code shifts with a complete dependency tree, knowledge where context is hidden.
+Both forces resolution of merge conflicts.
+Knowledge documentation diverges.
+
+Sadra Sabouri   31:12
+I don't do that.
+
+Sumit Gulwani   31:13
+They are in code only the only the primary when branch gets deployed.
+Because developers are forced to resolve conflicts to move forward, but outside of code, internal documents are littered with outdated or incorrect information that is challenging to reason about.
+
+Sadra Sabouri   31:28
+I don't argue with that. My reason is that comparing code with human text is very unfair. In code, like in human context, you have some word similarities and like contextual temporal information that's...
+
+Sumit Gulwani   31:29
+Hmm?
+
+Sadra Sabouri   31:47
+each segment of transcripts you're talking about the concept and like some back and forth, but in code you have like that temporal information gives you nothing. So.
+Comparing them is is is is not a.
+In fact, I would say for transcripts and for raw text data, textual data, knowledge extraction.
+No, no, no, not easier, but I, I don't know what, what knowledge do they mean do they extract from code?
+Is it gonna be like, what, what knowledge a code has that's a documentation about that code doesn't have?
+
+Sumit Gulwani   32:29
+But who is extracting this knowledge?
+
+Sadra Sabouri   32:31
+It seems like agents.
+
+Sumit Gulwani   32:36
+But there you would extend a lot of stuff, right? How the code works and so on documentation is usually not that describes the system choices or architecture or details of implementation. So those are the things that you will get out that may not have from the documentation. But I didn't fully understand your question. So why are you asking this question? But I see your point, right? What you're saying is that the analogy with code is not very clear, so we should be careful about it. So that's why I'm learning.
+
+Sadra Sabouri   32:36
+If.
+
+Sumit Gulwani   33:01
+Right, so I will be careful about, right? OK, so let me move on for the timing, right?
+
+Sadra Sabouri   33:05
+Okay.
+
+Sumit Gulwani   33:05
+So I was in this section of, you know, views, not documents. So if I define view workflow wiki, then we give examples of the top views that we are calling for and creative views, which is nice. The code analogy may go away, but this is what I find is interesting.
+So the same shift that Excel made decades ago with formulas instead of static cells and values that we compute as inputs change.
+is the move every document can make now. So I like this one and dashboard also. So if you think about dashboards already do it right. And there's a new feature in Excel that you might have seen in my keynote equals co-pilot.
+
+Sadra Sabouri   33:48
+Did you ask for compiler to complete the?
+
+Sumit Gulwani   33:48
+Theo.
+Yes, you have a prompt and then it will apply the prompt and it will repeat that thing.
+So, Saghi just.
+
+Sadra Sabouri   33:56
+Okay.
+
+Sumit Gulwani   33:57
+Can you close the door, please?
+It.
+So now, so we have three good examples, dashboards, which automatically update when new data comes in, the formulas and the recalc engine in Excel, and the equals co-pilot feature. So every slide deck, every design documentation.
+Status report can actually be all living artifacts, living documents, living explories. If there are raw sources and the workflow that produced, them are captured. See, this is the heart of it. I think this gets to the heart of it, at least the document use cases. That every document can be a living document, every...
+The artifact can be doing artifact if it's raw source and the workflow that produces is captured.
+And this is a good paragraph I feel like this is maybe this is a good analogy to use maybe this is the analogy that we should just focus on instead of the too many other.
+
+Sadra Sabouri   34:54
+I mean.
+I didn't get the nuanced part of it. You're saying that if you want to have a dynamic...
+
+Sumit Gulwani   35:06
+Document, then you need to capture the raw sources and the process that cap that produced it.
+
+Sadra Sabouri   35:07
+Do you?
+Okay, but is how, how, how is is not isn't that clear? Why, why would people surprise?
+
+Sumit Gulwani   35:25
+Because I'm talking for the first time here, right? That a document can be a living document. I did not talk about it up until now. Or maybe I did talk about, maybe there is a repetition here, right? I did talk about it before when I introduced the knowledge base with their offs, right? So that repetition can be avoided. Okay, sounds good. That's a good point, right? There's A repetition in this document, yes. Okay, so what did we learn up until now, right? So second paragraph was, or second section was about.
+
+Sadra Sabouri   35:28
+Yep.
+Ohh, is that a version in the earlier slides?
+Yeah, yeah.
+
+Sumit Gulwani   35:46
+defining these terms and giving the most of the views as documents kind of metaphor explaining that.
+and talking about some creative views, right? So let's move on, right? I think these two paragraphs can are not so good, right? Okay. Then I talk about another application, which is the brains of the organization as one brain, right? The associative discovery thing.
+
+Sadra Sabouri   36:09
+Yeah.
+
+Sumit Gulwani   36:12
+And here I'm giving an example of associative thinking. So I did give an example of associative thinking in my talk.
+Not sure what example I used there, or maybe I did not, but I have given that talk in two or three places, and every time I bring a different example that is more relevant to the audience. So that was interesting, right? So maybe the prompt to the model would be that come up with any good example of associative thinking. In this case, the example that I'm using is PageRank, that it borrowed an idea from an entirely different domain.
+
+Sadra Sabouri   36:34
+What is specific?
+
+Sumit Gulwani   36:41
+of academic citations and applied it to the web. So web page becomes important by not what it contains, but by who points to it. Much like a research paper gains influence by who cites it. And that cross connection between citation networks and hyperlinks transform how we navigate the internet. Actually, this is an example of associated thinking.
+And now what you're saying is a knowledge base across an organization.
+Or an individual is bound by what they personally read, hear, and remember. And a knowledge base across a 10,000 person org is not. And AI grounded in it can combine fragments from one group's transcripts with another group's design documents to surface an idea neither team had alone. Identify the two people in different organizations working on the same hidden problem and put them in touch.
+or surface a tacit knowledge who to talk about what, how someone handles disagreement that today only lives in colleagues heads.
+I think these are good examples, right? For both creative work as well as connecting people.
+
+Sadra Sabouri   37:42
+Yeah.
+
+Sumit Gulwani   37:44
+So in fact, the prompt for this, I can imagine, would be explain what associated thinking is, pick an example that is relevant to the audience. That's how I write it, right? That would be my prompt. And then I will say, pick some very concrete examples of what can happen if the knowledge base spans, you know, 10,000 person organization.
+
+Sadra Sabouri   37:51
+Yeah.
+
+Sumit Gulwani   38:04
+Those are the two things I would like in this section, right?
+
+Sadra Sabouri   38:04
+Yeah, and then.
+And then I think this is the place where questions of scalability arises, and then we should we should tell them why this system could be explainable, sorry, scalable. I was I was thinking about it, and my my way of presentation of scalability is that...
+
+Sumit Gulwani   38:23
+Yeah.
+
+Sadra Sabouri   38:27
+For construction, you can, you have this command for ingestion that you don't need to put every document and then in constructive, you can put the first document in just the second one, in just the third one, just the third one. So you have this stepwise building mechanism. So for, it's like a solution for.
+It's making this system scalable, and then third, you have this query efficiency, and then for my argument for that would be having a graph structure.
+connections between your documents is definitely better than having raw text. And here by giving you this option to use this wiki, we are basically giving you a...
+Access to a higher number of raw documents that you could have access to by rack or by just appending the documents.
+
+Sumit Gulwani   39:28
+If I was like, what are the three things? So, you one you said we do it in just one by one, the other one we said we maintain the dependency structure for computations, and what is the first thing you mentioned?
+
+Sadra Sabouri   39:41
+First thing, or so, so I said that the next thing after this slide should be about the scalability. People might ask how the system scale when the documents are getting the documents are getting bing and the number of documents are getting high, and my arguments has like 2 points.
+
+Sumit Gulwani   39:52
+Yeah.
+
+Sadra Sabouri   40:00
+One is that for creating this wiki, we are using the ingesting mechanism which can do document by document. And then for querying my...
+
+Sumit Gulwani   40:10
+No.
+
+Sadra Sabouri   40:15
+My proposition is that this...
+Querying this structure is more efficient than querying raw text or using rack, but these are all just like arguments we don't have numbers for them yet.
+
+Sumit Gulwani   40:34
+OK, so I I see the.
+The importance of talking about is scalability here. So this is one piece of scalability we go. OK, so let me go back to the document. Let's see what I have. So we're talking about applications, then we're talking about the second application that the brains of the organization is 1 brain.
+Mhm.
+And then I also did something here. Imagine the relevant slices of every Microsoft employee's brain available with consent as one brain.
+Okay.
+
+Sadra Sabouri   41:06
+And this is about the same semi-private information probably.
+
+Sumit Gulwani   41:10
+But somehow, you know, it's coming a little bit too early. It's not there, but I think it should be there somewhere else, right? And maybe I can probably remove it from there to make it shorter. Now, and then it gets into, I don't know, overall structure here. I have to fix it, right? But then it says convergent frames. The point being the field is converging fast.
+
+Sadra Sabouri   41:13
+Yeah.
+
+Sumit Gulwani   41:29
+and then talks about Andre Karpati's work and then uses his codes to in some sense to motivate things that I don't have to motivate. So in some sense I'm giving him credit and then I also get my point. Then I talk about applied compute, then he talks about the second brain. But as we discussed, second brain is kind of subsumed by Andre, or that part will need to be cleared and applied.
+compute is slightly different. So, but the way it currently reads is not that great. But the point is that we at some point in time we should compare it, right? So the prompt would need to compare it in a proper way. But let me read out this thing to you. This is nice, right? What the Andres was summarizing it. Let's see how it summarized it.
+Immutable raw sources.
+and LLM maintain markdown wiki of entities and cross references on top.
+and a schema documenting how pages and views are structured.
+Is it just trying to use a rule of three or what is it? Are they really three different things? So Andre is arguing for immutable raw sources, LLM maintained markdown, wiki of entities and cross references on top, and a schema documenting how pages and views are structured.
+
+Sadra Sabouri   42:41
+I think the last one, we don't need that. Last one is basically what agents can be.
+
+Sumit Gulwani   42:43
+Yes, last one, right? It's just time to use the rule of three, right? We have to very expected say don't use rules of it, and then his critique of standard drag, the LNM is rediscovering knowledge from scratch on every question. There is no accumulation.
+
+Sadra Sabouri   42:46
+Yeah.
+
+Sumit Gulwani   42:58
+This is what he's saying, because sometimes it also hallucinates, like it gives my own idea and then put it in under the ideas, the answer that.
+
+Sadra Sabouri   42:58
+Of this, it is the same here.
+Yeah, I, I, yes, I, I read that it says it says that, but I think this is the wrong place to to say the comparison between this speaking and like I think the correct place is the efficiency of query, querying like the scalability, maybe.
+For for talking about comparison between Rag and this Wiki.
+
+Sumit Gulwani   43:26
+Ohh.
+So, uh...
+But then if we, if we, so what I'm trying to do, right, we're trying to now in some sense educate the audience a little bit more, but we probably have to educate them when we talk about it because we don't want to cross, keep talking about Andre again and again. So that I think is the idea that is probably going on in here. But you are saying that the right place to say this would be somewhere else where we talk about.
+Efficiency, is that what you're saying?
+
+Sadra Sabouri   43:52
+Efficiency of query, yeah.
+
+Sumit Gulwani   43:54
+Okay, so, but let me just read out what all it picks up from there, right? So it picked this up and then it says, and his diagnosis of why Wiki is rot. The tedious part of maintaining a knowledge base is not the reading or the thinking, it's the bookkeeping.
+
+Sadra Sabouri   44:07
+The.
+
+Sumit Gulwani   44:08
+Did you see that?
+
+Sadra Sabouri   44:11
+Yes, yes.
+I, I, I don't, I don't wanna be sure about the the word bookkeeping, but uh, I should check this one, yeah.
+
+Sumit Gulwani   44:21
+Okay, so basically he's saying that you have this inefficiency of processing it over and over again, but at some point of time you also need to not let it rot. So you have to do the bookkeeping, right? So efficiency in bookkeeping is what the credit this AI agent produces, you know, give to Andres. Okay, then.
+
+Sadra Sabouri   44:34
+Mm.
+
+Sumit Gulwani   44:40
+It talks about applied compute and the second brain, but I don't feel it probably got it right, right? If I were to just compare again the second brain, I would say that, you know, we are doing one of the steps, you know, using AI or something.
+
+Sadra Sabouri   44:51
+Yeah.
+
+Sumit Gulwani   44:53
+But the overall idea is like this, that we talk about this related work, and then we say, how are we different? And then it says, how are we different as a subsection.
+Where it talks about.
+Vu.
+that we have distinctive applications and what these people are talking about.
+Like, AI build a brain at every scale and living stories, but doesn't Arne already talk about this, like living stories, art artifact recalcs, or no? So, what is Arne's goal? Does Arne talk about recalc or Arne does not talk about recalc?
+
+Sadra Sabouri   45:24
+So.
+Uh, he talked about the lint linting, which is like cleaning the graph, but the recalc, uh, no.
+
+Sumit Gulwani   45:35
+So he's not as motivated about recalc, right? Because for us, one of the important applications is that we should be able to see the current state of the project at any point of time. So he's not necessarily talking about it.
+
+Sadra Sabouri   45:42
+Yeah.
+I think he's not talking about it, I'm pretty sure.
+
+Sumit Gulwani   45:47
+So then these views of documents and so on is very unique to us. What he's talking about is that I have my knowledge base, I want to answer query one, query two, query three, and all of them might use reprocess some of the same computation. So let's make sure we store it. That's what he's talking about, right? Okay, so in some sense, the application is different. And the other application that we have is the AI built in.
+
+Sadra Sabouri   46:00
+Yes, yes, yes.
+
+Sumit Gulwani   46:06
+at every scale, scale of 10, 105, and that also he's not talking about.
+
+Sadra Sabouri   46:11
+Yeah.
+
+Sumit Gulwani   46:14
+And so these are what our agent seems to claim is novel because you're trying to differentiate against them.
+And then it's saying one other thing.
+That.
+The org scale instance has a precondition no personal or team brain has.
+If it only forms if individuals choose to contribute their slides to it, and that choice depends upon credit.
+So if we, if our system, you know, also produces who contributed what, then people will be more incentivized to do it. So that's what I told it, right? I said that this is one way that you can explain it, but it is not at the right place. But what it is saying is that the org level brain will come up only when individuals willingly contribute, but.
+I believe they will, because they would like to get, as long as we can also compute credit, right? They want credit in the system, then they would be incentivized to contributing that.
+And then I talk about one enabling mechanism for this. So maybe, maybe what this is, what this writer, what it is doing is it's getting into semi-private information, but the way it is getting into it is very roundabout. So what it did is just talk about related work and then it is saying, you know, how we are different and we are talking about org level application and org level application requires people to willingly contribute.
+And that requires this semi-private matching under differential privacy norms, so that what we are getting there.
+
+Sadra Sabouri   47:40
+And then I think one important part that it might be missed is the notion of communication versus self-read. So we have one internal, okay.
+
+Sumit Gulwani   47:52
+Yes, yes, so it has that right. This one it has nicely captured after that, so it says that if you think about how to simulate life, two things matter: information processing and choice, so that one is good. You know, it's there after that, and then it gives my example that I picked up. That's nice. I have got my own agent on both sides of this line. It once pulled three sentences of someone else's unpublished work.
+
+Sadra Sabouri   48:00
+Yes.
+
+Sumit Gulwani   48:14
+grand draft that I was helping someone else with, so I had to ask her to remove it. But then on the other hand, I routinely merge general observations from my private Microsoft transcripts into shared notes with explicit prompt level instructions to omit IP and author restricted material. And both notes should be a first class capability of the knowledge base.
+not a manual cognitive text I pay each time. If we get this right, so again, it's giving just an example, so nothing more there.
+Then it is saying two further mechanisms are worth naming. Workflows as skills. I think this is old stuff, we can remove that. And temporal evolution and raw stream management.
+
+Sadra Sabouri   48:52
+Yeah.
+
+Sumit Gulwani   48:57
+Yeah, I think this is a little bit of a slop.
+Um...
+Then it is saying that why is this rather more important now?
+And it gives 3 reasons: pause, meeting of intelligence, what is the same thing?
+Hello.
+So, Cox, you know, because they're expensive, you know, it's always very expensive, so you need to think about it now. This is the efficiency purpose, but the other thing is genuinely is that, you know, well, I think we've talked about applications, right, so maybe this part is not as interesting. I think this can emerge with why we want it to be efficient, and and the meter, you know, tap and logic can just, you know, go there, probably.
+
+Sadra Sabouri   49:37
+Vu.
+
+Sumit Gulwani   49:38
+So, this is the cost in the latency thing, right? The same thing that Andre talked about.
+Yes, that's pretty much it. And then there's a call to action for different people.
+So for example, every office app team makes their artifacts a living view, they should think about it. But we should build a Wiki and KB layer as a shared infrastructure. So this is for us, you know, to pitch this proposal.
+Start doing research on semi-private machine.
+and stand up a community pattern library because many of us are trying to create and maintain these knowledge bases in our own creative ways. Maybe what I should say is distilling information in your own creative ways. So it's good to understand what kind of prompts are people writing and so on. Like one good example of that was this.
+Grounded theory prompt light.
+
+Sadra Sabouri   50:32
+I think creating workflow is better. What do you think this information is better?
+
+Sumit Gulwani   50:32
+The.
+So come again, creating a workflow is better meaning.
+
+Sadra Sabouri   50:42
+Yes, you said all of us has this creative workflows that wanted to share something like that, right?
+
+Sumit Gulwani   50:49
+Yes, we all have creative workflows that we should share with each other because some of those we can just pull it in our library for how we want to distill information, right? Because the real creativity of people would be that we can leverage is how to distill information out of some documents.
+
+Sadra Sabouri   51:02
+OK, so it's like a gallery of workflows, basically, that is shared into the in the.
+
+Sumit Gulwani   51:07
+Not workflow, but I would say skills. So we are calling it the skills now, right? We are no longer calling. So workflow is implicit, right? So given, give me a prompts, you know, which depend upon this, I can make a flow out of it. But the skills are probably what we are using, right? So this is your terminology, right? We switched from workflows to using skills.
+
+Sadra Sabouri   51:10
+Excuse, OK.
+K.
+Skip.
+Okay, okay.
+
+Sumit Gulwani   51:26
+So, okay, as I go through it, and again, you know, as I said, this is a rough thing, you know, I have not even read it. I was reading it for the first time, you know, I just asked, you know, AI to actually make it up.
+But what I'm realizing as I go through it is that...
+As we're working on a presentation and as I'm working on this document, we are trying to also...
+Figure out, you know, what are the important points to land?
+And I'm probably working in a reverse direction. So I kind of know what the ground truth is. I want and then I'm thinking what kind of strong could have helped me get there.
+
+Sadra Sabouri   52:06
+Yes.
+
+Sumit Gulwani   52:07
+You are probably doing it the other way round. You know, you are starting with your prompts and you are saying, oh, Sumit, this is good enough enough for the story you want to say, right? But we are, we are, that's a good, right? So we should, we should keep talking to each other very tightly now until Thursday. So now let me reflect on what we discussed other night. I think there are three things that are standing out that we should talk about are the views as documents metaphor.
+
+Sadra Sabouri   52:14
+Yeah.
+
+Sumit Gulwani   52:28
+So we can have an example of Excel, PowerPoint, Word, and so on. And we can talk about some creative views as well.
+
+Sadra Sabouri   52:35
+Yeah.
+
+Sumit Gulwani   52:35
+For an organization.
+Then we should talk about the second application, which is the organizational brain.
+And...
+Then we should talk about how will this be done. So we have this private mashup of information is very important because when you talk about organizational name, we have to do this. It's not like all information can just be merged. We should talk about this particular concept. We're talking about the concept. We're not providing any solution, but we are seeing people should start doing this search in this space.
+And.
+The 4th point probably is around efficiency and temporal maintenance and so on, but maybe that can be mentioned in passing probably. But the three most important points I think are the two applications.
+and the semi-private mashup of information.
+And then it's about how do you make the process efficient? So, 3 3 1/2 points probably, at least that's what I'm thinking right as I go through it, right? But let's see what you got, right? Maybe let's now switch to what you had, and I think I did share, you know, what what you know got to me was important, so let's look at your your presentation now.
+
+Sadra Sabouri   53:45
+So I sent the link to you.
+
+Sumit Gulwani   53:47
+Yes, yes, I'm looking at the link list, right?
+
+Sadra Sabouri   53:49
+Open.
+If we can, we can read on it with this.
+
+Sumit Gulwani   53:52
+Yes, yes.
+So, you have one view or multiple views, you just have one view presentation is just one, so just one view you have written. OK, and what did you write there? What what is the prompt you used?
+
+Sadra Sabouri   54:00
+Yes, yes.
+Ohh.
+The.
+Read the knowledge base as a presentation slide outline renders, I render the knowledge base as a presentation slide outline. This is the self-referential.
+
+Sumit Gulwani   54:17
+Hello, but how can I? How can I get into it? I I will not able to see it here. I need a different.
+
+Sadra Sabouri   54:20
+Ohh, thank you. Yes, you can see.
+Can see this me.
+
+Sumit Gulwani   54:32
+So, Sadra, here is, here is what would be very nice, right? Yeah, I just should have two links here, one is showing the the prompt template, we have template with holes essentially, or maybe a format, you know, you can you can think of it as one prompt or many prompts, right? That's a small distinction, and I think we're thinking of it as one prompt, so it's a template.
+And then there are holes, and then we are filling in that holes, right? That would be beautiful, like, if we can just make that look right, if you like, if I can see both those things at the same place, right? So...
+
+Sadra Sabouri   54:56
+Okay.
+
+Sumit Gulwani   55:02
+But yeah, please read your, so either you shared with, you already shared, okay, let me go back and look at your prompt now.
+Okay, so render the knowledge base as a presentation slide outline. This is a self-referential view. The Wiki generates the talk about itself.
+Specify a topic and audience. Each slide title is a subview drawn from the wiki. So what does this mean? Each slide title.
+
+Sadra Sabouri   55:37
+The line in the, you see the headlines in the wiki link, those are the slide titles.
+
+Sumit Gulwani   55:50
+So is it an agentic workflow or is it a simple, simple call? So it's an agentic workflow. So which means that the agent will be first figuring out what the outline is and then it will be generating the content for each.
+
+Sadra Sabouri   55:54
+Let me.
+Yes, yes.
+It will go the same way it has it in the steps. In fact, I asked the agents to create this.
+
+Sumit Gulwani   56:10
+Oh yeah, I didn't, I didn't need a step. Let me actually look at it. Okay. We'll look at it, right? Okay, good, good. I get it now, right? But I thought the description was okay, but read the Wiki index, identify all pages relevant to...
+Topic.
+Read the most relevant concept project and in pages, special draw source.
+So I'm trying to think what is the difference between this and what everyone around me is doing in the company. So what they do is they just produce this presentation.
+Automatically, like they ask, you know, Claude put CLI to make a JavaScript-based presentation with previous and next buttons. It does it very nicely, actually.
+
+Sadra Sabouri   57:06
+Yes.
+
+Sumit Gulwani   57:09
+But I think they're all doing it from documents, some Word documents or something like that.
+I think so, because I did it using that. I made one presentation I did using that.
+And I will have to talk to other people though, how did they do it? Maybe they vibe coded it in a session, like either they did a vibe session or they pointed it to a document.
+And what we are saying is that we are doing it from transcripts. And as more transcripts keep getting added, it becomes better and better. That's I think what we are seeing probably. Is that the difference maybe?
+between what I'm showing to the audience and...
+And whatever was around me.
+
+Sadra Sabouri   57:49
+Um...
+I, I mean, is it say?
+Okay, we're saying that in addition to documents, we also are fitting in transcripts.
+
+Sumit Gulwani   58:02
+Yes.
+
+Sadra Sabouri   58:03
+Yes, that's true.
+
+Sumit Gulwani   58:05
+Can you?
+
+Sadra Sabouri   58:05
+It did does this this VP is generated from transcripts, that's why how it's connects.
+
+Sumit Gulwani   58:08
+Sometimes, yes.
+OK, now.
+Diamond.
+And maybe when I was discussing this with you, one can be a little bit more precise as well here. So this can be a view or maybe it's a skill, like maybe I can write another skill here, a more detailed skill about this presentation.
+Where I say that, okay, I want three slides and this slide should be talking about these particular topics. The first slide should contain the important application of views as documents.
+And it should also contain some creative prompts or creative views.
+So this is the specification I provide, right, and so on. So one can imagine that a person who is a better speaker or who wants to put in more effort, they can guide the agent around this.
+
+Sadra Sabouri   59:14
+Mhm.
+There.
+
+Sumit Gulwani   59:25
+And what would be very cool is if by just changing the audience, you know, the structure remains the same, but I get very different stories and I get very different examples in my presentation.
+
+Sadra Sabouri   59:37
+So I was thinking about the concept of holes that you said as the arguments that you have here the one like topic for example on the like
+
+Sumit Gulwani   59:44
+Yes, yes, yes.
+
+Sadra Sabouri   59:45
+These are holes, right?
+
+Sumit Gulwani   59:47
+Yes, yes.
+
+Sadra Sabouri   59:48
+Yes, and then...
+Hosein.
+
+Sumit Gulwani   59:52
+So what I will do from Sadra, what I will do is that I will try to 1st finish this write up that I have and then I will try to convert it into a prompt with holes and then I will send it to you and then see what happens. So that one, so that's how I will try, but again, I do not know how much will I have to get done, right? I'm trying hard, but time, we're just fighting against time and then you try to do whatever you can best, you know, from your side.
+
+Sadra Sabouri   1:00:03
+K.
+Okay.
+
+Sumit Gulwani   1:00:15
+But right now my general feedback is that try to focus on, like this thing is not very useful, right? Because then this can lead to any kind of presentation and then I will be blabbing and people will not be able to understand. So make sure just the key concepts are captured and try to write a more detailed prompt where you can do it. And as I said that some of the interesting things to show are.
+
+Sadra Sabouri   1:00:27
+Yeah.
+
+Sumit Gulwani   1:00:38
+So, the two most important things are the two applications.
+One is views as documents, so views not documents, right? Or documents as views, right? We can title it anything.
+And there you want the system to.
+Talk about, you know, what is the future of Office?
+And you can use analogies such as...
+And let it use some analogies, like let's see what analogies comes up with, right? But I think the good analogies that we talked about probably are this recalc, the equals co-pilot feature and dashboards. Those are some real things that are there. But these things occur only at very specific cases. We are seeing every part of the document can actually be this.
+The reason why...
+Different parts of the document are not this today is because these things are not very objective.
+Like for example, when I'm building a dashboard, the semantics is very fixed, right? That's where the dashboard can be built using code. Even today, if AI is building a dashboard, it is building it using code.
+The the refresh feature in Excel, the formulas are all code.
+And the recalc feature was never applied to an entire document because it is subjective.
+And the raw sources are this unprocessed, you know, information that is there. But hey, now we have the power to process this.
+So that's how I feel.
+Yeah, we can.
+
+Sadra Sabouri   1:02:06
+Mm-hmm.
+
+Sumit Gulwani   1:02:06
+talk about the analogy and build over it.
+Right, so one slide has to be around this pitch.
+Views, not documents, or documents as views.
+We can use the analogy that is only close to documents, which is dashboards and so on. And then say that now we are ready to capture the entire documents, because AI can also do the subjective and aesthetic part.
+
+Sadra Sabouri   1:02:32
+Yes, and and something.
+
+Sumit Gulwani   1:02:32
+The right, the second application is about organizational game.
+
+Sadra Sabouri   1:02:39
+Organizational what?
+
+Sumit Gulwani   1:02:41
+The organizational brain, the the organizational brain.
+
+Sadra Sabouri   1:02:42
+K.
+How about that?
+
+Sumit Gulwani   1:02:51
+Right, so one we talked about a little bit of a personal, the key kind of thing.
+The other one is an organizational name. And there we also talk about some interesting questions.
+And then we have one slide on the semi-private mashup of information.
+
+Sadra Sabouri   1:03:06
+Mm.
+
+Sumit Gulwani   1:03:06
+And I can just say, no efficiency, but efficiency is not something like, you know, we need it, like, it's not a surprise, right? You know, people will understand, and so right, these always not people, you know, right? But these three things are interesting. Let me tell you my ending, which I felt, you know, it was cheesy, and you can give me input whether to, you know, have that or not.
+
+Sadra Sabouri   1:03:10
+Yeah.
+
+Sumit Gulwani   1:03:26
+So, I, when I click this thing, then I'm going to post it somewhere internally, right? Internally, there's some place there, and some people receive it by email.
+I was thinking of tagging Satya in this post.
+
+Sadra Sabouri   1:03:40
+Yeah.
+
+Sumit Gulwani   1:03:42
+And this is the the.
+I have no idea I know what is really happening because, you know, there are these different versions floating around and I'm not even sure if the version that I was looking at had this before. But anyway, so I'll read this to you, the conclusion. This is interesting.
+The knowledge base is that, no, this is all junk, it's not true, I let remove it.
+Okay, then with this part. A knowledge base is the recalc model taken to its extreme. A folder of self-evolving documents, self-evolving stories, whose raw inputs are transcripts, conversations, and white session trajectories.
+And those outputs are the views the organization actually consumes.
+The piece you are reading was produced this way. Not yet, but you know, that's my hope. My agent extracted notes from every relevant transcript, merged them, iterated, then I spent 30 minutes on my own. It's all made up and handed the human draft back to be expanded against my structure anyways.
+Ah, this is interesting. Midway through, the CLI started using terms like minimal specs and knowledge base on its own. Learning the architecture from the substrate, it was helping me distill.
+If tomorrow a colleague shares a sharper framing, the yeah, if tomorrow a colleague shares a sharper framing, this addition should update itself.
+This I believe is the future of office and the future of our organization distill themselves, right? So nothing much interesting, just repeating everything. Maybe it's time to capture my story about the surreal aspect which didn't come through very nicely. But here is the cheesy thing that I asked you to add at the end.
+
+Sadra Sabouri   1:05:10
+Mm.
+
+Sumit Gulwani   1:05:26
+Satya, imagine your power when the Microsoft brain comes up.
+You will have a wiki so powerful that few in the world will have one.
+
+Sadra Sabouri   1:05:36
+Yeah.
+Yeah, because it's like the wiki of the smart minds, basically.
+
+Sumit Gulwani   1:05:43
+Yeah.
+Right, but only Satya has access to it, right? In the sense that I might have documents which I make accessible only within my organization. There are lots of documents, right, which will be accessible only, you know, up your management chain in some permissions, you know, how the permissions float, for example.
+But you see, Satya in some sense has the power, you know, already the authority permissions to look at in all of that.
+
+Sadra Sabouri   1:06:08
+Yeah.
+Um...
+
+Sumit Gulwani   1:06:12
+Like, seriously, he can ask questions like, OK, which AI trend you know was being discussed the most in Microsoft today, right? Things like that, yeah.
+
+Sadra Sabouri   1:06:22
+I was thinking, when we were explaining this, one question that can appear of how this live views can live is that who decides if a new concept should deprecate?
+
+Sumit Gulwani   1:06:40
+Yeah.
+
+Sadra Sabouri   1:06:41
+the older one, like it is better, for example.
+
+Sumit Gulwani   1:06:45
+So if it is a group wiki, right, then the people are actively maintaining it.
+Again, it might be only is it a read-only, you know, is it in a reader who has the permissions and so on, and then it probably gets closer to the PR, you know, kind of thing I would say, like all reviews that someone checks in something and another person can can look at it and review it and so on.
+
+Sadra Sabouri   1:07:06
+And then like in terms of like organizations, who is reviewing? Is it like someone in the team? Is it someone hiring the team? Is it someone outside there?
+
+Sumit Gulwani   1:07:16
+So we are saying that who does this, like in an organization who is motivated to maintain this wiki. So very good point, right?
+
+Sadra Sabouri   1:07:18
+Yes.
+
+Sumit Gulwani   1:07:23
+But then it can be this process of like, you know, how open source code in itself evolves probably, like this will evolve, like people will just, you know, people look at it, you know, they see something went wrong or some information is old, you know, they will go and, you know, edit it and so on.
+
+Sadra Sabouri   1:07:37
+Yeah, because they depend on it.
+
+Sumit Gulwani   1:07:39
+They depend on it, right? And the service that they are doing, yeah.
+
+Sadra Sabouri   1:07:40
+Yeah.
+Okay.
+So then then this this can can can be a case for for once people are starting using it, we show how useful this can be, this tool can be, and then once people are starting using it, people value Viki that that Viki being opted.
+Updated and being trimmed and everything - that's why it becomes an art of how to maintain the SV key, and then there we...
+
+Sumit Gulwani   1:08:12
+Yes, and in fact, even this will be doing using agents, right? Even today, code PRs and so on are all being submitted using agents, so, so people will just have to look at it and then say, yes, you know, or no, and so on, yeah, and we'll have better and better prompts, and models will keep getting better, right? So, both things will keep improving.
+
+Sadra Sabouri   1:08:22
+Yeah.
+Yeah.
+Okay.
+
+Sumit Gulwani   1:08:36
+Okay, so then let's do this. I'll continue working on this document. I'll try to get it closer to how we like it. But I think there are these three points I feel. I feel confident that in this two minutes, not more time, the two applications and the semi-private mashup of information. If we can make that thing come through, that would be so cool.
+
+Sadra Sabouri   1:08:56
+Okay.
+
+Sumit Gulwani   1:08:56
+And then, of course, you know I can show, you know, the people's contributions. I think that's a good example to show. Another example is the different concepts, the different projects, you know, that we are discussing in our research group. That will be good to, so that will also be a good way if I'm sure that it's the project, right? You know, talk about it. Actually, somehow the system didn't catch it up properly, or maybe you did not.
+feeding all the transcripts, or maybe transcripts are not there, but you can feed in the research paper though, right? You can let the system read the research paper. And I think the way it will ingest the research paper is it will have to do the opposite. It will have to take the PDF and convert it into text. But that's how the ingestion would look like, right? It's not like, you know, if PDF is more refined, actually it is raw.
+
+Sadra Sabouri   1:09:28
+Yeah.
+
+Sumit Gulwani   1:09:34
+For an agent, the file part is converting PDF into text, probably. So, so if the title of that can also improve, that would be good. Right now, I think that title is not that great. I is just talking about validating or something like that, right, but it should be validating and steering. It would be nice if the description of the project is that.
+
+Sadra Sabouri   1:09:52
+So you mean the title of paper, right?
+
+Sumit Gulwani   1:09:55
+So, so right now the description of the second project is is I think just validating. If you look at the wiki that you have, then the second project title is just that it has picked up is.
+
+Sadra Sabouri   1:10:08
+Especially verification.
+
+Sumit Gulwani   1:10:10
+Well, it's pretty verification, right? I might hope is that if you put your paper in it.
+
+Sadra Sabouri   1:10:15
+This will change.
+
+Sumit Gulwani   1:10:17
+It will hopefully change - that's what I'm hoping, like, and then see what happens.
+
+Sadra Sabouri   1:10:19
+Thank you.
+Okay, yeah.
+Interesting.
+
+Sumit Gulwani   1:10:26
+So you can try to fix that. So again, try to fix these small little things that we talked about because I think they make a big difference. Like 2 minutes is less of a time for me to explain all this, you know, the sloppiness. Let's just fix the sloppiness, right? It is hopefully easy to fix. And then see what is the three best slides that you can come up with here, right? Which are the two applications we talked about?
+
+Sadra Sabouri   1:10:33
+Yeah.
+
+Sumit Gulwani   1:10:45
+and the private mashup of information. Just focus on these three slides. And in the meanwhile, let me try to work on this document and see if I can first get it to the end state I want. And then from there, I will work backwards and see what is the general prompt I can come around.
+
+Sadra Sabouri   1:10:49
+Okay.
+Yeah, I will work on it tonight, and one thing is that tomorrow I'm flying back, so sometimes tomorrow I will be off, but I will, once, once I get back to the computer, I will message you or email you.
+
+Sumit Gulwani   1:11:01
+That's good.
+Sounds good, Sadra. Okay, then. Thank you. Talk to you later. Bye bye.
+
+Sadra Sabouri   1:11:22
+OK, thank you. Bye.
+
+Sumit Gulwani stopped transcription

@@ -1,72 +1,46 @@
 ---
 tags: [view, presentation]
 target: views, workflows
-audience: manager-level decision makers
+audience: distinguished AI practitioners (Satya's office)
 generated: 2026-05-05
+note: audience updated per Sumit's feedback in Sadra-5May2026-TRANSCRIPT2; restructured to 3 slides
 ---
 
-# Presentation: "Views and Workflows for Knowledge Bases" for Manager-Level Decision Makers
+# Presentation: "Views and Workflows for Knowledge Bases" for Distinguished AI Practitioners
 
-## Why your knowledge workers spend more time reconstructing context than creating it
+## Views, Not Documents
 
-- Every meeting, email, and 1:1 contains decisions and reasoning that exist only inside one person's head five minutes later
-- New joiners take months to reach productive context; existing staff re-litigate decisions they've already made
-- Notion / Confluence / SharePoint store documents — they don't synthesize across them
-- The bottleneck on knowledge work isn't writing; it's **reuse**
+- Every document — PowerPoint, Word, design doc, status report — is actually a **view**: a template whose holes are prompts over a knowledge base ([[views]])
+- The insight isn't new: **dashboards** auto-update when data changes; **Excel formulas** recompute when inputs change; **Excel Equals Copilot** applies a prompt when the cell re-triggers ([[living-system]])
+- These only worked before for *objective*, code-expressible computation. AI enables the same recalc model for *subjective* and *aesthetic* content — summaries, narratives, creative analysis
+- A knowledge base is: a timestamped stream of raw sources, with structured views automatically maintained on top — **views that rewrite themselves as the stream grows**
 
-> speaker note: Open with a relatable scenario — "How many times this month did someone in your org ask a question whose answer was already in a transcript or email no one re-read?" Cite the [[simulation-metaphor]] framing without naming it: world progress = individual processing + communication; both are slow today. The point is to make managers feel the cost before introducing the solution.
+> speaker note: The recalc framing is the anchor for this slide — your audience will have used Excel formulas and will feel the click immediately. The key move is "dashboards and formulas worked for code; now AI makes the whole document recalcable." Reference [[Sadra-5May2026-TRANSCRIPT2]] where Sumit articulated this as "the heart of it." Don't use "views not documents" as a slogan until you've landed the analogy — the analogy earns the slogan. Mention that the document summarizing this research was itself generated as a view, updated as new transcripts arrived. That's the self-referential proof point.
 
-## What a "view" is, in one sentence: a saved question over your team's collective knowledge
+## The Organizational Brain
 
-- A **view** is a prompt + a target ("Show me every concern raised about Project X") that runs over the whole knowledge base and produces an always-current answer
-- Views are user-definable — managers, not engineers, can author the questions that matter to them
-- Views are **hierarchical** and **composable** — a "design doc" view can compose with a "topic summary" view
-- Concrete examples already in our system: [[contribution-map-views|who introduced which idea, when]], [[timeline-views|how a concept evolved across meetings]], "what does each person think about X?"
+- An individual's knowledge base is bounded by what they personally read, hear, and remember. An organizational brain is not ([[semi-private-mashing]], [[digital-twins]])
+- AI grounded in a 10,000-person org's transcripts, emails, and design docs can: surface an idea neither team had alone; identify two people in different orgs working on the same hidden problem; retrieve tacit knowledge ("who to talk to about X, and how they handle disagreement")
+- The PageRank analogy: PageRank borrowed the citation-network idea from academic publishing and applied it to the web — a cross-domain insight that transformed how we navigate information. Cross-organizational synthesis at scale is the same kind of combinatorial creativity
+- **"Satya, imagine your power when the Microsoft brain comes up"** — the CEO's permission scope, already the broadest in the org, combined with a wiki spanning all of Microsoft gives strategic intelligence no individual can have today
 
-> speaker note: This is the slide where you make views feel inevitable. Use a manager-relevant example, not a technical one — "What's our team's position on remote work?" or "What concerns has Legal raised about the new vendor?" Reference [[views]] and the [[Sadra-1May2026-Transcript|May 1 sync]] where Sumit identified views as the unifying abstraction. Keep it under 60 seconds — this is the easy slide.
+> speaker note: This is the slide that makes the audience feel the scale. Don't start with Satya — earn it. Start with the contrast: what can one person know vs. what 10,000 people collectively know but never share. The PageRank analogy (from [[Sadra-5May2026-TRANSCRIPT2]]) is the associative-thinking example to use for a technically literate audience. Close with the Satya line — it's cheesy, but it lands for a Microsoft internal audience. Reference [[digital-twins]] for the longer-term vision (onboarding from months to days, async collaboration at sync quality).
 
-## Why one prompt doesn't fit all: workflows are where your domain expertise lives
+## Semi-Private Mashup
 
-- A **view** says WHAT to compute. A **workflow** says HOW to compute it
-- The same view ("summarize this user research") produces materially different output depending on the workflow: grounded theory analysis vs. multi-pass summarization vs. per-section chunking
-- Workflows are **creative artifacts** — choosing the right method for the right input is where your team's tacit expertise gets encoded
-- Without explicit workflows, the AI picks one for you. Your senior people's methodology stays in their heads instead of in the system
+- The organizational brain only forms if individuals choose to contribute — that choice depends on **credit** and **privacy** ([[semi-private-mashing]])
+- Most KB tools force a binary: include the whole 1:1 transcript in the shared KB, or include nothing. This system filters: extracts only the parts of a private exchange relevant to a shared topic; leaves everything else private; privacy is enforced *before* content enters the shared layer
+- The dual problem: the same mechanism that guards IP must also enable *appropriate* sharing — "I routinely merge general observations from private Microsoft transcripts into shared notes with explicit prompt-level instructions to omit IP"
+- Both enforcement (block private content) and facilitation (share what's appropriate) should be **first-class capabilities**, not manual cognitive overhead each time
 
-> speaker note: This is the slide that earns the "views *and* workflows" framing in the title. Managers often think "we'll just use ChatGPT on our docs" — workflows are why that doesn't work for serious knowledge work. Cite [[workflows]] and the grounded theory example from [[Sadra-1May2026-Transcript]]. The implication: investing in good workflows is the same kind of investment as writing a runbook — durable institutional value.
-
-## How this differs from Notion, RAG, and "ChatGPT on your docs"
-
-- **Notion / Confluence**: static pages, no synthesis. You still have to read everything to answer a question
-- **RAG (e.g. ChatGPT-on-your-docs)**: retrieves text chunks at query time; can't reason across them; opaque about which sources actually drove an answer; rediscovers knowledge from scratch on every query
-- **This system**: pre-organizes raw sources into a structured **knowledge layer**; views run on the knowledge layer, not raw text — **75–99% lower token cost at scale** ([[llm-wiki-landscape]])
-- Every claim in every output is **traceable to a source** — auditable, unlike RAG
-
-> speaker note: Most managers' mental model of AI-on-docs is RAG. This is the slide that breaks that frame. The 75–99% number is real and from a published mind-DB benchmark cited in [[LLM-Wiki Related Works]] — but flag that it's a third-party number, not ours. The auditability point is the one that resonates with risk-averse decision makers.
-
-## The org-scale unlock: keep 1:1s private, share what matters
-
-- Most KB tools force a binary: include the whole 1:1 transcript in the shared KB or include nothing
-- This system filters automatically — extracts only the parts of a private exchange that are relevant to a shared topic, leaves everything else private
-- Privacy is enforced **before** content enters the shared layer — the raw private source never touches the team KB
-- This is the differentiator vs. existing personal-KB tools (e.g. the Karpathy pattern, [[second-brain-code-method|Building a Second Brain]]); those tools assume all input is shareable. Org work doesn't
-
-> speaker note: This is the slide that makes the system specifically organizational. The concept name is [[semi-private-mashing|semi-private mashing]] but don't say that — say "intelligent privacy filtering." Be honest with your audience: this is currently a research direction, not a shipped feature. See Open Questions slide for the gap. Reference [[Thursday demo]] where this was first articulated and [[Sadra-1May2026-Transcript|the May 1 sync]] where Souti raised privacy concerns.
-
-## What changes for your team day-to-day: embedded, live, additive
-
-- **Embedded views**: prompt-powered fields inside Word, PowerPoint, Excel — not a new tool to learn ([[embedded-views]])
-- **Living documents**: when a new transcript arrives, every document that depends on it auto-updates ([[living-system]] — like Excel formulas, not values)
-- **Additive, not migrative**: nothing has to be moved out of your existing tools; sources plug in as they're created
-- The long-term direction: **digital twins** — a model of how each team member thinks. Onboarding from months to days, asynchronous collaboration at the quality of synchronous ([[digital-twins]])
-
-> speaker note: This is the adoption slide. Manager-level audiences will be thinking "do I have to migrate everything?" — answer is no. The Excel formula analogy from [[Sadra-4May2026-TRANSCRIPT3|the May 4 sync]] lands well: cells with values vs. cells with formulas. Digital twins is the aspirational vision — present it as direction-of-travel, not a quarterly deliverable.
+> speaker note: This is the differentiator slide for organizational buyers. Lead with the credit point — "people will contribute if they get credit in the system" — before the privacy mechanism, because it sets up *why* you want semi-private mashup to exist in the first place. Be direct that this is a research direction, not a shipped feature. The mechanism (differential privacy norms, permission-aware filtering) is not yet specified — say so and frame it as "where we're putting research effort." The best challenge to anticipate: "How do you enforce this technically?" Answer: we're starting with prompt-level instructions; the formal mechanism is open research. Reference [[Sadra-5May2026-TRANSCRIPT2]] for the Sumit anecdote about pulling unpublished work accidentally.
 
 ## Open Questions
 
-- **Privacy guarantees** — semi-private mashing is presented as a core capability, but the design and enforcement mechanism are not yet specified ([[semi-private-mashing]], [[Sadra-1May2026-Transcript]]). Before deployment in any sensitive context, this needs concrete design and audit.
-- **Performance vs. RAG** — the efficiency and quality claims are anecdotal. The system has not been rigorously benchmarked against RAG on representative org tasks ([[llm-wiki-landscape]]). Pilots should include head-to-head comparison.
-- **Maintenance at scale** — the knowledge graph gets harder to maintain as it grows. Strategies for percolation, deprecation, and contradiction resolution are partially designed but not battle-tested at thousands of meetings ([[temporal-knowledge]], [[purge-operation]]). A dedicated curator role may be needed at scale.
+- **Privacy mechanism** — semi-private mashup is central to the organizational-brain pitch, but the enforcement design (differential privacy, permission propagation, audit trail) is not specified. Any deployment in a sensitive enterprise context requires this to be concrete before the system can be trusted ([[semi-private-mashing]]).
+- **Wiki maintenance at scale** — the PR model (agents submit, humans review) makes sense theoretically, but the incentive structures and tooling for reviewing AI-generated knowledge updates across a 10,000-person org are undesigned. Who curates? What's the review interface? ([[2026-05-05]])
+- **Skill quality and gallery** — the value of the system depends heavily on the skills (creative computation methods) supplied for each view. Currently hand-crafted. A community library of skills is proposed but doesn't exist; it's unclear how skill quality would be assessed or improved over time ([[skills]]).
 
 ---
 
-**Presenter brief:** Lead with the cost-of-knowledge-work hook (slide 1) — that's what gets manager attention; the rest of the deck is justifying the spend. Slides 2 and 3 are the substantive core; do not skip them even if short on time. Slide 4 (vs. RAG) is the most important slide for technically-curious managers; if you sense the room is skeptical, expand here. Slide 5 (semi-private mashing) is the differentiator for org buyers but is currently an oversold claim — present it as a design direction, not a feature, and own that openly when challenged. Slide 6 (embedded views, digital twins) is the "what does my team experience" slide — keep it concrete. The most likely audience question: **"Do my people have to learn a new tool?"** — answer is no, embedded views means it lives inside Word/PPT/Excel; the second most likely question: **"Is our IP safe?"** — answer honestly: the privacy-filtering mechanism is a research direction, and any deployment should start in a low-sensitivity context.
+**Presenter brief:** Lead with the Excel analogy (slide 1) — this audience will grok it immediately and it gives you the "recalc for subjective content" insight without jargon. Slide 2 (organizational brain) is the one that lands emotionally for a Microsoft-internal audience; the Satya line is intentionally provocative — use it or cut it based on room read. Slide 3 (semi-private mashup) is the hardest slide — it makes a promise (privacy enforcement + appropriate sharing) the system can't yet keep, so be precise about what's designed vs. what's research. Most likely audience question: **"How is this different from what GitHub Copilot/RAG does today?"** Answer: Karpathy's critique — RAG rediscovers knowledge from scratch on every question, there is no accumulation. This system accumulates into a structured knowledge layer; views query the layer, not raw text. Second most likely: **"Who maintains the wiki?"** Answer: PR model — agents submit changes, humans review, same as open-source code evolution.

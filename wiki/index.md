@@ -25,6 +25,8 @@
 - [[information-knowledge-pipeline|Information → Knowledge → Views Pipeline]] — three-layer architecture; wiki as semantic index / hot cache; views run on wiki, not raw data
 - [[living-system|Living System]] — always-live recalc model (Excel formula analogy); automated raw data generation; everything-is-a-DAG; temporal source filtering
 - [[embedded-views|Embedded Views]] — Option 2: views as prompt-powered holes inside existing applications (Word, PPT, Excel) vs. standalone CLI generation
+- [[skills|Skills]] — per-prompt creative methodology (HOW to fill a view hole); renamed from "creative workflows"; includes a gallery / community library
+- [[context-base|Context Base vs. Knowledge Base]] — applied compute paper's agent-focused architecture (Remember→Refine→Retrieve) vs. this project's human-centered knowledge base
 
 ## People
 
@@ -52,3 +54,4 @@
 - [[2026-05-02|May 2]] — Simulation metaphor; temporal KB; views/workflows distinction; purge; provenance; self-referential presentation
 - [[2026-05-03|May 3]] — Three-way sync; wiki demo to Sumit; semantic index framing; raw→knowledge→views pipeline; embedded views; Karpathy differentiator
 - [[2026-05-04|May 4]] — Two 1:1s; full-system provenance DAG; temporal source filtering; living system; everything-is-a-DAG; knowledge graph as alternative foundation
+- [[2026-05-05|May 5]] — AI slop diagnosis; workflows→skills rename; view = template with holes; workflow = data dependencies; context base vs. knowledge base; document as view; Satya pitch

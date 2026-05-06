@@ -6,9 +6,14 @@ tags: [concept]
 
 The KB as an always-current, self-updating system that recomputes whenever new data arrives — like Excel formulas, not Excel values. Articulated by [[sumit-gulwani|Sumit]] across two late-night syncs in [[2026-05-04|May 4]] ([[Sadra-4May2026-TRANSCRIPT2]], [[Sadra-4May2026-TRANSCRIPT3]]).
 
-## The Excel Formula Analogy
+## The Excel Formula Analogy — Three Concrete Anchors
 
-A spreadsheet cell can contain a value (`5`) or a formula (`=A1+B1`). If it contains a value, it doesn't update when inputs change. If it contains a formula, it recomputes automatically. The KB should work like formulas: every wiki page and every view is a "formula" over its input sources. When inputs change, outputs recompute.
+Three real-world examples grounded the concept in [[Sadra-5May2026-TRANSCRIPT2|the May 5 sync]]:
+1. **Dashboards** — auto-update when new data arrives; already standard in BI tools
+2. **Excel formulas / recalc engine** — static cells vs. formula cells; the formula recomputes when inputs change
+3. **Excel "Equals Copilot" feature** — a prompt-powered cell; the prompt applies to new inputs and repeats automatically
+
+These examples show the recalc model applied to *objective*, code-expressible computation. The KB extends it to *subjective* and *aesthetic* content: "the recalc feature was never applied to an entire document because it is subjective… but hey, now we have the power to process this." See also [[views|Document as View]].
 
 "Another way to think about this knowledge graph is that it also encodes workflow automation... when you change A1 and B1, C1 automatically updates. So that kind of workflow automation we are trying to do." — Sumit, [[Sadra-4May2026-TRANSCRIPT3]]
 

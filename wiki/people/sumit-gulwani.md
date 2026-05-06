@@ -22,10 +22,18 @@ Proposed the [[living-system|living system]] model — KB as always-live recalc 
 
 Observed his own agent becoming "too smart" — self-organizing his KB in ways he hadn't asked for — and described it as "very, very surreal, almost as if the system had consciousness." Detailed in [[misc thoughts]] and [[Thursday demo]].
 
+Diagnosed the "AI slop" problem from his "connect" exercise in [[Sadra-5May2026-TRANSCRIPT|the May 5 morning sync]]: all raw sources present, still got mediocre output. Conclusion: **"Having raw sources and a processing pipeline is not good enough. There is something more."** The missing piece is the [[skills|skill]] — encoding exactly how to compute the output, not just what to ask. This experience confirmed the rename from "creative workflows" to "skills."
+
+Settled the most precise definitions to date in [[Sadra-5May2026-TRANSCRIPT2|the May 5 evening sync]]: **view = template with holes** (each hole = prompt + optional [[skills|skill]]); **workflow** = data dependency graph (narrowed from its earlier meaning; see [[workflows]]). Introduced the **document-as-view** concept: each paragraph of a document is a prompt; a document authored this way is itself a view and updates as the KB grows.
+
+Shared the **applied compute / [[context-base|context base]]** paper — a convergent framing from Microsoft Research distinguishing agent-focused context bases (Remember→Refine→Retrieve) from human-focused knowledge bases. Positioned this project as an extension of Karpathy's LLM-wiki approach for the organizational scale, with views-not-documents and semi-private mashup as the distinctive contributions.
+
+Articulated the **Satya pitch**: "Satya, imagine your power when the Microsoft brain comes up." The organizational-brain at CEO scope — permission to access all of Microsoft's knowledge — would give strategic intelligence no individual has today.
+
 ## Distinctive Intellectual Move
 
 Sumit consistently finds the single abstraction that unifies superficially different problems. [[views]] unified the spreadsheet tool and the KB system. He also extended the simulation metaphor and the degree-of-separation framing of [[semi-private-mashing|semi-private mashing]] in [[Thursday demo]].
 
 ## Appears In
 
-[[Thursday demo]], [[Presentation]], [[misc thoughts]], [[Transcripts]], [[GMT20260220-230118_Recording.transcript|Feb 20]], [[GMT20260316-200648_Recording.transcript|Mar 16]], [[Sadra-1May2026-Transcript|May 1]], [[Sadra-2May2026-TRANSCRIPT|May 2 morning]], [[Sadra-2May2026-TRANSCRIPT2|May 2 evening]]
+[[Thursday demo]], [[Presentation]], [[misc thoughts]], [[Transcripts]], [[GMT20260220-230118_Recording.transcript|Feb 20]], [[GMT20260316-200648_Recording.transcript|Mar 16]], [[Sadra-1May2026-Transcript|May 1]], [[Sadra-2May2026-TRANSCRIPT|May 2 morning]], [[Sadra-2May2026-TRANSCRIPT2|May 2 evening]], [[Sadra-5May2026-TRANSCRIPT|May 5 morning]], [[Sadra-5May2026-TRANSCRIPT2|May 5 evening]]
