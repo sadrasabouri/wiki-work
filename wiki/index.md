@@ -31,6 +31,7 @@
 - [[sujay-maladi|Sujay Maladi]] — collaborator on Spreadsheet Verification; must-haves vs. nice-to-haves rubric
 - [[athena-saghi|Athena Saghi]] — creativity study researcher; productivity-creativity tradeoff findings and four collaboration modes
 - [[tiago-forte|Tiago Forte]] — creator of Building a Second Brain / CODE method / PARA; intellectual predecessor to Karpathy's LLM-wiki pattern
+- [[gary-marcus|Gary Marcus]] — AI critic; "GenAI is net negative outside coding and brainstorming" — his carve-out validates the wiki project's domain
 
 ## Projects
 

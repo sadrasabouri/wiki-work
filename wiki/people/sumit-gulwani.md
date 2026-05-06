@@ -14,6 +14,8 @@ Identified [[views|Views]] as the unifying abstraction across both projects in t
 
 Proposed the self-referential presentation: "A Presentation About This Presentation" — using the wiki as the presentation medium for the talk about the wiki. See [[misc thoughts]] and [[Presentation]].
 
+Forwarded [[gary-marcus|Gary Marcus]]'s GenAI critique post to Sadra, observing "Our wiki kinda allows us to 'brainstorming'" — positioning the project inside the narrow legitimacy band that even skeptics grant to GenAI. See [[Presentation]] and [[AI Backlash Grows Amidst Negative Impact on Society  Gary Marcus posted on the topic]].
+
 Observed his own agent becoming "too smart" — self-organizing his KB in ways he hadn't asked for — and described it as "very, very surreal, almost as if the system had consciousness." Detailed in [[misc thoughts]] and [[Thursday demo]].
 
 ## Distinctive Intellectual Move

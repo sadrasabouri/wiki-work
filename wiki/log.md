@@ -36,6 +36,11 @@ Sources ingested (13 files):
 - Pages updated: wiki/projects/wiki-kb-project.md, wiki/index.md
 - Views regenerated: none (no matching target frontmatter)
 
+## [2026-05-05] ingest | Presentation (wikilink fix), AI Backlash / Gary Marcus post
+- Pages created: wiki/people/gary-marcus.md
+- Pages updated: wiki/projects/wiki-kb-project.md (external positioning section), wiki/people/sumit-gulwani.md (Marcus forwarding), wiki/index.md
+- Views regenerated: none (no matching target frontmatter)
+
 ## [2026-05-05] ingest | LLM-Wiki Related Works (updated) + Building a Second Brain
 - Pages created: wiki/concepts/second-brain-code-method.md, wiki/people/tiago-forte.md
 - Pages updated: wiki/concepts/llm-wiki-landscape.md (historical roots section added), wiki/projects/wiki-kb-project.md (Intermediate Packets connection), wiki/index.md

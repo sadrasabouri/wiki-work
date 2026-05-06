@@ -20,7 +20,7 @@ Source: [[Presentation.eml]]
 
 ## Body
 
-This linkedin post from Gary Marcus<https://urldefense.com/v3/__https://www.linkedin.com/posts/gary-marcus-b6384b4_why-is-the-ai-backlash-growing-outside-share-7456554051284021248-qefz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAbpgc4BRAQmkOWfG4QzZjocR0kV4pimVOs__;!!LIr3w8kk_Xxm!vW0WlnhFW__klHllVhGTSMn5IBM60A8NZ-ZRAva3JldINfTkRLYjnDGN8L1daw1o4b43vFcymV7ls3b3$ > I found interesting because of this comment:
+This linkedin post from Gary Marcus [[AI Backlash Grows Amidst Negative Impact on Society  Gary Marcus posted on the topic]] I found interesting because of this comment:
 
 Outside of coding (where there is clear value), and a handful of other domains (e.g. brainstorming), Generative AI has been a net negative for society.
 

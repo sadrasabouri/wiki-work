@@ -18,6 +18,10 @@ As articulated in [[Thursday demo]] and refined in [[Sadra-1May2026-Transcript|t
 
 The LLM-wiki pattern originates with Andrej Karpathy's X post (a prompt for extracting entities from fleeting notes) and has since been applied across finance, management, and personal tracking — see [[llm-wiki-landscape|LLM-Wiki Landscape]] for the full ecosystem. This project inherits the core pattern and extends it with [[views]], [[semi-private-mashing|semi-private mashing]], and temporal integrity — addressing the lossiness and scaling critiques identified by Anatoly Krasnovsky as known limitations of the approach.
 
+## External Positioning
+
+AI critic [[gary-marcus|Gary Marcus]] argued in May 2026 that GenAI is net negative outside of coding and brainstorming. [[sumit-gulwani|Sumit]] forwarded this post noting "Our wiki kinda allows us to 'brainstorming'" ([[Presentation]]). The wiki project doesn't need to rebut Marcus — it operates within the domain he already grants legitimate. This is a stronger positioning move than arguing against the critique: the project lives inside the exception.
+
 ## Self-Referential Nature
 
 The project is its own best use case — see [[self-referential-kb]]. The raw sources feeding this KB are the transcripts of the meetings that designed it. The presentation on Thursday is planned to be generated from the KB itself.
