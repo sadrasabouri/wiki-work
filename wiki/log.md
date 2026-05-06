@@ -70,6 +70,11 @@ Sources ingested (13 files):
 
 ## [2026-05-05] view:presentation | grounded transcript examples → presentation-grounded-examples.md
 
+## [2026-05-06] ingest | Work IQ overview, Microsoft Tool For Idea Automation
+- Pages created: wiki/concepts/workiq.md
+- Pages updated: wiki/concepts/context-base.md (Work IQ as productized context base), wiki/concepts/semi-private-mashing.md (Work IQ gap as concrete evidence), wiki/concepts/skills.md (Work IQ Business Skills as org-scale analogue), wiki/concepts/llm-wiki-landscape.md (Work IQ as Microsoft org-scale incumbent), wiki/index.md
+- Views regenerated: none (no matching target frontmatter)
+
 ## [2026-05-06] ingest | Sadra-6May2026-Notes
 - Pages created: wiki/events/2026-05-06.md
 - Pages updated: wiki/concepts/views.md (FlashFill analogy added to vibe sessions section), wiki/concepts/llm-wiki-landscape.md (Karpathy gist 700-comment mining; wiki vs. RAG compression reframe), wiki/people/sumit-gulwani.md (May 6 contributions + appearances), wiki/people/sadra-sabouri.md (May 6 appearances), wiki/index.md

@@ -65,6 +65,14 @@ Sadra's interpretability argument — that wiki edges are typed and traversable 
 
 The synthesis: the wiki's advantage is that its compression model (entity extraction + typed relations) is *declarative* — inspectable, correctable, extensible. An embedding is not directly editable. The interpretability argument and the compression argument are the same point at different levels of abstraction.
 
+## Work IQ: The Microsoft Org-Scale Incumbent
+
+[[workiq|Work IQ]] is the Microsoft product most adjacent to this project. It provides a three-layer architecture (Data, Context, Skills/Tools) grounding Microsoft 365 Copilot in enterprise data — essentially the [[context-base|applied compute context base]] productized at org scale. Its semantic index (lexical + semantic retrieval over all M365 data) is the state of the art for RAG-based organizational knowledge access.
+
+The gap, per Sadra in [[Microsoft Tool For Idea Automation]]: Work IQ "stays in the surface level and does not connect with the organization's experience." It retrieves from documents but does not build a structured knowledge layer — no concept pages, no typed relations, no synthesis across sources. And it has no semi-private contribution model: individuals cannot selectively push personal knowledge to a shared layer while filtering private content.
+
+Work IQ defines the floor the Wiki KB Project builds above: the context base exists; the knowledge layer and semi-private mashing are what's missing.
+
 ## How the Wiki KB Project Differentiates
 
 The Karpathy pattern produces a generic entity graph. The [[wiki-kb-project|Wiki KB Project]] goes further on three axes:

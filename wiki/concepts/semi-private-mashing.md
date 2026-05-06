@@ -10,6 +10,8 @@ Filtering private exchanges — 1:1 meetings, personal transcripts — to extrac
 
 A 1:1 between Sadra and Sumit contains a mix of: project decisions (shareable), personal context (not shareable), and half-formed ideas (judgment call). Current tools have no mechanism for this filtering — you either include the whole document or exclude it. Semi-private mashing provides a third option: include the relevant subset.
 
+[[workiq|Work IQ]] makes the gap concrete: it indexes all of M365 at the document level but has no model for an individual selectively contributing distilled personal knowledge to a shared layer. The result, as Sadra observes in [[Microsoft Tool For Idea Automation]]: "tons of rework is happening that wouldn't be there if there was a common source of updating knowledge where individuals can contribute using their semi-private information." Work IQ can retrieve what exists; it cannot surface what someone knows privately that would solve a colleague's problem.
+
 ## Relevance as a View
 
 Deciding what is "relevant to share" is itself a [[views|View]] — a declarative spec applied to a private source. This makes the filtering user-definable and auditable: you can see exactly what the KB extracted from a private source and why. The [[wiki-kb-project|Wiki KB Project]] treats this as a first-class operation rather than a manual preprocessing step.

@@ -29,6 +29,7 @@
 - [[context-base|Context Base vs. Knowledge Base]] — applied compute paper's agent-focused architecture (Remember→Refine→Retrieve) vs. this project's human-centered knowledge base
 - [[semantic-diff|Semantic Diff]] — design primitive for inspectable agents: surface the computational unit (formula, rule), not the artifact surface (highlighted cells); generalizes across spreadsheet, code, document agents
 - [[local-first-kb|Local-First KB]] — personal KB as local branch; private processing on-device; PR model for contributing to org KB; matvellosoknowledge as concrete RAG-based instantiation
+- [[workiq|Work IQ]] — Microsoft's org-scale context base (Data + Context + Skills/Tools); closest incumbent to the wiki project; gap: surface-level indexing, no knowledge layer, no semi-private contribution model
 
 ## People
 

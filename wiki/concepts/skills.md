@@ -33,6 +33,8 @@ Skills encode the creative insight — the recognition that grounded theory appl
 
 A community library of skills is a natural extension: practitioners share skills for knowledge distillation the way developers share libraries. Sumit's call-to-action in his draft post: "stand up a community pattern library, because many of us are distilling information in our own creative ways." The grounded theory prompt from this project is one example of a skill worth sharing.
 
+**Real-world analogue at org scale:** [[workiq|Work IQ]]'s **Business skills** — "natural-language instructions that encode your organization's processes, policies, and domain knowledge in a format agents can interpret and execute" — are skills at the org-process level. Agents discover and apply them at runtime to ensure consistent behavior across the org. Same pattern as wiki skills, different scope: Work IQ skills encode org procedures; wiki skills encode per-prompt creative methodology. [[Work IQ overview]]
+
 **Real-world analogue in the wild:** [[matvellosoknowledge]] implements a skills-equivalent called **MY PREFERENCES.md** — a plain markdown file where users encode domain-specific extraction rules and hard constraints (e.g., "always extract action items from work emails," "never include prices in shopping summaries"). The agent uses it as part of the system prompt. This confirms the skills pattern is independently discoverable: when you build a serious personal KB, you end up needing a user-configurable methodology layer. [[Personal Private Knowledge Management]]
 
 ## Relation to Workflows

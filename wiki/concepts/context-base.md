@@ -29,6 +29,10 @@ This project is a knowledge base for **human knowledge work**, not an agent auto
 
 The Refine phase in the applied compute paper corresponds to the [[information-knowledge-pipeline|wiki layer]] here. The Retrieve phase corresponds to [[views|views]] (queries over the knowledge layer). But views in this project are richer — they are templates with prompts and [[skills]], not just search APIs.
 
+## Work IQ as a Productized Context Base
+
+[[workiq|Work IQ]] (Microsoft 365) is the closest shipping product to the applied compute architecture: its Data layer = Remember, its semantic index = Refine, its Skills/Tools layer = Retrieve. Work IQ demonstrates the context base at org scale — grounding Copilot in all of M365 — but does not add the knowledge layer. It retrieves from documents; it does not synthesize concept pages or support personal→org knowledge contribution. See [[workiq]] for the full analysis.
+
 ## Convergent Framing of Related Work
 
 Sumit situates three pieces as convergent frames (from [[Sadra-5May2026-TRANSCRIPT2]]):
