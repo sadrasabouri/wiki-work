@@ -89,15 +89,15 @@ List branch pairs in `.github/quartz-diff-pairs.txt`, one per line in
 `BASE...HEAD` form:
 
 ```text
-main...v1
-v1...v2
+main...v0.1
+v0.1...main
 ```
 
 For each listed pair the workflow publishes a site at:
 
 ```text
-https://sadrasabouri.github.io/wiki-work/main...v1/
-https://sadrasabouri.github.io/wiki-work/v1...v2/
+https://sadrasabouri.github.io/wiki-work/main...v0.1/
+https://sadrasabouri.github.io/wiki-work/v0.1...main/
 ```
 
 The site is a normal Quartz build (search, backlinks, navigation all work).
