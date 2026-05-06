@@ -64,6 +64,11 @@ jobs:
             exit 1
           fi
 
+          remove_quartz_hidden_content() {
+            find "$QUARTZ_DIR/content" -type d -name log -prune -exec rm -rf {} +
+            find "$QUARTZ_DIR/content" -type f -name log.md -delete
+          }
+
           mkdir -p "$SITE_DIR" "$WORKTREE_ROOT"
           touch "$SITE_DIR/.nojekyll"
 
@@ -129,6 +134,8 @@ jobs:
               mkdir -p "$QUARTZ_DIR/content/$(dirname "$content_path")"
               rsync -a "$source_path" "$QUARTZ_DIR/content/$(dirname "$content_path")/"
             done
+
+            remove_quartz_hidden_content
 
             export CLAUDE_COMMANDS_DIR="$QUARTZ_DIR/content/.claude/commands"
             node <<'NODE'
@@ -390,6 +397,8 @@ jobs:
 
           fs.writeFileSync(statusPath, JSON.stringify(status, null, 2))
           NODE
+
+            remove_quartz_hidden_content
 
             export CLAUDE_COMMANDS_DIR="$QUARTZ_DIR/content/.claude/commands"
             node <<'NODE'
