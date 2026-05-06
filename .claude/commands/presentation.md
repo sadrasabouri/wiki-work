@@ -1,6 +1,6 @@
 ---
 description: Generate a presentation by filling a template file with content synthesized from the wiki.
-argument-hint: <path-to-template>  e.g. ".claude/templates/sumit-lightning.md"
+argument-hint: <path-to-template>  e.g. "templates/sumit-lightning.md"
 ---
 
 Generate presentation from template: $ARGUMENTS

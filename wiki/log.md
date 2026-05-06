@@ -70,6 +70,8 @@ Sources ingested (13 files):
 
 ## [2026-05-05] view:presentation | grounded transcript examples → presentation-grounded-examples.md
 
+## [2026-05-06] view:presentation | .claude/templates/sumit-lightning.md → presentation-sumit-lightning.md
+
 ## [2026-05-06] ingest | LLM-Wiki Related Works (Applied Compute pointer), Remember Refine Retrieve (full paper)
 - Pages created: none
 - Pages updated: wiki/concepts/context-base.md (full rewrite: Refinery swarm architecture; three structural gaps code vs. knowledge work; APEX/GDPVal benchmark results; reasoning-effort amortization table; source updated to actual paper wikilink), wiki/concepts/llm-wiki-landscape.md (Applied Compute Context Engine section added with empirical results summary), wiki/concepts/scalable-oversight.md (Contextbase feedback loop as parallel to participation-over-review), wiki/index.md

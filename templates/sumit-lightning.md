@@ -10,7 +10,8 @@ num_view_examples: 3
 num_open_questions: 3
 examples_source: presentation-grounded-examples
 landscape_source: llm-wiki-landscape
-note: the presentation should use [[NAME]] wikilinks to reference related wiki pages
+self_referential: true
+note: Use [[NAME]] wikilinks generously to reference wiki pages and concepts. When self_referential is true, treat this presentation as an instance of what it describes — its sections are holes filled by prompts (possibly guided by skills); the deck recomputes when the wiki updates. Weave that self-reference in where natural across slides, not just once.
 ---
 
 # {{title}} — for {{audience}}
@@ -29,7 +30,7 @@ note: the presentation should use [[NAME]] wikilinks to reference related wiki p
 
 ## Views × Needs (Live Map)
 
-> fill: Two-column table — pain point on the left, view type + one-line example on the right. {{num_view_examples}} rows. Source examples from [[{{examples_source}}]].
+> fill: Two-column table — pain point on the left, view type + one-line example on the right. {{num_view_examples}} rows. Source examples from [[{{examples_source}}]]. If self_referential, one row must be this very presentation as a view that solves a real pain point (assembling a talk on a fast-evolving topic).
 
 ## This Generalizes Across Domains
 
