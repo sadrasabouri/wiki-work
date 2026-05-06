@@ -70,6 +70,11 @@ Sources ingested (13 files):
 
 ## [2026-05-05] view:presentation | grounded transcript examples → presentation-grounded-examples.md
 
+## [2026-05-06] ingest | LLM-Wiki Related Works (updated — three-category survey)
+- Pages created: none
+- Pages updated: wiki/concepts/llm-wiki-landscape.md (Applications in the Wild replaced with three-category survey: software developers / researchers / teams; 14 specific projects with descriptions; cold-start problem framing; OmegaWiki and Beever Atlas called out as most significant comparisons)
+- Views regenerated: none (no matching target frontmatter)
+
 ## [2026-05-06] ingest | Work IQ overview, Microsoft Tool For Idea Automation
 - Pages created: wiki/concepts/workiq.md
 - Pages updated: wiki/concepts/context-base.md (Work IQ as productized context base), wiki/concepts/semi-private-mashing.md (Work IQ gap as concrete evidence), wiki/concepts/skills.md (Work IQ Business Skills as org-scale analogue), wiki/concepts/llm-wiki-landscape.md (Work IQ as Microsoft org-scale incumbent), wiki/index.md

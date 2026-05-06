@@ -18,13 +18,50 @@ The pattern originates from Andrej Karpathy's X post, which shared a prompt for 
 
 ## Applications in the Wild
 
-The pattern has been picked up across domains:
+Sadra surveyed ~700 comments on Karpathy's GitHub gist in [[Sadra-6May2026-Notes|May 6]] and expanded the taxonomy in [[LLM-Wiki Related Works]]. Three distinct user segments have emerged, each solving a different problem:
 
-- **Finance** — using Claude + Obsidian to build a personal investment KB from raw research
-- **Manager summaries** — "Garry's Opinionated OpenClawHermes Agent Brain" applies the wiki pattern to management notes
-- **Personal vibe sessions** — Lore, a living KB powered by Claude Code sessions, applies it to informal personal tracking
+### For Software Developers
 
-The commonality: unstructured input → LLM-extracted entities + relations → browsable, queryable graph.
+The core pain is the **cold-start problem**: on every new coding agent interaction, the developer must re-supply context about who they are, what projects they're working on, how projects relate, and what design decisions were made. A structural persistent memory eliminates this tax. [[LLM-Wiki Related Works]]
+
+Notable projects:
+| Project | What it does |
+|---------|-------------|
+| `.brain` folder (@samflipppy) | Local project-root markdown layout: `index.md`, architecture, decisions, changelog, deployment notes, schemas, pipeline notes |
+| [Claude-persistent-memory](https://github.com/pjmattingly/Claude-persistent-memory) | Persistent memory backed by NotebookLM as the wiki layer |
+| [hyalo](https://github.com/ractive/hyalo) | CLI for agents to search markdown KBs, inspect frontmatter, move files, repair links |
+| [Freelance](https://github.com/duct-tape-and-markdown/freelance) | Provenance-first: propositions track source file hashes and stale status — connects to [[provenance-tracking]] |
+| [Lore](https://github.com/cianmarbo/Lore) | Generates/updates documentation from Claude Code conversations; positioned for team infrastructure |
+
+### For Researchers
+
+Researchers generate insights continuously — during paper reading, conferences, coffee-break conversations — and need a system that accumulates these and surfaces connections across them over time. [[LLM-Wiki Related Works]]
+
+Notable projects:
+| Project | What it does |
+|---------|-------------|
+| [Exocortex write-up](https://jayswamimusic.substack.com/p/i-built-an-exocortex-i-didnt-know) (@jayswami) | Indexes sources + session transcripts, corrections, reasoning threads; convergence criterion: "the system begins reflecting the author's voice" |
+| [Memex](https://github.com/memex-lab/memex) | Mobile app that auto-organizes daily recordings into a PARA markdown wiki and life-pattern cards |
+| [IDEA.md](https://github.com/pithpusher/IDEA.md) | Vendor-neutral idea specification format: thesis / problem / how-it-works / limits / where-to-start |
+| [paper-spec](https://github.com/spectralbranding/paper-spec) | Research programs as git repos; adds `.wiki/` for PDFs, datasets, emails, review exchanges, concepts, authors, methods — connects to [[kb-as-codebase]] |
+| [llm-research-wiki](https://github.com/MetamusicX/llm-research-wiki) | Academic template (music/philosophy) with concepts, authors, debates, syntheses, ingest/query/lint, Claude schema |
+| [OmegaWiki](https://github.com/skyllwt/OmegaWiki) | Full research lifecycle: ingest papers → typed knowledge graph → idea generation → experiment design → paper draft → reviewer response. Most ambitious in this category. |
+| [RIS/SPATE](https://zenodo.org/records/19914452) | Research Intelligence System with Prompt IDs, provenance registry, and self-constructing taxonomy |
+
+OmegaWiki is the closest to the [[wiki-kb-project|Wiki KB Project]]'s long-term vision for researchers: not just storage and retrieval but an active participant in the research workflow from idea to publication.
+
+### For Teams
+
+Team-oriented deployments focus on shared memory across multiple contributors: onboarding, product decisions, meeting history, multi-user agent workflows. [[LLM-Wiki Related Works]]
+
+| Project | What it does |
+|---------|-------------|
+| [Peeps Skill](https://github.com/Know-Your-People/peeps-skill) | People and organization intelligence |
+| [Waykee Cortex](https://waykee.com/) | Hierarchical knowledge + work tracking; context inheritance across systems/modules/screens and tasks/bugs/milestones |
+| [agent-wiki](https://github.com/junbjnnn/llm-wiki/) | Team wiki inside a project repo; ingests PRDs, meeting notes, API specs, postmortems into summaries, ADRs, runbooks, entity pages |
+| [Beever Atlas](https://github.com/Beever-AI/beever-atlas) | Team-chat-to-wiki for Slack/Discord/Teams corpora; typed graph + semantic store + citations + MCP server |
+
+**Beever Atlas** is architecturally closest to the [[wiki-kb-project|Wiki KB Project]] at team scale: it produces a typed graph with citations from conversational corpora and exposes it via an MCP server — exactly the structured knowledge layer + tool-access pattern this project targets. The gap: no [[semi-private-mashing|semi-private mashing]], no [[views|views]] as first-class constructs.
 
 ## A Documented RAG-Based Alternative: matvellosoknowledge
 
