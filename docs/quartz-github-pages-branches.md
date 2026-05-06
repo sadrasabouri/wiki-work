@@ -57,12 +57,16 @@ By default, only these paths are published:
 
 ```text
 wiki
-views
+raw
+.claude/commands
 ```
 
-That intentionally leaves `raw/` unpublished. Edit
-`.github/quartz-content-paths.txt` only when a path is safe to put on the public
-internet.
+That publishes the maintained wiki, generated views, raw Markdown sources, and
+Claude command Markdown. Edit `.github/quartz-content-paths.txt` only when a
+path is safe to put on the public internet. The workflow publishes
+`.claude/commands` rather than all of `.claude` so local settings are not copied
+into the Quartz site. It also patches the cloned Quartz build to include
+dot-prefixed content paths.
 
 This only controls the generated website. If the GitHub repository is public,
 all tracked source files in all branches are still visible on GitHub. For a

@@ -72,6 +72,26 @@ jobs:
           cd "$QUARTZ_DIR"
           npm ci
 
+          # Quartz's upstream glob does not include dot-prefixed directories by default.
+          node <<'NODE'
+          const fs = require("node:fs")
+
+          const globPath = "quartz/util/glob.ts"
+          let globSource = fs.readFileSync(globPath, "utf8")
+
+          if (!globSource.includes("dot: true")) {
+            const patchedSource = globSource.replace(
+              "gitignore: true,",
+              "gitignore: true,\n      dot: true,",
+            )
+            if (patchedSource === globSource) {
+              throw new Error("Could not patch Quartz glob to include dot-prefixed content.")
+            }
+            globSource = patchedSource
+            fs.writeFileSync(globPath, globSource)
+          }
+          NODE
+
           declare -A SEEN_SLUGS=()
           declare -a BUILT_BRANCHES=()
           declare -a BUILT_SLUGS=()
@@ -201,4 +221,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
