@@ -31,3 +31,11 @@ In [[spreadsheet-verification|Spreadsheet Verification]], views render agent com
 ## Analogy to Database Views
 
 A database view is a saved query over mutable data; a wiki view is a saved prompt over an evolving corpus. Both hide underlying complexity behind a purpose-specific lens. Views are user-definable and hierarchical — a "design doc" view can compose with a "topic summary" view.
+
+## View Definition UX: Vibe Sessions
+
+Sumit noted in [[Sadra-3May2026-TRANSCRIPT|the May 3 sync]] that defining the right view requires iteration: "the real experience is going to be that I'm trying to create some view, and it will take a lot of iteration before I land onto something that I like." The natural UX is a **vibe session** — an interactive back-and-forth that explores the right prompt and workflow. After the session, the user should be able to distill it into a reusable view definition. The current CLI lacks this facility.
+
+## Embedded Views
+
+An alternative rendering model proposed in May 3: instead of generating standalone files, views are embedded inside existing applications (Word, PowerPoint, Excel) as prompt-powered holes in a document template. See [[embedded-views]].

@@ -19,3 +19,9 @@ The DAG is the "see" component of the [[agent-lens|Agent Lens]] framework. Witho
 ## Connection to [[views|Views]]
 
 The DAG view is one specific rendering of agent computation — one [[views|View]] in the views framework. A user who cares only about formula correctness would use a different view (just the formulas). A user debugging a data transformation error would use the DAG. This is precisely the use case Sumit described in the Mar 16 meeting when connecting the spreadsheet tool to the broader views concept.
+
+## Extension: Full-System Provenance DAG
+
+In [[Sadra-4May2026-TRANSCRIPT2|the May 4 early morning sync]], Sumit extended this concept beyond the spreadsheet context to the entire wiki KB: a graphical view of computational dependencies across ALL levels — raw sources → wiki entities → view outputs. This "provenance DAG" shows users what was computed from what across the full [[information-knowledge-pipeline|information → knowledge → views pipeline]]. 
+
+The clean formulation from [[Sadra-4May2026-TRANSCRIPT3|the May 4 morning sync]]: **"Nodes are data, edges is a workflow."** Every artifact is a node; every transformation is an edge. The full system is one DAG — the spreadsheet tool's computation DAG is a subgraph. See [[living-system]] for the recalc implications of this architecture.

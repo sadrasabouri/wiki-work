@@ -1,0 +1,2200 @@
+---
+timestamp: "2026-05-05T17:10:02-07:00"
+source: "[[Sadra-3May2026-TRANSCRIPT.docx]]"
+source_path: "raw/meeting-transcripts/Sadra-3May2026-TRANSCRIPT.docx"
+source_type: "docx"
+tags:
+  - extracted
+---
+# Sadra-3May2026-TRANSCRIPT
+
+Source: [[Sadra-3May2026-TRANSCRIPT.docx]]
+
+SumitSadraSouti sync-20260503_203410-Meeting Transcript
+
+May 3, 2026, 3:34AM
+
+1h 40m 24s
+
+started transcription
+
+Souti Chattopadhyay   0:03
+I'm in Connecticut.
+Yeah.
+
+Sumit Gulwani   0:08
+And I'm on iPhone.
+
+Souti Chattopadhyay   0:09
+Yeah.
+
+Sumit Gulwani   0:09
+No.
+
+Sadra   0:10
+I know.
+
+Souti Chattopadhyay   0:11
+Yeah.
+
+Sumit Gulwani   0:12
+Walking, so no camera for me now. Yeah, I'm gonna have spent all my day sitting, so I have to enjoy some of those moments where I don't need to show my face to just walk.
+
+Souti Chattopadhyay   0:22
+No problem.
+
+Sumit Gulwani   0:24
+Okay, so Sadra, I didn't fully get to absorb everything you have, but generally speaking, here is what I was thinking, right? So why don't you work through the demo script? By the way, do you want to even think about using this for your demo tomorrow? Because this can really challenge you.
+You can upload your paper, you can upload the transcripts, you can upload all the what all what all raw data do we have for the presentation tomorrow? You have my teams invite.
+
+Sadra   0:48
+For, yes, for the presentation tomorrow, I will only use a slide which is only like technical these days. I...
+
+Sumit Gulwani   0:59
+So, what do they use? You use a slide that?
+
+Sadra   1:03
+Some technical details in a in a in a slide.
+
+Sumit Gulwani   1:07
+What technical details would be there on the slide?
+
+Sadra   1:07
+So.
+Uh, how I implemented that?
+
+Sumit Gulwani   1:14
+But how did you implement that?
+
+Sadra   1:17
+With.
+So I would show the different components like the back end, front end, and the underlying LLM, the data type that goes through this system, and how different important actions that user can do will be done in the back end and in the front end.
+For example, the again, I can actually.
+
+Sumit Gulwani   1:41
+Is that a is that an architecture diagram? Is it an architecture diagram in the paper that we'll be using?
+
+Sadra   1:46
+No, no, it's something which is not in the paper.
+
+Sumit Gulwani   1:49
+Will you see what game I'm trying to play with you? I was hoping that I can capture enough that it distill what the slide or what looks like is more complicated. It may not work.
+
+Sadra   1:58
+For even, even you want to use this idea of knowledge graph for the slides?
+
+Sumit Gulwani   2:06
+Yes, I just want to force you to see if you can make your presentation from this knowledge graph.
+
+Sadra   2:12
+So actually, here, here, I'm trying to onboard my other family, other family members to use their research as well, or like the things that they were doing working. So I'm already trying to apply it already to multiple scenarios. So one thing that is interesting, my cousin here,
+
+Sumit Gulwani   2:28
+Okay.
+
+Sadra   2:32
+Is like a chemical, chemical simulation researcher, and then right now I exported all of his all of the email that he has with his supervisor, and I converted, applied it in the same idea to...
+Connect the concepts that appear into different meetings that they have, or the different emails that they have, and try to see how it scales over more than just like toy example.
+
+Sumit Gulwani   3:04
+Yes, actually, that's a good point, right? So I want to discuss that with you also. I forgot to put that in my last email. Is that for the time being, is it possible for you to wrap it up in such a way that you send it to me and I can run it on my private transcripts inside Microsoft? You know, it does have all Microsoft IP and so on.
+
+Sadra   3:20
+Yeah.
+Yes, yes, right now.
+
+Sumit Gulwani   3:23
+So how would that be possible? So what exactly would you send me?
+
+Sadra   3:29
+You only need to clone the repository and then have a cloud code. And then if you just open a cloud code in that and just put your raw data in any form in the raw and then do ingest, it will do that for you.
+
+Sumit Gulwani   3:48
+Okay, so maybe we can try this out later in the week. But if you can maybe send me some instructions that I can try to follow it. I will be a little bit nice, so I have not done these kinds of things before. But if you send me some instructions, then I can try to follow that. That would be useful.
+
+Sadra   3:55
+Okay.
+Yeah.
+Okay.
+OK.
+
+Sumit Gulwani   4:11
+So I have my own cloud code subscription from Microsoft, so I'll also have to see how does that work through on that.
+
+Sadra   4:17
+It will probably work. It will be a challenge.
+
+Sumit Gulwani   4:20
+But will there be authentication and so on? So that is the part that I'm a little bit concerned about.
+
+Sadra   4:25
+The authentication would basically use the same method that you use for signing in into a cloud in browser.
+
+Sumit Gulwani   4:34
+So, I don't do that in the browser, I do that in my VS Code plugin, or adding that I have the cloud code adding that I have in my VS Code.
+
+Sadra   4:41
+So, you, you, you have a cloud account with Microsoft, right?
+
+Sumit Gulwani   4:45
+I don't fully understand how it works, but apparently Microsoft got it for free for all their employees and then it has all been validated and all that I have to do is that it just authenticates me with my Microsoft credentials.
+
+Souti Chattopadhyay   4:47
+Ohh.
+
+Sadra   4:55
+Then there's two three ways to logging in: one way is to log in using your the the personal plan, one is is log in through team plan, the one the other way is to log in through like the API key that you might have.
+
+Sumit Gulwani   5:04
+Okay.
+Okay, okay, maybe try to send it to me, like not urgent, but maybe by sometime later tomorrow, if you can send me some instructions, I can try to do that because that would be really nice. Like we can just try it on something that is completely unexpected, right? We never planned for that, but I have a lot of my conversations, you know, on all kinds of topics with my colleagues here. And then I can just see, you know, what happens there so that I can give you some good feedback on that.
+
+Sadra   5:10
+Okay.
+Yeah.
+Gupta.
+Yeah.
+No.
+
+Sumit Gulwani   5:30
+So let's plan for that. Okay. And before we go to this project, any questions you have for tomorrow's meeting? Tomorrow's meeting, I think you're probably all set.
+
+Sadra   5:39
+Yes, I, I can share the slides with you, so that's you also see what I'm gonna talk about. It, as I said, it's gonna be very more toward more about the discussion that that's gonna happen, and for the discussion I will just let me share it with you when you have access, but...
+Let me share with Sumit, and then also share the link here.
+
+Souti Chattopadhyay   6:04
+Sumit, did anybody submit any pre-questions to you?
+
+Sumit Gulwani   6:05
+So, I feel one thing.
+Let her know.
+
+Souti Chattopadhyay   6:10
+Yeah.
+
+Sumit Gulwani   6:13
+So I don't think I was thinking about the commonality similarity between the two projects, right? So the one project that we today have, the Pista project, it is about views over the output of an agent or maybe views over the right session probably that the agent that the user will have with the agent.
+
+Sadra   6:27
+Yeah.
+
+Sumit Gulwani   6:32
+And right now what you're talking about is views over human transcripts, human meetings, right? So maybe that's something that is common to.
+
+Sadra   6:37
+Yeah.
+
+Sumit Gulwani   6:41
+with those projects. And then if I were to think about, okay, how do I combine the idea in with those two projects and how do I, and what generalization will I get? So I think the generalization that comes from it is that the raw data can be anything. It may not just be human transcripts, it can also be human agent, you know.
+Data.
+
+Sadra   7:03
+Yeah, so for this first iteration, I intentionally removed the AI summaries because they were not, my idea was that they were not actual raw, but I was keeping it for an iteration that I would add it later. But this is the link that I shared. I don't know if you had a chance to go to the link, but.
+I think it's just...
+
+Sumit Gulwani   7:24
+No, I'm going to the link, yeah.
+
+Sadra   7:26
+Okay, it was, I would say it was, oh sorry, this is the presentation first. You were touching on the similarities. Yeah, okay, so maybe we should focus on this presentation and then I will talk about the link.
+
+Sumit Gulwani   7:40
+Sure, yes, yes, yeah.
+
+Sadra   7:43
+So about the presentation.
+
+Sumit Gulwani   7:45
+Yes.
+
+Sadra   7:46
+I will, let me, I, I...
+Accidentally close it.
+I will start with a very, very simple demo just to give them of like how like it is actually working. If they say to see if they already have seen the video, that's going to be like nothing more than that. And then this is the technical detail. I will say that the technical detail inspired by the...
+post that you said sent the guy that was reverse in that reverse engineered these agents and for the EXCEL agent because of the simplicity that at least this guy said it has I took I took that as my example I didn't put any harness or anything for the agent so it's a very vanilla agent this
+The interaction diagram in figure 4 is how a spreadsheet with EXCEL plugin, with backend, with LLM, they interact. And these are the technology that has been used. The links in those boxes, links to the GitHub repository that includes all of them.
+I don't know if you want to do that or not, but it's like basically open source and they can see the code too.
+And in slide 5, I will talk about the example of when a query comes, for example, create a tax form. The query would be enriched by SP sheet metadata, the conversation history, it will go to the back end, and this will go to the DSY program, which makes it basically more like a better prompt, and then it will be given to LLM.
+And then the output is a list of a dictionary in which each.
+There are some key and values. One of the important keys are the, one of the important values inside that is the obvious JS code that is implemented in each step. Each item in this list is a step which has some information like the JS code that is being applied, like the scaffolded questions, like the description of the steps and.
+like the sheet context and so on. And then this will be shown to the user on each step. And then figure 6, I will touch on two important, two fundamental action. One is next, which is when users say next, what will happen?
+What is happening is that a memory map updates and then the office JS code applies and then the things updated. Then it's ready for the next step. And then the seven is the view thing, how the branching view is implemented.
+basically is a lookup from the memory from of the user browser. And then I will touch on some of the important ports from evaluation in the slide 8, some of which are quantitative, most of which are.
+qualitative from their codes, just touching on the idea that we actually tested it with actual users and this is how they took it. And the most important part in the discussion part, which I will start with these three discussion points. One is this idea, this is more for this.
+The people that you mentioned are in the meeting, which are in the like other teams maybe as well, that Pista basically wraps over any agent. It could be EXCEL agents, word agent, coding agents. Second is that Pista is a tool support for presenting data views. So different data views, thank you. Different data views can be.
+Oh.
+can be supported and this is like a one, this is like a design view, design, this is like a supporting tool for a view, how data changes. And the third point, which is the point that your colleague mentioned and also you mentioned before, is that Pista can be used for giving granular.
+Training time feedback, meaning that's when...
+An evaluator, either a user or like someone who's testing a version of.
+an agent that EXCEL is designed, wanted to test how it's actually doing instead of just giving tons, thumbs up, thumbs down feedback, it can be just.
+It can be very granular on each step and giving more informative feedback which can be used in a bit as a better signal for training. And then talking about some technical limitation of how the data state and nodes can be better and also the fact that this stepwise
+Ohh.
+
+Souti Chattopadhyay   12:25
+Sorry, just wordsmithing, sorry on, yeah.
+
+Sadra   12:27
+Yeah.
+Oh, uh, this is the point.
+
+Sumit Gulwani   12:30
+Yes, yes, no, previously it was not not not good, right? So, so let's go over this, start with the slide, right? So, Pista, second point, right, is tool support for presenting data views, but we are seeing different kinds of views. What do you mean by data views?
+
+Sadra   12:43
+I meant like data, how data is being changed through agent actions.
+Data story views, maybe.
+
+Sumit Gulwani   12:57
+Yeah, so, so I think you know it is not not hitting the point, and then what we want to say is different kinds of views.
+
+Sadra   13:06
+Yeah.
+
+Sumit Gulwani   13:07
+And maybe even want to take examples of those views here, saying I showed you these two, but these are the views that can also be built.
+
+Sadra   13:15
+K.
+
+Sumit Gulwani   13:16
+And just taking it from my Teams invite, if you want, or you can just speak to it.
+
+Sadra   13:20
+Yes, OK. Talk about the example of the big thing.
+
+Sumit Gulwani   13:25
+And then the third one was, you know, this training time feedback was very confusing, as if the feedback is being given when the model is being trained, right, which is not what it is. So it allows user-support grammar feedback that can be used to...
+Why improve using training time? That can be used to generally improve the agent hardness, right? Or you can use to improve the model during fine-tuning. That's not what you're necessarily talking about, right? That can be used, can you use to provide data feedback?
+
+Sadra   13:45
+Yeah.
+
+Sumit Gulwani   13:52
+that can be used to improve the agent. That's it.
+
+Souti Chattopadhyay   13:56
+Yeah, just the agent is enough, yeah, and then how you can you can elaborate.
+
+Sadra   13:58
+It.
+
+Sumit Gulwani   13:58
+Right, so maybe, yes.
+Yes, you can just level it here, right? Yeah.
+
+Sadra   14:07
+Mhm.
+
+Sumit Gulwani   14:07
+So maybe the feedback that we're getting through Sadra is generally meta feedback is that you need to be more precise and you need to use fewer words.
+
+Sadra   14:10
+Yeah.
+Yeah.
+
+Sumit Gulwani   14:15
+Yeah.
+So, now the limitations thing.
+Inefficient sheet state saving loading.
+So what is this part?
+
+Sadra   14:26
+Um...
+So we have in the slice six and seven, we talked about how the sheets agent is being saved. And then right now we are saving the content of the sheet, which is not efficient. And we saw that like it takes some time and it was like slow.
+
+Sumit Gulwani   14:32
+Yeah.
+
+Sadra   14:48
+And one, another way of implementing this is to save diffs and then apply, apply or undo diffs. This is more like technical level, it's not research level.
+
+Sumit Gulwani   14:59
+I see, I see, but maybe this is the point, right? That if Excel, you know, provides you some scoring infrastructure pieces like revision records and so on, that kind of infrastructure, then you can use that to make it more efficient. So maybe that's the kind of thing that you can call out here. That's inside to build it outside of Excel. So there are some inefficiencies, but they can be removed if.
+
+Sadra   15:08
+Yes, yes.
+Okay.
+
+Sumit Gulwani   15:18
+We integrated natively inside EXCEL.
+
+Sadra   15:20
+Yeah.
+
+Sumit Gulwani   15:26
+And again, maybe I would say, you know, these are again too many details, right? In the limitations, what I would just say is, you know, inefficiencies, performance inefficiencies, but can be avoided with native support. That's it. Otherwise, you know, talking too many details, right? Do we really want them to understand this? That's the question.
+Right, this audience, so this audience is mostly made up of, but they might be some engineer as well, but we do want to tell them that the native support is important and that person who owns this revision records infrastructure will be there, so I think this can be their opportunity to shine and will be good to mention that, yeah, yeah, so, so maybe I'm wrong, right? Earlier I was thinking it was only PMs and UX people, but no engineer would also be there.
+
+Sadra   15:57
+Yeah.
+Yeah.
+Could be.
+A leaflet.
+Like, you said community sort of a word that you use: community support, native support.
+
+Sumit Gulwani   16:16
+By by native native support, native support, yes, integrating this inside, integrating this, implementing this inside the product.
+
+Souti Chattopadhyay   16:34
+This, this you can just talk about when you say, say, for example.
+
+Sadra   16:37
+Yeah.
+Okay.
+
+Sumit Gulwani   16:46
+Again, you know, the technical limitations, I use the word technical, you can just say limitations. So again, just try to think about every word that you put on the slide.
+And.
+
+Sadra   17:01
+How to make it?
+That's concise.
+
+Souti Chattopadhyay   17:05
+More concise.
+
+Sadra   17:07
+Less.
+
+Sumit Gulwani   17:09
+Yes, and it should be inefficiencies that we want to say, or I don't want to be the efficiency or inefficiencies you can think about it.
+
+Sadra   17:15
+Performance.
+
+Souti Chattopadhyay   17:18
+No.
+
+Sumit Gulwani   17:19
+Right, and then the word arrow, the arrow symbol is being probably is being inconsistent here, so...
+
+Sadra   17:21
+Okay.
+
+Sumit Gulwani   17:29
+In #3, the arrow probably means, like, kind of, you know, and right, and this leads to that, but here you are saying, you know, before versus after kind of thing, right?
+
+Sadra   17:30
+Yes.
+Yes.
+Yeah, so do you think this is better if you have?
+Different subtle.
+
+Sumit Gulwani   17:43
+I would kind of avoid the error because it kind of sometimes will be that they're probably fine. Everybody uses consent. It's like on slide 8, you also use an arrow.
+
+Sadra   17:48
+Okay.
+
+Souti Chattopadhyay   17:51
+Yeah.
+
+Sumit Gulwani   17:51
+And that one is definitely confusing because it looks like you're telling me before versus after, right? But then you understand before versus after, right? You're seeing better understanding and higher trust or something, better understanding results in higher trust or whatever, and higher trust.
+
+Sadra   17:56
+Ohh.
+It is understanding.
+
+Souti Chattopadhyay   18:08
+Leads to.
+
+Sadra   18:10
+Ohh.
+
+Sumit Gulwani   18:22
+But we also want to say, I think the most important thing is that they are able to, like, I'm not sure if you observe this or not, right, but were they able to produce more correct output? But it is not just about, you know, what is their feeling, right, whether they have high trust or low trust. It's not about their feeling, it's also about the outcome. And did they get more correct results or no?
+
+Sadra   18:40
+No, it was the same performance.
+Here, we touched on this, this same accuracy, this of course.
+
+Souti Chattopadhyay   19:03
+But we didn't test at all.
+
+Sumit Gulwani   19:04
+I think the last bullet you can avoid, right? The stronger ownership and felt greater ownership. No, that does not really, you know, tell us much.
+Yeah, really?
+
+Souti Chattopadhyay   19:14
+I was saying that you should also, we should call out that we didn't test on adversarial tasks where agents are prone to making mistakes. That is a testing that we plan to do for in the future where we will plant.
+
+Sadra   19:32
+We actually did, we actually did that, but the agent was not that powerful, so the adversarial tasks were like normal tasks.
+
+Souti Chattopadhyay   19:33
+Tracks.
+Oh.
+
+Sadra   19:42
+Yeah, but but we we tested like before before finalizing the thing, we tested to make sure that in like 10 runs in.
+I don't know, like seven of them, they they just make make this mistake.
+
+Souti Chattopadhyay   19:56
+Mmh.
+
+Sumit Gulwani   20:11
+Some time to understand the second part, same accuracy, less effort, meaning.
+Because people are able to try alternatives. Is that what you're saying or?
+
+Sadra   20:16
+So they.
+They have same accuracy in Pista versus baseline, but they put less effort in Pista.
+
+Sumit Gulwani   20:28
+I see it.
+
+Souti Chattopadhyay   20:31
+Effort in prompting and steering.
+For example, the number of words used.
+In the prompt, or the number of times they were re-prompted.
+
+Sadra   20:42
+It's the only reason.
+They find the number of words they use in the prompt.
+
+Souti Chattopadhyay   20:48
+Yeah.
+
+Sadra   20:49
+Just for the importing.
+This is like kind of a title, so either I think we should remove this or have it as a sentence if you want to expand this.
+
+Souti Chattopadhyay   21:11
+No, that's.
+
+Sumit Gulwani   21:21
+So, let me say the first bullet, right? Enables exploration. So what value is it adding compared to the title?
+
+Souti Chattopadhyay   21:26
+Yeah.
+
+Sumit Gulwani   21:30
+More exploration with less effort enables exploration, branching or the cost of trying content, so I don't think that adds any value compared to the title or anything.
+
+Sadra   21:35
+Oh.
+This one, right? Yeah.
+
+Sumit Gulwani   21:39
+You can delete the entire first sub-bullet now.
+
+Sadra   21:43
+Mm.
+The three others.
+
+Sumit Gulwani   21:45
+And then again, same accuracy, same accuracy, less effort, you know, is also not needed.
+
+Sadra   21:49
+Yeah.
+
+Sumit Gulwani   22:07
+That, that's not needed, right? Why are you saying with this, that's kind of already in this? So, again, you have a tendency to keep adding more and more words, just because you're using a smaller font, you see some space on the slide you want to see. Maybe I should send you this talk that was trying to make fun of people, just watching yesterday, making fun of people who use, you know, too many words on slides.
+
+Sadra   22:12
+Thank.
+Yeah.
+
+Souti Chattopadhyay   22:23
+Yeah.
+
+Sumit Gulwani   22:26
+We should see that here.
+
+Sadra   22:32
+You should increase the font.
+It's 19, 20.
+
+Souti Chattopadhyay   22:37
+No, it's...
+
+Sadra   22:38
+No.
+
+Souti Chattopadhyay   22:40
+This is fine. Keep it at 20.
+
+Sadra   22:41
+Open Sumit.
+
+Sumit Gulwani   22:44
+Use that term, give it air, right? Give it some air.
+
+Souti Chattopadhyay   22:48
+Yeah.
+
+Sadra   22:49
+Yeah.
+
+Souti Chattopadhyay   22:57
+Yeah, make it like this.
+
+Sumit Gulwani   23:00
+Do you know how come what kind of slides you know this all these people make who said it was probably more close to like you know $7,000,000 a year for these executives and so I they made the slides I've seen like you know deck since when every time I go it's like a five-slide deck and every slide has like one sentence that's it.
+
+Souti Chattopadhyay   23:13
+Mm.
+Yeah.
+
+Sadra   23:16
+Okay.
+
+Sumit Gulwani   23:16
+That sentence is like 5, 6, 7 words.
+
+Sadra   23:19
+Yeah.
+
+Souti Chattopadhyay   23:19
+Yeah, I mean, even even better, right? I've seen slides where it's just like image after image after image, no words, yeah.
+But here, transparency.
+
+Sumit Gulwani   23:35
+Okay, so discussion evaluation is good. The technical details part, how about like, maybe I started losing you at the earlier itself. So how much of like this architecture can probably just be encapsulated as, or it could have been any other agent as well. We don't want to.
+in some sense, like if this system is parameterized, it can work on top of any agent. So how is that coming through and what could here have been an Excel agent, for example, and what is your Excel agent wrapper that you created?
+
+Sadra   24:08
+Yeah.
+
+Sumit Gulwani   24:08
+So that part was probably not as clear to me. Maybe it's like the back end and the LLM combined together is your spreadsheet agent and Excel agent, then you can put it in a box and you can say, right, this is the Excel agent that I implemented, but it can be replaced by.
+
+Sadra   24:22
+Mhm.
+
+Sumit Gulwani   24:22
+The real acceleration.
+
+Sadra   24:25
+K.
+
+Sumit Gulwani   24:26
+But then the part that is not really clear to me is, but then after that, then what I'm trying to wonder is that, okay, how are you using, what is the magic to walk through these different views? But then what you're saying is that you are just caching them.
+
+Souti Chattopadhyay   24:38
+Yes.
+
+Sadra   24:40
+Uh-huh.
+So you're saying the question here is how we're making the steps?
+And then it will answer.
+
+Sumit Gulwani   24:48
+Or maybe again, again thinking of another thing, I think the most important part here is that other people will say that, oh, we also have a step-by-step based view, and this is something that is becoming quite common with different agents. But then what you say is that with each step, we are also offering the suggestions, the edit suggestions and the ask question suggestions. That part would be good to highlight.
+
+Sadra   25:08
+Yes.
+
+Sumit Gulwani   25:10
+And the bouncing was also something that probably people found in normal that you're already showing.
+
+Sadra   25:21
+Yeah, I, since you said that I should put more time on the, like, the Thursday impression is going for, and I just like did this very fast. I didn't put that much time on this.
+
+Sumit Gulwani   25:36
+Yes, and maybe if you want to set the mood tomorrow, right, maybe we can start with the demo probably. I do not know. We can, we can, we can ask it right, see what this year.
+
+Sadra   25:46
+So sorry, it said I should ask them if they want to.
+
+Sumit Gulwani   25:49
+So, yes, I think tomorrow we can just ask them, right? Have people seen the demo? Maybe I'll, you know, you can ask them, "Hey, have you folks seen the demo? So let's send this email," and if people say, "No, no, we want to see the demo," and then you can just, you know, do that.
+
+Sadra   26:02
+Okay.
+Yeah, this this demo is a like the actual thing that I share scan and I interact with the Pista. Do you think this is good or or or should I put the video here?
+
+Souti Chattopadhyay   26:17
+Which demo?
+
+Sadra   26:19
+Just on the page two.
+
+Sumit Gulwani   26:19
+Go ahead.
+
+Sadra   26:22
+So, page two is like an XML file that I will, like I have it in my own, but they can also download it, and then they put it in the EXCEL, and they also can work with it at the same time.
+
+Souti Chattopadhyay   26:35
+Hold.
+For A 30 minute meeting, Sadra, that will probably be...
+
+Sumit Gulwani   26:47
+Twenty-five.
+
+Souti Chattopadhyay   26:49
+25 minute meeting. There'll probably be a lot.
+
+Sadra   26:53
+So, I will.
+
+Souti Chattopadhyay   26:53
+Because it's gonna take them time to download it and put it on there and all that thing, yeah.
+
+Sadra   26:56
+Yeah.
+So, I'd change this with video then.
+
+Souti Chattopadhyay   27:01
+Mhm.
+
+Sadra   27:04
+Yair.
+
+Souti Chattopadhyay   27:04
+And you don't need to play the... How long is the video? Take the shorter video.
+
+Sadra   27:08
+Six minutes.
+
+Souti Chattopadhyay   27:10
+Six minutes, do we have a teaser video?
+
+Sadra   27:12
+Yeah, we have a penalties video.
+We do, we have a like we do this only talks about like the the parts of the.
+
+Souti Chattopadhyay   27:22
+Yeah, we don't need the whole like, imagine, yeah, imagine Excel, those parts we don't need.
+
+Sadra   27:23
+Eclipse rather than execute, yeah.
+This is like one minute, twenty-nine.
+
+Souti Chattopadhyay   27:34
+Yeah.
+
+Sadra   27:36
+Which is the only interaction part with pizza?
+
+Sumit Gulwani   27:40
+But does it show the two moves?
+
+Sadra   27:40
+Rather than executing it.
+
+Souti Chattopadhyay   27:43
+Sorry, Sumit.
+
+Sumit Gulwani   27:43
+Does it show both the views?
+
+Sadra   27:43
+Seven.
+
+Sumit Gulwani   27:47
+Does this shorter video show both the views, the step view and the branching view and the error?
+
+Sadra   27:50
+No.
+No.
+
+Sumit Gulwani   27:53
+Or the other thing is that you can take the six one to do, you can just start maybe slightly later and then end early. That's another possibility.
+
+Souti Chattopadhyay   27:59
+Yeah, just trim it to the portions that's only the technical, like the interaction.
+
+Sadra   28:05
+Okay.
+
+Sumit Gulwani   28:05
+That should, basically, the two things that you want to show are the automated suggestions, and then the user fixes things right, and that, and then the branching view after that.
+
+Souti Chattopadhyay   28:14
+Mhm.
+
+Sadra   28:18
+Did it fix those things, and then...
+K.
+
+Sumit Gulwani   28:26
+So do you have any questions here on this, Sadra, about the presentation or any specific feedback you want to get from us?
+
+Sadra   28:32
+Oh.
+I think that that was good.
+I would just replace this with...
+For the one, and also puts this technical detail in a...
+in a box and also I should
+Ohh.
+Talk about the setting view, but like the setting, I will only say like it, it, it, it was done by prompting the model and like it left to agents or like underlying L.
+
+Sumit Gulwani   29:03
+So this is the thing that we should maybe talk about, right? So how are you getting these different steps? So you are prompting the agent to give you these steps initially.
+
+Sadra   29:10
+Yes, yes, instead of giving me only the office GS code, give it in a...
+
+Sumit Gulwani   29:15
+And, but then if you are working on top of another agent whose system harness will not change, then you'll probably set up another agent to look at the output of the agent and then ask it to decompose it into steps, right? That change will have to be made.
+
+Sadra   29:24
+Yes.
+Yes, yes.
+
+Sumit Gulwani   29:29
+And then when the user wants to make a change there to one of those steps, then how will you communicate that back to the...
+Overall agent.
+For it to be efficient.
+
+Sadra   29:41
+I will give the current step and then the following steps and users feedback and ask it to update the following steps. This step given this feedback.
+
+Sumit Gulwani   29:52
+I see, I see, so you'll save the previous steps, so that, so you will do two things. So, A is that you don't want necessarily want the agent to redo the computation, and you don't want the agent to rediscover the steps. So, the steps have already been discovered, you just change it, but then when you change it, then the following steps can be applied, and how or or those are the how do we ensure that once you change the steps, the following steps still make sense?
+
+Sadra   30:18
+Are we making sure of that?
+
+Sumit Gulwani   30:21
+So let's say above 10 steps, the user went and changed, you know, step #4.
+
+Souti Chattopadhyay   30:21
+Yeah.
+
+Sumit Gulwani   30:26
+Uh, so from 4A, they went to step 4B, but how do you, how do we make sure that step 5, 6, and the output of step 4B?
+
+Sadra   30:35
+So since we're giving the already generated steps to the agent, if the following step doesn't make sense anymore, like deprecated, those steps would be not applied or some other steps would be applied that is more relevant to this prompt. This will be handled by agent.
+
+Sumit Gulwani   30:50
+So the agent will figure it out itself.
+
+Sadra   30:52
+Yes.
+
+Sumit Gulwani   30:58
+But if it makes sense, then...
+agent wouldn't have to do anything. You can just run the Office.js code again because each other steps has Office.js.
+Underneath it.
+Probably.
+
+Sadra   31:11
+Sorry, can you repeat that?
+
+Sumit Gulwani   31:13
+So I'm just wondering, right, so if the user change is 4A to 4B, but if all the steps still apply and make sense, then we don't need to regenerate the Office JS for each of the steps. We can just run the Office JS on that.
+
+Sadra   31:16
+Mm.
+Yes, yes, that's right.
+Yes.
+And then, in the...
+In that case, the output of that LLM would be basically attending to the already generating accepts that it is given in the prompt and will be basically copy-pasting and not using the whole power of the LLM, which is probably the same thing. So basically, agent is going to be...
+
+Sumit Gulwani   31:54
+So...
+
+Sadra   31:55
+No.
+
+Sumit Gulwani   31:57
+So first experimentation that will need to be done is that if we look at the output of Excel again, then I'll be able to decompose it into this, you know, general steps and so on and how does that look like.
+
+Sadra   32:05
+Yes.
+
+Sumit Gulwani   32:08
+And that part I feel maybe they are already doing that. Some team might already be doing that because I have seen different kinds of videos before, or experiences before. But I do not know what the state is and who exactly is working on that, but maybe some of those people might be there tomorrow.
+But then to those people, we say that, well, the novel thing is that we are talking about these different suggestions to be provided to the user and the notion of preserving the branching view, supporting the branching view, and then other views also we can potentially support.
+
+Sadra   32:44
+Yeah.
+
+Sumit Gulwani   32:47
+And I think this data dependency view can probably be a good one, as there are different kinds of objects in the sheet.
+
+Sadra   32:57
+Sorry, can you repeat that?
+
+Sumit Gulwani   32:59
+So, so the data dependency view, if the agent generates multiple outputs.
+Then you also want to show the data dependency. In fact, the user, even when touching a data dependency of existing objects in the spreadsheet.
+
+Sadra   33:05
+Oh, oh.
+That.
+Oh.
+
+Sumit Gulwani   33:15
+Especially if they are looking on a new spreadsheet and so on.
+
+Sadra   33:19
+Yeah.
+I, I didn't include the the event C view because I thought it would be out of scope for the technical detail, but like we can talk about it in discussion, something like that.
+
+Sumit Gulwani   33:31
+Yes, yes, it would be good to actually remind them. So, maybe I do not have well in the last towards the last slide or the discussion slide, you can actually tell what the different views are going to be, right? Maybe that would be one place where where you can.
+
+Sadra   33:41
+No.
+
+Sumit Gulwani   33:46
+Maybe have some bullets or give examples.
+
+Sadra   33:49
+Mm.
+What do you have?
+
+Sumit Gulwani   34:01
+Right, so we saw branching in a step-wise view, or you can just, you know, put it in one one, you can put commas and so on, and branching and step-wise, and then the other ones can be hierarchical data dependency.
+And you can call it data dependency, and...
+And step by also you want to see maybe step by is the number one doing before branching and then you can put dot dot dot at the very end.
+Yes, like that.
+
+Sadra   34:44
+I don't get to this one.
+
+Sumit Gulwani   34:49
+Yeah, you can remove this one, or maybe you can keep it in different views.
+
+Souti Chattopadhyay   34:53
+No, no, because you didn't have the views listed. For now, you can delete it. Idea of it being eventually...
+
+Sadra   34:58
+Yeah.
+
+Souti Chattopadhyay   35:01
+You want to do something like your Wiki? Yeah, users can define their own ways.
+
+Sadra   35:02
+Users can define them.
+Ohh.
+OK, yeah, I think they did the three, three dots done.
+
+Sumit Gulwani   35:06
+Yes.
+Yeah, and let me just a little bit more pedantic on how you can even reduce that. I'm not saying it would, but I'll just tell you, right? So do you really need, you know, bullets, one, two, three? Because you can, you know, each of them has a different sentence, you can at least leave some space between them and so on, you know, what point is in a bullet setting. But then you might say that,
+
+Sadra   35:27
+Yeah, the only reason.
+
+Sumit Gulwani   35:29
+Yeah, I know what you'll see, right? You'll see the limitation section is there below, right? There's a separate section and something. Is that what you'll see?
+
+Sadra   35:34
+Yeah, the reason was that, uh, this is the...
+The slide that I would stop at, and then people would refer to these points, so I would, I wanted to, I want them to.
+
+Sumit Gulwani   35:45
+No, keep it. I'm not saying to do that, but I'm just telling you, right? I'm just, you know, just wanting to give you interesting ideas. I, but don't make, you don't have to make changes to the slide, right? So, so if we want to reduce that clutter, I do want a professor, I would just, you know, entertaining myself with this professor's video. I keep still like watching videos on storytelling and presentations, and if I never have some time to burn, I'll just watch those.
+
+Sadra   35:48
+Yeah.
+
+Sumit Gulwani   36:04
+Because this professor was again telling, I know all these things, I know I'm just telling you, so you can remove the one, two, three, and then you might think that, ohh, how do we do limitations and performance inefficiency and so it looks ugly, like limitations, and then one black bullet, one white bullet, and so on, right?
+
+Sadra   36:18
+Yeah.
+
+Sumit Gulwani   36:19
+So there what you will just say is, you know, limitation, colon, or you can, oh, you don't even use the word limitation. You say performance inefficiency can be lifted by native support. And you just color it red, right? Color it differently.
+
+Sadra   36:28
+Mm.
+
+Sumit Gulwani   36:33
+That makes it, you know, or looks like a limitation, right? Or you colour it red or something if you want to really say limitations, and that's how you know, reduce, or you can keep it separate or keep it, you know, space extra space, you know, between there and so on, yeah.
+
+Sadra   36:39
+So, what if I could?
+Mhm.
+Yeah, yeah, I think this is good.
+
+Sumit Gulwani   36:47
+It's something like that.
+But really, of course, you know much more. I think you folks at HCI students, you would probably know much more here.
+
+Souti Chattopadhyay   36:54
+Yeah, no, that is a whole different skill, Sumit, storytelling.
+
+Sumit Gulwani   37:02
+Yeah, did you buy the any chance I'd share? Did I share this video with you? My storytelling talk?
+
+Souti Chattopadhyay   37:08
+No, your the slides, no, no, no, your prompt, I did, we don't have it.
+
+Sumit Gulwani   37:10
+Yeah.
+No, not the prompt, my storytelling talk. Did I ever share that with you? The talk that I gave.
+
+Souti Chattopadhyay   37:18
+No, no, no.
+
+Sumit Gulwani   37:20
+OK, OK, so that is my most favorite talk in my entire career, so I'll send it to you. I gave it last year, so you know, hopefully you like it, and then you can share it with your students also.
+
+Souti Chattopadhyay   37:23
+Yes, please.
+Yeah, please, please.
+
+Sumit Gulwani   37:30
+You can even watch it, you know, with all your students in your class, you know, one day or something, if it is applicable in any part of the lecture. Okay, cool. So good luck with this presentation, Sadra. I'm confident you will nail it. And then Lini and I will probably watch the discussion and probably it'll help respond in the Teams chat.
+
+Souti Chattopadhyay   37:34
+Yeah.
+
+Sadra   37:42
+Okay.
+
+Sumit Gulwani   37:50
+Now I will have to leave immediately after, but you folks can still keep going, you can stay.
+
+Souti Chattopadhyay   37:54
+Yeah.
+
+Sumit Gulwani   37:55
+And another thing that I told someone who is an important attendee, she said I was not very sure I'll be able to make it or not, but I will try. I said, well, if you cannot make it, then it's still very important that you meet with Sadra. You can just set up a separate meeting with him. You know his email address from the invite that I've created. So if someone, you know, sets up a meeting and so on, you know, just accept it and you can explain this again.
+
+Sadra   38:17
+K.
+
+Sumit Gulwani   38:18
+But we can also record this site so people will have access to this recording.
+
+Sadra   38:21
+Yeah, sure.
+
+Sumit Gulwani   38:29
+Okay, so shall we move on to the other project? So we are good, really, we're good with this. Do you have any other thoughts?
+
+Sadra   38:33
+Yeah.
+
+Souti Chattopadhyay   38:38
+No, it's good. I'll, once Sadra polishes the slides tomorrow morning, I'll, my morning, which is surface, way too early morning, I'll check again and then we'll ensure everything's on the way. Good, good.
+
+Sumit Gulwani   38:40
+Yeah.
+OK.
+OK, and Sadra, how do you really plan for these presentations? Again, I understand that you know we don't have much time and we are also putting time on the other presentation, but normally what I do is...
+especially for more high-stakes presentation, I would actually even work out my speaker notes.
+
+Sadra   39:07
+I usually.
+
+Sumit Gulwani   39:07
+But then it's up to you whether you want to read them or not, because reading them makes it sound very artificial. But at least working on the speaker notes is usually good, so that at least it's clear in your mind, you know, what are the two or three points will say it.
+
+Sadra   39:13
+Yeah.
+Yeah.
+
+Sumit Gulwani   39:20
+It makes the transitions between slides more clear.
+But the most important thing also does is it makes sure that you have exactly the right vocabulary that you are using to say what you are doing it, and you also need the right pauses and so on, but that is a very different kind of finish, right? We're not going to talk about that in order to do that today, but at least knowing how to say things, how to easily explain more.
+technically intensive stuff to an audience who did not build this system. You know, again, is an art. Then if you think about it before and say and work it out how exactly you're going to say it, you know, it often helps.
+
+Sadra   39:56
+Yeah, yeah, I, I, I didn't plan to make speaking up, but I will do it. Let's share with you guys who maybe review before the meeting.
+
+Sumit Gulwani   40:06
+Yeah, yeah, but even if you just go through this in your mind once or twice, I think you would be good, right? So that you are not surprised, you know what slide is next, and you know the transition part, and that would be good enough.
+
+Sadra   40:14
+Yes, sir.
+Yeah.
+
+Sumit Gulwani   40:19
+OK, I can give you more tips on presentations as you move forward in our conversations here, OK?
+
+Sadra   40:22
+Thank you.
+
+Sumit Gulwani   40:26
+Okay, so now back to this project. I think the most important thing is just think about how would someone demo it, right? What would they start with? So starting thing is very easy. They'll say that, look, in this project, you upload all of your raw sources of information here. That's how you kind of start with it.
+
+Sadra   40:43
+Yes.
+
+Sumit Gulwani   40:44
+And then what do I do? And then what I'm thinking is that if then we are taken to a screen where we can define our view, or we can look at our view, look at existing views, and then there's a button, you know, which we press that then runs that views over some part of the raw data.
+or entire raw data or some part of the raw data and so on.
+So that kind of experience, if you can walk through, would be good. So all these views can be pre-populated, some of them can be cached, and we just show the original, or we write the view definition in front of the audience so that they see what's going on.
+And then the other thing that I was thinking is, let's say if we go back to the one of the views that you have, which is this output questions dot MD.
+No.
+Maybe it is a small, subtle difference between the two options that I'm going to say, but I feel that they may make more fundamental difference downstream.
+So for instance, if you talk about the output format, right, so you have written or you kind of, you know, telling the system is just one prompt and you tell the system that you generate the output in this particular form. So that's one possibility, which is what you have. The other possibility is to think about this output format as maybe a Word document or some kind of document. And then inside this document, I go and
+
+Sadra   42:06
+Yes.
+
+Sumit Gulwani   42:13
+Create, you know, four different prompts.
+
+Sadra   42:17
+Yeah, this also, yeah.
+
+Sumit Gulwani   42:20
+Right, so, because what that means is, I can, in fact, in an existing application.
+I can embed all of this system, right? So, I might have a very complicated application like EXCEL or Word or PowerPoint or some other application, and I can go inside those applications. I can I can define views inside those applications.
+It might be again a so the output of view is just some text, right? Some some probably text, but then all the decoration and formatting comes thanks to the replication.
+
+Sadra   42:54
+Yeah, but again, it doesn't need to be, like, I mean, it could be anything. It could be an EXCEL file, it could be a PowerPoint.
+
+Sumit Gulwani   43:04
+It can be anything. So there's a little bit of a subtle difference between do I control the output format overall myself, the decorations and so on, and then I introduce holes, and then each of the holes is associated with a prompt. That would be one option two. And option one is what you have, where you ask the...
+
+Sadra   43:05
+No.
+Yeah.
+
+Sumit Gulwani   43:24
+the prompt to complete the entire thing. So for example, if you're giving a presentation on topic X, then what I would say is, you know, think about the title slide. So for the title, I would say a prompt and I will tell the model, you know, really think of a good title, a six word title, you know, for all of this project. Even title is a prompt.
+Then speaker maybe is not a prompt, it's hard-coded because you know you are giving a presentation or I'm doing the presentation already I know it.
+And then collaborators is also a prompt. So the system goes and figures out who participates there and then populates it there. And then I can always have two views of the slide. One is the rendered view or one is the view before the rendering, where I just see the view of different prompts. So every item, or most of the items on the PowerPoint are like.
+
+Sadra   44:02
+Okay.
+
+Sumit Gulwani   44:13
+Jones.
+And so this document becomes a living document, right? Every document, every artifact that we have is a becoming a living document and it is a continuously improving artifact.
+
+Sadra   44:24
+Yes.
+
+Sumit Gulwani   44:25
+The more data I dump, the new data I dump in, you know, auto updates or auto improves and so on. So that's one kind of, you know, view, one kind of feeling that we can probably try to provide. I don't know which is the right one to go and so on. So in option two, we are integrating this thing in existing applications. And option one, we are saying that all applications are dead.
+And every application, every view will be regenerated, you know, from scratch and using Cloud Code CLI or...
+So, you can take any of those stands, but...
+
+Sadra   44:53
+So, yeah.
+I think the second one is safer to go like to to say that this is gonna work with existing applications.
+And I tried to do that by, so before I start, did you have a chance to go through the Wiki that I generated or?
+
+Sumit Gulwani   45:14
+So I'm looking at it now. So I'm looking at the commands page I am. So you have 3 links that you sent. So which one should I click on?
+
+Sadra   45:23
+The first one.
+
+Sumit Gulwani   45:33
+So you added some new views probably earlier they were only two views. Now I see more views.
+
+Sadra   45:38
+Yeah, I up to, so we have like 10 views, but these are the generated, like a cache for the lastly generated views.
+
+Sumit Gulwani   45:55
+And, but I should also select that point, whose views is this? Is this views of...
+Everything or one project or all the projects?
+
+Sadra   46:03
+Ohh.
+It depends if, for example, for open question, I, as a argument, I selected all, so it's for all projects, but for the timeline, I use the views concepts, and it only tracks the concept of views in this project.
+At time, time it, who set it first, how it evolves overtime, and blah blah, so some of them are.
+
+Sumit Gulwani   46:31
+OK, so, so let me, let me start giving you some feedback and start asking questions, right? As I'm trying to understand what is the idea that you already have and what you've already done, so I'm also trying to do that and simultaneously I'm trying to just, you know, post some, you know, questions and ask you some questions here in timeline views or edit says you, right? I would like to actually see what prompt it was, so how do I see that? That's not easily accessible here.
+
+Sadra   46:37
+Yeah.
+That, yeah, it's it's not here. I should share my uh protocol session with you if you wanna say that, but uh...
+See if it's easier.
+
+Sumit Gulwani   47:00
+No, no, but when you're creating any view, right, when creating any view and what is being rendered there, the user should be able to look at the underneath, you know, problem that is there.
+
+Sadra   47:02
+Ohh, that that's.
+Yeah, that is the second, that is the third thing that I sent you as one of the examples.
+
+Sumit Gulwani   47:17
+So this is the I should click on the third link in the email address and I should click on the third link.
+
+Sadra   47:17
+Which?
+Yes.
+The third link is, for example, the...
+prompt that Claude used for answering the open question view, for creating open question view. And then if you go to other commands.
+
+Sumit Gulwani   47:42
+Yeah.
+So you are even reusing the prompts also, right? So you are using reusing the prompt as it is workflows. Both of those things you are using, so you don't want to associate the prompt with a view, because the same prompt can be applied to different views then.
+
+Souti Chattopadhyay   47:55
+Yeah.
+
+Sumit Gulwani   48:02
+So I was actually thinking of it as...
+Well, I even had a word like alternates and so on, because I might want to rerun it if I don't like the output, or I might want to apply a different workflow. I might have two different workflows there, a simple workflow, more complicated workflow. And if I don't like the output of the simpler workflow, I can apply with a more complicated workflow.
+
+Sadra   48:23
+Yep.
+
+Sumit Gulwani   48:23
+In fact, another variation might be I might even choose a different model to do it. It might be the case that some model is better at some kinds of views, some kind of some reason or some other model is better at other kinds of things.
+
+Sadra   48:31
+Yeah.
+It didn't either all.
+
+Sumit Gulwani   48:35
+Uh, so then...
+
+Sadra   48:37
+It's all doable, it's current.
+
+Souti Chattopadhyay   48:40
+But...
+
+Sadra   48:40
+Implementation.
+
+Souti Chattopadhyay   48:42
+So what I'm imagining when Sumit says this is not just giving them the wiki, but giving them sort of an agent, like a space where there is an agent and a wiki and the person can talk to this agent and say, you know what, I like this contributions map.
+
+Sadra   48:55
+Yeah.
+
+Souti Chattopadhyay   49:01
+But I want you to add a column which has which does da da da da, right? And then that life changes the wiki for them.
+
+Sadra   49:05
+Exactly.
+Yeah.
+Yeah, and then yeah, this is exactly the thing that I should send the tutorial for. If you just clone this project and open a cloud code, we can do that.
+To do everything.
+
+Sumit Gulwani   49:21
+So, so Rini said something very interesting. In fact, that was another of my points on my note here that I wanted to talk about today, and I don't think we have spoken about this before, but I didn't really mention that.
+Which is that?
+Because this is, you know, in all honesty, this is what is going to be a more real experience, right? Otherwise, this is all, you know, made up. Otherwise, I would think the real experience is going to be that I'm trying to create some view.
+And it will take a lot of iteration before I land onto something that I like. It is not like, you know, I will just define a prompt and then it will work for me.
+And when I am doing that white session.
+And this is what was talking about, right? So you need to give me a facility to do a white session in the process of me, you know, defining that right view and figuring out the right prompt.
+And then...
+Maybe I might want to be able to distill that vibe session, right? I should be able to even distill that vibe session to learn about some good practices and so on that get converted into new skills that the system, you know, then takes care of it on its own in the future.
+of it on its own in the future.
+Uh, but yes, you know, at the end of that vibe session, I will be, I will have to come up with my definition of a view.
+The workflow for populating the views. I keep making this distinction between view and workflow because to me view is more of a declarative specification of what you're trying to do.
+And that's kind of your goal.
+and workflow are constructive specification of how do you think the system should work.
+
+Sadra   50:57
+Yeah.
+
+Sumit Gulwani   50:57
+We don't specify anything, the system figures out on its own.
+
+Sadra   51:01
+Yeah.
+
+Sumit Gulwani   51:02
+But if you specify, you can specify different kinds of things there. You can even ask the system to compute a summary. In fact, another thing that you can do is you can say, oh, repeat now computing the summary and define it one more time, starting with this as a baseline, or you might say repeat it four times, you know, repeat it five times. Or you might want to say that, well, I want to compute summary of this transcript, but the way you should first do it, that first you should take a scan over the transcript and figure out
+where we top three key items, that's it. And then summarize everything under the top three key items. That may be another way for you to describe this thing. So where is this captured? So are you making a distinction between the two or are you combining the two things together?
+
+Sadra   51:31
+Yep.
+So, I I tried the the distinct thing workflows on views, as you can see, like there's the steps in the views right now that is like default workflow, and first I tried this this.
+
+Sumit Gulwani   51:52
+So which way should I should I go to? So I'm looking at this Wiki and then there's a raw.
+
+Sadra   51:57
+Alright, let me share my screen; this is better.
+
+Sumit Gulwani   51:59
+Yeah.
+So you have 3 links. I should go to, so these are three different wikis or the same wiki.
+
+Sadra   52:08
+It's the same wiki. The first link is the rendered version. The two other links are the...
+Actual files in my GitHub that made them.
+
+Sumit Gulwani   52:25
+But do we want to separate it like that or do you want the user to be able to easily, let's say, you know, go to a view and then right click and then they will get they get the source underneath it or something.
+
+Sadra   52:28
+And the person.
+Yes, so the person would only see the first link.
+This link.
+
+Souti Chattopadhyay   52:41
+But, but, but again, I think...
+Yeah. What do you think? What do you guys think about this not as a...
+something where you run it on the cloud code and it generates this wiki but instead as an embedded
+Interface where the agent is on the interface itself.
+
+Sadra   53:07
+Yeah, I think that that's that that is good, but that wouldn't have like a scientific contribution in in that way, or like, like a...
+
+Souti Chattopadhyay   53:17
+No, it's not. It's not.
+
+Sadra   53:18
+Yeah, it's like it's like something that you should definitely do because a user would not probably would not like clone this and this, but the I thought that the point of this presentation should be to just give them this.
+A view again that they can have they have ability to merge ideas.
+Like to do other stuff like increase views or stuff like this.
+
+Sumit Gulwani   53:43
+No, but then why are you separating out these two things, right? You're separating out the definition of views and...
+And the rendering.
+So how will people, so if I let's say click on the first view, right, then how do I interact with it? You are just giving me a static thing.
+
+Sadra   53:59
+This one, so this is, this is like...
+
+Sumit Gulwani   54:01
+Yes, the first few is just a static thing, right?
+
+Sadra   54:03
+Yeah, so let me, I think this is better. This is how the first prompt, again, these prompts generated. I prompted.
+I prompted a...
+Give a better example.
+I prompted the agent with this, only this, timeline views. Views is a concept in this graph, and I ask it to timeline views, and this generated this text for me.
+Time to save to this file, and then five events touched in views, blah blah blah, and then when I go to the website, I would see, I will see.
+
+Sumit Gulwani   54:43
+Okay, okay, so maybe this was my confusion, right? So then my question would be that do you want people to interact at the level of CLI or at the level of the...
+And the the the graphical level.
+
+Sadra   54:57
+It should be in the graphical level, so we will have, we should have this.
+Prompting mechanism that right now, like meets, what was the name? Microsoft meetings application has for creating the views that give you the template. This is basically the same thing here. We can also give them.
+access to a text prompt that they can write what they want.
+Or use our predefined views, for example, timeline, for example, for example, open question, for example, contribution map.
+Or just like, write down that, ask a question, for example, about to do all this, create a...
+
+Souti Chattopadhyay   55:42
+It.
+So I think, Sumit, eventually this will be a graphical interface where, let's say, it will even have something like, you know, users can choose which files to upload and put in different repositories, et cetera, et cetera. A chat on the site where it can tell the agent that.
+
+Sumit Gulwani   56:00
+Mmhm.
+
+Souti Chattopadhyay   56:05
+run this model or this model or change this view in this this way like add a column to the contributions view or something like that to create custom views and they will have like template views where it will be based on pre templates that we are generating right now through experimentation. But I think what's advising that just for generating the ideas of the wikis right now.
+
+Sumit Gulwani   56:13
+Mhm.
+
+Souti Chattopadhyay   56:28
+Adding those would not be difficult. It's more engineering effort, but figuring out like...
+
+Sumit Gulwani   56:34
+No, so sounds good, so I understand, right? It's a very good, right? Okay, okay, so it's just a matter of timing and so on, right? So what you're saying is that the ideal vision would be that people would edit at the level of the graphical thing, but for now what we have is that you're editing at the level of this command CLI essentially.
+
+Sadra   56:49
+Feeling.
+
+Souti Chattopadhyay   56:53
+Yeah.
+
+Sumit Gulwani   56:57
+And then what is the process like in the today's environment? What is the process of maybe looking at a specific view and adding a new view? So maybe let's go through that. So let's do contribution map view. So what is contribution map?
+
+Sadra   57:09
+Phil Shanmugam.
+
+Sumit Gulwani   57:09
+Because who contributed what?
+
+Sadra   57:12
+So yeah, it will ask you for a concept name or project name, and this will give you a list of contributions for each person to this concept, to this project. For example, this.
+Says that, in these states.
+The word views, so I ask for the contribution map to the concept of view coined first time, but by Sumit Gulwani in this meeting.
+
+Souti Chattopadhyay   57:43
+Ed, can you show the prompts you used to define contribution?
+
+Sadra   57:45
+Yeah.
+This was this.
+And then the actual pump.
+
+Sumit Gulwani   57:52
+So is this on your screen or can I see it in the, I'm just looking at 3 links, right? So I should, how do I go to this let's say view?
+
+Souti Chattopadhyay   57:58
+Oh no, Sumit, Sadra is sharing his screen. See if you can.
+
+Sadra   58:03
+Yeah.
+
+Sumit Gulwani   58:07
+Okay, but then, like in the presentation that I will do, right, where would I go to actually show this?
+
+Sadra   58:13
+You can use it, yeah, in you can share a screen and use Cloud Code for that.
+
+Souti Chattopadhyay   58:13
+In.
+No, it's in the GitHub, right?
+
+Sumit Gulwani   58:22
+So I won't be able to show it here.
+
+Souti Chattopadhyay   58:24
+You have GitHub. Wait, hold on. The prompts are in the GitHub links, no?
+
+Sadra   58:29
+The problems are in the, the, yeah, the definitions of which is, yeah, the problems are are here, for example, for the contribution map. It says that the description, it gives the arguments, and then it sets the arguments, and then it says that for a step one you should do this, a step 2 you should do this, this is basically workflow, default workflow for this.
+
+Souti Chattopadhyay   58:29
+The definitions of in each view.
+
+Sumit Gulwani   58:49
+I see, I see. So the prompt is in the commands directory.
+
+Souti Chattopadhyay   58:53
+Yes, yes.
+
+Sadra   58:53
+Yes, yes.
+
+Sumit Gulwani   58:55
+Okay.
+Okay, so views you are calling as commands. Is that thing that you're doing or?
+
+Souti Chattopadhyay   58:58
+Can then be.
+
+Sadra   59:02
+Operations and views are commands. Commands in a is like a low level thing for for cloud. So for example, ingest is not a view, is something that changed the graph. It's like operation.
+
+Sumit Gulwani   59:16
+So maybe that way you are using the term view is that view is a rendered version and a view is associated with a prompt or a command essentially.
+
+Sadra   59:25
+Yes, exactly, yeah.
+
+Souti Chattopadhyay   59:26
+Yeah.
+
+Sumit Gulwani   59:28
+And this command maybe here is also in some sense mixing up the terms of the view definition and the workflow what I'm calling.
+
+Sadra   59:37
+Yes.
+
+Sumit Gulwani   59:39
+Okay, okay, so maybe we can just simplify it to for now to say that, okay, there's a command to populate the view and this command is talks about, so this command is really a prompt, right? It's like a like a prompt.
+
+Souti Chattopadhyay   59:54
+Yeah, I think, Sumit, you can just simply say you can write prompts to generate different views. You can define your views through prompts.
+
+Sumit Gulwani   1:00:00
+OK, yes, yes, yes, yes, yes, and these storms are in the commands section here. OK, got it. OK.
+
+Sadra   1:00:05
+Yes.
+
+Sumit Gulwani   1:00:09
+Okay, and then where do we specify what raw sources to run it on?
+
+Sadra   1:00:16
+So whatever you put in the raw directory and then call the ingest command, it will ingest the data.
+
+Sumit Gulwani   1:00:25
+But when will I call the? So let's say I want to generate the contribution map, but I want to generate the contribution map from some subset of the raw data. So how do I specify that?
+So the default would be to use all the raw data, right?
+
+Sadra   1:00:34
+Done.
+Yeah, so for that thing, since we don't have the...
+That feature, for example, I will try it right now.
+
+Sumit Gulwani   1:00:45
+Okay, that's okay. So you today we don't have a fear. So today what you're saying is that all the data will be ingested to generate that.
+
+Sadra   1:00:50
+Yeah, but but but like we don't have the feature, but we can like ask it in like natural language. I want creator.
+
+Sumit Gulwani   1:01:00
+So what you're saying is we can just put it as part of the command then, essentially.
+
+Sadra   1:01:05
+Yeah, or like ask in an international language.
+
+Sumit Gulwani   1:01:09
+Okay.
+So, ask in natural language, maybe in the command description.
+
+Souti Chattopadhyay   1:01:12
+But, but...
+
+Sadra   1:01:17
+In the...
+
+Souti Chattopadhyay   1:01:18
+So.
+
+Sadra   1:01:19
+As a prompt.
+
+Souti Chattopadhyay   1:01:22
+No, no, no, Sadra, explain the prompt to cloud code versus cloud code versus the command. So, you're using, since Sumit is cannot see your screen, what Sadra is doing right now is he's prompting cloud code that create a contribution map from.
+
+Sadra   1:01:37
+Right.
+
+Souti Chattopadhyay   1:01:43
+Data files, this is this.
+using and then says this view and the view is basically calls this like pre-formulated prompt about how to generate that view.
+So it's kind of like, so if you can think of it, a pending which files to take for this particular view to the prompt.
+
+Sumit Gulwani   1:02:01
+Okay.
+
+Souti Chattopadhyay   1:02:10
+Like you have the prompt word.
+
+Sumit Gulwani   1:02:10
+I see, so, so in your so right now, what you have defined is the the prompt contribution map, the command that you have defined, and then in Cloud CLI, you're going to say run this command on this subset of the data.
+
+Sadra   1:02:24
+Yes.
+
+Souti Chattopadhyay   1:02:25
+Yeah.
+
+Sumit Gulwani   1:02:26
+Okay, and then you'll also say they put it in the views folder essentially right now for now.
+
+Sadra   1:02:32
+So yeah, that thing is already in the that predefined command.
+
+Sumit Gulwani   1:02:39
+Redefine instructions to the model domain or agent.
+
+Sadra   1:02:40
+Yes.
+
+Sumit Gulwani   1:02:42
+Okay, so you don't have to specify to put it in the views, but views will keep getting populated. And when I have lots of these views, then I can, then the Riki actually shows these views only. So if I go back to the first thing that you have, so it was just showing different kinds of views.
+
+Sadra   1:02:43
+Great.
+Yes.
+
+Souti Chattopadhyay   1:02:57
+Mm.
+
+Sadra   1:02:57
+These pages, yes.
+
+Sumit Gulwani   1:02:58
+That's it, right?
+
+Souti Chattopadhyay   1:02:59
+Yeah.
+
+Sumit Gulwani   1:03:00
+Okay, very nice. Okay, and then the wiki, what is the wiki folder? So if I go to the main wiki, it has views and then it has wiki also. What does the wiki folder mean? It has concepts, events.
+
+Sadra   1:03:12
+Yes, yeah, so the folder is the includes all the entities that appeared in this in the raw data. The wiki folder is how we are creating the connections between concepts and people and events that are in that raw data.
+
+Sumit Gulwani   1:03:30
+But these are also views, right? They are also views essentially.
+
+Sadra   1:03:34
+I wouldn't call them call them views; these are like a...
+Yeah.
+
+Sumit Gulwani   1:03:42
+But everything got to be a view, right? The only assumption we want to make is that we just have raw data that you've invested. Now, some views will be very generic, maybe more like, you know, very common views, so they will be there always, and the rest of the views you define from there. No, or what is it? How do you how are you populating these things? So let's say project site, especially verification, you have two projects like on the wiki section.
+How did how did these two projects come up? Did you create these projects manually or did you ask your cloud code CLR to look at all the raw data and figure out how many projects are there?
+
+Sadra   1:04:10
+Second one, later on.
+
+Sumit Gulwani   1:04:13
+So in some sense, this is a view. The way you populated the two projects is a view, no?
+
+Sadra   1:04:18
+Yes.
+
+Sumit Gulwani   1:04:21
+But this is a more complicated view because I can see that on the right side you have table of contents and backlinks and so on.
+
+Sadra   1:04:28
+That's.
+That can be done for the actual use as well. That's not a different thing.
+This is just like an index file for the for this wiki.
+
+Souti Chattopadhyay   1:04:39
+So, so Sumit basically...
+Exactly that. It's the appendix for the views where...
+You see the graph, basically each node of the graph is a terminology and here they have defined these terminologies and kept a list of it. And then these are then used for the different views, basically. So.
+
+Sadra   1:05:04
+Yeah, the only thing is that the nodes are actually like a like a markdown page, which again, it connects to other nodes.
+
+Souti Chattopadhyay   1:05:09
+Yes, yeah.
+Yeah.
+So...
+
+Sumit Gulwani   1:05:15
+So, you have created some, so, so you are getting inspired by the standard of a wiki that I use standard concepts, like, you know, people, projects, events, and so on, and you have set up some extensive set of views with all these rendering using the proper HTML point, and then, as I...
+
+Sadra   1:05:34
+Yes.
+
+Sumit Gulwani   1:05:35
+Add more, but the most important thing to understand is that if I add more raw data, then this will update itself, you know, the moment you ask plot CI to do that.
+
+Sadra   1:05:43
+Yes, exactly. And the search and the connections will be easier to maintain.
+
+Souti Chattopadhyay   1:05:43
+Mhm.
+Mm.
+The other thing you can do is make this, we will eventually at some point make this user editable. So if something is defined wrong or you know, you want to change how it, you want to change who said what, you can do it in this page and it will update through.
+All the views.
+We're not sure, Sumit, if you're intentionally muted or you're muted by accident.
+
+Sumit Gulwani   1:06:21
+Yes.
+Ohh.
+Time again, time to, you know, simplify this, understand how will I explain this thing best?
+Is.
+Again, I want to get to this point that everything is a view, right? There is no notion of any kind of documentation. Everything is a view. A view is a is really a document.
+And that self updates, and maybe there's a distinction between our self-continuously evolving, evolving things, right? Some kind of artifact, so I would like to call even these, you know, wikis as views, right? So why are you not calling wiki as views? It's just a space, it's like a wiki view, why are you not calling it a wiki view or concept view and so on? So then I'm trying to understand if there's anything more deep.
+Behind behind it.
+
+Sadra   1:07:05
+The only thing is that the way that, so for each of these prompts that we're giving to Claude, it should.
+Look into the views, it it it would not look into the raw data as defaults, unless we ask for. This is like a...
+
+Sumit Gulwani   1:07:25
+Ah, ah, okay, selecting the nurses. Okay, okay, so what you're saying is that each view is operating over Wiki. It is not looking at the raw data.
+
+Sadra   1:07:26
+Hardness.
+
+Souti Chattopadhyay   1:07:32
+Yes, yes.
+
+Sadra   1:07:32
+Exactly, exactly, yeah, yeah.
+
+Sumit Gulwani   1:07:34
+And what you're saying is that your wiki has in some sense processed all the raw data. So wiki is more of knowledge, right? So the raw data is information and wiki is more like knowledge.
+
+Souti Chattopadhyay   1:07:40
+Yes.
+
+Sadra   1:07:40
+Yes.
+Yes.
+
+Souti Chattopadhyay   1:07:44
+Yes.
+
+Sumit Gulwani   1:07:44
+and then views are on top of the knowledge. Is this what you're saying?
+
+Sadra   1:07:47
+Yes, yes.
+
+Sumit Gulwani   1:07:49
+Okay, okay, okay, sounds great. And that's a concept that I started, you know, thinking about today. I didn't fully articulate it very well, but it definitely reflects the exercise that I was doing, right? So I'm preparing my own, you know, review. I told you, right, the people everything is going around. I have to tell my own contributions and...
+
+Souti Chattopadhyay   1:07:49
+Yes.
+
+Sumit Gulwani   1:08:10
+And then I have to comment on the people contributions.
+
+Sadra   1:08:10
+Yeah.
+
+Sumit Gulwani   1:08:13
+And my final connect is going to be, let's say it has four different sections, and each section I can only write in 1000 characters or, you know, 6000 characters and so on. But the first thing that I want to do that I want to process all of my raw information, and raw information is not just transcripts, but also even some process information that I have put together and so on. I'm calling it all raw information.
+
+Sadra   1:08:23
+Right.
+
+Sumit Gulwani   1:08:37
+And then I am.
+For this exercise, I for this exercise of making my connect, what I'm doing is I'm doing this in two phases, so phase one is...
+I'm saying that, you know, like we have figured out maybe 6 or 10 or you know 15 important topics, and then for each of this topic, extract all the information from all of the raw data and we put it together.
+
+Sadra   1:08:59
+Yeah.
+
+Sumit Gulwani   1:09:01
+K.
+So my number one such topic is what service did I do for the science community inside EXCEL?
+OK, and one such topic is, ohh, the technical insights behind the agent integrator system that we worked on, which many people in my team know we worked with on, we worked agent integrator for Excel, Excel Agent, and so on.
+There are very different kinds of topics. One is a technical topic, one is a topic about my service. In fact, I even have one topic about my academic collaborations, right? So where I'm talking about that, oh, I'm working with you folks and so on. So then the system goes and produces the right information for, or right knowledge for each of these topics.
+
+Souti Chattopadhyay   1:09:32
+I...
+
+Sumit Gulwani   1:09:46
+And then once that is there, then now I am working with the agent to massage it properly in 1000 characters or 5000 characters and so on. So now this second exercise that is going on is not happening on the raw transcripts. It's happening on the curated information that has been computed.
+
+Sadra   1:09:54
+Yeah.
+Yes, exactly.
+
+Sumit Gulwani   1:10:04
+But what I want to tell you is that for this particular activity, I define what these two pieces are, right? So I, as a user, creatively worked with the agent to decide this plan. In fact, it was my plan only, but still, you know, I made sure that Claude understands how we're going to do it, right? So it doesn't, my instructions are not go and populate 1000 characters in this section for my connect, and here is all the raw data.
+I didn't go through that round, right?
+
+Sadra   1:10:27
+Yeah.
+
+Sumit Gulwani   1:10:28
+So my creativity was that I'm going to do this in a two-step process. In one step, I'm going to 1st gather all the information according to these, you know, 15 topics which are going to go, which will form the top level headings, you know, in my write-up.
+And then I'm going to work through this exercise of putting it in the exactly the same number of characters and so on.
+Similarly here, there's a two-phase process that is going on. It can even be a three-phase process, who knows, right? But the two-phase process is more interesting probably here, where we don't need to probably re-parse the transcript, provided you have accepted enough that you would need for the various views.
+
+Sadra   1:11:08
+Yeah.
+
+Sumit Gulwani   1:11:08
+So for example, if I ask you, if I want to define a view, oh, how does Sumit Gulwani ask questions in a meeting?
+Or how does Gulwani behave when someone, you know, tries to be quite nasty to him?
+Like.
+
+Sadra   1:11:25
+The.
+
+Sumit Gulwani   1:11:25
+Is this information going to be in your wiki from the raw transcript?
+
+Sadra   1:11:29
+Probably not, yeah.
+
+Sumit Gulwani   1:11:29
+Probably not, right? So then, what it means is that Wiki is maybe just some default choice that we have of a two-phase in our processing, which is going to serve many needs, but then we understand that there will be some people or some kinds of tasks for which...
+
+Sadra   1:11:37
+Cash.
+Yeah.
+
+Sumit Gulwani   1:11:49
+We need to give the freedom.
+The way to...
+organize this information so that things become efficient, right? And this goes back in the workflow, the notion of workflow, right? So for me, workflow is trying to capture that notion that when I'm defining a view, I'm also defining how to compute that view. So in some sense you have kind of merged that notion of workflow inside wiki. Right now, whether you have confused the various concepts or you have something really smart, I do not know. We are trying to figure that out.
+Right, but my first current reaction is that there are only two things: you know, views and workflows.
+
+Sadra   1:12:19
+Yeah.
+
+Sumit Gulwani   1:12:27
+And...
+Eh, eh.
+And maybe there's another notion of information and knowledge, right? And maybe information is all the rough things, and knowledge is probably what I started calling as, you know, after one phase of processing and so on, multiple, you know, phases of processing that you might want to be.
+These different process things can be even be, let's say, you know, take a transcript and remove all the grammatical errors from it. Or maybe the speaker summary. Speaker summaries, I really like it. I think they are much more exhaustive. Like if you look at the AI summary of Teams, it's not as good. But if you look at the speaker summary, it's actually quite exhausting. Maybe that would be good to, you know, put as part of the.
+This Wiki or a two-phase process.
+So, this is what I'm getting confused by, right? So, on one hand, let me say that, so let me take that both the extreme side. Let me take that, take both the extreme. One extreme is that you have mixed up the concept of workflows and wiki, and you are making one fixed choice on behalf of the user. You just happened to have made it right, so that's one reaction.
+
+Sadra   1:13:26
+Ohh.
+
+Sumit Gulwani   1:13:32
+On the other extreme, maybe what you've done is good, but we need to make sure that there is still a flexibility for people to extend the wiki with some other piece of information that would be good to cache, and they will need it more and more, because the views on top of it will keep, you know, using that information more and more.
+
+Sadra   1:13:51
+Yeah.
+
+Sumit Gulwani   1:13:53
+So that would be another extreme of how we may want to think about this thing. But ultimately, everything I feel is just views and the dependencies between them. And what you are saying is that views are going to operate on things inside the wiki. So let's say I'm looking at the contribution maps, right? You operate it on what? What do you say? Operate it on what kind of data? So you say operate it on the projects or all the projects or what do you say? Then what becomes your input to contribution map views?
+
+Sadra   1:14:17
+So, the let me just read this from from the actual prompt, so that we know the workflow of that.
+Map.
+It will start, read the wiki page, which is like at the index page for the wiki, for the argument, which is going to be the concept or like anything that we want to make the contribution map for. Note every distinct idea of framing or naming decision.
+Then, step 2 is read all Wiki events page and Wiki people pages that reference that concept.
+that you want to make the contribution map for. Then for each distinct intellectual contribution, a new idea, a reframing, a term coined, a connection drawn, trace it to the earliest source where it appeared, use raw transcripts, links where possible, wherever possible. So it has actually used
+raw transcripts, build the attribution table. If multiple people arrive at the same idea, it definitely list each and blah, blah. This was the final step. So I would say the notion of Wiki is more like a hot cache or like something like that.
+
+Sumit Gulwani   1:15:33
+Okay, okay, okay. So maybe that thing is a good one, right? So we need to have some sense of index. Maybe this is a, I think I have some, you know, enlightenment now, right? So normally, if we just have a lot of raw data, we will probably kind of index it and create a vector index for it and so on, right? This is what is the first thing that people started doing in the agentic world.
+
+Sadra   1:15:52
+Yes.
+
+Sumit Gulwani   1:15:53
+this notion of lag and then everything was in vector indexes and so on. So one thing which is very, very clear is that when we have large amounts of information, we will absolutely need, you know, some kind of good indexing kind of thing.
+
+Sadra   1:16:05
+Yes.
+
+Sumit Gulwani   1:16:06
+And now how do you index things? And maybe Wiki is a more semantic index, right? A way to capture a more semantic index to different topics, you know, entities and so on.
+
+Sadra   1:16:12
+Yes, that's true.
+
+Sumit Gulwani   1:16:17
+It does not mean that we may not have to process the transcript, but it just depends, you know, what the query is, what the view is. Maybe some of the previously processed information, let's say speaker summary, for example, it might be good enough if that was part of the wiki or if transcript has already been pulled into that format or someone has already created that kind of view for a transcript.
+Then one can probably just bypass and short circuit, you know, the the processing again, right?
+
+Sadra   1:16:44
+Thanks.
+
+Sumit Gulwani   1:16:46
+So maybe that is helpful for me in terms of thinking about the role of this wiki, which is it is providing the right kinds of artifacts to do good indexing about different kinds of entities, such as people, topics, and so on.
+
+Sadra   1:17:03
+Connections here.
+Yes, yes.
+
+Souti Chattopadhyay   1:17:07
+The other other thing you said, Sumit, is also useful, so certain information is not in our wiki.
+But imagine you can define certain things like how you ask questions, right? In the wiki, through the wiki, you can start indexing those things. And maybe we can provide a pathway where over multiple interactions, you provide few examples from raw transcripts.
+of what to look for when somebody is defining, when the wiki is defining questions by Sumit, right? And over time, then those elements or concepts will be starting, will be additionally indexed, and it will start showing up into your views.
+Sort of like...
+
+Sumit Gulwani   1:17:55
+So, yes, so let's go to again. So, let's say I define some interesting entity about the style of each speaker, right? How, how it is, you know, the style of each speaker, let's say.
+
+Souti Chattopadhyay   1:18:02
+Yeah.
+Mhm.
+
+Sumit Gulwani   1:18:06
+So next time onwards, when more information comes in, then this thing will automatically get indexed as part of the wiki.
+
+Souti Chattopadhyay   1:18:10
+Mm.
+
+Sumit Gulwani   1:18:16
+And the first time that it was not there, then I will go and process all the transcripts again. But in the future, this information will also start getting be part of the wiki. Is this what you're saying, Erin?
+
+Souti Chattopadhyay   1:18:22
+Yep.
+Yes, yes.
+
+Sumit Gulwani   1:18:26
+Okay.
+So it's one level of probably indirection. And maybe the one another way to explain this is that of around efficiency and organizing my information, right? I quickly even call it a kind of a knowledge map.
+Um...
+Right, so the entire thing is a knowledge base, but then this is with this kind of knowledge map or something.
+
+Souti Chattopadhyay   1:18:49
+Yeah.
+Mm-hmm.
+
+Sumit Gulwani   1:18:59
+And it caches, you know, some common items, and then it is extensible.
+
+Souti Chattopadhyay   1:19:02
+Yeah, just like the human, just like the human brain works, right? We pull, we have short-term memory, working memory, and then we have the larger memory chunks. So we pull into our working memory the relevant information nodes by activating certain edges.
+
+Sadra   1:19:19
+It.
+
+Souti Chattopadhyay   1:19:22
+That's exactly how this is working.
+
+Sadra   1:19:24
+Yeah.
+
+Sumit Gulwani   1:19:31
+So let me see how the, so let's go into the wiki here. So what level have you pulled in the transcripts or the raw information here? So if I were to see that, where will I go? Let me figure it out myself first. So I will not look at the raw, the rendered page, but I will go and look at the page where you.
+
+Sadra   1:19:45
+It.
+
+Souti Chattopadhyay   1:19:53
+Um...
+
+Sumit Gulwani   1:19:53
+So, in the in one, yeah, go ahead, yeah.
+
+Souti Chattopadhyay   1:19:56
+Sorry, Sumit, are you recording this meeting by any chance?
+
+Sumit Gulwani   1:19:59
+Yes, yes, is being recorded. You want it to be recorded, right?
+
+Souti Chattopadhyay   1:20:01
+Perfect. Yes, yes. So it's almost 1 A.m. and I have a 6 A.m. meeting, so I might need to drop off. Yeah.
+
+Sumit Gulwani   1:20:03
+Yes.
+No, no, please, no, you please, please actually please drop off any. I'm so sorry, you know, I didn't realize that. Please, please, you know, go right there.
+
+Souti Chattopadhyay   1:20:12
+No, no, no, it's I want to go on, but I'm I need to prepare for that meeting, so, but so if you guys have this transcript on, I'll definitely follow, I mean, read them through this.
+
+Sumit Gulwani   1:20:17
+Yes.
+Yes, no, I've been diligently emailing it to you all right, so I'll email it as soon as this is done. Yes, yes. OK, OK then. Goodnight, Linia. OK, bye bye, yeah.
+
+Souti Chattopadhyay   1:20:25
+Yes, yes, yes. Thank you for that. Thank you so much. Yes. Good night. And Sadra, send me the slides once you have the final ones. I'll review and then we can chat quickly in the morning before the meeting. Yeah, yeah. Cool. Sumit, thank you so much for taking time and having this discussion. Super helpful and much, much appreciated.
+
+Sadra   1:20:35
+Okay, okay.
+
+Sumit Gulwani   1:20:38
+Okay.
+Okay, yes, good.
+Yes.
+Yeah, yeah, OK. Thanks, India. I'll just go back.
+
+Souti Chattopadhyay   1:20:45
+Yeah, yeah, yeah, of course. Yeah, goodnight.
+
+Sumit Gulwani   1:20:49
+By, by goodnight. OK, so now that I let you go quickly as well, but let me just try to see if I can understand the three links that you have. So, one link is a rendered version, and what is the difference between the two other links that you have? They are pointing to the same thing, right? The same GitHub page, both are there.
+
+Sadra   1:20:49
+Hi.
+This.
+Thank you, yes, the.
+The file in the cloud, the file that ends with cloud.md, the second file, second link, that one is a file that cloud reads whenever you open the cloud, and it has a summary of comments which are operations and views.
+
+Sumit Gulwani   1:21:14
+Yes, yes, yes.
+
+Sadra   1:21:29
+And then the third link is an example of what is inside those comments. So what is the prompt for one of these comments?
+
+Sumit Gulwani   1:21:44
+Okay.
+And this kind of organization, you made it easy that anyone, you can send it to anyone and they can apply it. They can give this MD file and the agents will understand what this is all about.
+
+Sadra   1:21:56
+Exactly, yeah. So whoever opens up this, who has cloned this repository and open cloud can do all of these things.
+
+Sumit Gulwani   1:22:06
+Okay, so it will be very useful and great if you can actually send me some detailed instructions on how to get started on this. Maybe by later.
+
+Sadra   1:22:13
+Yeah, if you...
+Okay, okay. Yep, it's very easy. So like whenever you want, I can also send you the...
+
+Sumit Gulwani   1:22:18
+Okay.
+Or maybe tomorrow you can even even probably guide me right because I also need to actually work on something very important you know for tomorrow. I'll also have to drop soon. But now I understand this cloud dot MD thing. And then for the other last thing that you had. So there if I want to let's say understand.
+
+Sadra   1:22:29
+Mhm.
+
+Sumit Gulwani   1:22:42
+If I go to commands, then I see all these different things. But if I want to understand what all is inside the wiki.
+So then I see these concepts, people, projects. Let's say if I go to project, then I see an MD file.
+But where are the details of the transcripts? Essentially, they are probably just in the people and people and concepts, and that's it, or...
+
+Sadra   1:23:01
+Sorry, sorry, sorry, COVID.
+So, you can, can you can you repeat it? You said you said you goes to project and it's empty file or...
+
+Sumit Gulwani   1:23:12
+Yes, yes. So my question to you is that let's say we have all these transcripts, right? Where is the real meat of all those transcripts coming in? Is it coming as part of concepts maybe? So you define these different concepts and all the ideas are now probably as part of those concepts?
+
+Sadra   1:23:21
+No.
+For seeing that, you should go to the GitHub. I don't render the raws because of the, like, what is it called? The...
+
+Sumit Gulwani   1:23:35
+No, I I I am in the in the GitHub thing, right? So I'm looking at the third link and I'm trying to understand how has Wiki been populated. This is what I'm trying to understand, right?
+
+Sadra   1:23:45
+Yes, yes. OK, so for that, go to the raw directory.
+
+Sumit Gulwani   1:23:52
+OK.
+
+Sadra   1:23:53
+And then there are emails and meeting transcripts.
+
+Sumit Gulwani   1:23:56
+Yes.
+
+Sadra   1:23:58
+And then you can open each any of them.
+Like, let's say, meeting class.
+
+Sumit Gulwani   1:24:02
+So, this is the process, this is the process version of the transcript, this and draw draw things.
+
+Sadra   1:24:07
+This is the process version of the, but it was like a deterministic process from files that I have it on my local, and I didn't get them.
+
+Sumit Gulwani   1:24:20
+No, no, so okay, I think I'm lost. Let's repeat this thing again. So when any view is being populated, you are not looking at the raw information, you are just looking at the wiki information. Is that correct?
+
+Sadra   1:24:23
+K.
+Yes.
+
+Sumit Gulwani   1:24:34
+But then, wiki information must have enough summary that those views are able to work well. So, where are those summaries? This is what I'm trying to figure out, right? So, if I look at the raw data, there is a lot of interesting, you know, technical discussion there, but has a technical discussion already pulled in the right form in wiki, and is it is it is it filed under concepts or?
+
+Sadra   1:24:42
+Ohh.
+Yes, yes. So.
+It is, I would say, if you find in one of the pages that you can find in the wiki, it's not summarized first and then find these concepts. It will do this like on the fly, I would say, extracting the concepts and events and people.
+
+Sumit Gulwani   1:25:14
+So let's say if I want to figure out, okay, can you summarize everything that this people talked about views?
+
+Sadra   1:25:20
+Yes.
+
+Sumit Gulwani   1:25:20
+Then it would be in views.md file.
+
+Sadra   1:25:24
+If we, I haven't generated that, but I should do like summary and then summary the views, for example.
+So one thing that I think I should clear this out, since we're using same terminology here, the views.
+Directory doesn't have to do with view concepts. It is the generated views.
+It's confusing, I think, right?
+
+Sumit Gulwani   1:26:00
+OK, maybe, maybe we should probably take another example, right? So let's say we talk about, you know, the comparison with code base, right, knowledge base that we're talking about, comparison with code bases. So we talked about it in different meetings. And if I want to summarize it all, I don't need to look at the transcripts because all of that summary is already there as part of knowledge base as code bases.
+
+Sadra   1:26:10
+Yes.
+Yes.
+Yes, yes.
+
+Sumit Gulwani   1:26:23
+Okay, so the hope is that these concepts actually capture all the right information and they have already broken that down information down. In some sense, some self-organization has already started as part of concepts.
+
+Sadra   1:26:24
+Yeah.
+Yes. Yes.
+Yes, that's true.
+
+Sumit Gulwani   1:26:45
+And.
+And how does this relate to, let's say, you know, typical wiki, right? Typical wiki is manually updated by different people. And they will take a page and they will keep updating it. And that role is now being played by when you update more raw data, then our system goes and leverages and messages that raw data or does all the analysis.
+to go and update the wiki essentially.
+
+Sadra   1:27:11
+Yes, exactly. That's the ingest count.
+
+Sumit Gulwani   1:27:15
+So, the raw data is being ingested into this more structured wiki wiki thing, essentially.
+
+Sadra   1:27:19
+Yes.
+
+Sumit Gulwani   1:27:24
+It is just that today I don't have a few other things, but if I define that, then this will mostly be self-sufficient, right? Like this, you know, speaker style and so on. But for otherwise, all the technical content, technical meat, your feeling is that these concepts are a good abstraction to store summaries, essentially.
+
+Sadra   1:27:44
+Yes.
+
+Sumit Gulwani   1:27:48
+And then at some point of time, do you feel that this concept map also needs to be updated and whose job is going to be that? Or maybe we can the same information also be part of different concepts also, right? That's also okay.
+
+Sadra   1:28:00
+To answer to the second same question, yes, they can be part information can be part of different concepts and that's actually how they relate. To answer to the first question, there should be either an agent that keeps updating the...
+updating the wiki, either trimming some edges that are deprecated and hasn't been talked about for a long time, for example, and that doesn't have connections to other stuff, or a manual human intervention that trim this wiki.
+
+Sumit Gulwani   1:28:37
+OK, OK, so this concept is being updated using ingest, so everything is happening in the ingest command that you have.
+
+Sadra   1:28:44
+Yes.
+
+Sumit Gulwani   1:28:46
+So this ingest command has new concepts and new projects. So and what is the definition of a project? So concept maps is like, you know, you are mixing between different projects in some sense, right? Or there's some, you know, basic granularity of some concept. So how do the projects and concepts relate to each other?
+
+Sadra   1:28:46
+In this world.
+Yeah.
+So, I, I didn't firmly define them, define them, and I let agents decide what, how, how it, how it defines it, define them.
+So, I didn't define anything.
+
+Sumit Gulwani   1:29:15
+And this I should look at the ingest, so the description of ingest would be there, right? So you said that there is some notion of projects and some notion of, you know, concepts. So you define these things, new concepts, meeting somebody, new person, new project.
+
+Sadra   1:29:30
+Let me check it. Yes, yes, that's true.
+
+Sumit Gulwani   1:29:32
+So your ingest is, so basically your ingest is a very special command because your ingest is in some sense describing the structure of this wiki.
+
+Sadra   1:29:40
+Yes, but let me send you the another link that has the first prompt that includes a...
+Like, so the first prompt that I use, this is the underscore parties prompt that everyone use for making this Wiki. Where can I send you? Can I send you the...
+
+Sumit Gulwani   1:30:02
+Okay, that is that is that is enlightening for me, right? I do not know about this Andre Karpathy's work, right? So let's look into that. Maybe if you can explain the connection to me, that is useful. And then the second thing that probably you are talking about is, maybe another curiosity that I generally have is that, is this also, how does this relate?
+
+Sadra   1:30:09
+Yes, yes.
+Yes.
+
+Sumit Gulwani   1:30:21
+To the standard notion of a wiki, so are you also boarding concepts from there, and is a very well-steadied, you know, thing that these are the fundamental aspects of a...
+Um...
+
+Sadra   1:30:30
+Oh.
+So.
+I think I would say we should we should read the the underscore what these prompts together, but the way that I think that it connects to Wiki is that since it generates entities.
+Uh, that's how...
+Also, Wikipedia, for example, works, and I...
+And I think that that's why he and what they call it LMV key, and I'm borrowing that term from him.
+
+Sumit Gulwani   1:31:08
+Okay, so this is very, very related work.
+Um...
+Mm.
+And what do you think we are doing now over this?
+
+Sadra   1:31:24
+In terms of.
+This is a very good question. This is a very important question that we should answer too. I was also struggling to answer. I think rather than framing, the only contribution, which is I think is still is narrow, is that we are using this in context of...
+co-work, like in kind of organization information sharing instead of personal notes. For Andershkar, it was just like a how to manage the personal notes. Yeah.
+
+Sumit Gulwani   1:31:59
+A personal knowledge base, I see.
+I see.
+So that is a non-trivial contribution, I would say, because if you recall, you know, I think we probably talked about three or four key contributions, right? And one of those things clearly was this notion of semi-private in just in just of information, because we do believe that the word runs by, you know, individual processing, but also communication.
+
+Sadra   1:32:24
+Yes.
+
+Sumit Gulwani   1:32:31
+So that's a very important point. So that's definitely clearly novelized because he's clearly saying it's a personal knowledge base. We never call it a personal knowledge base.
+
+Sadra   1:32:38
+Yes.
+
+Sumit Gulwani   1:32:39
+Um...
+Then the second thing that we called out for was...
+the notion of workflows, right? Efficient duration. So there's no one algorithm. Different people might come up with different algorithms, and depending upon the time, I might use a cheaper model, smaller model, and so on.
+Does he talk about that?
+
+Sadra   1:33:05
+No.
+But I think that, like, that's that second part is somehow trivial.
+By at least by adding one new comment to it, instead of in just we have updates where we are using, or like basically removing the Viki and asking it to join it again.
+
+Sumit Gulwani   1:33:31
+So, not sure if I if I say right, but let me actually repeat this right, so let's say I have a slide deck.
+
+Sadra   1:33:38
+Yes.
+
+Sumit Gulwani   1:33:38
+And I want to now summarize it, but my claim is that it could somebody can be computed in many different ways.
+And that might lead to different results.
+
+Sadra   1:33:51
+Mhm.
+
+Sumit Gulwani   1:33:55
+But then what you are saying is that maybe that's not the point because those things will happen at the view level and the wiki will extract everything that is relevant. We are not losing any information.
+
+Sadra   1:34:07
+Yes.
+
+Sumit Gulwani   1:34:09
+So maybe then the creativity that I'm talking about comes to be on top of the wiki, on top of the views, how we define the views, right? So let's say even if, so maybe wiki can just be seen as a process, you know, form of some information. But even after that, how do I end up computing a summary?
+As I was telling you, Sadra, that if you, let's say, repeat the process, you know, two or three times, you know, you get better results sometimes. Or if you do that in a two-phase process, as opposed to what might look like, you know, in one-phase process, it might just work right. That might also be.
+Um...
+It might lead to better results.
+
+Sadra   1:34:49
+Mm.
+
+Sumit Gulwani   1:34:49
+And this kind of, like, like another example I'll give you is this one, right, which is the grounded theory example, right? So, so Nikhil Swamy, you know, use this grounded theory analysis to distill information from...
+his interaction with the agent, so his vibe session, right? So he said that this is how I want you to extract information from the vibe session.
+Now, if I look at thing, what is he talking about uploading? So he says you upload a collection of files that LLM retrieves relevant chunks at query time and generation answer.
+But it is rediscovering knowledge on a scratch, there's no accumulation. Ask a subtle question that requires some training.
+Yes, so I think that is definitely also not right, because he is not talking about how you compute this somebody. He's saying that you compute some Viki notion, which is exactly the notion that you are talking about. In fact, I was not even thinking about that I thought there will be, you know, customizable two phase, you know, processes, but sure, you know, let's not invent everything from first principles. You know, Viki seems definitely like a good concept, because Andrew thinks about it, and we also know that this is a...
+
+Sadra   1:35:59
+Yeah.
+
+Sumit Gulwani   1:36:13
+This has been a general topic in the past, so let's definitely build up upon that. But I do feel that the way you go about extracting the information.
+
+Sadra   1:36:16
+Yes.
+
+Sumit Gulwani   1:36:24
+Is going to be novel, and what information you extract is also novel, right? Like this contradictory thing, so what should the user and the person should have asked, and so right? So, my sense is that, you know, we are, I'm confident that we have a lot of novel stuff, but I am delighted that you found out this link.
+and you are leveraging this code ID of Wiki.
+and then leveraging this, you know, ingesting and so on. So this is very nice. In fact, I should educate myself about Andre's ideas as well, so that I can refer to his post at the right time in my narrative. So I'll do that.
+
+Sadra   1:37:03
+Yes.
+Yeah, so I read through this prompt. It's interesting that it doesn't look like very published. It's like very general and very, I would say, like not accurate, but I think this is the point. When you let it be general and unambiguous, the agents would pick up on it.
+Is a good thing.
+
+Sumit Gulwani   1:37:34
+So come again, Sadra, I do not get this last week. What is the last thing that you said? If you let it be general enough, agent will pick up on it. What does it mean?
+
+Sadra   1:37:40
+Oh.
+I mean, if...
+You don't force agents to...
+work on what you're saying it to do because you have some designers bias, it will do whatever is default to.
+Capture different use cases, so this.
+This is generated for personal code base, but we are applying the same prompts for the, yeah, other cases as well.
+
+Sumit Gulwani   1:38:12
+I see.
+Okay, got it, got it. So, Sadra, I do remember someone did point me to about Andre's thing. I didn't pay attention to it before. Did you point it to me or was it, you know, someone from Satya's office? You pointed it to me.
+
+Sadra   1:38:23
+Mm.
+Yes.
+I apologize this, so this happened April 2nd, and I sent you an email the day that you arrived back from your trip about this, and then I worked a little bit on this idea, and then...
+
+Sumit Gulwani   1:38:40
+So that's why it got lost. I now remember that's why it got lost, right? Because you sent me two emails and I thought one was more important to respond. I did respond to that and then the other one I never got to. And then you sent another email and then it was lost. Okay, now I understand. Okay, got it. Okay.
+
+Sadra   1:38:44
+Thanks.
+Yeah, but this is this is the idea that is circling around really fast, and really so I give you if you look at this link that I sent you, it has it has more than 5000 stars in a in GitHub, which is something uncommon in a way that GitHub is also not ready for this, and it's shows showing that more than 5K because these.
+
+Sumit Gulwani   1:39:07
+Yes.
+
+Sadra   1:39:16
+This GIST files don't usually get that much attention.
+
+Sumit Gulwani   1:39:24
+OK, Sadra, so I should probably go now, so I need to finish some of some other, you know, Monday work, but maybe we will pick up, you know, tomorrow, maybe more closer to the evening or definitely on Tuesday night tomorrow. I'm not sure what time I'll be free, but after that, you know, let's intensely work on this. Yeah, so we'll have two more days, Tuesday and Wednesday, so let's try to do.
+
+Sadra   1:39:27
+Yeah.
+Yeah, sure.
+Okay, okay.
+
+Sumit Gulwani   1:39:43
+Push it to the best.
+
+Sadra   1:39:45
+Awesome, yeah.
+
+Sumit Gulwani   1:39:45
+But I do feel good about it because in some sense the idea is being validated in different places. And I do also feel confident about the novelty that we have. But again, it won't stay for long, right? We know that in this world, you know, things go very fast. People catch up on. So I think we need to make aggressive progress here. Yes, okay.
+
+Sadra   1:39:50
+Yeah.
+Yeah.
+Yeah, yeah. Thank you.
+
+Sumit Gulwani   1:40:06
+Okay, then sounds good. Sadra, so I'll talk to you later then. Yeah, thanks.
+
+Sadra   1:40:11
+Sure, thank you. Bye.
+
+Sumit Gulwani   1:40:12
+Okay, okay then, yeah, bye bye.
+
+Sadra   1:40:14
+Hey.
+
+Sumit Gulwani stopped transcription

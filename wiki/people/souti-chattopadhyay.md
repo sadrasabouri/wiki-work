@@ -18,6 +18,8 @@ Brought the creativity research angle: Torrance creativity tests, two AI roles (
 
 Raised privacy concerns about [[semi-private-mashing|semi-private mashing]] in [[Sadra-1May2026-Transcript|the May 1 sync]] — an important design constraint on the [[wiki-kb-project|Wiki KB Project]].
 
+In [[Sadra-3May2026-TRANSCRIPT|the May 3 sync]], proposed the graphical interface vision: an embedded agent + wiki where users select files, chat with the agent, and define/modify views without touching the CLI. "Figuring out like what are the views that are going to be useful — that's the research contribution."
+
 ## Appears In
 
-[[GMT20260220-230118_Recording.transcript|Feb 20]], [[GMT20260304-191231_Recording.transcript|Mar 4]], [[GMT20260311-184637_Recording.transcript|Mar 11]], [[GMT20260316-200648_Recording.transcript|Mar 16]], [[Souti-3Apr2026-TRANSCRIPT-Part1|Apr 3 Part 1]], [[Souti-3Apr2026-TRANSCRIPT-Part2|Apr 3 Part 2]], [[Sadra-1May2026-Transcript|May 1]]
+[[GMT20260220-230118_Recording.transcript|Feb 20]], [[GMT20260304-191231_Recording.transcript|Mar 4]], [[GMT20260311-184637_Recording.transcript|Mar 11]], [[GMT20260316-200648_Recording.transcript|Mar 16]], [[Souti-3Apr2026-TRANSCRIPT-Part1|Apr 3 Part 1]], [[Souti-3Apr2026-TRANSCRIPT-Part2|Apr 3 Part 2]], [[Sadra-1May2026-Transcript|May 1]], [[Sadra-3May2026-TRANSCRIPT|May 3]]

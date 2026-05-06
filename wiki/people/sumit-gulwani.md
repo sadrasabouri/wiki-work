@@ -16,6 +16,10 @@ Proposed the self-referential presentation: "A Presentation About This Presentat
 
 Forwarded [[gary-marcus|Gary Marcus]]'s GenAI critique post to Sadra, observing "Our wiki kinda allows us to 'brainstorming'" — positioning the project inside the narrow legitimacy band that even skeptics grant to GenAI. See [[Presentation]] and [[AI Backlash Grows Amidst Negative Impact on Society  Gary Marcus posted on the topic]].
 
+Framed the wiki as a **semantic index** — structured, typed, relational, unlike mechanical vector indexes — and coined the [[information-knowledge-pipeline|raw→information→knowledge→views pipeline]] distinction in [[Sadra-3May2026-TRANSCRIPT|the May 3 sync]]. Proposed [[embedded-views|Option 2 (embedded views)]] — views as prompt-powered holes inside existing applications.
+
+Proposed the [[living-system|living system]] model — KB as always-live recalc like Excel formulas — and gave the cleanest system formulation: **"Nodes are data, edges is a workflow"** in [[Sadra-4May2026-TRANSCRIPT2|May 4 TRANSCRIPT2]] and [[Sadra-4May2026-TRANSCRIPT3|May 4 TRANSCRIPT3]]. Also proposed temporal navigation via source filtering as an alternative to purge/supersede.
+
 Observed his own agent becoming "too smart" — self-organizing his KB in ways he hadn't asked for — and described it as "very, very surreal, almost as if the system had consciousness." Detailed in [[misc thoughts]] and [[Thursday demo]].
 
 ## Distinctive Intellectual Move

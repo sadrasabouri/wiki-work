@@ -21,3 +21,9 @@ Most KB tools (Notion, Confluence) treat pages as independent documents. Tempora
 ## Versioning
 
 The KB should be queryable at a point in time: "what did we know about views as of March?" This requires either version control (git history) or explicit timestamps on claims, making [[provenance-tracking|provenance]] inseparable from temporal management.
+
+## Alternative: Temporal Navigation via Source Filtering
+
+Proposed in [[Sadra-4May2026-TRANSCRIPT2|the May 4 early morning sync]]: instead of maintaining cached past states or relying on git history, let users filter which input sources participate in a view computation. Filtering out all sources from after a given date = simulating the KB state at that date.
+
+This is a non-destructive, query-time operation — unlike purge (which permanently removes claims). The tradeoff: it requires recomputing the view from scratch against the filtered source set, which is more expensive than reading a cached snapshot but simpler to implement. See [[living-system]] for the broader recalc architecture this belongs to.

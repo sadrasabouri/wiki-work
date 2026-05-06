@@ -22,6 +22,9 @@
 - [[bidirectional-collaboration|Bidirectional Collaboration]] — gap: current AI is unidirectional (human instructs); ideal is mutual proposal
 - [[llm-wiki-landscape|LLM-Wiki Landscape]] — ecosystem of wiki-from-notes projects; Karpathy origin; wiki vs. RAG efficiency; known critics (lossiness, scaling, no benchmark)
 - [[second-brain-code-method|Second Brain / CODE Method]] — Tiago Forte's pre-LLM PKM framework (Capture, Organize, Distill, Express); the intellectual precedent that LLM wikis automate
+- [[information-knowledge-pipeline|Information → Knowledge → Views Pipeline]] — three-layer architecture; wiki as semantic index / hot cache; views run on wiki, not raw data
+- [[living-system|Living System]] — always-live recalc model (Excel formula analogy); automated raw data generation; everything-is-a-DAG; temporal source filtering
+- [[embedded-views|Embedded Views]] — Option 2: views as prompt-powered holes inside existing applications (Word, PPT, Excel) vs. standalone CLI generation
 
 ## People
 
@@ -47,3 +50,5 @@
 - [[2026-04-03|Apr 3]] — Two Souti meetings: creativity in Excel; human-as-API; Gulf of Envisioning
 - [[2026-05-01|May 1]] — Three-way sync; Teams channel example; views taxonomy; digital twins; workflows as creative artifacts
 - [[2026-05-02|May 2]] — Simulation metaphor; temporal KB; views/workflows distinction; purge; provenance; self-referential presentation
+- [[2026-05-03|May 3]] — Three-way sync; wiki demo to Sumit; semantic index framing; raw→knowledge→views pipeline; embedded views; Karpathy differentiator
+- [[2026-05-04|May 4]] — Two 1:1s; full-system provenance DAG; temporal source filtering; living system; everything-is-a-DAG; knowledge graph as alternative foundation

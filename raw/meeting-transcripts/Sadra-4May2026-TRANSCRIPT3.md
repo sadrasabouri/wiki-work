@@ -1,0 +1,378 @@
+---
+timestamp: "2026-05-05T17:10:02-07:00"
+source: "[[Sadra-4May2026-TRANSCRIPT3.docx]]"
+source_path: "raw/meeting-transcripts/Sadra-4May2026-TRANSCRIPT3.docx"
+source_type: "docx"
+tags:
+  - extracted
+---
+# Sadra-4May2026-TRANSCRIPT3
+
+Source: [[Sadra-4May2026-TRANSCRIPT3.docx]]
+
+SadraSumit sync-20260504_233649-Meeting Transcript
+
+May 4, 2026, 6:36AM
+
+20m 6s
+
+started transcription
+
+Sumit Gulwani   0:03
+to observe our behavior, they would think we have gone crazy or something.
+
+Sadra   0:08
+Yeah, yeah.
+Yeah.
+
+Sumit Gulwani   0:12
+Okay.
+So, let me read your email carefully, and so the reason why I called was because, again, you know that your email one interesting thought occurred to me, so I just wanted to make sure we captured that.
+
+Sadra   0:26
+Yes, OK.
+
+Sumit Gulwani   0:28
+So, this thing that he mentioned that...
+You ingested the Viki with some.
+Within notes or related words, or you added related words.
+
+Sadra   0:41
+So you remember we decided to find some related works that use Second Brain? And I added, I went through some Twitter posts and then add them as sources.
+and then read like a my language summary of them. These are all raw data and then ingest.
+
+Sumit Gulwani   1:06
+So, okay, sorry, you broke up for me. Can you please repeat again? So, what did you do?
+
+Sadra   1:11
+So I started from some Twitter posts, which were related, some related work that used this idea of second brain, similar to us, basically. And then I wrote a summary of over some of them, used that data as the raw data, and then ingest data.
+the graph using that data.
+
+Sumit Gulwani   1:35
+So, again, I'm trying to listen: how do you get the raw data? By the way, did I why I started the transcript? So, how did you get the raw data? You went to Twitter, you saw one post, and then...
+
+Sadra   1:44
+I saved that post as the raw data. I saved all like five of them. And then I wrote like my opinion on them. And those sources plus my opinion would became the like 5 raw files. And then I ingest the Wiki with that.
+
+Sumit Gulwani   1:48
+Mm.
+I see.
+
+Sadra   2:03
+Witha.
+
+Sumit Gulwani   2:04
+Okay, okay, okay. Sounds good. Okay. So now you see there is one other automation you could have done which you did not do and this is what I want to talk about, right?
+
+Sadra   2:12
+Right.
+
+Sumit Gulwani   2:13
+So the strategy, but right now we are thinking raw data is the raw data, but actually that's not the case. In fact, in fact, in the raw data can come from a process.
+The process here would be to do search, right? Or do decide your creativity. So if your creativity is go to X, get the top five posts ordered by number of likes.
+
+Sadra   2:36
+Mhm.
+
+Sumit Gulwani   2:36
+Or you can say, go to X, order, get top five posts, which have at least 100 likes, but are the five latest. So that's your creativity. So you write that, you capture that process. And then when you run that process, raw data comes in.
+
+Sadra   2:45
+Yeah.
+
+Sumit Gulwani   2:50
+But when you run the process tomorrow again, the raw data might change.
+Okay, so raw data might change. Now, that you have to decide what to do. You remove the old raw data or you will make it edited and so on. I think you should remove the raw old raw data, right? Because our goal is to be able to recalc. You know, that's another perspective here, that we want the system to be automatically living, right? So this is what we want to develop, right? We want to develop a living system.
+
+Sadra   2:55
+Yes.
+Mhm.
+
+Sumit Gulwani   3:14
+system that will the moment I press something, you know, re-computations happen, right? So there's some trigger points. So normally we said the trigger points are when you add more raw data, right? But trigger points can also be when you just run this process that generates raw data.
+
+Sadra   3:20
+But.
+I think here that this distinction becomes what?
+So I want to say that this is the same. So we are treating the transcript as raw data for here. But then again, the way these people would approach a problem in the meeting, that can also result into differences in the raw data. So I would say.
+Any.
+human-generated any, yes, human-generated thoughts, thoughts should be treated as raw data.
+
+Sumit Gulwani   4:12
+Yes, but what I'm saying is the raw data can come from some other place, some other creative process.
+Right, so the raw data is coming from your search on Twitter.
+
+Sadra   4:23
+Yes.
+
+Sumit Gulwani   4:23
+So whatever issue on Twitter is raw data, assuming it's not the AI slot, right? But...
+It is your creativity.
+to say that I want 5 posts from Twitter which have this characteristic.
+
+Sadra   4:40
+Yes.
+
+Sumit Gulwani   4:40
+And when I run your system again.
+it just changes the raw data. Tomorrow I might have a different set of five Twitter posts that are even more popular than the ones that you ingested. So what I'm saying is that raw data does not, raw data, it is still raw data, is human data, right? Human data, but it is not the entry point of the overall system. You can, there can be another process that might be populating.
+
+Sadra   4:53
+Yes.
+
+Sumit Gulwani   5:04
+These auditized, so that was a thought that occurred below.
+
+Sadra   5:08
+I see.
+
+Sumit Gulwani   5:09
+So now what you can also do is we can say that, okay, these are the five, you know, or two or three related topics that we would like to do research on, a comparison on. Now, even those papers are pulled by then your creative prompt.
+
+Sadra   5:25
+Mm.
+
+Sumit Gulwani   5:26
+Right now, it's processed, human data is still human data, but maybe a little more processed.
+So even that we ought to be able to do.
+
+Sadra   5:37
+Yes.
+
+Sumit Gulwani   5:37
+Right, so in some sense, what you're really capturing is...
+different data sources, different sources, and then some workflow that we are creating on top of that, right? And this is all files and folders. And the idea is that this workflow is always live. I can always rerun it. When I rerun it, then it produces better artifacts, better views, and rerun can happen when I trigger the rerun.
+
+Sadra   6:04
+Yeah.
+
+Sumit Gulwani   6:04
+Because there might be some non-deterministic process in the system, like we are talking about, you know, get the five from Twitter, or you can you want to most often rerun it when I add more raw data manually, because most of the competitions are likely to happen and reduce, and they have a very well-defined semantics that if I were to add more information, then something more interesting should happen.
+
+Sadra   6:21
+Yeah.
+
+Sumit Gulwani   6:27
+Same thing for comments as well, right? So, as more and more people comment, we can pull in, you know, more and more stuff from there or interesting summarization there, and maybe the summary just updates, right? You just set it up and it keeps updating. Whenever you go and look at it, you know, you see something updated there.
+
+Sadra   6:34
+Different.
+Yes, yes.
+
+Sumit Gulwani   6:46
+So maybe another perspective that I have is that normally it's even in Excel, there's no perspective with Excel. In Excel you have these recalcs that are happening. So you don't try to values, you write formulas, and if you change the source values, output value updates.
+So, so that's what happened with the formula in the spreadsheet, right? If you have a cell 5 and a cell three, and then the third cell, you know, you don't write A to you say a + b, right? A1 plus B1, and then you know the value gets populated in C1, but when you change A1 and B1, C1 automatically updates.
+
+Sadra   7:00
+So.
+Change them.
+
+Sumit Gulwani   7:18
+So that kind of workflow automation we are trying to do. So another way to think about this knowledge graph is that it also encores workflow automation. It's also capturing workflow.
+
+Sadra   7:29
+Mm-hmm.
+
+Sumit Gulwani   7:30
+And that's what we have been giving a first-class rate to anyways.
+So you can imagine the raw data being research papers, the raw data being Twitter posts, but then they themselves have been generated using some other creative process which you would like to encompass in our system.
+
+Sadra   7:36
+Does it work?
+Mhm.
+
+Sumit Gulwani   7:47
+Right, because you will have some creativity, some ideas on how to go and search about papers, or which Twitter posts to get, or which comments to look at, and so on. And maybe you want to get Twitter, you want to get people comments, but then it is your idea that, oh, don't get random comments on the internet, go to post and look at the comments there and get those particular comments and so on.
+
+Sadra   8:07
+See.
+Yeah, yeah.
+Yeah, it makes sense.
+So workflows are not only to create, okay, workflows can.
+Use data sources to.
+Ohh.
+
+Sumit Gulwani   8:36
+So, every workflow, every workflow, so essentially, you know, every node which is a data.
+
+Sadra   8:36
+I wanna.
+
+Sumit Gulwani   8:42
+some kind of data is transformed into another node, you know, using a workflow, right? So that's the overall story. So nodes and edges, right? So nodes are data, edges is a workflow. That's it. As simple as that, right? So the example that I'm describing is, in my case, the input node is null. There is no input input.
+and the output is a bunch of Twitter posts. So that's the output node. In the previous examples we have talked about is that the raw data becomes an input to a summary Wiki computation. So Wiki is a node, raw data is a node, and it is computed by how you describe the prompts for each of the Wiki entries.
+
+Sadra   9:04
+Yeah.
+
+Sumit Gulwani   9:20
+Typically, it's a typical computational graph, right? Just a typical computational graph.
+
+Sadra   9:25
+Yeah.
+
+Sumit Gulwani   9:32
+So, maybe that's how we should probably define workflows and capture it as such.
+
+Sadra   9:38
+Mm.
+
+Sumit Gulwani   9:43
+OK, now let me read your other last comment here.
+By the way, this email, I hope you realize what we are doing with this email thread, right? We are using the same email thread, right, so that we don't have to dump, you know, different and different emails. And I hope you also saw what I did, right? So there was one email where I said, okay, let's meet at 8.30 PM. So I just, you know, dumped that, right? I didn't carry it forward and that was a junk information.
+
+Sadra   9:51
+Yeah, interested.
+
+Sumit Gulwani   10:06
+So, I just reply to the previous thread, but let's just follow this practice, right? Let's just keep replying on the same thread, and you can fork it, but if you, if if we realize that the fork was, you know, some other administrative stuff, so we can get rid of that, right, and then we can get back to the previous.
+
+Sadra   10:11
+Yes.
+So.
+
+Sumit Gulwani   10:20
+Thick.
+So now let me look at the last comment that you are building on top of looking into Wiki.
+So, knowledge graph is source, relation, and target.
+
+Sadra   11:06
+Yes.
+
+Sumit Gulwani   11:06
+So, so maybe, but this is exactly what we are talking about, maybe, right? Which is, in some sense, nodes and you know, connected by a...
+Edges, but it can be multi-graph in that sense, like multiple nodes.
+
+Sadra   11:14
+Whoa.
+Yeah, so, so the motivation behind this last point is that we talked that even Viki, this thing that came up.
+which could be a view as opposed to like the ultimate mining mechanism. And then the question arises that what could be other views then? These are the things that I had like some vibe session conversation with different LLMs and these are the two.
+
+Sumit Gulwani   11:33
+Yes.
+Yair.
+
+Sadra   11:51
+promising ones that I think could be useful. The difference between knowledge graph and what we have here as like a wiki graph is that here the edges has a relational meaning. So for example, if...
+A person as source or owns as a relation.
+the concepts as targets. These are more interpretable, probably more a smaller graph. And also, since the edges also has this has unique meaning, this is
+This is at least another possible view that can be extracted from the data, like another data structural view that then opens up the path for having some other sub views or like views to be generated more efficiently.
+From this view.
+
+Sumit Gulwani   12:56
+Yes, so Wiki is like a shared library of views that we generally feel, you know, would be useful for people to consume and then build on top of.
+
+Sadra   13:06
+Yes, and here I'm saying that it could not be the only one.
+And knowledge graph could be on another one, even slug could be another one.
+
+Sumit Gulwani   13:17
+So what are the examples you're giving? So the typical Wiki is 1 and then knowledge graph. What is the knowledge graph?
+
+Sadra   13:23
+Of.
+
+Sumit Gulwani   13:25
+But no, knowledge graph is in it, but views can be anything, right? Views can be a like all the you already had lots of examples of the views.
+
+Sadra   13:26
+S.
+Yes, yes, but the the the the interesting thing about Wikibing view is that it provides a like indexing mechanism, like a mining mechanism.
+
+Sumit Gulwani   13:43
+Yes, exactly. You're right. Very good point. I love that point. I love that point. So let me repeat that. AI, please take note, right? Wiki is a very special kind of you because it not only computes some computations that can be reused, it will be used many, many times, but it will also be the source of indexing. Because once this graph gets very big,
+then we will have the challenge of figuring out, oh, which conversation or something. So, and maybe, maybe part of Wiki will also define interesting strategies for indexing things.
+
+Sadra   14:11
+Yes.
+Yes, exactly. And the question that arise arise for me is that what if we have other these good infrastructure like foundational views that can be good indexing for future views? And these two are the other ones that I'm presenting.
+A knowledge graph, and then basically database, so making events log from the...
+Data.
+
+Sumit Gulwani   14:56
+Yes, yes.
+So a random thought that I put when you are talking a lot about human, you know, raw information being human generated and so on. I just wanted to tease you a little bit there. So what if I add a transcript which is not a human-human, but the transcript is AI-AI. So you can set up.
+Two agents, spin up two agents, and ask them to discuss this topic.
+
+Sadra   15:26
+Yeah.
+
+Sumit Gulwani   15:26
+And generate a transcript, put that, and then you give them some guidance on what should they discuss.
+And then...
+Maybe they have some background, right? You can also, you know, give some background to them, some summary or existing transcripts that they can use, and then they start talking, yeah.
+
+Sadra   15:46
+It really depends on the organizational point of view toward AI. If they think that two AI can generate insightful discussions, yes, they can include it as raw. But I think I have still with the current state of AI.
+
+Sumit Gulwani   16:05
+Yes.
+
+Sadra   16:06
+I don't completely believe that. That's why I want to make sure.
+
+Sumit Gulwani   16:08
+Yes, yeah.
+
+Sadra   16:12
+The the the insights are coming from me.
+
+Sumit Gulwani   16:13
+Yes, no, yes, yes, no. Of course, if we do this, we are not going to pollute it, right? So if we do this, we will very clearly mark that this is not a human human, right? This is AI transcript. And then all the data processing upstream knows that, right? It's not like we process everything always. We have filters which define.
+
+Sadra   16:21
+Is.
+
+Sumit Gulwani   16:32
+What goes in each subject, right? OK, so again, Sadra, maybe I will encourage you to think like this side, because I'm trying to simplify things as much as I can, and all I'm saying is that these views are just different nodes.
+
+Sadra   16:34
+Yes.
+
+Sumit Gulwani   16:43
+And they are just connected by, and the relationship between these nodes and edges, which is described the computational relationship, is as simple as that. So earlier I said a view is made up of two things. It's a prompt and that describes what that thing is.
+And then it's a workflow which describes the process of how to efficiently compute it, and maybe optionally you describe what the sources are. And what I am saying is that in this node and edge view, there are two things only, the nodes, which describe what the inputs are.
+And the edge, which will, in some sense, you know, talk about...
+So it's a multi-graph, right? So each node, you know, can be dependent upon multiple nodes, and that edge is describing the computational relationship, right? But then computational relationship may be in two parts, right? One is a declarative specification, which is the prompt, and then if that's all that you have, LLMs are smart enough to compute that computation.
+But sometimes you can also describe the algorithm or more precise details on how to compute that stuff, and which is what we are calling a scale and so on, right? So again, it is the same thing, we just have different perspective, but the point being that...
+
+Sadra   17:59
+Yes.
+
+Sumit Gulwani   18:06
+that all these different data shapes that you have, these are all different views, these are nodes. And then we have a graph, it's a multi-graph. So the edges are between each node is computed from a bunch of other nodes. And maybe it's in some sense a DAG, right? So each node, you can just think of it as a DAG.
+Probably, so each node comes from a bunch of nodes, and then those those are the edges pointing to it, right? So, which is as simple as in just a just a dag.
+And.
+Yeah, I, I think that's pretty much it is, yeah, and then the other thing that we said was that raw does not necessarily mean that it is a gif, right? I think what you probably just want to say is, you know, human human or human written or human human or AI and so on, so those were those are the what the typical labels are, maybe.
+
+Sadra   18:49
+Yeah.
+
+Sumit Gulwani   18:59
+And the fact that many of these things are going to be around human transcripts, you know, that's what you want to give first class frequent to. So a lot of people have been doing work where either they are processing
+You know, human AI trajectories, you know, but what we are, but they are mostly for just improving the models and so on, but we are giving first to knowledge work and the work that humans are doing. And so, human human transcripts become a very fundamental concept there. And also we talked about the notion of communication, like sharing ideas between each other and so on.
+
+Sadra   19:26
+And.
+Yes.
+
+Sumit Gulwani   19:34
+So, in that sense, we are a little bit more general, but we also have a shift, a little bit more shift towards understanding the human, you know, workflow and knowledge with and evolving that.
+
+Sadra   19:42
+Yes.
+
+Sumit Gulwani   19:44
+Okay, okay, Sadra, I should probably go back to doing my work. Anything else? I think this is good, you know, short discussion.
+
+Sadra   19:47
+OK.
+No, I don't have anything else. Thank you.
+
+Sumit Gulwani   19:52
+OK, OK, so hopefully tomorrow you know I'll have more time and we'll just continue chatting and then we should try to still lean nail down the demos from this. OK, then take care, Sadra. OK, bye bye. Good idea.
+
+Sadra   20:00
+Must be.
+
+Sumit Gulwani stopped transcription

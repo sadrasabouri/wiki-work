@@ -36,6 +36,11 @@ Sources ingested (13 files):
 - Pages updated: wiki/projects/wiki-kb-project.md, wiki/index.md
 - Views regenerated: none (no matching target frontmatter)
 
+## [2026-05-05] ingest | Sadra-3May2026-TRANSCRIPT, Sadra-4May2026-TRANSCRIPT2, Sadra-4May2026-TRANSCRIPT3
+- Pages created: wiki/events/2026-05-03.md, wiki/events/2026-05-04.md, wiki/concepts/information-knowledge-pipeline.md, wiki/concepts/living-system.md, wiki/concepts/embedded-views.md
+- Pages updated: wiki/concepts/dag-of-computation.md, wiki/concepts/temporal-knowledge.md, wiki/concepts/views.md, wiki/people/sumit-gulwani.md, wiki/people/souti-chattopadhyay.md, wiki/index.md
+- Views regenerated: none (no matching target frontmatter)
+
 ## [2026-05-05] ingest | Presentation (wikilink fix), AI Backlash / Gary Marcus post
 - Pages created: wiki/people/gary-marcus.md
 - Pages updated: wiki/projects/wiki-kb-project.md (external positioning section), wiki/people/sumit-gulwani.md (Marcus forwarding), wiki/index.md
