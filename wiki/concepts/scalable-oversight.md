@@ -23,6 +23,10 @@ The primary application context was data labelers reviewing AI-annotated spreads
 
 The [[agent-lens|Agent Lens]] / [[dag-of-computation|DAG]] approach is a third strategy: make the computation *transparent* so humans can focus oversight at the steps most likely to fail, rather than reviewing the final output blindly. [[steerability|Steerability]] is the intervention mechanism that makes transparency actionable.
 
+## Connection to Context Base Feedback Loop
+
+The Applied Compute Context Engine [[Remember, Refine, Retrieve A Context Engine for Enterprise Agents]] frames human feedback as a "key signal" in the Refinery pipeline — subject matter experts can accept or reject changes to the Contextbase; dedicated Refine jobs incorporate explicit feedback. This is participation over review applied to a context base: humans don't review the agent's final output in isolation, they steer what the Contextbase accumulates. The mechanism differs from Pista (real-time intervention during execution) but the principle is the same: oversight is most effective when it is continuous and upstream of artifact production.
+
 ## Empirical Result: Participation Over Review
 
 [[Auditing and Controlling AI Agent Actions in Spreadsheets|The Pista paper]] provides the clearest statement of the principle: **meaningful human oversight of AI agents in knowledge work requires not improved post-hoc review mechanisms, but active participation in decisions as they are made.** Reviewing a finished output places the entire burden of oversight on a single moment of inspection — by then, errors that were legible at the step where they occurred have become invisible in the aggregate. The scalable oversight problem, in this framing, is fundamentally a *timing* problem: oversight must happen during execution, not after.

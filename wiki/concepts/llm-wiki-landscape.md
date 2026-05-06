@@ -102,6 +102,17 @@ Sadra's interpretability argument — that wiki edges are typed and traversable 
 
 The synthesis: the wiki's advantage is that its compression model (entity extraction + typed relations) is *declarative* — inspectable, correctable, extensible. An embedding is not directly editable. The interpretability argument and the compression argument are the same point at different levels of abstraction.
 
+## Applied Compute Context Engine: Empirical Validation of the Architecture
+
+The [[Remember, Refine, Retrieve A Context Engine for Enterprise Agents|Applied Compute Context Engine]] (published 2026-05-01) is the most rigorous external validation of the Remember→Refine→Retrieve architecture. Key results:
+
+- **16.9% relative improvement** on APEX-Agents (long-horizon investment banking, consulting, law tasks) vs. no-context baseline
+- **Reasoning-effort amortization**: a model with Contextbase at *low* reasoning matches the same model *without* Contextbase at *medium* reasoning. Context shifts the cost-quality Pareto frontier rather than trading within it.
+
+The paper also provides the cleanest diagnosis of why knowledge work context is hard: unlike code (centralized in VCS, ships with a complete dependency tree, forces merge conflict resolution), knowledge work is scattered, implicit, and divergent. The Context Engine's Refinery swarm — lightweight taggers plus powerful synthesis agents — is designed to close all three gaps.
+
+See [[context-base]] for the full architecture and empirical breakdown.
+
 ## Work IQ: The Microsoft Org-Scale Incumbent
 
 [[workiq|Work IQ]] is the Microsoft product most adjacent to this project. It provides a three-layer architecture (Data, Context, Skills/Tools) grounding Microsoft 365 Copilot in enterprise data — essentially the [[context-base|applied compute context base]] productized at org scale. Its semantic index (lexical + semantic retrieval over all M365 data) is the state of the art for RAG-based organizational knowledge access.
