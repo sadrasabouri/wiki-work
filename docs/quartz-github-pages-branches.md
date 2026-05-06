@@ -66,7 +66,9 @@ Claude command Markdown. Edit `.github/quartz-content-paths.txt` only when a
 path is safe to put on the public internet. The workflow publishes
 `.claude/commands` rather than all of `.claude` so local settings are not copied
 into the Quartz site. It also patches the cloned Quartz build to include
-dot-prefixed content paths.
+dot-prefixed content paths. Claude command frontmatter is converted to a fenced
+YAML block in the temporary Quartz content copy so the source command files stay
+unchanged.
 
 This only controls the generated website. If the GitHub repository is public,
 all tracked source files in all branches are still visible on GitHub. For a

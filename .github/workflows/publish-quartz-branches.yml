@@ -129,6 +129,40 @@ jobs:
               rsync -a "$source_path" "$QUARTZ_DIR/content/$(dirname "$content_path")/"
             done
 
+            export CLAUDE_COMMANDS_DIR="$QUARTZ_DIR/content/.claude/commands"
+            node <<'NODE'
+          const fs = require("node:fs")
+          const path = require("node:path")
+
+          const commandsDir = process.env.CLAUDE_COMMANDS_DIR
+          if (commandsDir && fs.existsSync(commandsDir)) {
+            const markdownFiles = []
+            const stack = [commandsDir]
+
+            while (stack.length > 0) {
+              const current = stack.pop()
+              for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+                const entryPath = path.join(current, entry.name)
+                if (entry.isDirectory()) {
+                  stack.push(entryPath)
+                } else if (entry.isFile() && entry.name.endsWith(".md")) {
+                  markdownFiles.push(entryPath)
+                }
+              }
+            }
+
+            for (const file of markdownFiles) {
+              const source = fs.readFileSync(file, "utf8")
+              const match = source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/)
+              if (!match) continue
+
+              const body = source.slice(match[0].length)
+              const renderedFrontmatter = `\`\`\`yaml\n${match[1]}\n\`\`\`\n\n`
+              fs.writeFileSync(file, renderedFrontmatter + body)
+            }
+          }
+          NODE
+
             if ! find "$QUARTZ_DIR/content" -type f -name '*.md' -print -quit | grep -q .; then
               echo "::error::No Markdown files were copied for branch '$branch'."
               exit 1
