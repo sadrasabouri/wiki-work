@@ -1,5 +1,8 @@
 # Wiki Log
 
+## [2026-05-06] view:timeline | views
+## [2026-05-06] view:timeline | second brain
+
 ## [2026-05-05] view:presentation | "views and workflows for knowldge bases" for "manager-level decision makers of an orgnaization"
 
 ## [2026-05-05] lint | full scan
