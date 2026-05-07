@@ -118,34 +118,22 @@ jobs:
               `import * as Component from "./quartz/components"
 
           const explorerSortFn: Options["sortFn"] = (a, b) => {
-            const getConfiguredFolderRank = (folder: string) => {
-              switch (folder) {
-                case ".claude":
-                  return 0
-                case "templates":
-                  return 1
-                case "raw":
-                  return 2
-                case "wiki":
-                  return 3
-                case "views":
-                  return 4
-                default:
-                  return Number.POSITIVE_INFINITY
-              }
+            const folderOrder = [".claude", "templates", "raw", "wiki", "views"]
+            const aParts = a.isFolder ? a.slug.split("/") : []
+            const bParts = b.isFolder ? b.slug.split("/") : []
+            let aRank = Number.POSITIVE_INFINITY
+            let bRank = Number.POSITIVE_INFINITY
+
+            if (aParts.length === 2 && aParts[1] === "index") {
+              const rank = folderOrder.indexOf(aParts[0])
+              if (rank !== -1) aRank = rank
             }
 
-            const getTopLevelFolderRank = (node: typeof a) => {
-              if (!node.isFolder) return Number.POSITIVE_INFINITY
-
-              const parts = node.slug.split("/")
-              if (parts.length !== 2 || parts[1] !== "index") return Number.POSITIVE_INFINITY
-
-              return getConfiguredFolderRank(parts[0])
+            if (bParts.length === 2 && bParts[1] === "index") {
+              const rank = folderOrder.indexOf(bParts[0])
+              if (rank !== -1) bRank = rank
             }
 
-            const aRank = getTopLevelFolderRank(a)
-            const bRank = getTopLevelFolderRank(b)
             if (aRank !== bRank) return aRank - bRank
 
             if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
