@@ -7,7 +7,7 @@ Purge claims sourced from the meeting: $ARGUMENTS
 
 ## Steps
 
-1. Identify the target raw source filename. If given a date (e.g. `2026-03-16`), find the corresponding transcript in `raw/meeting-transcripts/`.
+1. Identify the target raw source filename. If given a date (e.g. `2026-03-16`), find the corresponding transcript in `raw-sources/meeting-transcripts/`.
 
 2. Search all wiki pages for citations to that source:
    - Run: `grep -rl "$ARGUMENTS" wiki/`

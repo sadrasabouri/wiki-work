@@ -12,7 +12,7 @@ Each step maps to a component in modern LLM-wiki systems:
 
 | CODE Step | Manual Practice | LLM-Wiki Equivalent |
 |-----------|----------------|---------------------|
-| **Capture** | Save resonant content to a note app | Raw source ingestion; `raw/` directory |
+| **Capture** | Save resonant content to a note app | Raw source ingestion; `raw-sources/` directory |
 | **Organize** | PARA method (Projects/Areas/Resources/Archive) | Entity extraction → wiki graph structure |
 | **Distill** | Progressive Summarization — multi-layer summaries | Intermediate summaries; view distillation |
 | **Express** | Publish writing, slide decks, blog posts | [[views\|Views]] — rendering raw knowledge for a purpose |

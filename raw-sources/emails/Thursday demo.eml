@@ -1,0 +1,1039 @@
+Delivered-To: sabourih@usc.edu
+Received: by 2002:a05:7208:385:b0:ab:f1cf:178f with SMTP id l5csp1160997rbb;
+        Sun, 3 May 2026 10:35:15 -0700 (PDT)
+X-Received: by 2002:a05:690c:4911:b0:7bd:4cb2:44ba with SMTP id 00721157ae682-7bd7714a4femr71641367b3.44.1777829715465;
+        Sun, 03 May 2026 10:35:15 -0700 (PDT)
+Return-Path: <sumitg@microsoft.com>
+Received: from mx0b-00164701.pphosted.com (mx0b-00164701.pphosted.com. [67.231.157.15])
+        by mx.google.com with ESMTPS id 00721157ae682-7bd66564d22si73371397b3.58.2026.05.03.10.35.15
+        for <sabourih@usc.edu>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 03 May 2026 10:35:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sumitg@microsoft.com designates 52.101.44.96 as permitted sender) client-ip=52.101.44.96;
+Authentication-Results: mx.google.com;
+       dkim=neutral (body hash did not verify) header.i=@microsoft.com header.s=selector2 header.b=OqQMxvrr;
+       arc=fail (body hash mismatch);
+       spf=pass (google.com: domain of sumitg@microsoft.com designates 52.101.44.96 as permitted sender) smtp.mailfrom=sumitg@microsoft.com
+Received: from pps.filterd (m0087756.ppops.net [127.0.0.1])
+	by mx0b-00164701.pphosted.com (8.18.1.11/8.18.1.11) with ESMTP id 643FIh61683692
+	for <sabourih@usc.edu>; Sun, 3 May 2026 10:35:15 -0700
+Authentication-Results: usc.edu;
+	spf=pass smtp.mailfrom=sumitg@microsoft.com;
+	dkim=pass header.s=selector2 header.d=microsoft.com;
+	dmarc=pass header.from=microsoft.com
+Received: from sj0pr00cu001.outbound.protection.outlook.com (mail-westusazon11023096.outbound.protection.outlook.com [52.101.44.96])
+	by mx0b-00164701.pphosted.com (PPS) with ESMTPS id 4dx8w00ss1-1
+	(version=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384 bits=256 verify=NOT);
+	Sun, 03 May 2026 10:35:14 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=PdewSea7833J8/tG1YwpOUcujPLbbBOmKK9+oNyzohqtW7ZJ/TdYOMySaa4F4P0bvK2F6A3e0TjgEpmhzG1NyFokageC+N5NLVfu8/Umtx7MY+WTzTRLEGu7+Sd5vMUT7zXaxSkUkiOCaJBv2X05pAmw88VMN2SGkP5WZvRu1kaegSVCwu0N1smvhF0nGSSt9s/VHlHUzwwX0Tw5D7yRrzcGK3KE65tw0Ps9EQmE7y8ccBhQSFA36NYC7Spjw8qt1ydeEwFwdnMusXkGE/oGOOTvoy8RGkD77Z5HvOsFBtmDDinsBVv6Pat7kPzB0fw6oYFkYmmH0srToAG4UdRS0Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=twnauId/1ynzt/SR7QOouzuN+HpavTd8ctbc4ZJ1aSQ=;
+ b=kEkmP+OB5+ix85bCK+pL7svnEC6tFK9BY+q4E72aw50fPfmgXVJG6QbY1GFQipzg8pb2JpNqLR9YRGsyW0YqNbfQ3xDFMJ/+Tofh7CuEN3AWk02qgkaqvG6IQHfTR9wNbgGLubt0y+QJaF7BPXMYhkFBDHpwl6/N6qWTRZ7COqojsn1jWKT5xnIEvTQZhX7P6CBu81WOjJk5T4vb2uRc+jAwnnxclvZMi0Jnkp/59POlKTBBogVzzm8T5vfyYtHbNGrJWww6sINtgnOzHG3irh4W3bcbapo6Ujd0ne0mHrDsZUFTMM5PcaPRFHy5+crGt85SU0r3tNSB8JTFYPU16g==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=microsoft.com; dmarc=pass action=none
+ header.from=microsoft.com; dkim=pass header.d=microsoft.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=twnauId/1ynzt/SR7QOouzuN+HpavTd8ctbc4ZJ1aSQ=;
+ b=OqQMxvrrdl+eun3U6U4LUvx5C+7ZUfxddPdEJ7sHyzECjGlkgSXishKDz4I6M3WBcicO/Rhk+GAAmgcj8tXYnT0uc3hVyhPmluqJj8MGnHo7J5DYVAgtzyIdIXIECl6wwcKoitUHdylq8C5nQK1lcryzXLw6Ku0rrRnSSUHcAVI=
+Received: from SA6PR00MB2325.namprd00.prod.outlook.com (2603:10b6:806:439::8)
+ by SA1PR00MB2878.namprd00.prod.outlook.com (2603:10b6:806:4ad::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.21.37.0; Sun, 3 May 2026
+ 17:35:02 +0000
+Received: from SA6PR00MB2325.namprd00.prod.outlook.com
+ ([fe80::29ab:3efb:5783:b9a]) by SA6PR00MB2325.namprd00.prod.outlook.com
+ ([fe80::29ab:3efb:5783:b9a%5]) with mapi id 15.21.0033.000; Sun, 3 May 2026
+ 17:35:02 +0000
+From: Sumit Gulwani <sumitg@microsoft.com>
+To: Sadra Sabouri Halestani <sabourih@usc.edu>
+CC: Souti Chattopadhyay <schattop@usc.edu>
+Subject: Re: [EXTERNAL] Re: Thursday demo
+Thread-Topic: [EXTERNAL] Re: Thursday demo
+Thread-Index:
+ AQHc2ryAsJni8jAWikS0A5ZS/xV6p7X73NgRgAAC54iAAAeMAIAAD7NRgAB1nYCAACIS0Q==
+Date: Sun, 3 May 2026 17:35:02 +0000
+Message-ID:
+ <SA6PR00MB2325D04E1C0CA2902015E21FD0302@SA6PR00MB2325.namprd00.prod.outlook.com>
+References:
+ <SA6PR00MB23250EA1CBBE567B74102472D0302@SA6PR00MB2325.namprd00.prod.outlook.com>
+ <SA6PR00MB232570F8B8286797AFBEA9B7D0302@SA6PR00MB2325.namprd00.prod.outlook.com>
+ <SA6PR00MB2325685F9B989E9E38973FD8D0302@SA6PR00MB2325.namprd00.prod.outlook.com>
+ <CANCQpssWP7yXCW=TRAdnQ0rndmyzLV2RnCR+s1_S8KkQ3HXA6Q@mail.gmail.com>
+ <SA6PR00MB232511F71DDD0E4DD100E8A0D0302@SA6PR00MB2325.namprd00.prod.outlook.com>
+ <CANCQpstzwjsB43i=tfEumXCm-F-VWEmY3ZRL2i=gNN+Myziffg@mail.gmail.com>
+In-Reply-To:
+ <CANCQpstzwjsB43i=tfEumXCm-F-VWEmY3ZRL2i=gNN+Myziffg@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels:
+ MSIP_Label_f42aa342-8706-4288-bd11-ebb85995028c_Enabled=True;MSIP_Label_f42aa342-8706-4288-bd11-ebb85995028c_SiteId=72f988bf-86f1-41af-91ab-2d7cd011db47;MSIP_Label_f42aa342-8706-4288-bd11-ebb85995028c_SetDate=2026-05-03T17:35:02.878Z;MSIP_Label_f42aa342-8706-4288-bd11-ebb85995028c_Name=General;MSIP_Label_f42aa342-8706-4288-bd11-ebb85995028c_ContentBits=1;MSIP_Label_f42aa342-8706-4288-bd11-ebb85995028c_Method=Standard;
+authentication-results: mx.microsoft.com 1; dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=microsoft.com;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: SA6PR00MB2325:EE_|SA1PR00MB2878:EE_
+x-ms-office365-filtering-correlation-id: ebd56a75-afa3-447d-5db7-08dea93a4e56
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|366016|376014|1800799024|38070700021|22082099003|20046099003|56012099003|16056099006|18002099003|8096899003;
+x-microsoft-antispam-message-info:
+ =?utf-8?B?NVRoMk9NL3ZDK01ucFRZUzBDNTNxeHJ6VXNVYU1pZ3U4Yk9rWnVWZWhBUDlz?=
+ =?utf-8?B?NHBCK0R2dFpyanFJN0FNUDg5bTI1UGl1Q0h0SHkyRlJOUm91azBKTDh4WWh2?=
+ =?utf-8?B?Sis2VnJkZTVITWNEeWsxaWZiZGlpOXZIMk8wZGtwNFRrNHdSdS9JQUVqSFVL?=
+ =?utf-8?B?Uk0zV0M4S1RXa0t0cHowVnNQeXNDb1RTMldRQ2dOV05Fb0JqNGp2ZTd5VWl4?=
+ =?utf-8?B?aEk1T0dkaWoyN01JSVVBMFJFeWlST0hYQitmOFRvU1gzMEMwUXd1R25RaGlZ?=
+ =?utf-8?B?OTFGczZoWCtEbGpjUEltZVlqQjZMbldBZ0lEbmdpbmtLaWUrcURkMkV0MHo0?=
+ =?utf-8?B?VFhNNTZHOXI0NUlyUmYwVXBMeVg2SEQ1ZC9GL256RnRjNWpGR2ZIQzZWVTla?=
+ =?utf-8?B?dFVHNXU4Q0l1eEE0bW43L3g0R0U3dUVUd1VZWWc3bU55RG9DNXdtOEcrMW93?=
+ =?utf-8?B?NTc4TStMTDVlSjJtMHZZenBvbmFLV3R6bmdSb0xCSldwVjZIUE1rRjZzRHNm?=
+ =?utf-8?B?SXdBWnByUzV2aW1VUnczaVpISXdzV3gyQldrWlppWklobW40VVYzNCtucnpx?=
+ =?utf-8?B?Rmo2Q2pxUDhxMmFlQnJMRlBkcVFtczFIQ3hkdmc0Zmo2SldmUXlBdlpYL2pt?=
+ =?utf-8?B?Um85WktEbnZjWWtVZUdYc1BMUXlMMVgwSGNjeW5pVTgzMDROVkxneDdEdWtU?=
+ =?utf-8?B?b2kxeUFUUnZZdlpNOUpKcjFvakc4YThPMzB0MEtuWW9DVGRwSjh2M1h2YUk2?=
+ =?utf-8?B?dXNoOVZSZzBuRVFwQURBTjdPK29kcWZFU2E3WCtHLzdpZWd0bk5KL2dPbStJ?=
+ =?utf-8?B?ZGltNlhhYTJzM0VrUXJ3amxGSUVWcGx2VHZrUTVoelJZZWw2OGRja2N2Ymd4?=
+ =?utf-8?B?b0hYRHVES0VZRG9zellaUDBEYkh1SWZLWHc0aCtqTVJBazE4UVc2eXlEbThE?=
+ =?utf-8?B?Q1NMVkFwT3NTaFpGbVdhdTBUR0VzMWxRYlRnVGJESXd0U1l4N0t5L2lTRWx0?=
+ =?utf-8?B?V21DK215dmxQcWthWnZ0YUhxT0thUE9hZFZRN011Nmw4d3IvWEJqTW5lYnZG?=
+ =?utf-8?B?Z1hqSmRrckZUTWFEQnJ1SVRKNDNuajVLYzhIWnFQNmdWT21hYXBzOElRdlZr?=
+ =?utf-8?B?WFN4QThpb0NkTUg1Y3h3bFJ1YmhnTkhIOEJLUmk0Zk9hajhpaUcrcFdvWDVx?=
+ =?utf-8?B?S0l5T3JJM2VUTCtZTlNEUTB2N1dyVi9DV3JvQ0YzSTFtUVl3ZGdBeHZGSFlD?=
+ =?utf-8?B?ZWxRVWU3L1VKT0duanBBUnAweDFleURCSkkvdk44RVZrUk9yaUdGODZMNllv?=
+ =?utf-8?B?dXBiZ21Md1lZa21VTnQvS3U3Y0M1Y2dVS094aUN3cUwvUTZGV3JzcHBySno2?=
+ =?utf-8?B?RTVMV3FvTjk2TXc9PQ==?=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:SA6PR00MB2325.namprd00.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(366016)(376014)(1800799024)(38070700021)(22082099003)(20046099003)(56012099003)(16056099006)(18002099003)(8096899003);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?utf-8?B?WW5UQ1pVVFBxTDBtVzdOU0FxYmhwRnJpRWc5WFhUZDhzazZnMTdMZ21NRGhV?=
+ =?utf-8?B?N2FWN3dNMnZ1SlVaOGRDcmw3ZG1WYjFIMm85L3d6Mk9GTXczQnNQZFcreHJu?=
+ =?utf-8?B?MGI1N2YvdzVrQ0RoZk5ITlVKY2w0dCswbytPOHlvK293SWFaZ1lQSXBxQWRI?=
+ =?utf-8?B?dU1MbUVKM3RyZ1pFNnBNVHFxa0RNeEExalY0WVhVZmcrelBuUW1vY3RmbjF6?=
+ =?utf-8?B?MDQxUHVLT242dHd5ckhPVzFHa09GTzNjWGZnNVBQVmR3bGRDWnNCam90amds?=
+ =?utf-8?B?bXlvcDVFaU55RGd2eko2M25hZjdsZ0xqeWVMWWlPYkxramZKeXg2MlhaeDNs?=
+ =?utf-8?B?bzFvcXM5RjdMeXBWL3pVSktHOFpLSWsralBXQ2JveStRcksrQmVGUUVLOHVo?=
+ =?utf-8?B?SklHR1A3cytETmhLNVdNNHdiMTczVTZVWHFHbGtGaVBxY0VDbWlaMXlDNkJG?=
+ =?utf-8?B?Q2hjYldOTTlnWm5YU2ZJaXFWY2xXeW9wYlVqVGpTZzAvQ2xMNFZXWTBxQXdK?=
+ =?utf-8?B?YU9zWGVyNlNkeUZqZkpsL3NELys4VSs2UnBmL1pIamQ5bVNNS3RteUNIVndn?=
+ =?utf-8?B?WEdTUEhmWmRjR3ZCNGlwQ2hheHplbkFYcmNNNURZQXBtckJiVjBnRE1uNzhI?=
+ =?utf-8?B?RUo4MGZDeVJvNmZjM2R5U3dId2Z2TkRoQVdSdkRMN2ZQZmRLUVpPNis2K0Fy?=
+ =?utf-8?B?em1jV2VqMzFWNlBnaEt6d2VhalhkM1hxT3BFdTkvcmRncXRRYTNQelVkUmlz?=
+ =?utf-8?B?d0RoT0xkL240Y1R1ZmlSRnV2UWc3TW4rdWFKN2hoQVFrc2s1N2lic25HNnp5?=
+ =?utf-8?B?STVEWktaRHFjc1B3UWtvTDJGa2tCUlQrWFpNUTVsRUtlUExIaWErd01RbHFO?=
+ =?utf-8?B?QWdFT3ZLS2UzVWdvdG8renU5dmg0cXlrejJMMUlSUGlCdHRLUGFUektOYVlW?=
+ =?utf-8?B?dXlHZ2hocFRvVTRFaTRMYXpZYXRKVlRlY0krMGthcnBNSmU2REVSYjgya3Bj?=
+ =?utf-8?B?V3VqdVozMlQrekVLekxOTVlTb0o4WjdqaEtKR21ZbUtYSjFXVStKUSt5R3Js?=
+ =?utf-8?B?MDBrb20zSkowVVBzRXo1aExQbVprdkZxR1JXSEVPbmhNdFV0V0d0OG51dVIv?=
+ =?utf-8?B?T3FkSzBzT09UZm9HZHlIV3YxWkRBMENWUVkvOVlQQXRObVJqSjI1NHRoOWt1?=
+ =?utf-8?B?MTdNcXR0RWowV1ptWlNnRCtieEFRV00xR0V6VjAyb0dFMkxqT2cwMWVKQ3Bl?=
+ =?utf-8?B?ZUNmekVSUnM0cjR6RDBSRTlWcGdiNE50K3VJS2JZYzRtaHhaeEZiMHdSVVRl?=
+ =?utf-8?B?WGhJZVkrNVNrWE1IVnB0VFJidkdmMkdjSzBSOVhFS1Zrbk5yb3I0UEIweUdx?=
+ =?utf-8?B?L3JiWkE5S0JGdDYvWUhOSGZvS2dzeHJsTXh0dGRZWVZyMkg4S3NEeXMwOXl4?=
+ =?utf-8?B?dmR0TWZSSkYxWGxhT2dPN0dWa2ZZWk5YM3VjY0llUVdUUi9CRjRDMjRmS1c3?=
+ =?utf-8?B?b3diMVVHcStvb05xQ2tydnRDbU9yS0Z1RXNadVo2enkwRE9VQmlxWHAycnRp?=
+ =?utf-8?B?RkQzcWVnWHNPdmxGT1QwcnpldjNTa1k0dSt3UXVpcXdkUmdIZTJVSlk4aUx0?=
+ =?utf-8?B?LzFyQWY0bHkvQUFjdFNYR1FyamZBZ0dLWkdicU5VdXNMQmtkcmM3NWowRFVo?=
+ =?utf-8?B?T2V6eis3bmxBNk1pcjcybUg1bXFMRFFtT3Nkd0k2Y0duNDFXam5nM1FPV0R6?=
+ =?utf-8?B?aTFjeXRabmY5MEd3L0tBdUxQdjdCWmR3M1BtZWRtVTFGb2M5cHpQRHZvUEh3?=
+ =?utf-8?B?bEFGSTUwUXh3Skljc2hldVMrVkE0MDVEWElFVnp6M3htSTFjdlV0K1pOcmE2?=
+ =?utf-8?B?NFdzRFJDa1NaSmo0Z1dqOElsQ01KclBNbDlGS0xqVUZ5b1JwUncvaGpmb0lk?=
+ =?utf-8?B?cmlVT2dRazQvME82OEZxNytadGJzN3B3Smp3dk9JbjA2OVEvNnZKS3E3TDBJ?=
+ =?utf-8?B?aFZTc1RaQVpmVUlpVjVnazZ5QzNqVThqK1lIV2lXOVBYNUVIcUQ1V3RrRmIz?=
+ =?utf-8?B?VFlPZFovQXhZVllhRUJIZGEvdHgweFhJZXRrMzgyMUlIampiVFlBL0lIb3pt?=
+ =?utf-8?B?U1Z6YkgwY3RVcHVDajNXTE9saEk3VzNDR0NLWjhTVkdrajlteVJqSGY5UFlm?=
+ =?utf-8?B?cmllaFNjWHY3enFZZFFRdDYxRGN3YnUzMWdVVVVLRTlxRE05YU4vME05NCt5?=
+ =?utf-8?B?dmY1aXFpWVphZFFZZWxMNVlnNkFVN3pPUEpOekxkY1FKRC9DUVhWb1d5T1Nr?=
+ =?utf-8?B?WUorSTFvUTNXM05wRWdZSVBVOTBlZEttVjg0aG9VSjdqSlBvTzVyQT09?=
+Content-Type: multipart/alternative;
+	boundary="_000_SA6PR00MB2325D04E1C0CA2902015E21FD0302SA6PR00MB2325namp_"
+MIME-Version: 1.0
+X-OriginatorOrg: microsoft.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: SA6PR00MB2325.namprd00.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: ebd56a75-afa3-447d-5db7-08dea93a4e56
+X-MS-Exchange-CrossTenant-originalarrivaltime: 03 May 2026 17:35:02.0323
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 72f988bf-86f1-41af-91ab-2d7cd011db47
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: XZXwCf+rp+J2Wj6kpDYNo/1oEf3amXgSRAqcc/zwj6nxpCgMcqYcHykPTyVCR7oV75tCMDETuo6QxDofJP5dNw==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA1PR00MB2878
+X-CLX-Response: 1TFkXGxoaHxEKTHoXGBIbEQpZRBdoc3IBXEVbHER/GREKWFgXbGVtTkxwekV
+ kZEURCnhOF21jGGNDG1h8HEx6EQp5TBdkQk8dXU9eYHpTXREKQ0gXBxgcGBEKQ1kXBx8cEQpDSR
+ caBBoaGhEKWU0Xbk9GQ1xPWBEKX1kXGBwYEQpfTRdnZnIRCllJFxpxGhAadwYYHhhxGBweEBp3B
+ hgaBhoRClleF2xseREKSUYXX1lJSUtHWl9ZdUJFWV5PThgRCklHF3hPTREKQ04XGQdvHnhHZxl4
+ TVB9ZhldekJfdUcdX09fHXlEZxtzfE0RClhcFx8EGgQeGBoFGxoEGxoaBBsZHgQZHhAbHhofGhE
+ KXlkXQmZ5XF4RCk1cFwcYHxEKTFoXaGlrTWsRCkxGF29va2Nsa2sRCkJPF2ZYH01pbm1CaVBBEQ
+ pDWhcfGAQbGhsEHh4EExwRCkJeFxsRCkRYFxgRCkRJFxsRCkJcFxsRCl5OFxsRCkJLF21jGGNDG
+ 1h8HEx6EQpCSRdtYxhjQxtYfBxMehEKQkUXbxtcYWRJWHN/YgERCkJOF21jGGNDG1h8HEx6EQpC
+ TBdsZW1OTHB6RWRkRREKQmwXZUNQf3JSfWMbYh8RCkJAF2dnbk14fWNjTxhAEQpNXhcbEQpaWBc
+ YEQp5QxdlcmtZQxtzY3l5XhEKWUsXGxgdEh8RCnBoF2wTXhp+eGEdUGdsEBoRCnBoF21gXnp+SE
+ VEXWRuEBoRCnBoF2lFZHlye2RwbxN9EBoRCnBoF2Rvc2JwZ3sbWRNsEBoRCnBoF2dHZGRbXVh7T
+ F1wEBoRCnBoF3p8U20Bc1lifn8bEBoRCnBoF2wdbVtCfVxLElpEEBoRCnBoF2ZucG5OQnkecx94
+ EBoRCnBsF2VMSWl4T3pdZBJYEBkaEQpwTBdibWd8bWdzehJOZxAZGhEKbX4XGxEKWE0XSxEg
+X-Proofpoint-ORIG-GUID: 3-E4RmM3RgzWL3wPhu_m7ueu7SnM1YVg
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNTAzMDE5NCBTYWx0ZWRfX0329yTJZF1iR
+ ZWMKkwuHulAAMkr5U+SMyAZtFc1CKvmubDMsl7ZjJQx96HD1lINf/vrZ2aa+0lOwX3GAjYtryGC
+ /3pMY7TSQW2xev8iOwkaAdeMKmAQE/AAon2bCfW2/7jM0Rt9W7p8+AaIDOD4ACz3cu6Q8gAduqa
+ BloustsRiQIgvgoaWJkBo3i10sDiX6C6ZvSNdscowIzWLYtN5PUigrAxtnsYdjMZeoU9D7q5B6L
+ Aox/YDDWCvbdq/qqRGBJLRtRH6AdBfsVyzXTkLeH65sMFzDi2d+7RrqTJVvKBgWPGX+NHk5mySp
+ KJY8Kuc2Y10h8QZ/REMktllFHq2tmxuL8Hv84nvOU9uPIOW/PniNC8Vn+0voEz9BxUVlNdsjb03
+ fKyGtmrEy7hEtrnhZxiTqhZlXJ/8SvBIC60yrgbeATuGVSPLbR9A5aVhajKoZTgu1QdeDFaLony
+ e7LqoExdSzp7kBZWoYDWxwfmDoYsZG0FW6xQj/U6EQEUbistRMCnKLGe2j3gPj3J3P4SMlVfYcn
+ hSfOZfKw==
+X-Authority-Analysis: v=2.4 cv=IrMutr/g c=1 sm=1 tr=0 ts=69f78752 cx=c_pps
+ a=LrVdqjYIQ2LJ9TRDsXBWZg==:117 a=z/mQ4Ysz8XfWz/Q5cLBRGdckG28=:19
+ a=lCpzRmAYbLLaTzLvsPZ7Mbvzbb8=:19 a=xqWC_Br6kY4A:10 a=NGcC8JguVDcA:10
+ a=I3jg87b94x0A:10 a=JyWEw40TUO5AK6tc77iI:22 a=4Ns875fmS37Mew5ROLSn:22
+ a=waEo0Jsc2tpCB2SyJix_:22 a=yMhMjlubAAAA:8 a=JNyVD25uRb_BAuiwcecA:9
+ a=lqcHg5cX4UMA:10 a=QEXdDO2ut3YA:10 a=pc4zOqiFzLqxkMP7n2sA:9
+ a=tgTeR1cWEvmnJUWF:21 a=frz4AuCg-hUA:10 a=_W_S_7VecoQA:10
+X-CLX-Shades: Deliver
+X-Proofpoint-GUID: 3-E4RmM3RgzWL3wPhu_m7ueu7SnM1YVg
+X-Proofpoint-Banner-Trigger: inbound
+X-Proofpoint-SPF-Result: pass
+X-Proofpoint-SPF-Record: v=spf1 include:_spf-a.microsoft.com
+ include:_spf-b.microsoft.com include:_spf-c.microsoft.com
+ include:_spf-ssg-a.msft.net include:_spf1-meo.microsoft.com -all
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1143,Hydra:6.1.51,FMLib:17.12.100.49
+ definitions=2026-05-03_05,2026-04-30_02,2025-10-01_01
+X-Proofpoint-Spam-Details: rule=inbound_low_priority_notspam
+ policy=inbound_low_priority score=0 adultscore=0 suspectscore=0 bulkscore=0
+ priorityscore=281 malwarescore=0 clxscore=1005 lowpriorityscore=0 spamscore=0
+ impostorscore=0 phishscore=0 classifier=clx:Deliver authscore=0 authtc=
+ authcc= route=internal adjust=0 reason=mlx scancount=1
+ engine=8.22.0-2604200000 definitions=main-2605030194 domainage_hfrom=12785
+
+--_000_SA6PR00MB2325D04E1C0CA2902015E21FD0302SA6PR00MB2325namp_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+My4gQWhhLCBJIHNlZSB3aGF0IHlvdSBtZWFuIGJ5IHRoZSAic2tpbGxzIiBjb25uZWN0aW9uLiBZ
+ZXMsIHRoYXQnZCBiZSBhIGdvb2QgYW5hbG9neSB0byB1c2UsIGVzcGVjaWFsbHkgYXMgdGhlc2Ug
+d29ya2Zsb3dzIG1heSBiZSBhcHBsaWVkIHRvIG11bHRpcGxlIHZpZXdzLiBTbyBvbmUgbWF5IHRo
+aW5rIG9mICJ3b3JrZmxvd3MiIGFzIGEgc3BlY2lhbCBraW5kIG9mICJza2lsbHMiIHRoYXQgbWF5
+IGFsc28gYmUgZGVmaW5hYmxlIGFuZCBidWlsZGFibGUgdmlhIHNvbWUgZ3JhcGhpYyBsYW5ndWFn
+ZSBvZiBjb25zdHJ1Y3RzIHRoYXQgd2UgbWF5IGRpc2NvdmVyIHN1Y2ggYXMgcHJvY2Vzc2luZyBh
+bmQgcmVwZWF0aW5nIGJsb2Nrcy4NCg0KU29tZSBub3RlcyB0aGF0IEkgc2hhcmVkIHdpdGggdGhl
+bSB0byByZXF1ZXN0IG1vcmUgdGltZSBmb3Igbm93Og0KLVRoZSBWSUVXUyBvbiB0b3Agb2YgdGhp
+cyB3aWtpL0tCIG1hbmFnZW1lbnQgaXMgdGhlIGZ1dHVyZSBvZiBPZmZpY2UgYW5kIGtub3dsZWRn
+ZSB3b3JrLiBGb3IgaW5zdGFuY2UsIG9uZSB2aWV3IGNhbiBiZSBhIHRhYmxlLCBvciBhIGRlc2ln
+biBkb2N1bWVudCwgb3IgZXZlbiBhIHByZXNlbnRhdGlvbi4gW0luIGZhY3QsIEkgYW0gdGhpbmtp
+bmcgb2YgdXNpbmcgdGhpcyAicHJlc2VudGF0aW9uIiB2aWV3IHRvIHByZXNlbnQgdGhlIGlkZWFz
+IGFuZCBpbiB0aGF0IHNlbnNlIHRoZSB0aXRsZSBvZiB0aGlzIHByZXNlbnRhdGlvbiB3b3VsZCBi
+ZSBzb21ldGhpbmcgYWxvbmcgdGhlIGxpbmVzIG9mICJwcmVzZW50YXRpb24gYWJvdXQgdGhpcyBw
+cmVzZW50YXRpb24iIG9yICJhYm91dCBpdHNlbGYiICAgLSBhbmQgZm9yIHRoYXQgd2hhdCBJIGhh
+dmUgZG9uZSBpcyB0ZW5zIG9mIGNvbnZlcnNhdGlvbnMvbWVldGluZ3Mgc2luY2UgeW91IHNpZ25l
+ZCBtZSB1cCB3aGVyZSB0aGlzIGVudGlyZSBwcmVzZW50YXRpb24gd2lsbCBjb21lIHRvIGxpZmUg
+b3V0IG9mIHRob3NlIHRyYW5zY3JpcHRzL2VtYWlscy9UZWFtcy1jaGF0cyBhbmQgd2l0aG91dCBh
+bnkgaGFuZC1zcGVjaWZpYyBjdXJhdGlvbg0KLUFiaWxpdHkgdG8gbWFzaCAic2VtaS1wcml2YXRl
+IGluZm9ybWF0aW9uIiAoZm9yIGxhY2sgb2YgYSBiZXR0ZXIgdGVybSksIHdoZXJlaW4gc2F5IGFu
+IGV4Y2hhbmdlIGJldHdlZW4geW91IGFuZCBtZSBjYW4gYmUgZmlsdGVyZWQgdG8gZW5yaWNoIHRo
+aXMgS0IgdGhhdCByZWxhdGVzIHRvIGEgc3BlY2lmaWMgdG9waWMvZ3JvdXAuIE91ciBleGNoYW5n
+ZSBtaWdodCBiZSBwcml2YXRlIHRvIHVzIGFuZCBtaWdodCBiZSBvbiBhIHZhcmlldHkgb2YgdG9w
+aWNzLCBidXQgd2l0aCBhcHByb3ByaWF0ZSBmaWx0ZXJzLCB3ZSBib3RoIG1heSBiZSBvayBmb3Ig
+aXQgdG8gYmUgZGlzdGlsbGVkIHRvIGVucmljaCBhIGdpdmVuIEtCLiBUaGlzIGlzIEhVR0UgYmVj
+YXVzZSBpZiB5b3UgdGhpbmsgYWJvdXQgaG93IHRvIHNpbXVsYXRlIGxpZmUsIHRoZXJlIGFyZSAy
+IGtleSBjb21wb25lbnRzIEkgdGhpbms6IGluZm9ybWF0aW9uIHByb2Nlc3NpbmcgYW5kIGNob2lj
+ZSBtYWtpbmcgYnkgYW4gaW5kaXZpZHVhbCBBTkQgY29tbXVuaWNhdGlvbiBiZXR3ZWVuIGluZGl2
+aWR1YWxzLiBUaGUgYmVhdXRpZnVsIHRoaW5nIGFib3V0IHRoaXMgd29ybGQgaXMgdGhhdCB3ZSBo
+YXZlIGEgc21hbGwgZGVncmVlIG9mIHNlcGFyYXRpb24gKDYpIGJldHdlZW4gYW55IHR3byBpbmRp
+dmlkdWFscywgYW5kIHdpdGggdGhpcyBjb25jZXB0IG9mIHNlbWktcHJpdmF0ZS1pbmZvIG1hc2gg
+KGZvbGxvd2luZyBhbGwgZGlmZmVyZW50aWFsIHByaXZhY3kgbm9ybXMpIHdvdWxkIGJlIGtleSB0
+byBhY2NlbGVyYXRlIHByb2dyZXNzL2V2b2x1dGlvbiBvZiBhbnkgS0IgYW5kIHRodXMgYW55IG9y
+Z2FuaXphdGlvbi9zb2NpZXR5LiBUaGUgYmVzdCBwbGFjZSB0byBleHBlcmltZW50IHdpdGggdGhp
+cyBjb25jZXB0IHdvdWxkIGJlIGEgbGFyZ2Ugb3JnYW5pemF0aW9uIGxpa2UgRXhjZWwgb3IgTWlj
+cm9zb2Z0Lg0Kc2lkZSBub3RlOiB0aGUgcmVhc29uIHdoeSBJIG5vdGVkIHRoYXQgZG93biBhYm92
+ZSBpcyB0aGF0IGFsbCB0aGlzIGlzIGdvaW5nIGludG8gbXkgcmF3IHNvdXJjZXMgdG8gZW5yaWNo
+IG15IEtCLCBhbmQgaG9wZWZ1bGx5IHRoYXQgbGVhZHMgdG8gYSBiZXR0ZXIgcHJlc2VudGF0aW9u
+IG9mIFRodS4gQW5kIGl0IHdhcyBhbGwgaHVtYW4gd3JpdHRlbiAod2FudCB0byBzdHJpY3RseSBz
+ZXBhcmF0ZSB0aGF0IGZyb20gQUktZ2VuZXJhdGVkICJzbG9wIikNCg0KQSB2ZXJ5IHN1cnJlYWwg
+b2JzZXJ2YXRpb246IFRvZGF5IEkgbWFpbnRhaW4gbXkgS0IgaW4gYSBtb3JlIHByaW1pdGl2ZSBm
+YXNoaW9uLCBidXQgZmV3IGRheXMgYWdvLCBJIG5vdGljZWQgdGhhdCBteSBhZ2VudCAoQ2xhdWRl
+IENvZGUgQ0xJKSBiZWNhbWUgc21hcnQgZW5vdWdoIHRvIHN0YXJ0IHN1bW1hcml6aW5nIG15IGNv
+bnRlbnQgYW5kIG9yZ2FuaXppbmcgaXQgaW4gbW9yZSBpbnRlcmVzdGluZyB3YXlzLiBBcyBJIHdh
+cyB0cnlpbmcgdG8gZ2V0IHNvbWV0aGluZyBkb25lIHRvbyBxdWlja2x5LCBJIGNoaWRlZCBpdCB0
+byBub3QgdHJ5IHRvIGJlIHRvbyBzbWFydCBhbmQgc3RpbGwgZG8gdGhpbmdzIHRoZSBvcmlnaW5h
+bCAoZHVtYikgd2F5IGFzIEkgd2FzIG5vdCB5ZXQgcmVhZHkgZm9yIGEgdHJhbnNpdGlvbiB0byBW
+MiBteXNlbGYuDQoNCkJ1dCBub3cgdGhhdCBJIHRoaW5rIGFib3V0IGl0LCBpdCB3YXMgdXNpbmcg
+dGVybXMgbGlrZSAibWluaW1hbCBzcGVjcyIgYW5kICJLQiIgYW5kIGl0cyBzdW1tYXJ5IHdhcyBz
+dGFydGluZyB0byBiZSBvcmdhbml6ZWQgZGlmZmVyZW50bHkuIEl0IHdhcyB2ZXJ5IHZlcnkgc3Vy
+cmVhbCwgYWxtb3N0IGFzIGlmIHRoZSBzeXN0ZW0gaGFkIGNvbnNjaW91c25lc3MgKGFzIGl0IHN0
+YXJ0ZWQgdG8gZG8gdGhpbmdzIHRoYXQgSSBuZXZlciBhc2tlZCBpdCB0bywgYnV0IGl0IGp1c3Qg
+bGVhcm5lZCBhYm91dCB0aG9zZSBmcm9tIG15IHJhdyBub3RlcyBhbmQgcHJvY2Vzc2VkIG5ld3Ns
+ZXR0ZXJzISkuDQoNCl9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fDQpGcm9tOiBTYWRy
+YSBTYWJvdXJpIEhhbGVzdGFuaSA8c2Fib3VyaWhAdXNjLmVkdT4NClNlbnQ6IFN1bmRheSwgTWF5
+IDMsIDIwMjYgODoyNSBBTQ0KVG86IFN1bWl0IEd1bHdhbmkgPHN1bWl0Z0BtaWNyb3NvZnQuY29t
+Pg0KQ2M6IFNvdXRpIENoYXR0b3BhZGh5YXkgPHNjaGF0dG9wQHVzYy5lZHU+DQpTdWJqZWN0OiBS
+ZTogW0VYVEVSTkFMXSBSZTogVGh1cnNkYXkgZGVtbw0KDQoxLiB5ZXMgdGhhdCdzIHdoYXQgSSBt
+ZWFudA0KMi4gdGhhdCdzIGEgZ29vZCBpZGVhLiB3aWxsIHdvcmsgb24gdGhhdC4NCjMuIHNpbWls
+YXIgdG8gaG93IHVzZXJzIGRlZmluZSBjdXN0b20gc2tpbGxzIHRvIGRlZmluZSB3b3JrZmxvd3Mg
+Zm9yIGRpZmZlcmVudCB0YXNrcy4gdGhlc2Ugd29ya2Zsb3dzIGFyZSBwcmVkZWZpbmVkIChwcm9i
+YWJseSB0ZXN0ZWQgdG8gYmUgc29tZXdoYXQgb3B0aW1hbCkgd29ya2Zsb3dzIHRvIHByb3ZpZGUg
+YSBjZXJ0YWluIHZpZXcNCjQuIG9rIEkgd2lsbCB3b3JrIG9uIGl0IHRvZGF5IHRvIGhhdmUgcmF3
+IGNvbnRlbnRzIGF0IGxlYXN0IHRoYXQgZ2l2ZXMgZ2lzdCBvZiB0aGUgYmlnZ2VyIGlkZWENCg0K
+Y29tcGxldGVseSBhZ3JlZSBvbiB0aGUgbGFzdCB0d28gcGFydCBtZW50aW9uZWQuDQoNCk9uIFN1
+biwgTWF5IDMsIDIwMjYgYXQgMTozMeKAr0FNIFN1bWl0IEd1bHdhbmkgPHN1bWl0Z0BtaWNyb3Nv
+ZnQuY29tPG1haWx0bzpzdW1pdGdAbWljcm9zb2Z0LmNvbT4+IHdyb3RlOg0KMS4gSSBsb3ZlIHRo
+aXMgaGllcmFyY2hpY2FsIHN0cnVjdHVyZS4gQnkgIkkgZG9uJ3Qgd2FudCB0byBib3VuZCB0aGUg
+dXNlciBieSBkZXNpZ25lcnMnIGNvbnN0cmFpbnRzIiwgZG8geW91IG1lYW4gdGhhdCB1c2VycyBz
+aG91bGQgYmUgYWJsZSB0byBkZWZpbmUgdGhlaXIgb3duIHZpZXdzIGFuZCBzdWItdmlld3MgZm9y
+IHRoZW1zZWx2ZXMsIHJpZ2h0PyAyLiBMb3ZlIHRoaXMgY29ubmVjdGlvbiB0byBjb2Rpbmcu4oCK
+DQoxLiBJIGxvdmUgdGhpcyBoaWVyYXJjaGljYWwgc3RydWN0dXJlLiBCeSAiSSBkb24ndCB3YW50
+IHRvIGJvdW5kIHRoZSB1c2VyIGJ5IGRlc2lnbmVycycgY29uc3RyYWludHMiLCBkbyB5b3UgbWVh
+biB0aGF0IHVzZXJzIHNob3VsZCBiZSBhYmxlIHRvIGRlZmluZSB0aGVpciBvd24gdmlld3MgYW5k
+IHN1Yi12aWV3cyBmb3IgdGhlbXNlbHZlcywgcmlnaHQ/DQoyLiBMb3ZlIHRoaXMgY29ubmVjdGlv
+biB0byBjb2RpbmcuIEkgdGhpbmsgdGhpcyBpcyBnZW51aW5lbHkgc3ByZWFkIG91dCBhY3Jvc3Mg
+bXVsdGlwbGUgdHJhbnNjcmlwdHMuIExldHMgcHVsbCBpbiBhIHZpZXcgdGhhdCBkZXNjcmliZXMg
+Y29tcGFyaXNvbiB0byBjb2RpbmcsIGJvb3RzdHJhcHBlZCBvdXQgb2Ygb3VyIHRyYW5zY3JpcHRz
+Lg0KMy4gTm90IHN1cmUgSSB1bmRlcnN0YW5kIHRoZSBjb25uZWN0aW9uIHdpdGggc2tpbGxzLm1k
+LiBJIHdvdWxkIHRoaW5rIHRoYXQgdGhpcyBpcyBpbiB0aGUgc2FtZSBjYXRlZ29yeSBhcyB0aGUg
+cG9pbnQgMiBhYm92ZSB3aGVyZSB0aGlzIGdlbmVyYWwgaWRlYSBpcyBnZW51aW5lbHkgc3ByZWFk
+IG91dCBhY3Jvc3MgbXVsdGlwbGUgdHJhbnNjcmlwdHMuDQo0LiBOb3Qgc3VyZSBJIHVuZGVyc3Rh
+bmQgdGhpcy4gQXJlIHlvdSBzYXlpbmcgd2UgaGF2ZSB0b28gbXVjaCBjb250ZW50LiBUaGVyZSBJ
+IGNhbiBqdXN0IHdhbGsgdGhyb3VnaCBhIHNtYWxsZXIgbnVtYmVyIG9mIHZpZXdzIGRlcGVuZGlu
+ZyBvbiB0aW1lLiBCdXQgbXkgaG9wZSBpcyB0aGF0IHRoaXMgaXMgc28gZGFtbiBpbXByZXNzaXZl
+IHRoYXQgdGhleSBzaG91bGQgZ2l2ZSBtZSBtb3JlIHRpbWUgZm9yIGEgZGVtby4gVGhhdHMgd2h5
+IHRoZSBlYXJsaWVyIHlvdSBjYW4gc2VuZCBtZSBzb21ldGhpbmcsIEkgbWF5IGhhdmUgYW4gb3Bw
+b3J0dW5pdHkgdG8gcnVuIGl0IGJ5IHRoZW0gZm9yIHRoZW0gdG8gZ2l2ZSBtZSBtb3JlIHRpbWUu
+DQoNClNvbWUgb3RoZXIgdGhvdWdodHM6DQpBbm90aGVyIHRvcC1sZXZlbCB2aWV3IGJlc2lkZXMg
+YSAicHJlc2VudGF0aW9uIiBjYW4gYmUgYSAiZGVzaWduIGRvY3VtZW50IiBvciBldmVuIGEgInJl
+c2VhcmNoIHBhcGVyIiB3aXRoIGEgdGVtcGxhdGUgZGVmaW5lZC4NCg0KQmFzaWNhbGx5IGEgdmll
+dyBjYW4gYmUgc2VlbiBhcyBhIHRlbXBsYXRlIHdob3NlIGhvbGVzIGFyZSBmaWxsZWQgd2l0aCBw
+cm9tcHRzIEZST00gYSBzcGVjaWZpZWQgc291cmNlIG9mIHJhdyBpbmZvcm1hdGlvbiBhbmQgVVNJ
+TkcgYSBzcGVjaWZpZWQgd29ya2Zsb3cuIFRoZSBsYXR0ZXIgdHdvIGFyZSBvcHRpb25hbCBhbmQg
+ZGVmYXVsdCB0byAiYWxsIGluZm9ybWF0aW9uIiBhbmQgImxldCB0aGUgYWdlbnQgaW5mZXIgdGhl
+IHdvcmtmbG93Ii4NCg0KDQpCZXN0IFdpc2hlcywNClN1bWl0DQoNCl9fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fX19fDQpGcm9tOiBTYWRyYSBTYWJvdXJpIEhhbGVzdGFuaSA8c2Fib3VyaWhA
+dXNjLmVkdTxtYWlsdG86c2Fib3VyaWhAdXNjLmVkdT4+DQpTZW50OiBTdW5kYXksIE1heSAzLCAy
+MDI2IDEyOjI4IEFNDQpUbzogU3VtaXQgR3Vsd2FuaSA8c3VtaXRnQG1pY3Jvc29mdC5jb208bWFp
+bHRvOnN1bWl0Z0BtaWNyb3NvZnQuY29tPj4NCkNjOiBTb3V0aSBDaGF0dG9wYWRoeWF5IDxzY2hh
+dHRvcEB1c2MuZWR1PG1haWx0bzpzY2hhdHRvcEB1c2MuZWR1Pj4NClN1YmplY3Q6IFtFWFRFUk5B
+TF0gUmU6IFRodXJzZGF5IGRlbW8NCg0KSSBsaWtlZCB0aGUgaWRlYXMgaGVyZS4gTWlub3IgcG9p
+bnRzIHRoYXQgY291bGQgYXVnbWVudCB0aGUgaWRlYXM6DQoNCiAgKiAgIHdoZW4gd2UncmUgZGVm
+aW5pbmcgdGhlc2Ugdmlld3MgaXQncyBnb29kIHRvIHRoaW5rIGFib3V0IHRoZWlyIGdlbmVyYWxp
+emF0aW9uIGFzIHdlbGwuIGFzIHlvdSBtZW50aW9uZWQgaW4gdGhlIGxhc3QgZW1haWwgdGhlIHN1
+Yi12aWV3IGNvdWxkIGJlIGEgdXNlZnVsIG5hbWUgY29udmVudGlvbi4gZm9yIGV4YW1wbGUgL3N1
+bW1hcnkvcHJvYmxlbS1kZWZpbnRpb24sIC9wcmVzZW50YXRpb24vcmVsYXRlZC13b3JrLiBhdCB0
+aGUgb3RoZXIgaGFuZCBJIGRvbid0IHdhbnQgdG8gYm91bmQgdGhlIHVzZXIgYnkgZGVzaWduZXJz
+JyBjb25zdHJhaW50cy4gVGhlbiBJIHdvdWxkIHNheSBhbnkgcHJvbXB0cyB3ZSdyZSB1c2luZyB0
+byBhY2hpZXZlIG91ciAoc3ViKWdvYWxzIGlzIHRoZSBpbml0aWF0aW9uIG9mIGEgdmlldy4NCiAg
+KiAgIEkgbG92ZSB0aGUgb2YgYSBrbm93bGVkZ2Ugd2lraSB0byBhIGNvZGViYXNlLiBJdCBoYWQg
+YWxsIGNvbXBvbmVudHMgKFBSczogYWRkaW5nIHBlcnNvbmFsIGtub3dsZWRnZSB0byBjb21tb24g
+a25vd2xlZGdlLCBSZWZhY3RvcjogdHJpbW1pbmcgYW5kIHJlY29uc3RydWN0aW9uIGVudGl0aWVz
+IGluIGEgd2F5IHRoYXQgbWFrZXMgbW9yZSBlZmZpY2llbnQgcmVwcmVzZW50YXRpb24gb2YgdGhl
+IGRhdGEpLiBJbiBmYWN0IHRoaXMgY2FuIGJlIGEgbmljZSBjbG9zaW5nIHJlbWFya3MgdGhhdCBo
+ZWxwIHBlb3BsZSBpbWFnaW5lIHRoZSBjb21wb25lbnRzIG9mIG91ciBlbnZpc2lvbmVkIHN5c3Rl
+bS4NCiAgKiAgIHRoZSBsYXN0IHBhcnQgYWJvdXQgdXBkYXRpbmcgY3JlYXRpdmUgd29ya2Zsb3dz
+IGFsaWducyB3ZWxsIHdpdGggdGhlIFNLSUxMUy5tZCBmb3IgYWdlbnRzLg0KICAqICAgdGhlIGlk
+ZWFzIGluIHRoZSBsYXN0IGVtYWlsIHNvdW5kcyBnb29kIGJ1dCBJJ20gd29ycmllZCBhYm91dCBi
+ZWluZyB0b28gZmluZS1ncmFpbmVkIGZvciB0aGUgcHJlc2VudGF0aW9uIHdpdGggaGF2aW5nIHRv
+byBtYW55IGxheWVycy4NCg0KT24gU3VuLCBNYXkgMywgMjAyNiBhdCAxMjowN+KAr0FNIFN1bWl0
+IEd1bHdhbmkgPHN1bWl0Z0BtaWNyb3NvZnQuY29tPG1haWx0bzpzdW1pdGdAbWljcm9zb2Z0LmNv
+bT4+IHdyb3RlOg0KU28gdGhlIHByZXNlbnRhdGlvbiB3b3VsZCBqdXN0IGJlIGEgYnVuY2ggb2Yg
+dmlld3MgKHBlcmhhcHMgd2l0aCBub3Rpb24gb2Ygc3ViLXZpZXdzKSBpbiB3aGljaCBjYXNlIHRo
+ZSB0b3AtbGV2ZWwgdmlldyBJIGd1ZXNzIGlzIGp1c3QgYSBmb2xkZXIgbmFtZT8gRWFjaCAoc3Vi
+KXZpZXcgY2FuIGhhdmUgbXVsdGlwbGUgd29ya2Zsb3dzIGFzc29jaWF0ZWQgd2l0aCBpdC4gRm9y
+IGluc3RhbmNlLCBpZiB0aGUgaW5pdGlhbA0KU28gdGhlIHByZXNlbnRhdGlvbiB3b3VsZCBqdXN0
+IGJlIGEgYnVuY2ggb2Ygdmlld3MgKHBlcmhhcHMgd2l0aCBub3Rpb24gb2Ygc3ViLXZpZXdzKSBp
+biB3aGljaCBjYXNlIHRoZSB0b3AtbGV2ZWwgdmlldyBJIGd1ZXNzIGlzIGp1c3QgYSBmb2xkZXIg
+bmFtZT8NCg0KRWFjaCAoc3ViKXZpZXcgY2FuIGhhdmUgbXVsdGlwbGUgd29ya2Zsb3dzIGFzc29j
+aWF0ZWQgd2l0aCBpdC4gRm9yIGluc3RhbmNlLCBpZiB0aGUgaW5pdGlhbCB3b3JrZmxvdyBpcyBl
+bXB0eSwgYW5kIEkgZG8gbm90IGxpa2UgdGhlIHJlc3VsdCwgdGhlbiBJIGNhbiBkZWZpbmUgYW5v
+dGhlciB3b3JrZmxvdyB0aGF0IHByb3ZpZGVzIG1vcmUgZGV0YWlsZWQgZ3VpZGFuY2UgdG8gdGhl
+IHN5c3RlbS4gRm9yIGluc3RhbmNlLCBJIGNhbiBkZWZpbmUgYSB2aWV3IGFzICJyZWxhdGVkIHdv
+cmsiIGJ1dCB0aGVuIGlmIEkgZG8gbm90IGxpa2Ugd2hhdCB0aGUgc3lzdGVtIHB1bGwgb3V0LCBJ
+IGNhbiBwcm92aWRlIG1vcmUgY29uc3RydWN0aXZlIHNwZWNpZmljYXRpb24gc3VjaCBhcyB0aGUg
+cmVsYXRlZCB3b3JrIHdpbGwgaGF2ZSB0d28gcGFydHM6IGNvbXBhcmlzb24gd2l0aCBLQnMgb2Yg
+dGhlIHBhc3QgYW5kIG5ldyB3b3JrIChzdWNoIGFzIFRlYW1zIHRlbXBsYXRlcykuIE5vdCBzdXJl
+IGlmIHRoaXMgc2hvdWxkIGJlIHNlZW4gYXMgd29ya2Zsb3cgb3IgcGVyaGFwcyBhIG1vcmUgZGV0
+YWlsZWQgZ3VpZGFuY2UgZm9yIHRoZSB2aWV3IHByb21wdC4NCg0KV2UgY2FuIGFsc28gc2hvdyB0
+aGUgZGlmZmVyZW5jZSBiZXR3ZWVuIHRoZSBpZGVhIG9mIHJlLXByb2Nlc3NpbmcgYmFzZWQgb24g
+dGhlIG91dHB1dCBnZW5lcmF0ZWQgaW4gdGhlIGZpcnN0IHJvdW5kLiBUaGVzZSBjYW4gYmUgc2hv
+d24gYXMgIkFsdGVybmF0ZXMiIGZvciB0aGF0IHZpZXcgKGVhY2ggImFsdGVybmF0ZSIgaXMgYXNz
+b2NpYXRlZCB3aXRoIHNvbWUgd29ya2Zsb3csIG9yIHBlcmhhcHMgZXZlbiB3aXRoIGEgc21hbGxl
+ciBzZXQgb2YgaW5wdXQgdHJhbnNjcmlwdHMgKGlmIHRoZSB1c2VyIHdhbnRzIHRvIGNvbnRyb2wg
+dGhhdOKAlC1haGEsIHRoYXQgY2FuIGJlIG9uZSB3YXkgdG8gc2hvdyB0ZW1wb3JhbCBhc3BlY3Qp
+Lg0KDQpTbywgYW4gImFsdGVybmF0ZSIgb3IgcmVuZGVyaW5nIG9mIGEgdmlldyBpcyBhIGZ1bmN0
+aW9uIG9mIHRoZSBwcm9tcHQgZm9yIHRoYXQgdmlldywgYSBwb3RlbnRpYWwgd29ya2Zsb3cgdGhh
+dCB0aGUgdXNlciBzcGVjaWZpZWQsIGFuZCBhbiBvcHRpb25hbCBzZWxlY3Rpb24gb2YgdGhlIHJh
+dyBkYXRhIHRoYXQgdGhlIHVzZXIgc3BlY2lmaWVkLg0KDQoNCl9fX19fX19fX19fX19fX19fX19f
+X19fX19fX19fX19fDQpGcm9tOiBTdW1pdCBHdWx3YW5pIDxzdW1pdGdAbWljcm9zb2Z0LmNvbTxt
+YWlsdG86c3VtaXRnQG1pY3Jvc29mdC5jb20+Pg0KU2VudDogU2F0dXJkYXksIE1heSAyLCAyMDI2
+IDExOjUyIFBNDQpUbzogU2FkcmEgU2Fib3VyaSBIYWxlc3RhbmkgPHNhYm91cmloQHVzYy5lZHU8
+bWFpbHRvOnNhYm91cmloQHVzYy5lZHU+Pg0KQ2M6IFNvdXRpIENoYXR0b3BhZGh5YXkgPHNjaGF0
+dG9wQHVzYy5lZHU8bWFpbHRvOnNjaGF0dG9wQHVzYy5lZHU+Pg0KU3ViamVjdDogUmU6IFRodXJz
+ZGF5IGRlbW8NCg0KQW5kIHRoZW4gb24gdGhlIHRlY2huaWNhbCBpZGVhcyBwYXJ0Og0KT25lIHRl
+Y2huaWNhbCBpZGVhIGlzIGFib3V0IGRlZmluaW5nIHZpZXdzL3dvcmtmbG93cy4gVGhlcmUgb25l
+IHNlY3Rpb24gY2FuIGJlIGFib3V0IGEgYnVuY2ggb2YgYnVsbGV0cyBmb3IgImNyZWF0aXZlIHZp
+ZXdzIi4gRWFjaCBvZiB0aGVzZSBpcyBhc3NvY2lhdGVkIHdpdGggYSBwcm9tcHQgKHN1Y2ggdGhh
+dCB0b21vcnJvdyBpZiB3ZSBkaXNjdXNzIGFub3RoZXIgZXhhbXBsZSBvZiBhIGNyZWF0aXZlIHZp
+ZXcgaW4gb3VyIHRyYW5zY3JpcHQsIGl0IHdpbGwgYmUgcHVsbGVkIGludG8gdGhpcyB2aWV3IGF1
+dG9tYXRpY2FsbHkpDQpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXw0KRnJvbTogU3Vt
+aXQgR3Vsd2FuaQ0KU2VudDogU2F0dXJkYXksIE1heSAyLCAyMDI2IDExOjQ3IFBNDQpUbzogU2Fk
+cmEgU2Fib3VyaSBIYWxlc3RhbmkgPHNhYm91cmloQHVzYy5lZHU8bWFpbHRvOnNhYm91cmloQHVz
+Yy5lZHU+Pg0KQ2M6IFNvdXRpIENoYXR0b3BhZGh5YXkgPHNjaGF0dG9wQHVzYy5lZHU8bWFpbHRv
+OnNjaGF0dG9wQHVzYy5lZHU+Pg0KU3ViamVjdDogVGh1cnNkYXkgZGVtbw0KDQpTb21lIG5vdGVz
+IHRoYXQgSSBoYWQgc3RhcnRlZCB3cml0aW5nIGJlZm9yZSB3ZSBnb3Qgb24gdGhlIGNhbGw6DQoN
+CkBTYWRyYTxtYWlsdG86c2Fib3VyaWhAdXNjLmVkdT46IGFsbCB0aGVzZSBlbWFpbHMgYXJlIGFs
+c28gZ29vZCBzb3VyY2Ugb2YgcmF3IGluZm8gZm9yIG91ciB3aWtpIPCfmYINCg0KSSBhbSB3b25k
+ZXJpbmcgaWYgd2UgY2FuIGRvIHRoZSBwcmVzZW50YXRpb24gdXNpbmcgb3VyIHdpa2kgaXRzZWxm
+IQ0KDQpUaGUgd2lraSBjb250YWlucyBtYW55IHJhdyBzb3VyY2VzIGluY2x1ZGluZyB0cmFuc2Ny
+aXB0cy4gTWFueSBvZiB0aGVzZSB0cmFuc2NyaXB0cyBhcmUgYWJvdXQgdGhlIEtCIHByb2Nlc3Mv
+cHJvamVjdC4gU28sIGFsbCB3ZSBoYXZlIHRvIGRvIGlzIHRvIGRlZmluZSBzb21lIHZpZXdzIHRo
+YXQgaGVscCBleHBsYWluIHRoZSBrZXkgcG9pbnRzIHRoYXQgSSB3YW50IHRvIGxhbmQuIEZvciBp
+bnN0YW5jZSwNCi1vbmUgc3VjaCB2aWV3IGNhbiBiZSBhYm91dCAicHJvYmxlbSBkZWZpbml0aW9u
+IiBvciAibW90aXZhdGlvbi9hcHBsaWNhdGlvbnMiLiBUaGlzIGNhbiBhbHNvIHB1bGwgaW4gdGhl
+IHNwZWNpZmljIHN0b3JpZXMgdGhhdCBJIGhhZCB0YWxrZWQgYWJvdXQ6IGNyZWF0aW9uIGFuZCBt
+YWludGVuYW5jZSBvZiBkZXNpZ24gZG9jcyBmcm9tIGEgY29sbGVjdGlvbiBvZiBUZWFtcyBjaGF0
+LCBhbmQgcGVvcGxlIHJldmlld3MsIGFuZCBjcmVhdGluZyBwcmVzZW50YXRpb25zLg0KDQotQW5v
+dGhlciBjYW4gYmUgYWJvdXQgInJlbGF0ZWQgd29yayIgd2hpY2ggY29udGFpbnMgdHdvIHBvaW50
+czogU2ltaWxhcml0aWVzIGFuZCBEaWZmZXJlbmNlcyB3aXRoIHRyYWRpdGlvbmFsIEtCcyBvZiB0
+aGUgcGFzdCwgd2hhdCBpcyBoYXBwZW5pbmcgaW4gdGhpcyBicm9hZCBhcmVhIHRvZGF5IGZvciBp
+bnN0YW5jZSwgVGVhbXMgY3VzdG9tIHRlbXBsYXRlcyBjYW4gYmUgc2VlbiBhcyB2aWV3cyAoYnV0
+IHdpdGhvdXQgd29ya2Zsb3dzKSBvbiB0b3Agb2YgYSBzaW5nbGUgdHJhbnNjcmlwdC4NCg0KLUFu
+b3RoZXIgY2FuIGJlIGFib3V0IHRoZSA0LTUga2V5IHRlY2huaWNhbCBpZGVhcyB0aGF0IHdlIGhh
+dmUgaGFkLg0KDQotV291bGQgYmUgZ29vZCB0byBzaG93Y2FzZSBzb21lIHNwZWNpZmljIHF1b3Rl
+cy9hbmFsb2dpZXMgYXQgdGhlIHJpZ2h0IHBsYWNlIHN1Y2ggYXMgImRlZ3JlZSBvZiBzZXBhcmF0
+aW9uIiB3aGVuIHdlIG1vdGl2YXRlIG1hc2hpbmcgdXAgb24gc2VtaS1wcml2YXRlIGluZm9ybWF0
+aW9uIHdoaWNoIEkgdGhpbmsgZGVzZXJ2ZXMgaXRzIG93biBidWxsZXQuIEFub3RoZXIgcGhpbG9z
+b3BoeSB3ZSBjYW4gbWVudGlvbiB0aGVyZSBpcyB0aGF0IG9mIHNpbXVsYXRpb24gaW52b2x2ZXMg
+aW5kaXZpZHVhbCBwcm9jZXNzaW5nL2Nob2ljZS1tYWtpbmcgYW5kIGNvbW11bmljYXRpb24uIE91
+ciB3aWtpIGNob2ljZXMgc2VlbSB0byBhY2NlbGVyYXRlIGJvdGggInByb2Nlc3NpbmciIG9mIGlu
+Zm9ybWF0aW9uIGludG8ga25vd2xlZGdlIGFuZCBjb21tdW5pY2F0aW9uIChieSBhbGxvd2luZyB0
+byBicmluZyBpbiBzZW1pLXByaXZhdGUgaW5mbykNCg0KLUFub3RoZXIgYW5hbG9neSB0aGF0IHdv
+dWxkIGJlIGdvb2QgdG8gdGFsayBhYm91dCBpcyB3aXRoIHJlc3BlY3QgdG8gY29kaW5nLiBKdXN0
+IGFzIHdlIHNlZWsgInNwZWNpZmljYXRpb24gbWVjaGFuaXNtIiBhbmQgIklERXMiIG9mIHRoZSBm
+dXR1cmUgaW4gdGhlIGZ1dHVyZSBvZiBjb2RpbmcsIHdlIGhhdmUgdGhlIHNhbWUgcXVlc3Rpb25z
+IGZvciBrbm93bGVkZ2Ugd29yayAtIHdoaWNoIGlzIHdoYXQgb3VyIHdpa2kgaXMgZG9pbmcuIE9u
+ZSBrZXkgZGlmZmVyZW5jZSB0aG91Z2ggaXMgdGhhdCBvdXIgc3lzdGVtIGlzIGFkZGl0aXZlICht
+b3JlIGluZm9ybWF0aW9uIGNhbiBiZSBhZGRlZCB0byB0aGUgc3lzdGVtIGF0IGFueSB0aW1lLCBh
+bmQgdGhlIHN5c3RlbSBzaG91bGQgdXBkYXRlIC0gSSB3b25kZXIgdGhvdWdoIGlmIHRoYXQgY2Fu
+IGJlIHJlbGF0ZWQgdG8gYWRkaW5nIG9mIG1vcmUgdGVzdCBjYXNlcyDwn5mCKQ0K
+
+--_000_SA6PR00MB2325D04E1C0CA2902015E21FD0302SA6PR00MB2325namp_
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!-- BaNnErBlUrFlE-BoDy-start -->
+<!-- Preheader Text : BEGIN -->
+<div style=3D"display:none !important;display:none;visibility:hidden;mso-hi=
+de:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;opacity:0=
+;overflow:hidden;">
+3. Aha, I see what you mean by the &quot;skills&quot; connection. Yes, that=
+'d be a good analogy to use, especially as these workflows may be applied t=
+o multiple views. So one may think of &quot;workflows&quot; as a special ki=
+nd of &quot;skills&quot;</div>
+<!-- Preheader Text : END -->
+
+<!-- Email Banner : BEGIN -->
+<div style=3D"display:none !important;display:none;visibility:hidden;mso-hi=
+de:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;opacity:0=
+;overflow:hidden;">ZjQcmQRYFpfptBannerStart</div>
+
+<!--[if ((ie)|(mso))]>
+  <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" st=
+yle=3D"padding: 0px 0px 10px 0px; direction: ltr" lang=3D"en"><tr><td>
+    <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"paddin=
+g: 0px 8px 6px 8px; width: 100%; border-radius:4px; border-top:4px solid #9=
+0a4ae;background-color:#d0d8dc;"><tr><td valign=3D"top">
+      <table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" style=3D"padding: 0px 8px 4px 8px; font-size: 12px; line-height: 16px">
+	<tr><td style=3D"color:#000000; font-family: 'Arial', sans-serif; font-wei=
+ght:bold; font-size:14px; line-height: 20px; direction: ltr">
+	  External Sender
+	</td></tr>
+	<tr><td style=3D"color:#000000; font-weight:normal; font-family: 'Arial', =
+sans-serif; font-size:12px; direction: ltr">
+          This message is an inbound email from an external sender. Please =
+exercise caution when opening attachments or clicking links.
+	</td></tr>
+
+      </table>
+      <![if ie]><br clear=3D"all"><![endif]>
+      <table align=3D"right" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" style=3D"padding: 0px 0px 4px 0px; font-size: 14px; line-height: 36px"><=
+tr>
+	<td style=3D"direction: ltr">&nbsp;&nbsp;<a target=3D"_blank" href=3D"http=
+s://us-phishalarm-ewt.proofpoint.com/EWT/v1/LIr3w8kk_Xxm!PrblAsT2d65E9ueZDv=
+jUpzJ0EeBjvAXTCSLOFANZwRjCD6ttku1JHc_aHZqNcn2VoU_Pn12RRJ_fT183wguMxapHApcsp=
+7v4PnWc5mdij5uKgBSoN4o_WPnk5VbENazFngSPeS_OsCs$" style=3D"mso-padding-alt: =
+7px; padding: 7px; border-radius: 2px; border: 1px solid #666666; "><strong=
+ style=3D"font-weight: normal; color: #000000; text-decoration: none; font-=
+family: 'Arial', sans-serif; font-size: 14px;">&nbsp;&nbsp;Report&nbsp;Susp=
+icious&nbsp;&nbsp;</strong></a>&nbsp;&nbsp;&zwnj; </td>
+      </tr></table>
+    </td></tr></table>
+  </td></tr></table>
+<![endif]-->
+
+<![if !((ie)|(mso))]>
+  <div dir=3D"ltr" lang=3D"en" id=3D"pfptBannerilfiljb" style=3D"all: rever=
+t !important; display:block !important; text-align: left !important; margin=
+: 0 0 10px 0 !important; padding:7px 16px 8px 16px !important; border-radiu=
+s: 4px !important; min-width: 200px !important; background-color: #d0d8dc !=
+important; background-color: #d0d8dc; border-top: 4px solid #90a4ae !import=
+ant; border-top: 4px solid #90a4ae;">
+    <div id=3D"pfptBannerilfiljb" style=3D"all: unset !important; float:lef=
+t !important; display:block !important; margin: 1px 0 1px 0 !important; max=
+-width: 600px !important;">
+      <div id=3D"pfptBannerilfiljb" style=3D"all: unset !important; display=
+:block !important; visibility: visible !important; background-color: #d0d8d=
+c !important; color:#000000 !important; color:#000000; font-family: 'Arial'=
+, sans-serif !important; font-family: 'Arial', sans-serif; font-weight:bold=
+ !important; font-weight:bold; font-size:14px !important; line-height:1.29 =
+!important; line-height:1.29">
+	External Sender
+      </div>
+      <div id=3D"pfptBannerilfiljb" style=3D"all: unset !important; display=
+:block !important; visibility: visible !important; background-color: #d0d8d=
+c !important; color:#000000 !important; color:#000000; font-weight:normal; =
+font-family: 'Arial', sans-serif !important; font-family: 'Arial', sans-ser=
+if; font-size:12px !important; line-height:1.5 !important; line-height:1.5;=
+ margin-top:2px !important;">
+This message is an inbound email from an external sender. Please exercise c=
+aution when opening attachments or clicking links.
+      </div>
+
+    </div>
+    <div id=3D"pfptBannerilfiljb" style=3D"all: unset !important; float: ri=
+ght !important; display: block !important; display: block; margin-left: 16p=
+x !important; margin-top: 1px !important; text-align: right !important; wid=
+th: fit-content !important; font-size: 12px !important">
+<a id=3D"pfptBannerilfiljb" href=3D"https://us-phishalarm-ewt.proofpoint.co=
+m/EWT/v1/LIr3w8kk_Xxm!PrblAsT2d65E9ueZDvjUpzJ0EeBjvAXTCSLOFANZwRjCD6ttku1JH=
+c_aHZqNcn2VoU_Pn12RRJ_fT183wguMxapHApcsp7v4PnWc5mdij5uKgBSoN4o_WPnk5VbENazF=
+ngSPeS_OsCs$"
+    style=3D"all: unset !important; display: inline-block !important; text-=
+decoration: none">
+    <div class=3D"pfptPrimaryButtonilfiljb" style=3D"display: inline-block =
+!important; display: inline-block; visibility: visible !important; opacity:=
+ 1 !important; color: #000000 !important; color: #000000; font-family: 'Ari=
+al', sans-serif !important; font-family: 'Arial', sans-serif; font-size: 14=
+px !important;  font-weight: normal !important; text-decoration: none !impo=
+rtant; border-radius: 2px !important; margin-top: 3px !important; margin-bo=
+ttom: 3px !important; margin-left: 16px !important; padding: 7.5px 16px !im=
+portant; white-space: nowrap !important; width: fit-content !important;
+	border: 1px solid #666666">
+	Report&nbsp;Suspicious
+    </div>
+</a>
+    </div>
+    <div style=3D"clear: both !important; display: block !important; visibi=
+lity: hidden !important; line-height: 0 !important; font-size: 0.01px !impo=
+rtant; height: 0px">&nbsp;</div>
+  </div>
+<![endif]>
+
+<div style=3D"display:none !important;display:none;visibility:hidden;mso-hi=
+de:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;opacity:0=
+;overflow:hidden;">ZjQcmQRYFpfptBannerEnd</div>
+<!-- Email Banner : END -->
+
+<!-- BaNnErBlUrFlE-BoDy-end -->
+<html>
+<head><!-- BaNnErBlUrFlE-HeAdEr-start -->
+<style>
+  #pfptBannerilfiljb { all: revert !important; display: block !important;
+    visibility: visible !important; opacity: 1 !important;
+    background-color: #d0d8dc !important;
+    max-width: none !important; max-height: none !important }
+  .pfptPrimaryButtonilfiljb:hover, .pfptPrimaryButtonilfiljb:focus {
+    background-color: #b4c1c7 !important; }
+  .pfptPrimaryButtonilfiljb:active {
+    background-color: #90a4ae !important; }
+  html:root, html:root>body { all: revert !important; display: block !impor=
+tant;
+    visibility: visible !important; opacity: 1 !important; }
+</style>
+
+<!-- BaNnErBlUrFlE-HeAdEr-end -->
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; c=
+olor: rgb(0, 0, 0);">
+3. Aha, I see what you mean by the &quot;skills&quot; connection. Yes, that=
+'d be a good analogy to use, especially as these workflows may be applied t=
+o multiple views. So one may think of &quot;workflows&quot; as a special ki=
+nd of &quot;skills&quot; that may also be definable and buildable
+ via some graphic language of constructs that we may discover such as proce=
+ssing and repeating blocks.&nbsp;</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; c=
+olor: rgb(0, 0, 0);">
+Some notes that I shared with them to request more time for now: &nbsp;</di=
+v>
+<div style=3D"margin-top: 1em; margin-bottom: 1em; font-family: Aptos, Apto=
+s_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-s=
+ize: 11pt; color: rgb(0, 0, 0);">
+-The VIEWS on top of this wiki/KB management is the future of Office and kn=
+owledge work. For instance, one view can be a table, or a design document, =
+or even a presentation. [In fact, I am thinking of using this &quot;present=
+ation&quot; view to present the ideas and
+ in that sense the title of this presentation would be something along the =
+lines of &quot;presentation about this presentation&quot; or &quot;about it=
+self&quot; &nbsp;&nbsp;- and for that what I have done is tens of conversat=
+ions/meetings since you signed me up where this entire presentation
+ will come to life out of those transcripts/emails/Teams-chats and without =
+any hand-specific curation&nbsp;</div>
+<div style=3D"margin-top: 1em; margin-bottom: 1em; font-family: Aptos, Apto=
+s_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-s=
+ize: 11pt; color: rgb(0, 0, 0);">
+-Ability to mash &quot;semi-private information&quot; (for lack of a better=
+ term), wherein say an exchange between you and me can be filtered to enric=
+h this KB that relates to a specific topic/group. Our exchange might be pri=
+vate to us and might be on a variety of topics,
+ but with appropriate filters, we both may be ok for it to be distilled to =
+enrich a given KB. This is HUGE because if you think about how to simulate =
+life, there are 2 key components I think: information processing and choice=
+ making by an individual AND communication
+ between individuals. The beautiful thing about this world is that we have =
+a small degree of separation (6) between any two individuals, and with this=
+ concept of semi-private-info mash (following all differential privacy norm=
+s) would be key to accelerate progress/evolution
+ of any KB and thus any organization/society. The best place to experiment =
+with this concept would be a large organization like Excel or Microsoft.&nb=
+sp;</div>
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+side note: the reason why I noted that down above is that all this is going=
+ into my raw sources to enrich my KB, and hopefully that leads to a better =
+presentation of Thu. And it was all human written (want to strictly separat=
+e that from AI-generated &quot;slop&quot;)&nbsp;</div>
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+A very surreal observation: Today I maintain my KB in a more primitive fash=
+ion, but few days ago, I noticed that my agent (Claude Code CLI) became sma=
+rt enough to start summarizing my content and organizing it in more interes=
+ting ways. As I was trying to get
+ something done too quickly, I chided it to not try to be too smart and sti=
+ll do things the original (dumb) way as I was not yet ready for a transitio=
+n to V2 myself.&nbsp;</div>
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+&nbsp;</div>
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb(0, 0, 0);">
+But now that I think about it, it was using terms like &quot;minimal specs&=
+quot; and &quot;KB&quot; and its summary was starting to be organized diffe=
+rently. It was very very surreal, almost as if the system had consciousness=
+ (as it started to do things that I never asked it to,
+ but it just learned about those from my raw notes and processed newsletter=
+s!).&nbsp;</div>
+<div style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size=
+: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<hr style=3D"display: inline-block; width: 98%;">
+<div style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size=
+: 12pt; color: rgb(0, 0, 0);">
+<b>From:</b>&nbsp;Sadra Sabouri Halestani &lt;sabourih@usc.edu&gt;<br>
+<b>Sent:</b>&nbsp;Sunday, May 3, 2026 8:25 AM<br>
+<b>To:</b>&nbsp;Sumit Gulwani &lt;sumitg@microsoft.com&gt;<br>
+<b>Cc:</b>&nbsp;Souti Chattopadhyay &lt;schattop@usc.edu&gt;<br>
+<b>Subject:</b>&nbsp;Re: [EXTERNAL] Re: Thursday demo </div>
+<div style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size=
+: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: arial, sans-serif;">1. yes that'=
+s what I meant</div>
+<div style=3D"direction: ltr; font-family: arial, sans-serif;">2. <span sty=
+le=3D"background-color: initial;">
+that's</span>&nbsp;a good idea. <span style=3D"background-color: initial;">=
+will</span>&nbsp;work on that.</div>
+<div style=3D"direction: ltr; font-family: arial, sans-serif;">3. similar&n=
+bsp;to how users define custom skills to define workflows for different tas=
+ks. these workflows are predefined (probably tested to be somewhat optimal)=
+ workflows&nbsp;to provide a certain view</div>
+<div style=3D"direction: ltr; font-family: arial, sans-serif;">4. ok I will=
+ work on it today to have raw contents at least that gives gist of the bigg=
+er idea</div>
+<div style=3D"direction: ltr; font-family: arial, sans-serif;"><br>
+</div>
+<div style=3D"direction: ltr; font-family: arial, sans-serif;">completely a=
+gree on the last two
+<span style=3D"background-color: initial;">part</span>&nbsp;mentioned.</div>
+<div><br>
+</div>
+<div style=3D"direction: ltr;">On Sun, May 3, 2026 at 1:31=E2=80=AFAM Sumit=
+ Gulwani &lt;<a href=3D"mailto:sumitg@microsoft.com" id=3D"OWA95aa5a1f-d955=
+-bb6e-72bd-380e9b07f6e0" class=3D"OWAAutoLink">sumitg@microsoft.com</a>&gt;=
+ wrote:</div>
+<blockquote style=3D"margin: 0px 0px 0px 0.8ex; padding-left: 1ex; border-l=
+eft: 1px solid rgb(204, 204, 204);">
+<div style=3D"line-height: 1px; max-height: 0px; display: none; font-size: =
+1px; color: rgb(255, 255, 255);">
+1. I love this hierarchical structure. By &quot;I don't want to bound the u=
+ser by designers' constraints&quot;, do you mean that users should be able =
+to define their own views and sub-views for themselves, right? 2. Love this=
+ connection to coding.=E2=80=8A</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+1. I love this hierarchical structure. By &quot;I don't want to&nbsp;bound =
+the user by designers' constraints&quot;, do you mean that users should be =
+able to define their own views and sub-views for themselves, right?&nbsp;</=
+div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+2. Love this connection to coding. I think this is genuinely spread out acr=
+oss multiple transcripts. Lets pull in a view that describes comparison to =
+coding, bootstrapped out of our transcripts.&nbsp;</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+3. Not sure I understand the connection with skills.md. I would think that =
+this is in the same category as the point 2 above where this general idea i=
+s genuinely spread out across multiple transcripts.&nbsp;</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+4. Not sure I understand this. Are you saying we have too much content. The=
+re I can just walk through a smaller number of views depending on time. But=
+ my hope is that this is so damn impressive that they should give me more t=
+ime for a demo. Thats why the earlier
+ you can send me something, I may have an opportunity to run it by them for=
+ them to give me more time.&nbsp;</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+Some other thoughts:&nbsp;</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+Another top-level view besides a &quot;presentation&quot; can be a &quot;de=
+sign document&quot; or even a &quot;research paper&quot; with a template de=
+fined.&nbsp;&nbsp;</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+Basically a view can be seen as a template whose holes are filled with prom=
+pts FROM a specified source of raw information and USING a specified workfl=
+ow. The latter two are optional and default to &quot;all information&quot; =
+and &quot;let the agent infer the workflow&quot;.&nbsp;</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+Best Wishes,</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+Sumit</div>
+<div style=3D"direction: ltr; font-family: Calibri, Arial, Helvetica, sans-=
+serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<hr style=3D"direction: ltr; display: inline-block; width: 98%;">
+<div style=3D"direction: ltr; font-family: Calibri, Arial, Helvetica, sans-=
+serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<b>From:</b>&nbsp;Sadra Sabouri Halestani &lt;<a href=3D"mailto:sabourih@us=
+c.edu" id=3D"OWA22081bed-6f85-52a2-244e-cd6d5893291f" class=3D"OWAAutoLink"=
+>sabourih@usc.edu</a>&gt;<br>
+<b>Sent:</b>&nbsp;Sunday, May 3, 2026 12:28 AM<br>
+<b>To:</b>&nbsp;Sumit Gulwani &lt;<a href=3D"mailto:sumitg@microsoft.com" i=
+d=3D"OWA60a223d6-0373-a77b-f00c-0409c9a941b5" class=3D"OWAAutoLink">sumitg@=
+microsoft.com</a>&gt;<br>
+<b>Cc:</b>&nbsp;Souti Chattopadhyay &lt;<a href=3D"mailto:schattop@usc.edu"=
+ id=3D"OWA1bb480e5-938c-f839-b73e-b71e6ae9ae46" class=3D"OWAAutoLink">schat=
+top@usc.edu</a>&gt;<br>
+<b>Subject:</b>&nbsp;[EXTERNAL] Re: Thursday demo</div>
+<div style=3D"direction: ltr; font-family: Calibri, Arial, Helvetica, sans-=
+serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: arial, sans-serif;">I liked the =
+ideas here. Minor points that could augment the ideas:</div>
+<ul style=3D"direction: ltr;">
+<li style=3D"font-family: arial, sans-serif; direction: ltr;"><span style=
+=3D"background-color: initial;" role=3D"presentation">when</span>&nbsp;we'r=
+e defining&nbsp;these views it's&nbsp;good to&nbsp;think about their&nbsp;g=
+eneralization as well. as you mentioned in the last&nbsp;email the&nbsp;sub=
+-view
+ could be a&nbsp;useful&nbsp;name convention. for&nbsp;example /summary/<sp=
+an style=3D"background-color: initial;" role=3D"presentation">problem-defin=
+tion</span>, /presentation/related-work.
+<span style=3D"background-color: initial;" role=3D"presentation">at the</sp=
+an>&nbsp;other hand I don't want to&nbsp;bound the user by designers' const=
+raints. Then I would say any prompts&nbsp;we're using to&nbsp;achieve our&n=
+bsp;(sub)goals is the&nbsp;initiation&nbsp;of a view.</li><li style=3D"font=
+-family: arial, sans-serif; direction: ltr;">I love <span style=3D"backgrou=
+nd-color: initial;" role=3D"presentation">
+the of a knowledge</span>&nbsp;wiki to a codebase. It had all components (P=
+Rs: adding&nbsp;personal&nbsp;knowledge&nbsp;to common knowledge, Refactor:=
+ trimming and reconstruction entities in a&nbsp;way that makes more efficie=
+nt representation of the&nbsp;data). In fact this can be a&nbsp;nice
+ closing <span style=3D"background-color: initial;" role=3D"presentation">r=
+emarks</span>&nbsp;that
+<span style=3D"background-color: initial;" role=3D"presentation">help</span=
+>&nbsp;people imagine the&nbsp;components of our envisioned system.</li><li=
+ style=3D"font-family: arial, sans-serif; direction: ltr;"><span style=3D"b=
+ackground-color: initial;" role=3D"presentation">the</span>&nbsp;last part =
+about updating creative workflows aligns well with the SKILLS.md for agents=
+.</li><li style=3D"font-family: arial, sans-serif; direction: ltr;"><span s=
+tyle=3D"background-color: initial;" role=3D"presentation">the</span>&nbsp;i=
+deas in the last email
+<span style=3D"background-color: initial;" role=3D"presentation">sounds</sp=
+an>&nbsp;good but I'm worried about being too fine-grained for the presenta=
+tion with having too many layers.</li></ul>
+<div style=3D"direction: ltr;"><br>
+</div>
+<div style=3D"direction: ltr;">On Sun, May 3, 2026 at 12:07=E2=80=AFAM Sumi=
+t Gulwani &lt;<a href=3D"mailto:sumitg@microsoft.com" id=3D"OWAf265659d-644=
+5-3c9d-96ba-b37ab85a8eee" class=3D"OWAAutoLink">sumitg@microsoft.com</a>&gt=
+; wrote:</div>
+<blockquote style=3D"margin: 0px 0px 0px 0.8ex; padding-left: 1ex; border-l=
+eft: 1px solid rgb(204, 204, 204);">
+<div style=3D"direction: ltr; line-height: 1px; max-height: 0px; display: n=
+one; font-size: 1px; color: rgb(255, 255, 255);">
+So the presentation would just be a bunch of views (perhaps with notion of =
+sub-views) in which case the top-level view I guess is just a folder name? =
+Each (sub)view can have multiple workflows associated with it. For instance=
+, if the initial</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+So the presentation would just be a bunch of views (perhaps with notion of =
+sub-views) in which case the top-level view I guess is just a folder name?<=
+/div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+Each (sub)view can have multiple workflows associated with it. For instance=
+, if the initial workflow is empty, and I do not like the result, then I ca=
+n define another workflow that provides more detailed guidance to the syste=
+m. For instance, I can define a
+ view as &quot;related work&quot; but then if I do not like what the system=
+ pull out, I can provide more constructive specification such as the relate=
+d work will have two parts: comparison with KBs of the past and new work (s=
+uch as Teams templates). Not sure if this
+ should be seen as workflow or perhaps a more detailed guidance for the vie=
+w prompt.</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+We can also show the difference between the idea of re-processing based on =
+the output generated in the first round. These can be shown as &quot;Altern=
+ates&quot; for that view (each &quot;alternate&quot; is associated with som=
+e workflow, or perhaps even with a smaller set of input
+ transcripts (if the user wants to control that=E2=80=94-aha, that can be o=
+ne way to show temporal aspect).&nbsp;</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+So, an &quot;alternate&quot; or rendering of a view is a function of the pr=
+ompt for that view, a potential workflow that the user specified, and an op=
+tional selection of the raw data that the user specified.&nbsp;</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Calibri, Arial, Helvetica, sans-=
+serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<hr style=3D"direction: ltr; display: inline-block; width: 98%;">
+<div style=3D"direction: ltr; font-family: Calibri, Arial, Helvetica, sans-=
+serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<b>From:</b>&nbsp;Sumit Gulwani &lt;<a href=3D"mailto:sumitg@microsoft.com"=
+ id=3D"OWAb5e7d6d9-bf28-f024-da4b-c15b8db0305d" class=3D"OWAAutoLink">sumit=
+g@microsoft.com</a>&gt;<br>
+<b>Sent:</b>&nbsp;Saturday, May 2, 2026 11:52 PM<br>
+<b>To:</b>&nbsp;Sadra Sabouri Halestani &lt;<a href=3D"mailto:sabourih@usc.=
+edu" id=3D"OWA84c3b5dd-7ac1-b51b-05b2-ec7e4c6d887b" class=3D"OWAAutoLink">s=
+abourih@usc.edu</a>&gt;<br>
+<b>Cc:</b>&nbsp;Souti Chattopadhyay &lt;<a href=3D"mailto:schattop@usc.edu"=
+ id=3D"OWA784e5cff-d1f4-ae07-bbdf-9775a77debea" class=3D"OWAAutoLink">schat=
+top@usc.edu</a>&gt;<br>
+<b>Subject:</b>&nbsp;Re: Thursday demo</div>
+<div style=3D"direction: ltr; font-family: Calibri, Arial, Helvetica, sans-=
+serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+And then on the technical ideas part:</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+One technical idea is about defining views/workflows. There one section can=
+ be about a bunch of bullets for &quot;creative views&quot;. Each of these =
+is associated with a prompt (such that tomorrow if we discuss another examp=
+le of a creative view in our transcript, it
+ will be pulled into this view automatically)</div>
+<hr style=3D"direction: ltr; display: inline-block; width: 98%;">
+<div id=3D"x_m_-4672745965390682704x_m_5958329264217467332x_divRplyFwdMsg">
+<div style=3D"direction: ltr; font-family: Calibri, sans-serif; font-size: =
+11pt; color: rgb(0, 0, 0);">
+<b>From:</b>&nbsp;Sumit Gulwani<br>
+<b>Sent:</b>&nbsp;Saturday, May 2, 2026 11:47 PM<br>
+<b>To:</b>&nbsp;Sadra Sabouri Halestani &lt;<a href=3D"mailto:sabourih@usc.=
+edu" id=3D"OWA7f7301a4-92bd-3e49-6966-7c82ea04d5b3" class=3D"OWAAutoLink">s=
+abourih@usc.edu</a>&gt;<br>
+<b>Cc:</b>&nbsp;Souti Chattopadhyay &lt;<a href=3D"mailto:schattop@usc.edu"=
+ id=3D"OWA9a08b954-3aff-0f40-ced2-fca3ed8db8e2" class=3D"OWAAutoLink">schat=
+top@usc.edu</a>&gt;<br>
+<b>Subject:</b>&nbsp;Thursday demo</div>
+<div style=3D"direction: ltr;">&nbsp;</div>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+Some notes that I had started writing before we got on the call:&nbsp;</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<a href=3D"mailto:sabourih@usc.edu" id=3D"OWAb5cd498e-16fe-5c4b-cd7c-c9ccd1=
+42dd5e" class=3D"OWAAutoLink">@Sadra</a>: all these emails are also good so=
+urce of raw info for our wiki =F0=9F=99=82</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+I am wondering if we can do the presentation using our wiki itself!</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+The wiki contains many raw sources including transcripts. Many of these tra=
+nscripts are about the KB process/project. So, all we have to do is to defi=
+ne some views that help explain the key points that I want to land. For ins=
+tance,</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+-one such view can be about &quot;problem definition&quot; or &quot;motivat=
+ion/applications&quot;. This can also pull in the specific stories that I h=
+ad talked about: creation and maintenance of design docs from a collection =
+of Teams chat, and people reviews, and creating presentations.&nbsp;</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+-Another can be about &quot;related work&quot; which contains two points: S=
+imilarities and Differences with traditional KBs of the past, what is happe=
+ning in this broad area today for instance, Teams custom templates can be s=
+een as views (but without workflows) on top
+ of a single transcript.&nbsp;</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+-Another can be about the 4-5 key technical ideas that we have had.</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+-Would be good to showcase some specific quotes/analogies at the right plac=
+e such as &quot;degree of separation&quot; when we motivate mashing up on s=
+emi-private information which I think deserves its own bullet. Another phil=
+osophy we can mention there is that of simulation
+ involves individual processing/choice-making and communication. Our wiki c=
+hoices seem to accelerate both &quot;processing&quot; of information into k=
+nowledge and communication (by allowing to bring in semi-private info)</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: rgb=
+(0, 0, 0);">
+-Another analogy that would be good to talk about is with respect to coding=
+. Just as we seek &quot;specification mechanism&quot; and &quot;IDEs&quot; =
+of the future in the future of coding, we have the same questions for knowl=
+edge work - which is what our wiki is doing. One key
+ difference though is that our system is additive (more information can be =
+added to the system at any time, and the system should update - I wonder th=
+ough if that can be related to adding of more test cases =F0=9F=99=82)</div>
+</blockquote>
+</blockquote>
+</body>
+</html>
+
+--_000_SA6PR00MB2325D04E1C0CA2902015E21FD0302SA6PR00MB2325namp_--

@@ -1,0 +1,1386 @@
+WEBVTT
+
+1
+00:00:01.690 --> 00:00:03.110
+GCS304C: Okay. Okay.
+
+2
+00:00:04.050 --> 00:00:13.139
+GCS304C: Another component… is that AI isn't really collaborative.
+
+3
+00:00:13.280 --> 00:00:32.049
+GCS304C: And I mean, there has been, like, this research and a very recent paper review that basically looked into every body of research that works in agent collaborative agents, like human AI collaborative agents, and what happens in most of these existing collaborative agents
+
+4
+00:00:32.049 --> 00:00:34.809
+GCS304C: The decision-making is not actually
+
+5
+00:00:34.810 --> 00:00:41.990
+GCS304C: back and forth between the human and the AI. It's, mostly or AI dominant, or human dominant.
+
+6
+00:00:42.270 --> 00:00:46.039
+GCS304C: Specifically, how this paper presented,
+
+7
+00:00:47.200 --> 00:01:00.180
+GCS304C: The human-AI collaboration is one of these three patterns. Either the AI gives a recommendation and the human accepts or overwrites it, or the human makes the decision and AI provides validation.
+
+8
+00:01:00.450 --> 00:01:14.870
+GCS304C: And… or AI makes decisions, and human mind monitors all others. So, as you can see, this is always in one direction, and the systems that actually have this bi-directional influence, or the shared reasoning process, is always its enforcement of paper.
+
+9
+00:01:14.870 --> 00:01:20.560
+GCS304C: Are actually very rare, and this is something that I intend to work as well.
+
+10
+00:01:20.620 --> 00:01:26.790
+GCS304C: As another component in my usage. Wait, can I ask you a question about this?
+
+11
+00:01:31.270 --> 00:01:42.870
+GCS304C: So, is… are these examples in the bullets, are these examples of bidirectional influence? Like, if I'm using Copilot… These are one-directional. These are one-directional. Like, just accepting it as one-directional. Accepting or…
+
+12
+00:01:43.110 --> 00:01:46.430
+GCS304C: Oh, yes. So, it's not,
+
+13
+00:01:46.790 --> 00:02:01.999
+GCS304C: like, back and forth between human and the AI. So, like, human accepts or overrides, there's… there should be something, like, like, human gives feedback. I see, to the AI. Yeah. Okay. You're saying that this is one-directional and blue for one-directional?
+
+14
+00:02:02.350 --> 00:02:03.270
+GCS304C: Yes.
+
+15
+00:02:04.490 --> 00:02:07.809
+GCS304C: I, I, yeah, I'm supposing they should be bi-directional.
+
+16
+00:02:08.550 --> 00:02:13.359
+GCS304C: Now, specifically, I… I want to focus on cognitive disalignment.
+
+17
+00:02:14.110 --> 00:02:18.639
+GCS304C: Like, this by direction… no, no, I just have… yeah, I forgot to say, sorry.
+
+18
+00:02:19.580 --> 00:02:26.590
+GCS304C: So, in order to make this bidirectional cognitive alignment between the human and the AI,
+
+19
+00:02:26.790 --> 00:02:29.910
+GCS304C: My research goal has two main…
+
+20
+00:02:29.950 --> 00:02:49.099
+GCS304C: components or steps. On the human side, we… I mentioned that there are certain gaps. So, on the human side, I need to identify… I want to identify issues on the user side that contribute to discovery misalignment. I need to know what they are and how they happen. And the other sign, which is the other direction, basically.
+
+21
+00:02:49.100 --> 00:02:54.210
+GCS304C: my research intent to make and improve AI tools that support creative alike.
+
+22
+00:02:54.970 --> 00:03:06.629
+GCS304C: And this, alignment and the design is gonna be basically informed by the findings from identifying gaps we have on the user side. These are very, you know, related to each other.
+
+23
+00:03:06.870 --> 00:03:09.929
+GCS304C: On the human side.
+
+24
+00:03:10.550 --> 00:03:21.230
+GCS304C: So far, the words I'm going to present today, or one of them, actually, I ask these questions. How do users use AI tools in tasks that require human problem solving?
+
+25
+00:03:21.920 --> 00:03:33.149
+GCS304C: This question addressed the first direction I presented, that I said that AI could lead to loss of creative agency. And the second question is that, how do users evaluate AI response in complex tasks?
+
+26
+00:03:33.410 --> 00:03:40.710
+GCS304C: Which, talks about the human gap in the other direction, when the human is responsible for evaluating another response.
+
+27
+00:03:42.860 --> 00:03:48.230
+GCS304C: Today I'm just presenting the first, like, the paper that present are just for the first component.
+
+28
+00:03:49.350 --> 00:03:57.530
+GCS304C: Oh, I also, wanted to mention that in these two papers, in one paper, I use,
+
+29
+00:03:57.660 --> 00:04:16.220
+GCS304C: developers as target participants, because developers engage in cognitive demanding and complex tasks on a daily basis, so, we can, like, they have that in our checklist. And, they use… they need problem-solving skills to solve these program tasks.
+
+30
+00:04:16.220 --> 00:04:18.340
+GCS304C: And, the teacher supports that.
+
+31
+00:04:18.500 --> 00:04:37.110
+GCS304C: And they have to have, like, critical evaluation as well. And also, 90% developers nowadays, even more, more recent times, probably use code generation tools such as StratGPT for coding, so we have the, like, the participants are engaged in clinical random tasks, and they use AI very, very quickly.
+
+32
+00:04:37.390 --> 00:04:48.080
+GCS304C: For the first question, I present the paper, like, taking the path of least resistance, exploring the impact of LN Traction on the creative process of programming.
+
+33
+00:04:48.300 --> 00:04:51.320
+GCS304C: And the second one, I don't consume, actually.
+
+34
+00:04:54.250 --> 00:04:55.160
+GCS304C: Great.
+
+35
+00:04:55.440 --> 00:04:58.850
+GCS304C: I don't know, should I mention the authors here?
+
+36
+00:04:59.330 --> 00:05:02.250
+GCS304C: You don't even need this. I don't need this, okay.
+
+37
+00:05:03.220 --> 00:05:14.179
+GCS304C: So, the goal is to understand how AI might impact the creative process appropriately, right? What could be the cognitive gaps? What is the misalignment here? To answer this question, I…
+
+38
+00:05:14.650 --> 00:05:21.750
+GCS304C: created these three research questions. How does… first question, how does L&M Assistant affect the creative solutions?
+
+39
+00:05:22.070 --> 00:05:25.669
+GCS304C: And then, what are the effects of,
+
+40
+00:05:25.850 --> 00:05:36.220
+GCS304C: LLM usage on creativity during this problem-solving process. And the last question, how LLM can support, creativity and LLM assistant programming.
+
+41
+00:05:37.530 --> 00:05:54.549
+GCS304C: To understand the impact, I designed a between-subject, experiment, where participants, which were, like, people who had programming experience, had to perform two programming tasks, one algorithmic and one design task.
+
+42
+00:05:54.720 --> 00:05:59.429
+GCS304C: In two different conditions. In one condition, they…
+
+43
+00:05:59.560 --> 00:06:10.819
+GCS304C: only had access to GitHub Copilot on the environment, they couldn't use any external resources, like, they couldn't Google or anything. And in another condition, they even didn't have access to the Copilot.
+
+44
+00:06:10.950 --> 00:06:14.500
+GCS304C: So, I… because I wanted to isolate the effects of…
+
+45
+00:06:14.930 --> 00:06:27.479
+GCS304C: LLM usage here, I had to, like, forbid them from using any external resources as well. During this calling process, I asked them to engage in interlock protocol, which is basically that you…
+
+46
+00:06:27.480 --> 00:06:43.530
+GCS304C: express out loud what your thinking process. It's not like explaining, it's just like you are explaining your thinking as you're, as, as you do it internally, you just express it. You practice this with them to make sure they know how to actually do that.
+
+47
+00:06:43.840 --> 00:06:50.299
+GCS304C: During the session, we observed them and recorded their screen and recorded their think aloud for later analysis.
+
+48
+00:06:50.570 --> 00:06:54.600
+GCS304C: Of course, the order of the sessions were randomized to mitigate order height.
+
+49
+00:06:55.740 --> 00:06:59.140
+GCS304C: Here is a more limited structure of how
+
+50
+00:06:59.290 --> 00:07:11.939
+GCS304C: they, how they perform each of these tasks. So, each of these conditions, as you can see, the unassisted condition, based on a randomized order, they either finish the system design task first, or the algorithm task.
+
+51
+00:07:12.240 --> 00:07:15.589
+GCS304C: They had a short 3-5 minute break between the tasks.
+
+52
+00:07:15.960 --> 00:07:30.119
+GCS304C: And then, at the end of each condition, we asked them… we did the retrospective interview for about 20 minutes, where we basically, asked them about language problem solving. We see the interview details later as well. But we wanted to see,
+
+53
+00:07:30.120 --> 00:07:37.650
+GCS304C: Like, the notes we took during the session, we wanted to call it some, the perception of the session as well, basically.
+
+54
+00:07:38.710 --> 00:07:56.399
+GCS304C: So we have different sources of input. We have the screen recordings and think-aloud, data, we had the final generated solutions and the interview transcript. On the screen recording and think-aloud, we, link them, transcript them at a time stamps, and then we perform the early coding.
+
+55
+00:07:56.610 --> 00:08:12.200
+GCS304C: On the generator solution, we performed some code analysis, like coordinates and completeness, and also critical features analysis, which we get into later. For the interviews, we perform thematic analysis, to better understand how they actually use data.
+
+56
+00:08:13.780 --> 00:08:16.620
+GCS304C: So in the… Behavioral coding,
+
+57
+00:08:17.650 --> 00:08:22.920
+GCS304C: the box that you have there means that we were coding is actually coding entirely. Yes, most of that.
+
+58
+00:08:23.310 --> 00:08:38.779
+GCS304C: So, like, with behavioral coding, is it something more than just the cascaded action coding and kmatic analysis? Behavioral coding is… like, I did the action coding first, and then using thematic analysis and the actions, like, behavioral coding.
+
+59
+00:08:41.309 --> 00:08:44.109
+GCS304C: Didn't really be more clear if I, like, making sequential?
+
+60
+00:08:44.350 --> 00:09:03.320
+GCS304C: No, no, it's good, because I haven't heard of behavioral coding, I was trying to find the definition of that. This, this means that behavioral coding is action coding and data analysis. If that's what you meant, it's okay. Yeah, I think behavioral coding is something that, like, archery could do, so that…
+
+61
+00:09:08.250 --> 00:09:23.469
+GCS304C: In the, in the, in the interview, which was some instruction interview, we explored, problem-solving strategies, how they use LNM, and how they impact it. Here are some core example questions that they asked in the interview.
+
+62
+00:09:23.470 --> 00:09:34.300
+GCS304C: How was your general experience? How did you strategize the solution? And we followed up by asking, did the LLM offer strategies or approaches you wouldn't have thought of? We wanted to see if the LLM can
+
+63
+00:09:34.310 --> 00:09:50.819
+GCS304C: Like, whether it inspired people to another solution or not. And we asked them if they had any creative or aha moments. We identified, we defined for them what is this aha creative moment exactly. And we asked, like, we followed what was the trigger of this aha moment.
+
+64
+00:09:52.890 --> 00:10:03.319
+GCS304C: Here's a demographic table of our participants. Our final participants were 20, we recruited 23, 3 dropped out the middle of the experiment.
+
+65
+00:10:03.320 --> 00:10:16.859
+GCS304C: We recruited them to snowball and convenience sampling. Our inclusion criteria were familiarity with LLM-based code generation tools, such as ChatGPT, Gemini, and having experience in Python program.
+
+66
+00:10:17.380 --> 00:10:21.660
+GCS304C: And we try to make the gender and the educational level balanced.
+
+67
+00:10:22.510 --> 00:10:23.490
+GCS304C: How?
+
+68
+00:10:24.400 --> 00:10:28.989
+GCS304C: So educational level, like, 50% of each gender.
+
+69
+00:10:29.760 --> 00:10:33.949
+GCS304C: So you had a first recruitment phase, and then start from now?
+
+70
+00:10:34.260 --> 00:10:35.260
+GCS304C: Yes.
+
+71
+00:10:38.710 --> 00:10:45.320
+GCS304C: Okay, action coding. So… What is action coding? Action…
+
+72
+00:10:45.650 --> 00:10:49.869
+GCS304C: In this context, it's defined as a final step, co-directed step.
+
+73
+00:10:50.000 --> 00:10:58.799
+GCS304C: which is taken by a participant during programming. So, if you look at the table, you can see what actions are defined in our context.
+
+74
+00:10:58.970 --> 00:11:06.769
+GCS304C: Examining, we have read, which means examining information from artifacts, ideating, then the participant was coming out with the…
+
+75
+00:11:06.910 --> 00:11:10.470
+GCS304C: idea or constructing a solution they had in mind.
+
+76
+00:11:10.480 --> 00:11:27.500
+GCS304C: edit, which was basically any changes they made to the code, adding something, removing, or just changing something. And any big other completion was when they made any code with the… when they… any changes to the code that they used with the help of AI. Like, they covered basically something from the response, and then replaced it into the
+
+77
+00:11:27.670 --> 00:11:33.910
+GCS304C: Editor, or, they had, Excited.
+
+78
+00:11:34.020 --> 00:11:38.649
+GCS304C: Okay, let's… At the complex. Oh, in lieu of the complex.
+
+79
+00:11:39.700 --> 00:11:56.529
+GCS304C: And the execute action was basically when they compiled or run the code. Inquirers inquire because, participant had access to AI into cell conditions. It was when the participant, was prompting the co-pilot.
+
+80
+00:11:56.620 --> 00:12:08.799
+GCS304C: Adult co-pilot is when they decided to accept the response that was generated in the IDE and ignore it when they decided to not basically accept it, and pressed cancel.
+
+81
+00:12:13.060 --> 00:12:20.719
+GCS304C: This is an example of what the segment of what action coding basically looks like. We have a goal, which is like the…
+
+82
+00:12:21.430 --> 00:12:25.350
+GCS304C: over, like… Like, the biggest,
+
+83
+00:12:25.670 --> 00:12:35.120
+GCS304C: goal of what the user is trying to do with the set of actions. And then verbalization is clean transcription of what they were thinking aloud.
+
+84
+00:12:35.280 --> 00:12:36.850
+GCS304C: And, in this…
+
+85
+00:12:41.660 --> 00:12:49.910
+GCS304C: And, we used the screen recording, basically, to identify whether they were reading or isolating as well. We had the video of that.
+
+86
+00:12:51.710 --> 00:12:59.570
+GCS304C: A moment coding. So, in creativity study and creativity literature, basically, aha moment is an important concept.
+
+87
+00:12:59.810 --> 00:13:02.630
+GCS304C: Creative moments are identified by this
+
+88
+00:13:02.840 --> 00:13:10.209
+GCS304C: births of, like, epiphany or Urika moment, then you… Euryka moments.
+
+89
+00:13:10.470 --> 00:13:28.909
+GCS304C: when you, engage in ideation or give up a solution for… for some time, for an interval of time, and then you reach a moment, then you figure out the problem, what is that? What they call, basically, aha moment. You have, like, you sometimes say, aha, something like that. So, aha moments are… are a proxy of
+
+90
+00:13:29.190 --> 00:13:31.880
+GCS304C: Experiencing creative moments.
+
+91
+00:13:32.020 --> 00:13:47.369
+GCS304C: And in this study, we wanted to measure creativity process in the user by looking at aha moments. So, we coded every instance in which participants experienced an aha, or something, like, a similar reaction to that, which was,
+
+92
+00:13:47.680 --> 00:13:58.150
+GCS304C: suddenly, like, yikes, or oh my god, and, they had this, like, certain emotion with them. And, later in the retrospective interview, we…
+
+93
+00:13:58.340 --> 00:14:02.879
+GCS304C: We basically talked… took… took notes of this,
+
+94
+00:14:03.220 --> 00:14:11.529
+GCS304C: Aha moments, and then the perspective interview, we verified them with the user, whether there were too many aha moments, and they were not just what we received.
+
+95
+00:14:11.850 --> 00:14:18.029
+GCS304C: During the session as well, we collected some self-reported arm moments.
+
+96
+00:14:18.310 --> 00:14:23.530
+GCS304C: We created these pop-ups that came up at 5-minute intervals.
+
+97
+00:14:23.690 --> 00:14:29.999
+GCS304C: During the programming, and then they asked participants whether they had a MLS in the last 5 minutes or not.
+
+98
+00:14:32.210 --> 00:14:41.920
+GCS304C: Okay, let's get to the results. So, just to recap the recall, the first question was, how does LLM assist and affect creativity of solutions?
+
+99
+00:14:42.140 --> 00:14:49.289
+GCS304C: To answer this question, oh, before I jump to research, I know this like you, probably, that the creativity
+
+100
+00:14:49.760 --> 00:14:55.539
+GCS304C: a product in predictive literature is analyzed by two dimensions, usefulness.
+
+101
+00:14:55.950 --> 00:15:02.630
+GCS304C: And novelty. Usefulness, it means that the problem works, and novelty means unique. You haven't seen, like, it before.
+
+102
+00:15:02.710 --> 00:15:17.069
+GCS304C: So, we wanted to look at these specific aspects of the code. For usefulness, we looked at code characteristics of the code, which is, like, the immediate results we can get from a Python code. This comes from, like, syntax only.
+
+103
+00:15:17.070 --> 00:15:25.959
+GCS304C: We used Cardinal frameworks, like Raiden and ASP, and we extracted the features that, in literature, could be indicative of creative programming.
+
+104
+00:15:26.090 --> 00:15:27.849
+GCS304C: Because they show, like, their…
+
+105
+00:15:27.990 --> 00:15:39.419
+GCS304C: you know, the important, useful features that we basically look in the code. Like, in the literature, when they want to analyze LLM-generated code, human-generated code, or they want to compare them, some of these features are used.
+
+106
+00:15:39.510 --> 00:15:49.870
+GCS304C: So, we, calculated these metrics, like number of function calls, number of external libraries, etc, and as you can see, we ran groups called Wallace tests.
+
+107
+00:15:50.000 --> 00:15:51.030
+GCS304C: And…
+
+108
+00:15:51.500 --> 00:16:08.420
+GCS304C: We, we noticed that, we observed that in the LLM-assisted conditions, those solutions were significantly… had significantly more function calls, more lines of code, and interestingly, they were less maintainable, like, a maintainability as well as work.
+
+109
+00:16:09.290 --> 00:16:17.730
+GCS304C: So the result that we have, how that, twice the usefulness.
+
+110
+00:16:19.980 --> 00:16:21.719
+GCS304C: With more and more functional calls.
+
+111
+00:16:26.450 --> 00:16:33.210
+GCS304C: Like, the lines of code, for example. Do you have supports for connecting these items to the usefulness? Like, ETS supports?
+
+112
+00:16:34.450 --> 00:16:42.329
+GCS304C: No, like, there isn't any literature that exactly says these are related to creativity.
+
+113
+00:16:43.430 --> 00:16:50.459
+GCS304C: But I see what you mean. I think people can… like this. Oh. Yeah.
+
+114
+00:16:50.810 --> 00:16:55.100
+GCS304C: What? What's this? Why is the B7 calculator? What?
+
+115
+00:16:55.970 --> 00:16:58.230
+GCS304C: Usability, where is it?
+
+116
+00:16:58.390 --> 00:16:59.210
+GCS304C: Which one?
+
+117
+00:17:00.120 --> 00:17:02.880
+GCS304C: Visibility is articulating, right?
+
+118
+00:17:03.080 --> 00:17:08.390
+GCS304C: No, first, I wasn't sure if I should mention usability at all.
+
+119
+00:17:09.260 --> 00:17:13.600
+GCS304C: I didn't add this slide here, but in the paper, I have a usability and novelty.
+
+120
+00:17:13.950 --> 00:17:22.159
+GCS304C: What is the concern? How lines of code, how number of functions tied to usability? Why is this usability?
+
+121
+00:17:23.040 --> 00:17:34.220
+GCS304C: I mean, it's another title. It's nothing, it's just comparing the different code, like, how do the code… Yeah. You say code characteristics in the title, why are you talking about usability?
+
+122
+00:17:35.150 --> 00:17:51.440
+GCS304C: But, but even not saying usability, I'm not sure how this ties to creativity. I think creativity is not bad. You cannot tie it to creativity, I agree. But, this is, like… This is just, like, the baseline. RQ-0, like, to see how… Is it different?
+
+123
+00:17:51.660 --> 00:17:53.850
+GCS304C: Like, how is… how do they differ?
+
+124
+00:17:54.100 --> 00:17:57.809
+GCS304C: Do they differ at all? If they don't differ, you don't need to do the rest of the research.
+
+125
+00:17:59.200 --> 00:18:03.190
+GCS304C: If there is no difference between this, why are you asking the rest of the research questions?
+
+126
+00:18:03.750 --> 00:18:04.610
+GCS304C: Yeah.
+
+127
+00:18:04.840 --> 00:18:23.250
+GCS304C: But what I think is the maintainability, code maintenance, I think you can, put the maintainability in a different style, or, like, talk about different… Then I just put a red box around it. Yeah, because what I mean, maintainability, like, can tie to the usability, because if the code is not maintainable, this means that after you're done with your extraction, you cannot use it.
+
+128
+00:18:23.250 --> 00:18:26.100
+GCS304C: So if the code is nothing actionable, it's not usable.
+
+129
+00:18:26.360 --> 00:18:39.229
+GCS304C: if it's maintainable, it's not necessarily usable, but if it's not maintainable, it's definitely not usable. And you're showing that, code interaction with elements results into non-maintainable code. What were you saying? Oh, I would say,
+
+130
+00:18:40.120 --> 00:18:41.880
+GCS304C: usable? Does this mean, like.
+
+131
+00:18:42.180 --> 00:18:54.430
+GCS304C: It doesn't mean that an end user can use it, necessarily, it means, like, can another programmer come and use your code? So, usefulness in critical detail… Yeah, usefulness in critical condition means it satisfies the requirements in the task.
+
+132
+00:18:54.750 --> 00:19:03.360
+GCS304C: But, like, it does what the task is asking. Oh, okay. Yes. I guess then I'm wondering, like, these are the ways that you're measuring usefulness?
+
+133
+00:19:03.690 --> 00:19:07.040
+GCS304C: This, and also correctness and completeness.
+
+134
+00:19:08.930 --> 00:19:23.440
+GCS304C: Those are very, like, you have to show this, that is not part of usefulness. That is part of, basically, like… Differences. There is difference, so there is a need to study.
+
+135
+00:19:24.350 --> 00:19:31.529
+GCS304C: I could… Well, I could understand… I could understand usefulness,
+
+136
+00:19:32.180 --> 00:19:36.100
+GCS304C: But only, like, maybe if you only use the maintainability
+
+137
+00:19:36.130 --> 00:19:53.209
+GCS304C: or I could… from this, the only thing that I feel like I would associate with usefulness would be the maintainability, because, like, is the code unmaintainable? Is it more or less maintainable? That determines, like, how well another programmer can use it. And it sort of seems like all these other things, like number of function calls, external libraries use, like.
+
+138
+00:19:53.210 --> 00:20:02.559
+GCS304C: maybe they factor into code maintainability, but on their own, as something except for code maintainability, don't tell me anything. Nobody can use maintainability as a, like, a segue for the next slide.
+
+139
+00:20:02.560 --> 00:20:12.930
+GCS304C: Don't mention usefulness before. Look, mention this, show the difference, and say that, well, then it becomes less useful unless they are more correct.
+
+140
+00:20:13.370 --> 00:20:15.089
+GCS304C: That gives you a second finger.
+
+141
+00:20:18.610 --> 00:20:34.329
+GCS304C: So, the correctness and completeness shows that LLM-generated responses are significantly more correctness and more complete, because obviously they have access to LLM… And you have to mention time limit here. Yes. Under time pressure. I mean, they weren't really under pressure.
+
+142
+00:20:34.630 --> 00:20:41.090
+GCS304C: No, but they had limited time. If you give them 3 days to solve it, then they might be more complete than available.
+
+143
+00:20:42.200 --> 00:20:49.900
+GCS304C: So, if that limit has more character-compassed responses, but the codes are less maintainable,
+
+144
+00:20:50.560 --> 00:20:52.940
+GCS304C: It's… points towards the gap.
+
+145
+00:20:53.230 --> 00:20:54.810
+GCS304C: And how useful.
+
+146
+00:20:54.980 --> 00:21:04.739
+GCS304C: Yeah, but because I don't want to get into the topic, like, certain a good issue with LNG reports. No, I'm afraid I might confuse them.
+
+147
+00:21:05.320 --> 00:21:11.409
+GCS304C: No, okay, try this. Try this, and then maintainability, and then what's your next slide?
+
+148
+00:21:13.960 --> 00:21:18.940
+GCS304C: Okay, my next slide is… Comparing correctness and completeness?
+
+149
+00:21:18.950 --> 00:21:34.809
+GCS304C: Correctness and completeness are important quote-quality metrics, basically, that you want from a code. At the first step, you want it to be accurate, and also you want it to be complete. So, from literature, we managed to gather these categories of completeness and correctness.
+
+150
+00:21:34.820 --> 00:21:46.040
+GCS304C: On the left deck, or bar chart, you see the counts of completion types by condition, and this one is the correctness types by condition. So, basically, these are the levels of
+
+151
+00:21:46.040 --> 00:21:56.779
+GCS304C: completion, like, we didn't say… we didn't define a binary to say it's completely incomplete or just complete. Based on the number of requirements they satisfy.
+
+152
+00:21:56.840 --> 00:22:02.709
+GCS304C: Or, the edge cases this list. We put them in different categories, the responses.
+
+153
+00:22:02.960 --> 00:22:19.419
+GCS304C: Missing, it means the submission was missing, like, they couldn't provide a response, and incomplete means it was, like, it wasn't useful. It was completely, no requirement, no edge cases. And partial incomplete means, it means, like, they had, like.
+
+154
+00:22:19.670 --> 00:22:33.650
+GCS304C: like, 50%, of the, requirement of age cases. Just say that they are based on these. Yeah, so the top is, like, no complete, and as OB water becomes more complete.
+
+155
+00:22:34.080 --> 00:22:53.589
+GCS304C: And the correctness is also similar, but based on the type of errors that we basically identified. Syntax error, weapon error, logic error… like, the syntax and runtimes error, they were not even, like, executable files. So you said you asked the questions? No, we called… we, performed open coding, basically.
+
+156
+00:22:53.720 --> 00:23:05.039
+GCS304C: not exactly open coding, like, so, we extracted these categories from the literature, and then two researchers went over the…
+
+157
+00:23:05.160 --> 00:23:14.439
+GCS304C: Okay. Submissions? The left one doesn't, like, category, it's, like, a little bit thicker than here. The right one is, like, somehow, anyway. Yeah. Yeah.
+
+158
+00:23:14.990 --> 00:23:16.969
+GCS304C: That's why I don't focuses, necessarily.
+
+159
+00:23:19.120 --> 00:23:19.960
+GCS304C: Yeah.
+
+160
+00:23:22.670 --> 00:23:32.519
+GCS304C: We performed chiro tests, and, we got significant p-value that indicated the elements… Something in that office is on fire.
+
+161
+00:23:33.150 --> 00:23:38.269
+GCS304C: I think it's one of these, lab, torches… Oh, is that a lab?
+
+162
+00:23:38.510 --> 00:23:42.989
+GCS304C: Isn't it? I think, I think it's not just, it's just, like a decorative thing.
+
+163
+00:23:43.440 --> 00:23:49.470
+GCS304C: Okay. Someone just walked by, and it's like, 24.
+
+164
+00:23:51.710 --> 00:23:54.650
+GCS304C: Yes?
+
+165
+00:23:55.140 --> 00:24:02.780
+GCS304C: And these findings show that the LLM assistant codes are significantly more correct and complete compared to an assistant code.
+
+166
+00:24:03.610 --> 00:24:05.660
+GCS304C: Which is not needed.
+
+167
+00:24:05.840 --> 00:24:07.050
+GCS304C: Oh.
+
+168
+00:24:08.200 --> 00:24:15.490
+GCS304C: Comma, comma, no, you didn't. So it's really good to know. Yeah, why not?
+
+169
+00:24:16.350 --> 00:24:21.510
+GCS304C: Now, so far, this was, like, core characteristics. We didn't get into creativity very much.
+
+170
+00:24:21.940 --> 00:24:32.669
+GCS304C: we wanted to compare how unique the solutions were. So we looked at the ideas. What was the main idea that, that the participant came up with?
+
+171
+00:24:32.930 --> 00:24:38.789
+GCS304C: To measure this, two researchers performed open encoding on the files. Like, we read through the files.
+
+172
+00:24:38.840 --> 00:24:52.739
+GCS304C: and extracted the main approach of the solution, like, whether, they used DP, or was it a combination of DP and, I don't know, memoization, or didn't… or sometimes they came up with something, like, new,
+
+173
+00:24:52.740 --> 00:25:07.729
+GCS304C: And then measure the number of unique ideas per each, task and task category that we have. We have the algorithmic questions and system design questions. We have tasked for the algorithmic dashboard and system design.
+
+174
+00:25:07.770 --> 00:25:09.989
+GCS304C: And as you can see in the results.
+
+175
+00:25:10.070 --> 00:25:18.009
+GCS304C: If you look at the… this bar, horizontal bars on the right, that shows the percentage of Uniguide user participants.
+
+176
+00:25:18.190 --> 00:25:36.299
+GCS304C: In the algorithmic questions, the percentage of number of unique ideas for participants was slightly higher than… you know, unassisted was slightly higher than higher than LMassisted conditions, but in the system design, it was vice versa. But, overall, the difference was…
+
+177
+00:25:36.340 --> 00:25:38.430
+GCS304C: It's not much, it's not significant.
+
+178
+00:25:40.860 --> 00:26:02.290
+GCS304C: this was just comparing the ideas. In the next step, we wanted to see how similar the code itself is. I mean, the structure, how they've written it, and the syntax, basically. So, from literature, we know, like, code blue and singular metrics have been used for measuring, like, self-singularity between codebase, or between, like, element-generated codes and human codes.
+
+179
+00:26:02.440 --> 00:26:18.930
+GCS304C: So we used code blue to measure pairwise similarity between each solution and each condition. Like, in unassisted condition, we have 40 pairs, in an unassisted, we have 40 pairs. We compared this, like, pair-voice similarities to the two.
+
+180
+00:26:18.930 --> 00:26:26.939
+GCS304C: And then we, created, like, we visualized it by this kernel density estimation function. It's a smooth.
+
+181
+00:26:27.020 --> 00:26:29.739
+GCS304C: And here on the bottom, you can see the…
+
+182
+00:26:30.060 --> 00:26:39.030
+GCS304C: Box plot? Yeah. So, what we can really understand from this, what we should look at. So, in these similarity scores, like this…
+
+183
+00:26:39.150 --> 00:26:45.580
+GCS304C: X axis conditions the spectrum of the scores from 0 to the highest was, like, 0.4.
+
+184
+00:26:45.780 --> 00:26:50.270
+GCS304C: The peak represents the number of
+
+185
+00:26:50.810 --> 00:26:58.859
+GCS304C: the number of… sum of pairs with that specificity scores. And in the LLMS system, the peak is slightly higher.
+
+186
+00:26:59.270 --> 00:27:16.539
+GCS304C: Which means they're more similar to each other. Don't talk about these differences, because, like, they're very similar, and also you use, KDE, I think, I want to say it's not similar. We want to conclude that they are very similar.
+
+187
+00:27:16.650 --> 00:27:28.269
+GCS304C: Yeah, so exactly what you're saying. Yeah, I just want to, like, show how to read this, how to read this. Like, if you wanna analyze this, the things we looked at were, like, this peak.
+
+188
+00:27:28.550 --> 00:27:35.209
+GCS304C: And the range of the similarity scores, which is very, as I said, like, they overlap a lot.
+
+189
+00:27:35.350 --> 00:27:50.920
+GCS304C: Which, leads the question for us, this gap for us, that even though LLM codes were, more complex, and they were more, significantly more complete, more correct, but they necessarily didn't help us to come with more diverse ideas.
+
+190
+00:27:51.150 --> 00:28:07.390
+GCS304C: like, even though Lab has this great ability to give us fast responses, why… And more correct and… Yes, yeah, more correct and complete, but why it didn't help us to basically come up with better solutions under this time pressure that the participants had as well.
+
+191
+00:28:07.390 --> 00:28:14.409
+GCS304C: So to answer that question, we… we're going to the NSRQ, basically. We want to be looking to the process.
+
+192
+00:28:14.690 --> 00:28:16.050
+GCS304C: 20 cents it.
+
+193
+00:28:16.670 --> 00:28:18.430
+GCS304C: The process of problem solving.
+
+194
+00:28:19.260 --> 00:28:24.200
+GCS304C: Oh, you missed the thing. You should have brought in the productivity-creativity trade-off slide here.
+
+195
+00:28:25.990 --> 00:28:37.900
+GCS304C: But it's basically the same thing, isn't it? Yeah, but it makes them think, like, the audience will start thinking about this as you go… I can add it, I didn't, I just added…
+
+196
+00:28:37.900 --> 00:28:48.010
+GCS304C: Productivity-creativity trade-off. I had a slide that says, like, productivity-creativity trade-off, and it was just, like, kind of… It's like a buzzword was here.
+
+197
+00:28:49.230 --> 00:28:59.609
+GCS304C: you… that is the finding of result RQ1, right? That there is a productivity and creativity trade-off we have to deal with. Now, why is this? That's your research question, too.
+
+198
+00:28:59.890 --> 00:29:16.729
+GCS304C: So, the research question, too, is how does LMS identify creativity during problem solving? Before we get into that, I want to present, or want to introduce the Wallace creativity model. You might know about that. So, Wallace, this is, like, a very old, common
+
+199
+00:29:16.830 --> 00:29:28.439
+GCS304C: creativity framework that says, when you want to solve a problem, humans engage in these four steps in the psycholic process. First, you gather the knowledge, you see what's the problem.
+
+200
+00:29:28.590 --> 00:29:44.819
+GCS304C: then you subconsciously process that, like, come up with the ideas. And you do it, like, at any time. You might be sleeping, you might be doing something else. At some point, after a while, you come up with the idea. You have that ruka moment, or the aha moment.
+
+201
+00:29:44.970 --> 00:30:02.549
+GCS304C: And what is left is verification. Whether this idea works, is it useful in the novel, and if it doesn't work, or if you have any tasks, just move on. You do the cycle again, basically. Now, programming is very similar, like, we have these kind of similar steps, preparation, curation, elimination.
+
+202
+00:30:02.690 --> 00:30:06.150
+GCS304C: I'm probably gonna add another slide to…
+
+203
+00:30:06.710 --> 00:30:24.980
+GCS304C: make it, like, changing definitions for software development. The only difference is that in our steps, we added an empty implementation phase, because verification in software development is more like a debugging phase, but implementation is that they're actually coding, so we just added one new step. But the definitions are very similar.
+
+204
+00:30:26.540 --> 00:30:45.589
+GCS304C: So the first result we got was that, across these different steps, preparation, ideation, implementation, verification, we measured the time, the duration. Using that table that we had, we could, the action coding table, we were able to kind of calculate the difference,
+
+205
+00:30:46.640 --> 00:30:51.370
+GCS304C: Basically, we were able to measure the duration of each action, each row.
+
+206
+00:30:51.520 --> 00:31:04.549
+GCS304C: So, we… some of the actions that were mapped to prolibration, regeneration, and the rest of the steps, and as you can see here, we see the distribution of the time they spend each time. The crucial role test.
+
+207
+00:31:04.660 --> 00:31:08.229
+GCS304C: revealed only significant results in the audio generation.
+
+208
+00:31:08.400 --> 00:31:15.080
+GCS304C: Which indicated that participants tend to spend significantly less time on idea generation when they have access to the LLM.
+
+209
+00:31:15.640 --> 00:31:31.779
+GCS304C: The other thing we measured was the creative moments, because as I mentioned, they are, like, an important proxy for us that indicates how creative particip… how creative participants felt, as well, and how they cognitively engaged in this critical creative thinking, how they, like, came up with the harmonic.
+
+210
+00:31:31.990 --> 00:31:45.650
+GCS304C: So, we measured the number of creative moments at any step. So, creative moments might look like an elimination step, but we realized that, in software development, the creative moments could happen any of these steps.
+
+211
+00:31:46.540 --> 00:31:55.729
+GCS304C: when they are realizing the problem, they might have a unique hormone there. Or when they are debugging and fix a bug, that's also a hormone.
+
+212
+00:31:55.730 --> 00:32:08.179
+GCS304C: So it's not exactly, like, those four steps from our model that we saw. So we measured those in each step, and as you can see from, like, p-values, developers experience
+
+213
+00:32:08.380 --> 00:32:20.810
+GCS304C: significantly less aha moments in almost all of the stages, except the replication. In LMS sessions, we experienced less great moments. They felt less great, basically.
+
+214
+00:32:22.500 --> 00:32:35.190
+GCS304C: So, this leads us… They base, yeah, I mean, they indicated this? Yes, because we verified those experts. But we also, like.
+
+215
+00:32:35.810 --> 00:32:38.680
+GCS304C: verify that, so it's, like, something they verify, yeah.
+
+216
+00:32:39.260 --> 00:32:56.170
+GCS304C: So, from RQ1, we saw LLM generated fast, accurate results, but less diverse, not necessarily as diverse. And from the RQ2, we saw people feel less creative when they are working with LLMs, which is, like, this indicates a gap here, why this happens.
+
+217
+00:32:56.440 --> 00:33:06.239
+GCS304C: This could be because humans are removed from the creative fork themselves. We saw people engage less time in idea generation, and they have significantly less time in
+
+218
+00:33:07.750 --> 00:33:18.909
+GCS304C: Especially less time in other generation, and they have, like, lower aha moments in all of those. This could be because humans tend to kind of bypass that creative ideation and use irrelevant scent.
+
+219
+00:33:19.180 --> 00:33:36.939
+GCS304C: But, this is, like, hypothesis that we have. What's happened here? Was it the change of ownership, or the creative agency? So, this kind of motivates us to the third question. How they actually used LLM that led to these paradox, led to this difference.
+
+220
+00:33:37.420 --> 00:33:39.470
+GCS304C: Oh, the agency, yeah.
+
+221
+00:33:39.990 --> 00:33:46.349
+GCS304C: Yeah, so fearless, I don't have creative energy anyway. Never. Creative energy, yes.
+
+222
+00:33:46.590 --> 00:33:49.650
+GCS304C: So, we wanna balance
+
+223
+00:33:49.850 --> 00:34:07.479
+GCS304C: We want to find a good or ideal collaboration with L&M that helps us to have the productivity gains from using L&M, and also have our genuine moments and ownership of creativity. We want to feel more creative, we want to have more aha moments, but also we want to have complete responses.
+
+224
+00:34:07.570 --> 00:34:12.010
+GCS304C: So, this answers your question, we looked at the coagulation modes.
+
+225
+00:34:14.190 --> 00:34:26.320
+GCS304C: We performed… two researchers performed thematic analysis on the problem-solving strategies. We gathered these four from the observation we had, from the action codings and the behavioral codings.
+
+226
+00:34:26.320 --> 00:34:36.720
+GCS304C: And also, in the interview, if you remember, we asked them how they approached the problem. We basically aggregated all of these results, and identified… we put participants into four clusters.
+
+227
+00:34:36.880 --> 00:34:41.280
+GCS304C: Brainstormers, which, verifiers, implementers, co-pilot.
+
+228
+00:34:41.929 --> 00:34:49.840
+GCS304C: Where brainstormers are where participants that offloaded the audio generation phase completely to LN.
+
+229
+00:34:50.340 --> 00:35:02.680
+GCS304C: So the LLM here was the brainstormer. The coverlet was the brainstorming. The verifier, humans did the idea generation, LLM was responsible for verification phase, basically.
+
+230
+00:35:03.050 --> 00:35:04.619
+GCS304C: L&M was the very party.
+
+231
+00:35:04.940 --> 00:35:11.299
+GCS304C: An implementer, Ellen, was responsible for implementing the codes, and a human was still
+
+232
+00:35:11.490 --> 00:35:19.180
+GCS304C: in the control of critical deletion, basically. Co-Violet was just like co-violet. They just ask and have to give them the full response, so they…
+
+233
+00:35:19.560 --> 00:35:31.159
+GCS304C: uploaded all of the steps to LNM, which we call it co-pilot. Yeah. But if you don't think of Microsoft Covilot, this means that they're helping
+
+234
+00:35:32.130 --> 00:35:44.350
+GCS304C: the pilot, basically. The full… full agent, or something like that. Pilot is like a human, you know what I mean? Because, like… Yeah, because the co-pilot still has this meaning of, like, someone is helping.
+
+235
+00:35:45.730 --> 00:35:46.820
+GCS304C: I see.
+
+236
+00:35:47.420 --> 00:35:48.809
+GCS304C: Good suggestions?
+
+237
+00:35:50.830 --> 00:35:57.330
+GCS304C: And we thought, when we were, like, writing the papers, we thought about this a lot. But, yeah.
+
+238
+00:35:58.430 --> 00:36:02.549
+GCS304C: In that sense, you can put as backseater.
+
+239
+00:36:03.340 --> 00:36:05.370
+GCS304C: My backseater?
+
+240
+00:36:05.800 --> 00:36:14.710
+GCS304C: AI is basically doing all the herding. But, like, all of these names are… So, like, main driver, or…
+
+241
+00:36:14.870 --> 00:36:21.899
+GCS304C: So we want to change that for, like, Xi, but currently in this version…
+
+242
+00:36:22.900 --> 00:36:37.669
+GCS304C: In the revision of the paper, we're gonna make them based on rules. I mean, tools, hopefully. When you say brainstormer, the offloads generative thinking to AI, so the person's doing the brainstorming themselves and can review an idea, and then…
+
+243
+00:36:37.820 --> 00:36:47.130
+GCS304C: No. No. No. The human uploads generated thinking to AI. Maybe I should make it more clear. Idea generation. The AI is a very strong. AI is a brainstorming, yes.
+
+244
+00:36:47.390 --> 00:36:55.040
+GCS304C: So, AI is the driver, then? Ai is the… oh, I understand, okay. So, co-pilot would be, like, driver. These are the models that the AI takes, not the human.
+
+245
+00:36:55.670 --> 00:37:01.700
+GCS304C: So you should say here, put some… instead of all this, put, like, AI's role.
+
+246
+00:37:01.820 --> 00:37:03.970
+GCS304C: And then, yeah, that will keep clear.
+
+247
+00:37:04.500 --> 00:37:05.520
+GCS304C: Okay, cool.
+
+248
+00:37:06.370 --> 00:37:20.150
+GCS304C: After this, I need to add things to these more slides, but, because we don't have time and you have to leave at 12, I don't want to get into this in detail. But basically, I… what I explained, I explained what…
+
+249
+00:37:20.890 --> 00:37:22.439
+GCS304C: Well, how's your ending?
+
+250
+00:37:22.940 --> 00:37:30.860
+GCS304C: Doesn't have anything. Oh my god. Oh, come very gritty moments. No, no, end of the paper.
+
+251
+00:37:31.330 --> 00:37:33.830
+GCS304C: How does, after the paper, would you present?
+
+252
+00:37:36.340 --> 00:37:41.080
+GCS304C: Discussion? After the paper's discussion. I don't have a discussion.
+
+253
+00:37:41.850 --> 00:37:42.980
+GCS304C: Okay.
+
+254
+00:37:44.720 --> 00:37:48.400
+GCS304C: I don't think you need to present biases, you can say it, you know.
+
+255
+00:37:49.210 --> 00:37:51.530
+GCS304C: Okay, so,
+
+256
+00:37:51.570 --> 00:38:00.750
+GCS304C: I will go first, because I have 10 minutes for a meeting. The first part is taking way too much time, okay?
+
+257
+00:38:00.750 --> 00:38:18.290
+GCS304C: It needs to be very simple. You just need to show one arrow here, one arrow here, and say we will study both. For the first, we are only studying the top arrow. Three slides, three to four slides, at most. Doesn't need so much explanation, everybody already knows that there are problems, and blah blah blah. You just cite, there are problems.
+
+258
+00:38:18.290 --> 00:38:22.290
+GCS304C: For example, blah blah, we are studying how to make
+
+259
+00:38:22.370 --> 00:38:31.859
+GCS304C: Towards bi-directional, two things need to be studied, understanding how humans respond, and understanding how models can be more aligned, and
+
+260
+00:38:32.010 --> 00:38:39.319
+GCS304C: take initiator. For the first part, this proposal, for this qual exam, I'm doing the first, presenting the first part.
+
+261
+00:38:39.490 --> 00:38:48.689
+GCS304C: Go into directly creativity, bring in buzzwords, productivity creativity. Your methodology took about 12 minutes for explanation.
+
+262
+00:38:48.690 --> 00:38:59.769
+GCS304C: Too long, people will be totally checked out. Flash the methodology, and say, as we go through the research questions, I will pick it back up. Like, the analysis you have, you tell them how you did the study.
+
+263
+00:38:59.770 --> 00:39:18.349
+GCS304C: But then, say, flash that entire, these are the type of data and analysis we did, and say, I will explain it with the research questions. Move on. Because in the research questions, you're already doing it. You're again repeating, but you did thematic analysis, you did… there's no point in doing it twice. Okay, yeah, cut slides there.
+
+264
+00:39:19.600 --> 00:39:26.050
+GCS304C: A lot of it, you have some, like… you have a lot of content in a slide, you don't read out all of it.
+
+265
+00:39:27.270 --> 00:39:31.120
+GCS304C: So… I mean…
+
+266
+00:39:31.530 --> 00:39:37.700
+GCS304C: Is this a presentation philosophy. Either show a picture, don't have anything, and they are focused on you talking.
+
+267
+00:39:37.890 --> 00:39:41.910
+GCS304C: Or put everything you're saying on the slide, so they can follow along.
+
+268
+00:39:42.040 --> 00:39:49.429
+GCS304C: But if you have contradictory sources of information, like your slides have some bullet points that you are not talking about, then…
+
+269
+00:39:49.800 --> 00:39:55.560
+GCS304C: They will stop you again and again and again, and ask you to explain that and explain this and that.
+
+270
+00:39:56.100 --> 00:39:57.920
+GCS304C: So if you're gonna talk about it.
+
+271
+00:39:58.760 --> 00:40:02.170
+GCS304C: put it on the slide. If you're not gonna talk about it, take it off the slide.
+
+272
+00:40:02.900 --> 00:40:05.480
+GCS304C: So, completeness and correctness slide.
+
+273
+00:40:06.200 --> 00:40:08.889
+GCS304C: You had some bullet points on the side.
+
+274
+00:40:13.770 --> 00:40:16.329
+GCS304C: Important code quality metrics.
+
+275
+00:40:16.510 --> 00:40:18.830
+GCS304C: Just say it, you don't need to.
+
+276
+00:40:18.970 --> 00:40:20.750
+GCS304C: Okay,
+
+277
+00:40:22.970 --> 00:40:28.970
+GCS304C: the maintainability issue, I think you guys have figured out, and then I think I need to see how you're gonna end, like.
+
+278
+00:40:29.310 --> 00:40:32.480
+GCS304C: How you bring back your two-direction arrows.
+
+279
+00:40:33.580 --> 00:40:39.520
+GCS304C: At the end of the paper. You don't have to talk about the bias work at all, you can just say, like, other thing is that it is biased.
+
+280
+00:40:40.190 --> 00:40:43.600
+GCS304C: But the… What, what it would look like.
+
+281
+00:40:43.740 --> 00:40:50.759
+GCS304C: Like, how it motivates my next words? Yeah. Future direction. Two slides on future direction.
+
+282
+00:40:54.570 --> 00:40:59.510
+GCS304C: And then somewhere in the very beginning, show that you have already publications.
+
+283
+00:40:59.960 --> 00:41:06.090
+GCS304C: This paper, this paper, this paper has been published, and you're gonna present this paper under submission, and you're gonna present this work.
+
+284
+00:41:06.440 --> 00:41:11.620
+GCS304C: then they would know that you have already published work.
+
+285
+00:41:12.370 --> 00:41:20.970
+GCS304C: Because, especially because this work is not… has not been published, right? So you have to show that the other work you do are published.
+
+286
+00:41:22.140 --> 00:41:36.939
+GCS304C: No, no, it's, it's… for her case, it's related, like, the picture has it, so you should, instead of all those explaining that people have over-trust.
+
+287
+00:41:36.940 --> 00:41:42.469
+GCS304C: People have overtrust, you're not handling in this presentation, so why are you even talking about people who have overtrust?
+
+288
+00:41:43.810 --> 00:41:52.740
+GCS304C: you're only presenting the creativity part, right? So, just say that all this is not needed, just say that, oh, there's some… Can you just remove this form? Completely?
+
+289
+00:41:53.250 --> 00:41:56.610
+GCS304C: Yeah, because I have bi-directional in the title.
+
+290
+00:41:56.770 --> 00:42:03.399
+GCS304C: But that is not bidirectional, that is also going from either slide. That is also going…
+
+291
+00:42:04.890 --> 00:42:12.060
+GCS304C: It's also this direction, above is also this direction. It's still not bi-directional. This is… maybe this is misleading?
+
+292
+00:42:12.230 --> 00:42:28.959
+GCS304C: This is, like, what this results, but because I also have, like, this slide that what is the wrong… what's wrong with the AI? Because, like, the critical thinking paper that we are currently working on, that's gonna be in our observation. But you don't need to talk about that here. You're only presenting the creativity.
+
+293
+00:42:29.320 --> 00:42:34.409
+GCS304C: Okay. So you don't need to motivate all your work in the core.
+
+294
+00:42:34.720 --> 00:42:36.440
+GCS304C: To ring the lure?
+
+295
+00:42:37.420 --> 00:42:40.530
+GCS304C: No, no, keep the blue arrow, keep bidirectional.
+
+296
+00:42:40.720 --> 00:42:46.670
+GCS304C: But do not explain it? Don't explain it in so much detail. Like, here, this slide, for example.
+
+297
+00:42:48.770 --> 00:42:55.840
+GCS304C: It's, yeah, basically, this part needs to be streamlined.
+
+298
+00:42:56.640 --> 00:43:03.190
+GCS304C: To have to be four slides where you talk about… currently, when we say co-pilot, it basically means
+
+299
+00:43:03.590 --> 00:43:16.660
+GCS304C: human is invoking the AI. But in true co-pilot, the co-pilot can also be able to invoke AI. So a true co-collaborative AI means it's a bi-directional communication. But current
+
+300
+00:43:16.770 --> 00:43:35.029
+GCS304C: One link is broken. Current, yeah, one link is broken. In the current interaction paradigms, one link is broken, and the link that exists has problems, which leads to the broken link. When I read your title, it means that there is a misalignment
+
+301
+00:43:35.190 --> 00:43:44.139
+GCS304C: between human goal and AI goal. But this means, like, there's a broken link between AI and human-AI interaction.
+
+302
+00:43:45.670 --> 00:44:01.700
+GCS304C: So, look, you have misalignment, cognitive, cognitive misalignment. Cognitive misalignment. And, I couldn't find it, but what is the meaning to be cognitively misaligned in AI?
+
+303
+00:44:02.210 --> 00:44:05.450
+GCS304C: I think I added cognitive because I wanted to say…
+
+304
+00:44:05.550 --> 00:44:12.890
+GCS304C: IT. I prefer the cognitive side, not the… You should define it. If it's a term you are…
+
+305
+00:44:13.090 --> 00:44:26.889
+GCS304C: pointing, then there should be a slide saying, here, links are broken because there is lack of cognitive alignment, or something. Bring it back. Why are you saying cognitive alignment? The reason I'm saying that alignment is this coming
+
+306
+00:44:27.000 --> 00:44:29.640
+GCS304C: Has a, like, highly loaded, it's…
+
+307
+00:44:29.890 --> 00:44:33.940
+GCS304C: when you want LLM to, act.
+
+308
+00:44:34.800 --> 00:44:37.500
+GCS304C: as you want. That's what I'm gonna focus on.
+
+309
+00:44:38.710 --> 00:44:53.149
+GCS304C: Which is the same thing she's trying to say, but she's looking at, like, certain parts of the alignment problem. Like, the alignment… Sarah is talking about in NLP is, like, are the goals same? Like, does the model internals have the same goal as the human has? Or human…
+
+310
+00:44:53.610 --> 00:45:01.120
+GCS304C: has but hasn't expressed, right? But in your case, it's different. In your case, it's… It's like…
+
+311
+00:45:01.570 --> 00:45:02.709
+GCS304C: Yeah, I don't know.
+
+312
+00:45:03.560 --> 00:45:08.790
+GCS304C: Maybe just say that, orchestration.
+
+313
+00:45:10.100 --> 00:45:14.580
+GCS304C: Is it an issue of, like, control? Like, how much control the team has?
+
+314
+00:45:15.130 --> 00:45:21.909
+GCS304C: Right now, your paper is just on… yeah, it is about, like, the… the trade-off between control and…
+
+315
+00:45:22.400 --> 00:45:28.980
+GCS304C: control and… Efficiency, or productivity, or something? So the productivity page is paid off.
+
+316
+00:45:30.800 --> 00:45:32.890
+GCS304C: But,
+
+317
+00:45:33.800 --> 00:45:40.110
+GCS304C: I mean, you can say that your broader goal is basically this model where even the AI can
+
+318
+00:45:40.420 --> 00:45:45.670
+GCS304C: take initiative. It's a mixed initiative, right? Who takes the initiative for interruption?
+
+319
+00:45:46.100 --> 00:45:52.500
+GCS304C: It's the well-known principle, basically. Does the human… in this case, the human always takes the initiative in today's world.
+
+320
+00:45:52.760 --> 00:45:57.100
+GCS304C: AI very rarely takes, asks you a question by itself.
+
+321
+00:45:57.340 --> 00:46:05.020
+GCS304C: So, if you're trying to go towards that, then you need to solve a few problems along the way. First problem is to understand who
+
+322
+00:46:05.660 --> 00:46:10.980
+GCS304C: who takes control? And there, you can say, start talking about that creativity control.
+
+323
+00:46:11.560 --> 00:46:12.529
+GCS304C: Things like that.
+
+324
+00:46:12.670 --> 00:46:17.770
+GCS304C: I'll let you guys sort of discuss more. I am free after
+
+325
+00:46:18.040 --> 00:46:24.029
+GCS304C: 5, we can sit together and polish this until, after you, like, talk to…
+
+326
+00:46:24.770 --> 00:46:31.319
+GCS304C: like, incorporate their accounts. Thank you. So guys, for her fall,
+
+327
+00:46:31.560 --> 00:46:38.329
+GCS304C: Can we try to bring… so if, need some drinks and sacks. So…
+
+328
+00:46:38.980 --> 00:46:57.959
+GCS304C: Let's spare her, so that she actually works for the presentation. I have some Coke and stuff at office, but if you guys can help with, sort of, grabbing, like, cookies, like a box of cookies, maybe, from Smart and Final, get the bill. For calls or after calls? For calls. For the calls. What time's the calls? What time is it 1? 10 a.m.
+
+329
+00:46:58.130 --> 00:47:03.600
+GCS304C: So, cookies and, what? Do you expect us to participate, or…
+
+330
+00:47:04.110 --> 00:47:06.640
+GCS304C: Yeah, yeah, of course. Oh, we come to the close?
+
+331
+00:47:07.540 --> 00:47:09.210
+GCS304C: It's… it's open, right?
+
+332
+00:47:10.580 --> 00:47:19.529
+GCS304C: Calls. Calls are open, right? I think they recently, closed it? No, no, they recently let people come, so… Oh, it's open! Yeah, it's open. Oh, okay, okay.
+
+333
+00:47:19.700 --> 00:47:21.040
+GCS304C: Okay.
+
+334
+00:47:21.150 --> 00:47:26.160
+GCS304C: They'll let you… they'll kick you out after… Yeah. Okay. Bye! Bye.
+
+335
+00:47:27.220 --> 00:47:36.330
+GCS304C: Did you have any cookies, food? Yeah, I don't have very many, like, big picture ideas like Renee did, so my comments, I don't think, will be as…
+
+336
+00:47:37.060 --> 00:47:43.820
+GCS304C: And it's okay, can I leave? Because I have also missing, but I did send you my, like, an account, too. Okay.
+
+337
+00:47:44.690 --> 00:47:45.590
+GCS304C: God bless you.
+
+338
+00:47:48.780 --> 00:47:51.050
+GCS304C: So… Hmm…
+
+339
+00:47:58.220 --> 00:48:06.020
+GCS304C: Yeah, I… let's see, can you go to the slide where it says AI steers the result, and then it says loss of creative control?
+
+340
+00:48:06.530 --> 00:48:14.439
+GCS304C: So can you… would you just like… Oh, it says AI steers the results, and then that causes loss of creative control.
+
+341
+00:48:17.740 --> 00:48:19.880
+GCS304C: Yeah.
+
+342
+00:48:22.680 --> 00:48:28.920
+GCS304C: I guess this is the first time in the presentation that you've mentioned creativity, right? Yeah.
+
+343
+00:48:29.480 --> 00:48:38.919
+GCS304C: I think it… I think I know what you mean, I think it makes sense, but also, it's hard to connect. Kind of, because AI stewards as a result, leads to loss of control.
+
+344
+00:48:39.150 --> 00:48:42.940
+GCS304C: Period. Like, not just creative control.
+
+345
+00:48:43.070 --> 00:48:50.819
+GCS304C: So, like, it makes me wonder, like, why is… where does creativity come from here? Like, why is creative… creativity a part of this?
+
+346
+00:48:51.030 --> 00:48:55.630
+GCS304C: So maybe it's like…
+

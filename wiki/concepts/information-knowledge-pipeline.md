@@ -14,7 +14,7 @@ The pipeline is not just organizational — it is a **performance and coherence 
 
 ## Layer 1: Raw Data (Information)
 
-Unprocessed sources: meeting transcripts, emails, documents, notes, social media posts. These are information in the information-theory sense: they contain signal, but it is buried in noise and unorganized for retrieval. Stored in `raw/`.
+Unprocessed sources: meeting transcripts, emails, documents, notes, social media posts. These are information in the information-theory sense: they contain signal, but it is buried in noise and unorganized for retrieval. Stored in `raw-sources/`.
 
 Raw data can also come from upstream automated processes — a search query, a data-gathering workflow — not just manual ingestion. See [[living-system]].
 

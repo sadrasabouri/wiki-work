@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Personal knowledge base on the LLM Wiki pattern. **Domain:** AI-powered knowledge management (Sadra Sabouri, Sumit Gulwani, Souti Chattopadhyay).
 
-- `raw/` — immutable sources. Markdown extractions committed; binaries (`.eml`, `.vtt`, `.docx`) gitignored.
+- `raw-sources/` — immutable sources. Markdown extractions committed; binaries (`.eml`, `.vtt`, `.docx`) gitignored.
 - `wiki/` — LLM-maintained pages. `concepts/` `people/` `projects/` `events/` hold canonical knowledge.
 - `views/` — generated view artifacts (presentations, timelines, queries, etc.). All view commands write here.
 - `.claude/commands/` — slash command implementations (full step-by-step instructions live there).
@@ -15,7 +15,7 @@ Personal knowledge base on the LLM Wiki pattern. **Domain:** AI-powered knowledg
 
 - Read `wiki/index.md` first on any query; update it on every ingest.
 - Append to `wiki/log.md` on every operation: `## [YYYY-MM-DD] operation | title`.
-- Every `[[wikilink]]` must resolve to an existing file in `wiki/` or `raw/`. Raw sources link by filename: `[[Thursday demo]]` → `raw/emails/Thursday demo.md`.
+- Every `[[wikilink]]` must resolve to an existing file in `wiki/` or `raw-sources/`. Raw sources link by filename: `[[Thursday demo]]` → `raw-sources/emails/Thursday demo.md`.
 - Pages must be insightful — synthesize and connect, don't summarize.
 
 ## Slash Commands
@@ -24,7 +24,7 @@ Personal knowledge base on the LLM Wiki pattern. **Domain:** AI-powered knowledg
 
 | Command | Usage | What it does |
 |---------|-------|--------------|
-| `/ingest` | `/ingest raw/emails/new.md` | Read source → write wiki pages → update index, log, and regenerate relevant views |
+| `/ingest` | `/ingest raw-sources/emails/new.md` | Read source → write wiki pages → update index, log, and regenerate relevant views |
 | `/purge` | `/purge GMT20260316...transcript` | Supersede claims from a meeting → update wiki pages → regenerate affected views |
 | `/lint` | `/lint [scope]` | Audit: broken links, orphans, contradictions, stale claims, index gaps |
 | `/trim` | `/trim [scope]` | Remove deprecated concepts, superseded definitions, and outdated framings; distinct from purge (source-targeted) and lint (non-destructive) |

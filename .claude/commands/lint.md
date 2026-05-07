@@ -8,7 +8,7 @@ Lint the wiki${ $ARGUMENTS ? " — scope: $ARGUMENTS" : " — full scan" }.
 ## Steps
 
 1. **Structural fixes** (auto-fix, don't ask):
-   - Broken `[[links]]` — verify each resolves to a file in `wiki/` or `raw/`; fix obvious mismatches
+   - Broken `[[links]]` — verify each resolves to a file in `wiki/` or `raw-sources/`; fix obvious mismatches
    - Orphan pages — add cross-references where the connection is clear
    - Index gaps — add missing entries to `wiki/index.md`
 

@@ -1,0 +1,462 @@
+Delivered-To: sabourih@usc.edu
+Received: by 2002:a05:7208:385:b0:ab:f1cf:178f with SMTP id l5csp928311rbb;
+        Sat, 2 May 2026 23:40:25 -0700 (PDT)
+X-Received: by 2002:a05:7022:e25:b0:12c:6a24:a24f with SMTP id a92af1059eb24-12dfd83fd42mr2111315c88.33.1777790425449;
+        Sat, 02 May 2026 23:40:25 -0700 (PDT)
+Return-Path: <sumitg@microsoft.com>
+Received: from mx0a-00164701.pphosted.com (mx0a-00164701.pphosted.com. [67.231.149.15])
+        by mx.google.com with ESMTPS id a92af1059eb24-12df843ca6esi27560685c88.70.2026.05.02.23.40.25
+        for <sabourih@usc.edu>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sat, 02 May 2026 23:40:25 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sumitg@microsoft.com designates 40.93.200.108 as permitted sender) client-ip=40.93.200.108;
+Authentication-Results: mx.google.com;
+       dkim=neutral (body hash did not verify) header.i=@microsoft.com header.s=selector2 header.b=ZvU9zlPE;
+       arc=fail (body hash mismatch);
+       spf=pass (google.com: domain of sumitg@microsoft.com designates 40.93.200.108 as permitted sender) smtp.mailfrom=sumitg@microsoft.com
+Received: from pps.filterd (m0115899.ppops.net [127.0.0.1])
+	by mx0b-00164701.pphosted.com (8.18.1.11/8.18.1.11) with ESMTP id 6436cgJP1218294
+	for <sabourih@usc.edu>; Sat, 2 May 2026 23:40:24 -0700
+Authentication-Results: usc.edu;
+	spf=pass smtp.mailfrom=sumitg@microsoft.com;
+	dkim=pass header.s=selector2 header.d=microsoft.com;
+	dmarc=pass header.from=microsoft.com
+Received: from cy3pr00cu002.outbound.protection.outlook.com (mail-westcentralusazon11022108.outbound.protection.outlook.com [40.93.200.108])
+	by mx0b-00164701.pphosted.com (PPS) with ESMTPS id 4dwd6gyvdh-1
+	(version=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384 bits=256 verify=NOT);
+	Sat, 02 May 2026 23:40:24 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=GJYlwYJ2IW8UAKroMNa9azQmlwkfZ7yMWSNyxXnKuz8PnC/q0IVqyTdV7D2st5J/AfAcMGTpx7WphTg4k9VXIsj2UVCHOFsbK9zdFxobatr0MOKRLYfFnHN+1Lwy7U42DcavwCcjnUAkLaM+bmXe3dV/zoEf3NNVQpytZvrw29cxDN6xRYPXysb0WBt1y1NYASMTdoCq920am/rSewyM49A93ioya0GivbcN51fsaU8bUlGW0eq04rkZ0piS+YpvJksh02BGjcRnbZv0b49EVDvoI0cXyQUhjIsUk2/Y3vtG4EpQMo/e3YqOU8NLEpXzn/8zyRNLgZdLVh1W9PA2Tg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=rEwdsJ3cAmT4FMH39AYzk8VlAUph62M/D1JrqBc9Gxo=;
+ b=VTBxH6tUhinsqb2PkEooMnJtoFeyaaIAwU41AG3R6C4wc02lpY4yXDUnKhXyK350D0ySvMmfuIISZaiKbm2RkRSpfjyC3R5L/DcZDDafb4wiDY2ErODRUvtza4k7XPubNYwWu4f1PSWOfnqVo4k13cUJlOUNfDsZ8Q8/n1Ed7IghwpegabE5aLTMUhiZmtGzAxJCHYU0hK+CwDIVZzVQyplv5u7UEfIb4bw7xQUW5UbrcbQnFIDeg8js7Yy53/ysgdSvQzS49KK4SaV9YG0KQYB+mHeWj0eE0jIYtKgmf/ooGDn2Cw5k4KlQTJ5MFjXWDl6xLNWet03G6CV++jYHSQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=microsoft.com; dmarc=pass action=none
+ header.from=microsoft.com; dkim=pass header.d=microsoft.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=selector2;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=rEwdsJ3cAmT4FMH39AYzk8VlAUph62M/D1JrqBc9Gxo=;
+ b=ZvU9zlPEKLL+W6mWbD6iQ1bMzkBkrhSlUhsaEvWbmlOUULFjMwbVsefDp6Cr0mS9P8/dw/Ya2QFihM+GJPyUehbj/q3/uGHnOHIOxDLCKdmWOE3+Ej7uaveoyxr2+6a1K0aR746qmOgWyb4RFBEwZK4bj/bkXdXdwfk3E3Qdh6U=
+Received: from SA6PR00MB2325.namprd00.prod.outlook.com (2603:10b6:806:439::8)
+ by SA6PR00MB2307.namprd00.prod.outlook.com (2603:10b6:806:442::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.21.34.0; Sun, 3 May 2026
+ 06:40:21 +0000
+Received: from SA6PR00MB2325.namprd00.prod.outlook.com
+ ([fe80::29ab:3efb:5783:b9a]) by SA6PR00MB2325.namprd00.prod.outlook.com
+ ([fe80::29ab:3efb:5783:b9a%5]) with mapi id 15.21.0033.000; Sun, 3 May 2026
+ 06:40:20 +0000
+From: Sumit Gulwani <sumitg@microsoft.com>
+To: Sadra Sabouri Halestani <sabourih@usc.edu>
+CC: Souti Chattopadhyay <schattop@usc.edu>
+Subject: Re: Presentation
+Thread-Topic: Presentation
+Thread-Index: AQHc2scpkJQwahQBQU6+6lotiyBzdLX72XvK
+Date: Sun, 3 May 2026 06:40:20 +0000
+Message-ID:
+ <SA6PR00MB23258CDDDF7E3E6A86EBAC1AD0302@SA6PR00MB2325.namprd00.prod.outlook.com>
+References:
+ <SA6PR00MB232589EA69A9486E8C9896B8D0302@SA6PR00MB2325.namprd00.prod.outlook.com>
+In-Reply-To:
+ <SA6PR00MB232589EA69A9486E8C9896B8D0302@SA6PR00MB2325.namprd00.prod.outlook.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels:
+ MSIP_Label_f42aa342-8706-4288-bd11-ebb85995028c_Enabled=True;MSIP_Label_f42aa342-8706-4288-bd11-ebb85995028c_SiteId=72f988bf-86f1-41af-91ab-2d7cd011db47;MSIP_Label_f42aa342-8706-4288-bd11-ebb85995028c_SetDate=2026-05-03T06:40:22.018Z;MSIP_Label_f42aa342-8706-4288-bd11-ebb85995028c_Name=General;MSIP_Label_f42aa342-8706-4288-bd11-ebb85995028c_ContentBits=1;MSIP_Label_f42aa342-8706-4288-bd11-ebb85995028c_Method=Standard;
+authentication-results: mx.microsoft.com 1; dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=microsoft.com;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: SA6PR00MB2325:EE_|SA6PR00MB2307:EE_
+x-ms-office365-filtering-correlation-id: da5212c4-d82d-49e7-707e-08dea8ded8cb
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|366016|1800799024|376014|7053199004|38070700021|8096899003|22082099003|56012099003|18002099003;
+x-microsoft-antispam-message-info:
+ =?iso-8859-1?Q?cq/VBjjOYmuaqZRdt0mbOjYWoBw8ZLT/dGJE+NgkdgoXpFCzSVPVA3YKeU?=
+ =?iso-8859-1?Q?QPk5n6n2A+iDnFtrlvko2u3tD3p6VbSeccmO11KKEBtajWNb16VH3XDagI?=
+ =?iso-8859-1?Q?eo3qNvlzk3kQOzvMaXBMQOovYGaREG5I+KYDKRyszDvlljlH4jj5+mTO0c?=
+ =?iso-8859-1?Q?aJsx5ltAm/yCQ9fJWGMRzLbBxhLsBeHymw9L/PjIHhrLyyrT0wdVpGcv8x?=
+ =?iso-8859-1?Q?QzeDHYIo613fFXE3MgrlRtMKCzcMqJ1VdQs0uizjvPV2LWyv27wC13o8BR?=
+ =?iso-8859-1?Q?IXolbGiIycV4bCNBD/TlHO8X4EzzOQWqh7hgwpdatXZXBV09YfpVHV2S2M?=
+ =?iso-8859-1?Q?HBHK2EqxaCRPa1AAXdXxJruZMVPXL1oXHZ9Oua8EuPKl8a7lUlwgTuc0dx?=
+ =?iso-8859-1?Q?MHy0VSHbGk2Sdhl/zk1IBBYJA02lCibqQiHr6UsG3Y5WPfUQhCSvZtvKTI?=
+ =?iso-8859-1?Q?VmZiQXAArE+Rt7wkJzRFPLUUYjqvmUEwB5iOJujK4RLtuvoc20bJqqiaLM?=
+ =?iso-8859-1?Q?iO8ZpflU3I01L/ywinHyDWVT7KI99U6PHM9wC7+HAHR9uVfJ2vMlC07hel?=
+ =?iso-8859-1?Q?YXfQhHYZYBHYi+D8Ns3Pn7fKMQC8iULy//PtDPUXSEWaE8hRwk0goFWqll?=
+ =?iso-8859-1?Q?pSmV2c70bicFVdXIfGFNBGLCTSvgxzvPDXpox9u/EtoV0Qy2Hwlymt/D8F?=
+ =?iso-8859-1?Q?yHlvp3GFa0sr2IoS8n9fih+UmbefETML0ll8M92BerlnBbn+g0OsF0gq9B?=
+ =?iso-8859-1?Q?qLL20sfX+NHMT857YHxyZ2qadCAnk3pbrWwQSd+Re1SYrEQyRo318OcQ+J?=
+ =?iso-8859-1?Q?ElBEYwqAP8eCRAcBaflfFFocs/i6kEMO1gyz7JvhW/PFllXrNVbYiBzQLr?=
+ =?iso-8859-1?Q?5ZuUwvBeL65WMUoWsXiFb/+uShy/JccykwX6SPUJ8S5q+G/7bIQ4Cyyvdq?=
+ =?iso-8859-1?Q?A5/jlVAweR3cFipp8hgTgjM3WAOC8miXs3cywJvgxfxCltFajhxd+iIkzN?=
+ =?iso-8859-1?Q?M/E9/ZYw1POKDFKdQ=3D?=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:SA6PR00MB2325.namprd00.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(366016)(1800799024)(376014)(7053199004)(38070700021)(8096899003)(22082099003)(56012099003)(18002099003);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?iso-8859-1?Q?eNB8o1oIAzPgCrpUzJrQ4kgUavEDcfypxJnO8qz5Eq+Frv+WYuvhOkAYm2?=
+ =?iso-8859-1?Q?E7LNIj59OuLOC2ym6G3CZz4LChF0CQhZ+8ktL7kRzeMru3YkSLKH+4r/rL?=
+ =?iso-8859-1?Q?SXxIIHWi/Z+nA7/6vrErWJecV6XEsptUCC77r9t7dvFtkq+dn6sPhB37Ig?=
+ =?iso-8859-1?Q?8zHKx1CJxh8RagfiBpKFTbCWjVHuAJQhjRE52FgHemr505IxI0I32GgXSc?=
+ =?iso-8859-1?Q?1ys81dkVDdlAWUGgo1CoVxulupwMdZGedUYTEGQkyhCw9F83ozNV3GUdLm?=
+ =?iso-8859-1?Q?w5KB6R7PxdA/n05ZugpsQ96p71wbZzF5PXSsGjiouJClnB1ck99XavU3j8?=
+ =?iso-8859-1?Q?ccwxql4i4A2rpYxInVOWwkOLCxTHDOZSA7BS1rH0IlA7UA5DfxrE96G5Lo?=
+ =?iso-8859-1?Q?mn33a15if581p6DDd1r0MpwVZZXdo8EDM/8Y0X9/Cgq9ju8SljhXDIVW0p?=
+ =?iso-8859-1?Q?h5r6D5ZMoDD1E/Yp0gPRx40EohWq0IdFUyY6PeCIV81CIgOwxMKsjdK24S?=
+ =?iso-8859-1?Q?+BUTkG4Y6Eo3MHCB6Xz6RQI//eK/mw6JnjoQc11+iPisyyB2YpnGwf0bue?=
+ =?iso-8859-1?Q?L5o8r3wdvuTLCdlYWTPe+FZqmRBajaEHMlrx2q72JaQ4w3lvCY+BDnq4ND?=
+ =?iso-8859-1?Q?toqEvobR5uN2kJNyi7fDfnGZ9xiTtNPDtxwlAmV3gUCb7vK0UBnzEx5rxf?=
+ =?iso-8859-1?Q?Tpss8lT8qiWZ0LNj8AWDis9asG5Ld3Rs6/qufaxWWytWm/cJXTOb7Vgydq?=
+ =?iso-8859-1?Q?PTFoF51FC29ngSgwWlHMxc0FIgwBPslVOJ7vAE43rzO2omKc1Hj9vCojVC?=
+ =?iso-8859-1?Q?RN+iN7bELzF+nX8allrCzwHtavy8UZoYn/qCsJ3uZCEGt51IvsPMFzxVaT?=
+ =?iso-8859-1?Q?VmCd2/+ID9qM9uaXV22UtywnsKsEUiU0ehpsTIUABZ7gEHRo6Uux7uh298?=
+ =?iso-8859-1?Q?O5ZZrayDIQiBUxqMdVVQUYt4WUUvLiFOmDj3XgjICngy3iXB65kJZLFlwk?=
+ =?iso-8859-1?Q?HyPXMEDgYYaPx+1jHbNBmjBkjvA7HUaG64P+uQ7C3Sa2GSlQqvqUk9giyK?=
+ =?iso-8859-1?Q?6R0xfAgP9sJoSahcSMOtAhGt1JyavnAEH8OjChvXwTmzFwgsWBEEQWQaWa?=
+ =?iso-8859-1?Q?Wual7ktP3gdNUUELwsacjYEgyv6qP/H5a8EgbxWJceaGbG6VhAl013eqva?=
+ =?iso-8859-1?Q?uzEUZl7KwWApMt6MSyooEwWL3a9JuZrXGIdl2ix9JODl7L91iKpGPgrrAN?=
+ =?iso-8859-1?Q?DEXNVL2bKIQ/oftmZMiXuRvCnUJ94E9pA6Aq67+lD7KRyx5LZu9d2/hwQk?=
+ =?iso-8859-1?Q?b48k1THWVF3392h6ZBlVrwFX7w0fxljsjq8jBiyxmKbsg4gb/eLy0qipBI?=
+ =?iso-8859-1?Q?1lYwEvddziRNS/3xvgWl/TSwQH9aI6kgRBTvEIicdmx4TF8dnGo8uB9Bpi?=
+ =?iso-8859-1?Q?BDDZianaw3rOXQVSF1duFd+TBK0QfA39y4hxH2EyeVQg/GRvXvbZhJaw3s?=
+ =?iso-8859-1?Q?BxcmPD0B/CrpSV4rLZTjOPyrKFsJyh4IGxzhEVlPJ8k2Qy9On6yDNrBtES?=
+ =?iso-8859-1?Q?+XpwNNUDrj9gOC88tXEq54zwSwPUjy6CdVXe0lAYsCD9ALA6Ywp8gQkPJh?=
+ =?iso-8859-1?Q?zB0BnuSYHj55GPQLE3cRlJzxwcIrJxgVs8FwaOop4sdl0rfgOTaRbrEMnP?=
+ =?iso-8859-1?Q?pbwmByxDMQd81zxgYhgZa+n4jRD0GhU+EomMAvDoZEZljB/t0gt3wzST9k?=
+ =?iso-8859-1?Q?X8FbWgtLoQ8uFqrrALX6S8erYhLJBTCVlkpygilAnnjd7pCcWr/b4qvBRJ?=
+ =?iso-8859-1?Q?+eAXlyWxDw=3D=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_SA6PR00MB23258CDDDF7E3E6A86EBAC1AD0302SA6PR00MB2325namp_"
+X-OriginatorOrg: microsoft.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: SA6PR00MB2325.namprd00.prod.outlook.com
+X-MS-Exchange-CrossTenant-Network-Message-Id: da5212c4-d82d-49e7-707e-08dea8ded8cb
+X-MS-Exchange-CrossTenant-originalarrivaltime: 03 May 2026 06:40:20.6088
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 72f988bf-86f1-41af-91ab-2d7cd011db47
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: rnjqstnkxjaQDT99cmnuiGh8yDQhbMU9ZgenUGiX/RMelVEXFuLVSCnAQaJoMweDQAQaLVHLqIJUbVobUvLn3Q==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SA6PR00MB2307
+X-Proofpoint-ORIG-GUID: I99oGdQBIPwEGAIA-PH7c2SdMrAuFpHs
+X-CLX-Response: 1TFkXGxoaHxEKTHoXGB0aEQpZRBdoc3IBXEVbHER/GREKWFgXbGVtTkxwekV
+ kZEURCnhOF21jGGNDG1h8HEx6EQp5TBdkQk8dXU9eYHpTXREKQ0gXBxgbHxEKQ1kXBxsbHhEKQ0
+ kXGgQaGhoRCllNF25PRkNcT1gRCl9ZFxgSGBEKX00XZ2ZyEQpZSRcacRoQGncGGBwYcR4bExAad
+ wYYGgYaEQpZXhdsbHkRCklGF19ZSUlLR1pfWXVCRVleT04YEQpJRxd4T00RCkNOF2MTE0VtTnto
+ Y3pdb21rY2sHemIdSRh5TmdYa19sWmJZEQpYXBcfBBoEHhgaBRsaBBsbGgQbGR4EGR8QGx4aHxo
+ RCl5ZF0JmYGBQEQpNXBcYEx4RCkxaF2lrXWsRCkxGF29va2Nsa2sRCkJPF3p9aWhvUx5LH1JbEQ
+ pDWhceGgQTGQQYGhoEGxoSEQpCXhcbEQpEWBcYEQpESRcbEQpCXBcbEQpeThcbEQpCSxdtYxhjQ
+ xtYfBxMehEKQkkXbWMYY0MbWHwcTHoRCkJFF28bXGFkSVhzf2IBEQpCThdtYxhjQxtYfBxMehEK
+ QkwXbGVtTkxwekVkZEURCkJsF2VDUH9yUn1jG2IfEQpCQBdiXnx8cG1uX3BeaxEKTV4XGxEKWlg
+ XHxEKeUMXZVlPBWFYaUd7ZkMRCllLFxsYHRIfEQpwaBdlHgVSbmVScEtIQxAcExEKcGgXbxoYUH
+ toU0V8QlAQGhEKcGgXbk5tTGVCY3t5RBsQGhEKcGgXYRlBHU8aYHJ/TE0QGhEKcGgXYB5IAVNnZ
+ RxlfEEQGhEKcGgXYxkabhoaUH8dHRwQGhEKcGgXbVkdY2lgGxtfGGIQGhEKcGgXYU8aHVhOXl16
+ cH8QGhEKcH0XZmRufR4aSBx4Ql4QGhEKcH0XZklwElxdeU5tXGcQGhEKcH8XZnkdZX9pARxPa2Q
+ QEx8RCnBfF3obYVxya3hNHWIeEBoRCnBsF2VMSWl4T3pdZBJYEBkaEQpwTBdibWd8bWdzehJOZx
+ AZGhEKbX4XGxEKWE0XSxEg
+X-Proofpoint-GUID: I99oGdQBIPwEGAIA-PH7c2SdMrAuFpHs
+X-CLX-Shades: Deliver
+X-Authority-Analysis: v=2.4 cv=J4CaKgnS c=1 sm=1 tr=0 ts=69f6edd8 cx=c_pps
+ a=ScLdQGXr619Agt1J27Kt1Q==:117 a=z/mQ4Ysz8XfWz/Q5cLBRGdckG28=:19
+ a=lCpzRmAYbLLaTzLvsPZ7Mbvzbb8=:19 a=xqWC_Br6kY4A:10 a=NGcC8JguVDcA:10
+ a=I3jg87b94x0A:10 a=JyWEw40TUO5AK6tc77iI:22 a=4Ns875fmS37Mew5ROLSn:22
+ a=lkx5G8fOvtgTu2VXWBys:22 a=jU4qhlNgAAAA:8 a=yMhMjlubAAAA:8
+ a=zHUuATkbOmy-AkKrLA4A:9 a=wPNLvfGTeEIA:10 a=z-9fv22a5FYAnz-GVMQA:9
+ a=3Jwkkf6IJjBLctkO:21 a=frz4AuCg-hUA:10 a=_W_S_7VecoQA:10
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNTAzMDA3MSBTYWx0ZWRfX60548pU/WKIP
+ 8NUZJ5b3y9dsOoV7+lJ+wWaUe724izQTj+bNWQTLsKSrSZnfCygH7k7TtPvqx5ScDDQrA4zEppt
+ QzhCgY5D49yDGabu8IezPcqDZVUh6dLOuV0mAzMPjoLlkMbOY1Yl7+X1gyT6A6HHDZyQbWyL933
+ 3DhatcbDWxx4kiw6mxLs7RqvaHP2AJK6FfOUJeoIrdmbSano5sASszlS1rnj8rDX1nhREqbrOdS
+ OQrz1MfH2AuvUkJclin5YwGwI3kKDVjhj6ID22Qxx6e1WOHtqmTCiNhnVaO2d93whFFfaTqLTc1
+ fwOZMUoYOGd4J6WWqXxeezcDYn5znVC6T+qFppbDmnlTNt84J0vUgY8vz0uWNm2+cTBTboOhnfq
+ w+n0v8Ds30bmEWQKlReVusHvCfyGGh9ohO7soRFd5g68nbZXJLO8UuX9w6h9X5bpTMA1mn+kC9N
+ R6TMYB4dOYFphbXZ6y70KOY/mIsBzpn20J8qcpyT60Hqs4aCrF7qbKThOsIDK4oij8r1TGJ5xYC
+ PLBwDAwQ==
+MIME-Version: 1.0
+X-Proofpoint-Banner-Trigger: inbound
+X-Proofpoint-SPF-Result: pass
+X-Proofpoint-SPF-Record: v=spf1 include:_spf-a.microsoft.com
+ include:_spf-b.microsoft.com include:_spf-c.microsoft.com
+ include:_spf-ssg-a.msft.net include:_spf1-meo.microsoft.com -all
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.293,Aquarius:18.0.1143,Hydra:6.1.51,FMLib:17.12.100.49
+ definitions=2026-05-03_02,2026-04-30_02,2025-10-01_01
+X-Proofpoint-Spam-Details: rule=inbound_low_priority_notspam
+ policy=inbound_low_priority score=0 lowpriorityscore=0 priorityscore=270
+ malwarescore=0 impostorscore=0 phishscore=0 spamscore=0 suspectscore=0
+ clxscore=1005 bulkscore=0 adultscore=0 classifier=clx:Deliver authscore=0
+ authtc= authcc= route=internal adjust=0 reason=mlx scancount=1
+ engine=8.22.0-2604200000 definitions=main-2605030071 domainage_hfrom=12785
+
+--_000_SA6PR00MB23258CDDDF7E3E6A86EBAC1AD0302SA6PR00MB2325namp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+This linkedin post from Gary Marcus<https://urldefense.com/v3/__https://www=
+.linkedin.com/posts/gary-marcus-b6384b4_why-is-the-ai-backlash-growing-outs=
+ide-share-7456554051284021248-qefz?utm_source=3Dshare&utm_medium=3Dmember_d=
+esktop&rcm=3DACoAAAbpgc4BRAQmkOWfG4QzZjocR0kV4pimVOs__;!!LIr3w8kk_Xxm!vW0Wl=
+nhFW__klHllVhGTSMn5IBM60A8NZ-ZRAva3JldINfTkRLYjnDGN8L1daw1o4b43vFcymV7ls3b3=
+$ > I found interesting because of this comment:
+
+Outside of coding (where there is clear value), and a handful of other doma=
+ins (e.g. brainstorming), Generative AI has been a net negative for society.
+
+Our wiki kinda allows us to "brainstorming".
+
+________________________________
+From: Sumit Gulwani <sumitg@microsoft.com>
+Sent: Saturday, May 2, 2026 11:38 PM
+To: Sadra Sabouri Halestani <sabourih@usc.edu>
+Subject: Presentation
+
+I looked at the movies that you shared. Looks like you already had the idea=
+ of "presentation" using the wiki.
+
+However, lets just focus on creating a "presentation" view of the wiki idea=
+ as opposed to a talk that generalizes all our projects. This "presentation=
+ view" is made up of various sub-views such as motivation or applications e=
+tc. In fact the prompt for such a sub-view (or rather a short summary of it=
+) can serve as the title of that respective slide.
+
+Then other views can talk about a broader talk like what you seemed to do, =
+and I can just mention that to the audience.
+
+--_000_SA6PR00MB23258CDDDF7E3E6A86EBAC1AD0302SA6PR00MB2325namp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!-- BaNnErBlUrFlE-BoDy-start -->
+<!-- Preheader Text : BEGIN -->
+<div style=3D"display:none !important;display:none;visibility:hidden;mso-hi=
+de:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;opacity:0=
+;overflow:hidden;">
+This linkedin post from Gary Marcus I found interesting because of this com=
+ment: Outside of coding (where there is clear value), and a handful of othe=
+r domains (e.&#8202;g. brainstorming), Generative AI has been a net negativ=
+e for society. Our wiki</div>
+<!-- Preheader Text : END -->
+
+<!-- Email Banner : BEGIN -->
+<div style=3D"display:none !important;display:none;visibility:hidden;mso-hi=
+de:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;opacity:0=
+;overflow:hidden;">ZjQcmQRYFpfptBannerStart</div>
+
+<!--[if ((ie)|(mso))]>
+  <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" st=
+yle=3D"padding: 0px 0px 10px 0px; direction: ltr" lang=3D"en"><tr><td>
+    <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"paddin=
+g: 0px 8px 6px 8px; width: 100%; border-radius:4px; border-top:4px solid #9=
+0a4ae;background-color:#d0d8dc;"><tr><td valign=3D"top">
+      <table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" style=3D"padding: 0px 8px 4px 8px; font-size: 12px; line-height: 16px">
+	<tr><td style=3D"color:#000000; font-family: 'Arial', sans-serif; font-wei=
+ght:bold; font-size:14px; line-height: 20px; direction: ltr">
+	  External Sender
+	</td></tr>
+	<tr><td style=3D"color:#000000; font-weight:normal; font-family: 'Arial', =
+sans-serif; font-size:12px; direction: ltr">
+          This message is an inbound email from an external sender. Please =
+exercise caution when opening attachments or clicking links.
+	</td></tr>
+
+      </table>
+      <![if ie]><br clear=3D"all"><![endif]>
+      <table align=3D"right" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" style=3D"padding: 0px 0px 4px 0px; font-size: 14px; line-height: 36px"><=
+tr>
+	<td style=3D"direction: ltr">&nbsp;&nbsp;<a target=3D"_blank" href=3D"http=
+s://us-phishalarm-ewt.proofpoint.com/EWT/v1/LIr3w8kk_Xxm!PrblAsT2d65E9ueZDv=
+jUqPZx_Ph83txJGnz5ihh7T2KG_2W6kKPnaL3TzYvH-Kj0O_JlehU7FnL20K5zZSJyXdjwTaAOb=
+pP00Q-nno5fwNN5L_PtU-wlTxlvbgLaz-8iT6iXt-KFl00$" style=3D"mso-padding-alt: =
+7px; padding: 7px; border-radius: 2px; border: 1px solid #666666; "><strong=
+ style=3D"font-weight: normal; color: #000000; text-decoration: none; font-=
+family: 'Arial', sans-serif; font-size: 14px;">&nbsp;&nbsp;Report&nbsp;Susp=
+icious&nbsp;&nbsp;</strong></a>&nbsp;&nbsp;&zwnj; </td>
+      </tr></table>
+    </td></tr></table>
+  </td></tr></table>
+<![endif]-->
+
+<![if !((ie)|(mso))]>
+  <div dir=3D"ltr" lang=3D"en" id=3D"pfptBanner3g5uxra" style=3D"all: rever=
+t !important; display:block !important; text-align: left !important; margin=
+: 0 0 10px 0 !important; padding:7px 16px 8px 16px !important; border-radiu=
+s: 4px !important; min-width: 200px !important; background-color: #d0d8dc !=
+important; background-color: #d0d8dc; border-top: 4px solid #90a4ae !import=
+ant; border-top: 4px solid #90a4ae;">
+    <div id=3D"pfptBanner3g5uxra" style=3D"all: unset !important; float:lef=
+t !important; display:block !important; margin: 1px 0 1px 0 !important; max=
+-width: 600px !important;">
+      <div id=3D"pfptBanner3g5uxra" style=3D"all: unset !important; display=
+:block !important; visibility: visible !important; background-color: #d0d8d=
+c !important; color:#000000 !important; color:#000000; font-family: 'Arial'=
+, sans-serif !important; font-family: 'Arial', sans-serif; font-weight:bold=
+ !important; font-weight:bold; font-size:14px !important; line-height:1.29 =
+!important; line-height:1.29">
+	External Sender
+      </div>
+      <div id=3D"pfptBanner3g5uxra" style=3D"all: unset !important; display=
+:block !important; visibility: visible !important; background-color: #d0d8d=
+c !important; color:#000000 !important; color:#000000; font-weight:normal; =
+font-family: 'Arial', sans-serif !important; font-family: 'Arial', sans-ser=
+if; font-size:12px !important; line-height:1.5 !important; line-height:1.5;=
+ margin-top:2px !important;">
+This message is an inbound email from an external sender. Please exercise c=
+aution when opening attachments or clicking links.
+      </div>
+
+    </div>
+    <div id=3D"pfptBanner3g5uxra" style=3D"all: unset !important; float: ri=
+ght !important; display: block !important; display: block; margin-left: 16p=
+x !important; margin-top: 1px !important; text-align: right !important; wid=
+th: fit-content !important; font-size: 12px !important">
+<a id=3D"pfptBanner3g5uxra" href=3D"https://us-phishalarm-ewt.proofpoint.co=
+m/EWT/v1/LIr3w8kk_Xxm!PrblAsT2d65E9ueZDvjUqPZx_Ph83txJGnz5ihh7T2KG_2W6kKPna=
+L3TzYvH-Kj0O_JlehU7FnL20K5zZSJyXdjwTaAObpP00Q-nno5fwNN5L_PtU-wlTxlvbgLaz-8i=
+T6iXt-KFl00$"
+    style=3D"all: unset !important; display: inline-block !important; text-=
+decoration: none">
+    <div class=3D"pfptPrimaryButton3g5uxra" style=3D"display: inline-block =
+!important; display: inline-block; visibility: visible !important; opacity:=
+ 1 !important; color: #000000 !important; color: #000000; font-family: 'Ari=
+al', sans-serif !important; font-family: 'Arial', sans-serif; font-size: 14=
+px !important;  font-weight: normal !important; text-decoration: none !impo=
+rtant; border-radius: 2px !important; margin-top: 3px !important; margin-bo=
+ttom: 3px !important; margin-left: 16px !important; padding: 7.5px 16px !im=
+portant; white-space: nowrap !important; width: fit-content !important;
+	border: 1px solid #666666">
+	Report&nbsp;Suspicious
+    </div>
+</a>
+    </div>
+    <div style=3D"clear: both !important; display: block !important; visibi=
+lity: hidden !important; line-height: 0 !important; font-size: 0.01px !impo=
+rtant; height: 0px">&nbsp;</div>
+  </div>
+<![endif]>
+
+<div style=3D"display:none !important;display:none;visibility:hidden;mso-hi=
+de:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;opacity:0=
+;overflow:hidden;">ZjQcmQRYFpfptBannerEnd</div>
+<!-- Email Banner : END -->
+
+<!-- BaNnErBlUrFlE-BoDy-end -->
+<html>
+<head><!-- BaNnErBlUrFlE-HeAdEr-start -->
+<style>
+  #pfptBanner3g5uxra { all: revert !important; display: block !important;
+    visibility: visible !important; opacity: 1 !important;
+    background-color: #d0d8dc !important;
+    max-width: none !important; max-height: none !important }
+  .pfptPrimaryButton3g5uxra:hover, .pfptPrimaryButton3g5uxra:focus {
+    background-color: #b4c1c7 !important; }
+  .pfptPrimaryButton3g5uxra:active {
+    background-color: #90a4ae !important; }
+  html:root, html:root>body { all: revert !important; display: block !impor=
+tant;
+    visibility: visible !important; opacity: 1 !important; }
+</style>
+
+<!-- BaNnErBlUrFlE-HeAdEr-end -->
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; c=
+olor: rgb(0, 0, 0);">
+This<a href=3D"https://urldefense.com/v3/__https://www.linkedin.com/posts/g=
+ary-marcus-b6384b4_why-is-the-ai-backlash-growing-outside-share-74565540512=
+84021248-qefz?utm_source=3Dshare&amp;utm_medium=3Dmember_desktop&amp;rcm=3D=
+ACoAAAbpgc4BRAQmkOWfG4QzZjocR0kV4pimVOs__;!!LIr3w8kk_Xxm!vW0WlnhFW__klHllVh=
+GTSMn5IBM60A8NZ-ZRAva3JldINfTkRLYjnDGN8L1daw1o4b43vFcymV7ls3b3$" id=3D"OWA2=
+dc7810c-8f16-c9a7-d18f-039c7a4fefcf" class=3D"OWAAutoLink" title=3D"https:/=
+/www.linkedin.com/posts/gary-marcus-b6384b4_why-is-the-ai-backlash-growing-=
+outside-share-7456554051284021248-qefz?utm_source=3Dshare&amp;utm_medium=3D=
+member_desktop&amp;rcm=3DACoAAAbpgc4BRAQmkOWfG4QzZjocR0kV4pimVOs">&nbsp;lin=
+kedin
+ post from Gary Marcus</a>&nbsp;I found interesting because of this comment=
+:&nbsp;</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; c=
+olor: rgb(0, 0, 0);">
+Outside of coding (where there is clear value), and a handful of other doma=
+ins (e.g. brainstorming), Generative AI has been a net negative for society=
+.</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; c=
+olor: rgb(0, 0, 0);">
+<br>
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; c=
+olor: rgb(0, 0, 0);">
+</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; c=
+olor: rgb(0, 0, 0);">
+Our wiki kinda allows us to &quot;brainstorming&quot;.&nbsp;</div>
+<div id=3D"appendonsend"></div>
+<div style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size=
+: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<hr style=3D"display: inline-block; width: 98%;">
+<div style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size=
+: 12pt; color: rgb(0, 0, 0);">
+<b>From:</b>&nbsp;Sumit Gulwani &lt;sumitg@microsoft.com&gt;<br>
+<b>Sent:</b>&nbsp;Saturday, May 2, 2026 11:38 PM<br>
+<b>To:</b>&nbsp;Sadra Sabouri Halestani &lt;sabourih@usc.edu&gt;<br>
+<b>Subject:</b>&nbsp;Presentation </div>
+<div style=3D"font-family: Calibri, Arial, Helvetica, sans-serif; font-size=
+: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: bla=
+ck;">
+I looked at the movies that you shared. Looks like you already had the idea=
+ of &quot;presentation&quot; using the wiki.</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: bla=
+ck;">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: bla=
+ck;">
+However, lets just focus on creating a &quot;presentation&quot; view of the=
+ wiki idea as opposed to a talk that generalizes all our projects. This &qu=
+ot;presentation view&quot; is made up of various sub-views such as motivati=
+on or applications etc. In fact the prompt for such
+ a sub-view (or rather a short summary of it) can serve as the title of tha=
+t respective slide.</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: bla=
+ck;">
+<br>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 11pt; color: bla=
+ck;">
+Then other views can talk about a broader talk like what you seemed to do, =
+and I can just mention that to the audience.&nbsp;</div>
+</body>
+</html>
+
+--_000_SA6PR00MB23258CDDDF7E3E6A86EBAC1AD0302SA6PR00MB2325namp_--

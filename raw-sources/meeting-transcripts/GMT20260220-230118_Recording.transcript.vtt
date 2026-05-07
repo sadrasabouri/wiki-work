@@ -1,0 +1,2254 @@
+WEBVTT
+
+1
+00:00:05.730 --> 00:00:06.719
+Sadra Sabouri: Hello, guys.
+
+2
+00:00:16.790 --> 00:00:17.580
+Athena: Hi.
+
+3
+00:02:07.530 --> 00:02:11.180
+Sadra Sabouri: I can see Sumit is in the dock, but…
+
+4
+00:02:11.760 --> 00:02:15.700
+Sadra Sabouri: I don't know why he's not trying. Always lose more, and if he…
+
+5
+00:02:15.700 --> 00:02:16.410
+Sujay Maladi: No.
+
+6
+00:02:16.930 --> 00:02:18.950
+Sadra Sabouri: citizens, you know…
+
+7
+00:03:55.830 --> 00:03:56.690
+Sadra Sabouri: So it's…
+
+8
+00:03:57.380 --> 00:04:02.699
+Sumit Gulwani: Yeah, hi folks. Sorry it took me some time to get connected here.
+
+9
+00:04:02.700 --> 00:04:03.510
+Sadra Sabouri: Fine.
+
+10
+00:04:03.510 --> 00:04:05.950
+Sumit Gulwani: Finally. How are you folks doing?
+
+11
+00:04:06.500 --> 00:04:07.779
+Sadra Sabouri: Good, good, thank you.
+
+12
+00:04:10.330 --> 00:04:12.589
+Athena: Nice to meet… nice to meet you. I metina.
+
+13
+00:04:13.360 --> 00:04:15.169
+Sumit Gulwani: Hi, nice meeting you.
+
+14
+00:04:16.880 --> 00:04:19.929
+Sumit Gulwani: So, how do I say your name? Is it Zina, you said, or…
+
+15
+00:04:20.680 --> 00:04:23.200
+Athena: Well, I go by Athena.
+
+16
+00:04:23.800 --> 00:04:24.620
+Sumit Gulwani: Athena?
+
+17
+00:04:24.800 --> 00:04:26.140
+Sumit Gulwani: Athena? Okay.
+
+18
+00:04:26.140 --> 00:04:27.990
+Athena: Yes, yes, thank you for asking.
+
+19
+00:04:33.100 --> 00:04:34.710
+Sumit Gulwani: Sati going to join us?
+
+20
+00:04:34.710 --> 00:04:37.820
+Sadra Sabouri: I don't think so, because she didn't accept the…
+
+21
+00:04:38.150 --> 00:04:44.310
+Sadra Sabouri: calendar, so maybe I think we can start. If she joins, that's good, but I think,
+
+22
+00:04:44.310 --> 00:04:45.980
+Sumit Gulwani: Sounds good, so let's get it started, yes.
+
+23
+00:04:45.980 --> 00:05:00.300
+Sadra Sabouri: So we had, Sujayan and Atana are new team members, I believe you met Ron the other time. Yes. And, yeah, we were working on this for the submission. I believe you have my screen now, right?
+
+24
+00:05:00.570 --> 00:05:01.809
+Sumit Gulwani: Yes, I can see your screen.
+
+25
+00:05:01.810 --> 00:05:06.289
+Sadra Sabouri: Also, I'm recording this session so that I can, like, fall back to the…
+
+26
+00:05:06.290 --> 00:05:06.770
+Sumit Gulwani: That's good.
+
+27
+00:05:06.770 --> 00:05:08.610
+Sadra Sabouri: Just, yeah.
+
+28
+00:05:09.990 --> 00:05:22.049
+Sadra Sabouri: I tried to work on the motivations of the project, which was aiming to work on tooling for validating and maintaining the,
+
+29
+00:05:22.320 --> 00:05:26.509
+Sadra Sabouri: worksheet AI agents for users. So I alluded,
+
+30
+00:05:26.720 --> 00:05:42.229
+Sadra Sabouri: try it on the, like, a story that we're gonna tell in the paper. Today, I will start by the problem of, agency and challenges that users… lack of user agencies… user agency can have in worksheet agents.
+
+31
+00:05:42.610 --> 00:05:55.310
+Sadra Sabouri: And then the, we make some hypotheses about how we think users are currently working on… working… may work with these AI agents, and current state of, the agents in the market.
+
+32
+00:05:55.310 --> 00:06:14.619
+Sadra Sabouri: And the gap that is between users' need and current features of agents. And then our proposed solution, and what is novel about the solution, research questions that we're trying to aim for the final paper, and the limitations that this work would have, and the plan of…
+
+33
+00:06:14.620 --> 00:06:16.080
+Sadra Sabouri: what's VR and what's VR Applying?
+
+34
+00:06:17.380 --> 00:06:27.289
+Sadra Sabouri: Yeah. The first question that came up, frequent, like, a couple of times was why we're selecting worksheet agents to implement our
+
+35
+00:06:27.290 --> 00:06:38.619
+Sadra Sabouri: to work, on this, mechanification problem. I talked a little bit about it, and, one interesting difference between,
+
+36
+00:06:38.670 --> 00:06:44.019
+Sadra Sabouri: let's say… Programming and, this, type of worksheet
+
+37
+00:06:44.320 --> 00:07:00.630
+Sadra Sabouri: data analysis is that here we have a data-centric logic versus, in programming, which we are process-centric. Here, data turns into data, and the process in between is not, is not the main,
+
+38
+00:07:00.640 --> 00:07:12.239
+Sadra Sabouri: facade, while in programming, you have a mental model of… or you have a pattern of what you're gonna do to transform data, for example, or,
+
+39
+00:07:12.240 --> 00:07:20.949
+Sadra Sabouri: Like, in other terms, the auditing happens here in low level, instance level, where you,
+
+40
+00:07:20.950 --> 00:07:33.539
+Sadra Sabouri: check or, like, audit the, outputs, let's say cell by cell, row by row, versus in programming, you are comparing your mental model of what that data processing should be versus what is the retake code.
+
+41
+00:07:34.010 --> 00:07:48.079
+Sadra Sabouri: So these are two, main differences that makes Excel itself, or, like, a worksheet itself an interesting problem. One other interesting problem that I, find out is that one intrinsic
+
+42
+00:07:48.080 --> 00:07:54.929
+Sadra Sabouri: feature that, Worksheet has, and, I think is not utilized that much, is the idea of,
+
+43
+00:07:55.080 --> 00:08:05.639
+Sadra Sabouri: Duplicating the existing worksheet into, like, another slide, and doing, this sort of, like, parallel,
+
+44
+00:08:05.960 --> 00:08:10.970
+Sadra Sabouri: decision points computations. Let's say you're working on a, on a, on a…
+
+45
+00:08:12.120 --> 00:08:16.080
+Sadra Sabouri: On a sheet, and then there are two ways for calculating a specific,
+
+46
+00:08:16.120 --> 00:08:32.320
+Sadra Sabouri: factor. You can duplicate that, worksheet and work on that… that two, different ways in two different worksheets, and that, tree type of… decision tree type of structure can, can go down with each leaf being one of the final worksheets.
+
+47
+00:08:33.169 --> 00:08:35.099
+Sadra Sabouri: And, so this is…
+
+48
+00:08:35.100 --> 00:08:44.679
+Sumit Gulwani: So, Sada, I didn't understand this, right? So, maybe I was not paying much attention. So, this thing that you mentioned was that there might be two ways of doing things, and then you can work on
+
+49
+00:08:44.930 --> 00:08:47.029
+Sumit Gulwani: Both those things in…
+
+50
+00:08:47.190 --> 00:08:52.250
+Sumit Gulwani: parallel, or… so what exactly are you… what was the point that you're trying to make? I didn't fully… fully comprehend that.
+
+51
+00:08:52.250 --> 00:09:01.789
+Sadra Sabouri: So, comparing this to, like, programming, where you have one state of variable, and then You're, you're linearly following
+
+52
+00:09:02.170 --> 00:09:03.080
+Sadra Sabouri: the…
+
+53
+00:09:03.110 --> 00:09:15.669
+Sadra Sabouri: interventions, the manipulation on data, and then going to the next set of variables. Here, you can, like, by design, there is opportunity to duplicate the worksheet, and have
+
+54
+00:09:15.670 --> 00:09:26.539
+Sadra Sabouri: two different stories of data, and just switching them easily between them. So this is, like, a specific feature that worksheets has, but programming doesn't.
+
+55
+00:09:26.920 --> 00:09:27.520
+Sadra Sabouri: And, and I'm…
+
+56
+00:09:27.520 --> 00:09:31.140
+Sumit Gulwani: But you can make two copies of the program, and then you can evolve them in different ways.
+
+57
+00:09:31.580 --> 00:09:36.299
+Sadra Sabouri: That's, that's true, like, you can, you can modulate the…
+
+58
+00:09:36.630 --> 00:09:46.309
+Sadra Sabouri: you can, like, what is it called? You can make, make ways for making that happen, but this… I… I see this, feature in Excel more,
+
+59
+00:09:46.880 --> 00:09:48.819
+Sadra Sabouri: by design, there.
+
+60
+00:09:49.650 --> 00:09:56.410
+Sumit Gulwani: I see. Okay, maybe I think we can probably skip this, right? I think this would not be difficult to motivate. It would be an easy, easy thing, yeah.
+
+61
+00:09:56.710 --> 00:09:58.159
+Sadra Sabouri: Yeah.
+
+62
+00:09:58.490 --> 00:10:14.890
+Sadra Sabouri: for the user state, we are hypothesizing that users can be defined based on the trust that they have toward AI agents by the general trust in AI, and also their field experience. This is the same theory that we went through.
+
+63
+00:10:14.890 --> 00:10:21.500
+Sadra Sabouri: The other time. And, our hypothesis is that both the low trusters and high trusters would be… would be…
+
+64
+00:10:21.970 --> 00:10:24.419
+Sadra Sabouri: Right now, our,
+
+65
+00:10:24.760 --> 00:10:36.239
+Sadra Sabouri: facing challenges, because of the, erosome process of, just, overlooking for, for high trusters, and,
+
+66
+00:10:36.530 --> 00:10:56.020
+Sadra Sabouri: highly cognitively loaded process of, verification manually, all of the explanations and all the artifacts of analysis. For the domain that we're gonna work on, first, we started with, like, researchers, we decided to go with researchers, but then,
+
+67
+00:10:56.200 --> 00:11:00.849
+Sadra Sabouri: Because of these reasons, first, the reachability,
+
+68
+00:11:01.140 --> 00:11:10.249
+Sadra Sabouri: Second portion of user, and also the task that we can define, which is very aligned with what already exists in the domain.
+
+69
+00:11:10.540 --> 00:11:20.320
+Sadra Sabouri: We decided to go with the finance people, so we're gonna work on, finance domain for the tasks that we're defining.
+
+70
+00:11:21.490 --> 00:11:24.509
+Sumit Gulwani: I see. So, so maybe some, you know, thoughts there.
+
+71
+00:11:24.760 --> 00:11:27.919
+Sadra Sabouri: So this is a complementary perspective here.
+
+72
+00:11:28.320 --> 00:11:32.639
+Sumit Gulwani: So instead of thinking about the low-high-trust user.
+
+73
+00:11:34.030 --> 00:11:40.710
+Sumit Gulwani: We address the problem of helping the user figure out where the issues are, if at all, in the output of the agent.
+
+74
+00:11:40.890 --> 00:11:42.440
+Sumit Gulwani: Of the spreadsheet agent.
+
+75
+00:11:42.760 --> 00:11:46.960
+Sumit Gulwani: Right? So it doesn't matter whether the user has low trust or high trust. My goal is to build a system
+
+76
+00:11:47.170 --> 00:11:52.369
+Sumit Gulwani: That will help the user figure out what the issues are in the output of an agent, and fix it.
+
+77
+00:11:52.670 --> 00:11:53.290
+Sadra Sabouri: Yes.
+
+78
+00:11:53.930 --> 00:12:09.839
+Sumit Gulwani: And that's a system we want to build. And then what we want to evaluate is, you know, how easy or difficult was it for users to figure out errors, if there were, and were they able to catch it, were they able to fix it, right? So this has nothing to do with trust. This is about how to get the job done right.
+
+79
+00:12:10.020 --> 00:12:10.859
+Sadra Sabouri: Yes, that's true.
+
+80
+00:12:10.860 --> 00:12:23.649
+Sumit Gulwani: As opposed to, let's say, you know, agencies are maybe mostly doing the correct things, and then how… what is the feeling of, you know, low trust and high-trust, you know, user, which might be giving a slightly different kind of…
+
+81
+00:12:23.760 --> 00:12:42.179
+Sumit Gulwani: treatment here. But then, anyways, just a thought, you know, we will come back to it. But as I said, the goal is to enable the user to operate in a highly interactive setting, you know, see what the agent has done wrong, or what is it, something that they do not prefer. They would want to prefer things differently, because it's not always about correctness, it's about aesthetics as well.
+
+82
+00:12:42.180 --> 00:12:49.050
+Sumit Gulwani: Maybe the system ended up making a chart, I didn't like their chart, I now want to refine it, or how can I quickly know?
+
+83
+00:12:49.390 --> 00:12:58.329
+Sumit Gulwani: how the agent has done about doing its computation, so that I can tell it, or try to also account for this error, error case, error handling case, right? Things like that.
+
+84
+00:12:58.540 --> 00:13:08.129
+Sadra Sabouri: Yeah. So, like, your first point was that we should do this regardless of trust. Your second point was that we should
+
+85
+00:13:08.560 --> 00:13:11.340
+Sadra Sabouri: Satisfaction is more than correctness.
+
+86
+00:13:11.860 --> 00:13:14.839
+Sadra Sabouri: Like, the user satisfaction is the higher goal.
+
+87
+00:13:15.380 --> 00:13:19.490
+Sumit Gulwani: So maybe let's focus on, you know, what will it take for us to…
+
+88
+00:13:19.650 --> 00:13:27.900
+Sumit Gulwani: have the user get the correct output. So let's create an experience that will enable the user to get their job done correctly, to their satisfaction.
+
+89
+00:13:28.090 --> 00:13:46.170
+Sumit Gulwani: And then, what was their experience through the process? How confident they felt, is a separate, you know, dimension. Maybe not as important right now, and the more important dimension would be, what are the modalities we can provide to the user so that they can get the right out.
+
+90
+00:13:47.210 --> 00:13:56.469
+Sumit Gulwani: And it will not necessarily happen, because they might be writing ambiguous requirements, right? So that might be the reason why things happened, the way that they didn't like it.
+
+91
+00:13:56.670 --> 00:14:07.999
+Sumit Gulwani: Or, genuinely, the agent, you know, made an error, or the full context was not given. So when I thought about, you know, some of these things, I feel that… in fact, my last weekend, you know, I spent, you know, a lot of time working with
+
+92
+00:14:08.560 --> 00:14:16.540
+Sumit Gulwani: at least, you know, Cloud Code ORPUS model, which is performing very well, and my observations were that whatever hallucinations were there.
+
+93
+00:14:16.790 --> 00:14:30.050
+Sumit Gulwani: It was because the requirements are either not clear, or the agent didn't have access to the right information in the context that was not available to the agent. I did not spot a single bug in terms of instructions for me.
+
+94
+00:14:32.840 --> 00:14:41.500
+Sumit Gulwani: So the lessons to me were that if I'm trying to get a correct output out of the agent, I need to make sure I'm able to have an environment where I can spell down my requirements easily.
+
+95
+00:14:41.770 --> 00:14:46.379
+Sumit Gulwani: And I can… Make sure the agent has access to all the right context.
+
+96
+00:14:46.590 --> 00:14:52.970
+Sumit Gulwani: Now, but here we are talking about a slightly different thing here. We are saying the agent has done the work, so how do we make it easy for them to
+
+97
+00:14:53.110 --> 00:14:58.689
+Sumit Gulwani: for users to actually check it. I can even imagine that the users might want to
+
+98
+00:14:59.610 --> 00:15:06.349
+Sumit Gulwani: Make another query, right? Even write a grading scheme of how to go about, you know, making their checks.
+
+99
+00:15:06.990 --> 00:15:07.600
+Sadra Sabouri: Yeah.
+
+100
+00:15:07.600 --> 00:15:14.770
+Sumit Gulwani: For… I'll give you an example, right? So let's say, you know, I did some… I do some vacation planning, and I have an hour-by-hour itinerary about…
+
+101
+00:15:15.270 --> 00:15:18.629
+Sumit Gulwani: where I want to visit.
+
+102
+00:15:18.930 --> 00:15:21.100
+Sumit Gulwani: what attraction I want to visit.
+
+103
+00:15:21.510 --> 00:15:26.619
+Sumit Gulwani: And then what I want to do is I will probably write a grader to see if this is all realistic or not.
+
+104
+00:15:26.770 --> 00:15:38.540
+Sumit Gulwani: So the timing of the attraction should match with the opening and closing hours of that attraction. The time between two attractions should be right for me to walk from one attraction to the other.
+
+105
+00:15:38.630 --> 00:15:47.530
+Sumit Gulwani: So this is my grading scheme. So maybe what I will do is that since, you know, when I'm going to use the Excel agent to do my vacation planning, and once I have an itinerary.
+
+106
+00:15:47.680 --> 00:15:57.209
+Sumit Gulwani: I will write a separate verifier or a grader, you know, using this logic that I spelled out, and that would be my way of verifying the output of the agent.
+
+107
+00:15:57.940 --> 00:16:06.360
+Sumit Gulwani: So there might be lots of possibilities here, right? So let's look at, you know, the solutions that we are proposing. We can also have, you know, other interesting solutions that we can talk about.
+
+108
+00:16:06.490 --> 00:16:10.580
+Sumit Gulwani: Yeah, and then the study would be how effective they are.
+
+109
+00:16:10.790 --> 00:16:11.550
+Sadra Sabouri: Yes.
+
+110
+00:16:11.710 --> 00:16:12.540
+Sadra Sabouri: of…
+
+111
+00:16:12.950 --> 00:16:29.109
+Sadra Sabouri: So this is the current state of agents, and why we're proposing here that there is a gap between why these agents have different methods for explaining and highlighting change, but since they're disconnected and cluttered.
+
+112
+00:16:29.140 --> 00:16:47.160
+Sadra Sabouri: It makes the verification process highly correctly loaded. And also, for getting the feedback from user, or, like, making the process more interactive, what they're doing is that they share a plan, or give the user access to
+
+113
+00:16:47.160 --> 00:16:55.479
+Sadra Sabouri: like, redo the prompt, or, like, re-prompt, but, no, while run access to the, to the interaction.
+
+114
+00:16:55.800 --> 00:17:00.479
+Sadra Sabouri: These two gaps are the ones that we're trying to fill with the tool.
+
+115
+00:17:00.860 --> 00:17:02.940
+Sadra Sabouri: yes.
+
+116
+00:17:02.940 --> 00:17:10.869
+Sumit Gulwani: If we go back to the previous slide, so I very much like this slide. It reminds me of the study that you presented at the conference, you know, which I'm a big fan of.
+
+117
+00:17:11.160 --> 00:17:17.419
+Sumit Gulwani: Maybe having even more rows would be good here, to understand what is the overall broad space.
+
+118
+00:17:17.420 --> 00:17:27.170
+Sadra Sabouri: Yeah, Sujai worked on this, and in the hidden slides, we have more loads, but, like, here, I just removed some because of the time.
+
+119
+00:17:27.520 --> 00:17:45.749
+Sumit Gulwani: I see, I see. But this is a very important slide, I feel. Now, the various columns might be point-in-time things, right? Tomorrow, you'll figure out that, you know, these tools actually also go and add these supports, but the different rows are more important, right? The first column is more important than the other columns, so that's a very nice contribution, I think.
+
+120
+00:17:47.150 --> 00:17:48.650
+Sumit Gulwani: Also,
+
+121
+00:17:50.700 --> 00:18:00.880
+Sumit Gulwani: we should talk about other things also, other things as well. Like, for example, the way I was saying that, you know, I can take more agency. As a user, I can take more agency into helping also
+
+122
+00:18:00.880 --> 00:18:12.860
+Sumit Gulwani: implement my verification scheme? Because if I'm doing the task myself, what do I do, right? So I go about doing the task myself, and then I go about verifying it also. So I'm doing… I'm trying to execute both those logics.
+
+123
+00:18:13.660 --> 00:18:14.220
+Sadra Sabouri: Yes.
+
+124
+00:18:15.040 --> 00:18:24.809
+Sumit Gulwani: in my mind, right, I'm trying to go through… I have two workflows, right? Whenever I'm doing a task, I have two workflows. I go into the task, and then I have some mechanism to check for the correctness.
+
+125
+00:18:24.810 --> 00:18:25.670
+Sadra Sabouri: Yep.
+
+126
+00:18:25.670 --> 00:18:27.949
+Sumit Gulwani: And today, the first is getting automated.
+
+127
+00:18:28.070 --> 00:18:29.180
+Sumit Gulwani: Through the agent.
+
+128
+00:18:29.510 --> 00:18:29.830
+Sadra Sabouri: Yes.
+
+129
+00:18:29.830 --> 00:18:38.040
+Sumit Gulwani: maybe the second can also get out of it, right? So, in some sense, what I'm saying is the verifications… one big, you know, verification support tool
+
+130
+00:18:39.040 --> 00:18:41.190
+Sumit Gulwani: It's not a tool, but a methodology.
+
+131
+00:18:41.480 --> 00:18:45.110
+Sumit Gulwani: Where the second query the user does.
+
+132
+00:18:45.450 --> 00:18:54.189
+Sumit Gulwani: is meant to provide ideas around how to go about checking the correctness of the output that Excel Agent has generated.
+
+133
+00:18:54.390 --> 00:19:07.040
+Sumit Gulwani: So they can try to codify that kind of logic as well. So maybe it's a little bit more of the methodology on the part of the user, as opposed to a first-class tool that is being provided. I'll give you another interesting idea. So Excel Agent, you can pick different…
+
+134
+00:19:07.120 --> 00:19:10.900
+Sadra Sabouri: Can you elaborate on the last one? I didn't quite understand it.
+
+135
+00:19:11.480 --> 00:19:18.520
+Sumit Gulwani: Yes. So one way that a user can try to verify the output of the Excel agent
+
+136
+00:19:18.700 --> 00:19:24.679
+Sumit Gulwani: So one is leveraging these support mechanisms that you list in the first column.
+
+137
+00:19:24.680 --> 00:19:25.570
+Sadra Sabouri: Yeah.
+
+138
+00:19:25.570 --> 00:19:31.300
+Sumit Gulwani: The other one is, the user can themselves try to define an… a new query.
+
+139
+00:19:31.850 --> 00:19:38.009
+Sumit Gulwani: For the agent, where the goal of this new query is to verify the correctness of the.
+
+140
+00:19:38.010 --> 00:19:39.590
+Sadra Sabouri: Out.
+
+141
+00:19:40.180 --> 00:19:44.699
+Sadra Sabouri: So, you're saying using the power of agents to verify itself, basically?
+
+142
+00:19:45.000 --> 00:20:00.810
+Sumit Gulwani: Yes, yes, yes. Like, I already gave you an example, right? So let's say I'm planning some vacation, so I give general rules to the agent and say, you know, plan a vacation in the city, these are the attractions I want to visit, come up with a good ordering of these attractions, and do an hour-by-hour
+
+143
+00:20:01.380 --> 00:20:06.430
+Sumit Gulwani: Itinerary, and make sure that, you know, everything is consistent.
+
+144
+00:20:06.600 --> 00:20:19.899
+Sumit Gulwani: But then it can… it can give me an itinerary which is not realistic, because it probably made some mistakes. So how, as a human, would I check whether an itinerary is good or not, right? What I will do is I will make sure that the attraction is indeed open.
+
+145
+00:20:20.070 --> 00:20:22.280
+Sumit Gulwani: It is age appropriate.
+
+146
+00:20:22.490 --> 00:20:38.119
+Sumit Gulwani: it is, you know, opening-closing times, you know, match, and then there's enough distance between… enough time left between two attractions for me to walk from, you know, place A to place B, right? Those are the kinds of checks I will do, right? If someone were to give an itinerary to me, this is how I actually go and verify it.
+
+147
+00:20:39.120 --> 00:20:51.840
+Sumit Gulwani: and it is the same verification logic I can give to the Excel agent again, right? So one query to the Excel agent was, you know, help me plan an itinerary, and the second query that I will give to the Excel agent is, okay, now go and make these checks, you know, check for these things.
+
+148
+00:20:54.510 --> 00:20:57.159
+Sumit Gulwani: Let me give you another idea about verification.
+
+149
+00:20:57.880 --> 00:21:02.689
+Sumit Gulwani: So, Excel Agent today operates two models.
+
+150
+00:21:02.980 --> 00:21:07.630
+Sumit Gulwani: So you can pick the model. One is an OpenAI model, the other is Anthropic model.
+
+151
+00:21:08.340 --> 00:21:19.300
+Sumit Gulwani: So you can do the computation using one model, and then you can… and then you can switch to the other model and say, okay, you know, examine now, check the results of the other model.
+
+152
+00:21:19.650 --> 00:21:20.210
+Sadra Sabouri: Yeah.
+
+153
+00:21:21.640 --> 00:21:29.150
+Sumit Gulwani: Maybe you can even use the same model still. You don't even have to change the model, right? But I'm just trying to add some more spice in the process. So this is a workflow I have seen some people do.
+
+154
+00:21:29.320 --> 00:21:38.699
+Sumit Gulwani: Yeah. They will have a complicated, you know, financial spreadsheet, they will ask some complicated financial modeling query, the agent will try to go and do, you know, some very impressive things.
+
+155
+00:21:39.120 --> 00:21:45.280
+Sumit Gulwani: And then they can have another query where they can say, okay, you know, the agent has done its work, now go and check the output of the agent.
+
+156
+00:21:46.390 --> 00:21:47.120
+Sumit Gulwani: Oops.
+
+157
+00:21:47.760 --> 00:21:52.039
+Sadra Sabouri: So then, do you think if we have this as our baseline, as one of our baselines, that can be…
+
+158
+00:21:52.760 --> 00:21:56.450
+Sadra Sabouri: Is that a reasonable baseline, or is it unfair?
+
+159
+00:21:58.530 --> 00:22:14.519
+Sumit Gulwani: Actually, that's an interesting thing, right? So what you're saying is, we can use that as a baseline to compare against the experience that the user will have if they would have these features. So in one case, the user is verifying themselves, and in the other baseline, we are asking the agent, actually, to do the verification.
+
+160
+00:22:14.650 --> 00:22:23.500
+Sumit Gulwani: So that's an interesting idea, yeah, we can think about that. We can think about using it as a baseline. The other way to sell this would be to talk about it as a methodology.
+
+161
+00:22:24.350 --> 00:22:40.189
+Sumit Gulwani: And this methodology can be used with any of these tools, right? So it's not as much of a feature with this thing, but what we are proposing is some good methodologies for users on how to use that, right? So either you can sell it like that, or as you were saying, right, okay, you know, you can compare it as a baseline.
+
+162
+00:22:40.350 --> 00:22:41.380
+Sadra Sabouri: Based on the opening.
+
+163
+00:22:42.920 --> 00:22:44.019
+Sadra Sabouri: Yeah, thank you.
+
+164
+00:22:47.810 --> 00:22:50.849
+Sadra Sabouri: Any more comments on this slide, or should I go to the next slide?
+
+165
+00:22:51.070 --> 00:22:52.889
+Sumit Gulwani: No, let's go to the next slide, yeah, yeah.
+
+166
+00:22:52.890 --> 00:22:55.639
+Sadra Sabouri: This was the proposed idea that's…
+
+167
+00:22:55.960 --> 00:22:58.180
+Sadra Sabouri: Most of it, has been,
+
+168
+00:22:58.420 --> 00:23:13.089
+Sadra Sabouri: we went through at the other sessions. The new features that I was thinking about, and this is basically the idea of agency and that tree of decision points, is that for some steps, we might have
+
+169
+00:23:14.040 --> 00:23:23.969
+Sadra Sabouri: different ways of continuing, going to the next step. We can have, control buttons here for user to choose, and then,
+
+170
+00:23:24.420 --> 00:23:28.829
+Sadra Sabouri: The changing, the next step would…
+
+171
+00:23:30.560 --> 00:23:40.160
+Sadra Sabouri: The next step would switch users' view into another, another worksheet, which comes, at the decision points that,
+
+172
+00:23:40.830 --> 00:23:45.440
+Sadra Sabouri: the agent was designing. Implementation-wise, I'm losing my screen, let me…
+
+173
+00:23:46.350 --> 00:23:49.640
+Sadra Sabouri: Let me just share again. This screen is…
+
+174
+00:23:50.210 --> 00:23:59.720
+Sumit Gulwani: By the way, I very much like this idea, right? This idea of touring is a very nice idea, and it reminds me about, you know, two, standard experiences.
+
+175
+00:24:00.120 --> 00:24:07.180
+Sumit Gulwani: So today, if you, let's say, start using a product for the first time.
+
+176
+00:24:07.850 --> 00:24:09.980
+Sumit Gulwani: Or we have a significant update.
+
+177
+00:24:10.300 --> 00:24:21.749
+Sumit Gulwani: Then what we notice is that you get this, you know, touring experience. Oh, let me actually walk you through, you know, interesting things that you can do in this product, and then you can click next, next, next, which allow you a tour of the, you know, product.
+
+178
+00:24:22.110 --> 00:24:36.130
+Sumit Gulwani: And the other thing that this reminds me is that of animation. So in PowerPoint, you know, you have this animation, and the goal of animation is that you want to focus the user's attention at the right place, especially when you have
+
+179
+00:24:36.270 --> 00:24:38.959
+Sumit Gulwani: A bunch of things on the screen.
+
+180
+00:24:39.090 --> 00:24:39.980
+Sadra Sabouri: Yeah.
+
+181
+00:24:39.980 --> 00:24:45.890
+Sumit Gulwani: So you are leveraging, I think, you know, those kinds of, you know, cognitive mechanisms.
+
+182
+00:24:45.890 --> 00:24:46.780
+Sadra Sabouri: Yes, exactly.
+
+183
+00:24:46.780 --> 00:24:52.149
+Sumit Gulwani: for this, right? So this is very, very nice, and I love, you know, the solution that you're proposing here.
+
+184
+00:24:52.950 --> 00:24:56.709
+Sadra Sabouri: And just to check, you have my screen now, right? The same screen.
+
+185
+00:24:56.710 --> 00:24:57.939
+Sumit Gulwani: I, I can see.
+
+186
+00:24:57.940 --> 00:25:08.340
+Sadra Sabouri: And yeah, in addition to what we've seen in the other time, which was just stepping, here, I'm trying to propose this idea that, let's say, agent has been
+
+187
+00:25:08.460 --> 00:25:17.710
+Sadra Sabouri: Has, crafted that three of worksheets, which branch out whenever there is two possible two
+
+188
+00:25:18.090 --> 00:25:25.540
+Sadra Sabouri: equally good possible decisions to go, and then instead of just one final worksheet, it has three of worksheets, and then
+
+189
+00:25:25.710 --> 00:25:31.529
+Sadra Sabouri: when user is going through these steps for verification, I think click on,
+
+190
+00:25:33.020 --> 00:25:36.379
+Sadra Sabouri: Different, path… different, branches.
+
+191
+00:25:36.850 --> 00:25:42.149
+Sadra Sabouri: In the decision points, and this way, then there is a more sense of agency.
+
+192
+00:25:45.140 --> 00:25:51.639
+Sadra Sabouri: we can, we can think about, think about doing this online as well, but, like, currently, how, how I was thinking, like, doable, how…
+
+193
+00:25:51.810 --> 00:25:55.279
+Sadra Sabouri: Implementation-wise, doable is something like that.
+
+194
+00:25:55.280 --> 00:26:01.980
+Sumit Gulwani: Okay, but the slide that I'm seeing is this, you know, what's our proposed solution slide. Are you on a different slide? Because you're talking… you seem to be talking about something else.
+
+195
+00:26:03.170 --> 00:26:08.289
+Sadra Sabouri: yeah, I think I don't have a concrete.
+
+196
+00:26:09.710 --> 00:26:14.480
+Sumit Gulwani: Okay, so slow revealing the changes, you know, in process decision points.
+
+197
+00:26:14.480 --> 00:26:15.000
+Sadra Sabouri: Yes, yes.
+
+198
+00:26:15.000 --> 00:26:15.620
+Sumit Gulwani: I see.
+
+199
+00:26:15.820 --> 00:26:23.660
+Sumit Gulwani: So the… so here, there was an… is this what you're saying? That the agent actually made up, you know, some particular decision? Is this what you're saying with in-process decision points, or…
+
+200
+00:26:23.660 --> 00:26:24.420
+Sadra Sabouri: Excuse me.
+
+201
+00:26:25.970 --> 00:26:32.059
+Sumit Gulwani: And this ABC are… so ABC is what? So ABC is… Decision points, or…
+
+202
+00:26:32.060 --> 00:26:33.459
+Sadra Sabouri: Different, different decisions, yeah.
+
+203
+00:26:34.860 --> 00:26:40.379
+Sumit Gulwani: So, are you assuming that the agent would have done 3… calculated 3 different worksheets here, final worksheets?
+
+204
+00:26:40.380 --> 00:26:41.060
+Sadra Sabouri: Yes.
+
+205
+00:26:43.590 --> 00:26:46.689
+Sumit Gulwani: But then which agent is doing that? So, no agent is doing that today.
+
+206
+00:26:47.380 --> 00:26:50.989
+Sadra Sabouri: Yeah, that's true, that, that was the…
+
+207
+00:26:51.240 --> 00:26:58.750
+Sadra Sabouri: parts of, contribution that, that we are proposing. It's, it's computationally, More expensive?
+
+208
+00:26:58.750 --> 00:27:04.699
+Sumit Gulwani: Maybe, maybe, maybe it's a different contribution, right? I'm not sure if it fits well here. So it's a good idea.
+
+209
+00:27:04.700 --> 00:27:06.839
+Sadra Sabouri: But it's a different kind of idea.
+
+210
+00:27:07.430 --> 00:27:10.249
+Sumit Gulwani: So right now, what you're saying is, you know, agent has done something.
+
+211
+00:27:10.520 --> 00:27:27.749
+Sumit Gulwani: It has done lots of things. How does the user validate what the agent has done in this data-first environment, right? So that's what the slide number one was, that let's talk about the data-first environment, and how are we leveraging that to check the working of the agent.
+
+212
+00:27:28.260 --> 00:27:28.990
+Sadra Sabouri: Yes.
+
+213
+00:27:28.990 --> 00:27:35.550
+Sumit Gulwani: So… so maybe… maybe you can simplify things if you would like, and this is a separate paper, right? This is a separate idea that you pursue.
+
+214
+00:27:35.950 --> 00:27:39.400
+Sumit Gulwani: About, walking through these different instrument plans.
+
+215
+00:27:39.400 --> 00:27:45.319
+Sadra Sabouri: The reason we decided to add this was that, Rinia actually thought,
+
+216
+00:27:45.470 --> 00:27:59.120
+Sadra Sabouri: said the only, like, proposing a slow reveal might not be enough of a contribution, like adding a slow reveal mechanism or, like, animation mechanism to, for verification. That's why I proposed this idea.
+
+217
+00:27:59.340 --> 00:28:03.840
+Sumit Gulwani: So maybe we can build on it, right? So we can try to see how we can make it more powerful.
+
+218
+00:28:04.440 --> 00:28:10.519
+Sumit Gulwani: But this one requires you to now make changes to the systems, right? And what you are saying is that, you know, systems are given,
+
+219
+00:28:13.280 --> 00:28:17.239
+Sumit Gulwani: Okay? But now I have a better understanding of where this is coming from, okay?
+
+220
+00:28:17.530 --> 00:28:18.260
+Sadra Sabouri: Yep.
+
+221
+00:28:18.880 --> 00:28:27.030
+Sadra Sabouri: so, the idea was to have these two dimensions of changes. One was the change to ring…
+
+222
+00:28:27.090 --> 00:28:42.090
+Sadra Sabouri: that we went through, and all the story reading mechanism, and touring and stuff. The second one, which is new, is the adaptive user intervention, which, is basically the same idea that we went through.
+
+223
+00:28:42.190 --> 00:28:51.830
+Sadra Sabouri: Because tasks could be nonlinear based on the decision points and branching out in the decision points, we wanted to,
+
+224
+00:28:52.380 --> 00:29:00.789
+Sadra Sabouri: Have a prototype that shows how good a feature is this, to let user… Decide on decision points.
+
+225
+00:29:01.060 --> 00:29:02.060
+Sadra Sabouri: Importance.
+
+226
+00:29:02.060 --> 00:29:04.930
+Sumit Gulwani: So just give me a moment while I read through it, just give me a moment here.
+
+227
+00:29:39.930 --> 00:29:44.520
+Sumit Gulwani: I see, I see. Okay, okay, so I think I appreciate this thing better now.
+
+228
+00:29:46.850 --> 00:29:52.160
+Sumit Gulwani: So, so one very interesting point that I learned from this slide is…
+
+229
+00:29:53.140 --> 00:30:00.430
+Sumit Gulwani: That the most important reason why we are even creating this interface is for it to be actionable in some sense.
+
+230
+00:30:00.700 --> 00:30:01.070
+Sadra Sabouri: Yes.
+
+231
+00:30:01.070 --> 00:30:07.040
+Sumit Gulwani: Because it is not helpful for us to just give the confidence to a user that, oh, things are good, right, and correct.
+
+232
+00:30:07.430 --> 00:30:09.520
+Sumit Gulwani: But users should be able to drive it.
+
+233
+00:30:09.520 --> 00:30:10.469
+Sadra Sabouri: Yeah, this movie.
+
+234
+00:30:10.470 --> 00:30:20.199
+Sumit Gulwani: So whether something is incorrect or something is not aesthetically as pleasant as they would want, because it is not, as I said, not just about correctness, but also about other aesthetic properties.
+
+235
+00:30:20.560 --> 00:30:36.790
+Sumit Gulwani: In fact, we have seen some very strong reactions from people who look at the output generated by Excel Agent, which even may be correct, but they are not… the layout is not so good, formatting is not so good, they're not placed in the right place, they're not following the same style that is there in the rest of the worksheet in terms of
+
+236
+00:30:36.790 --> 00:30:40.889
+Sumit Gulwani: The colors chosen for the different tables, and the schemes for charts, and so on.
+
+237
+00:30:40.980 --> 00:30:46.090
+Sumit Gulwani: But when the user spots any of these things, they should be able to request edits.
+
+238
+00:30:46.350 --> 00:30:46.880
+Sadra Sabouri: Yep.
+
+239
+00:30:46.880 --> 00:30:52.400
+Sumit Gulwani: So how easy do we make it for the user to be able to request address to specific parts?
+
+240
+00:30:54.720 --> 00:30:58.760
+Sumit Gulwani: And then the second thing then probably naturally follows up there, in the sense that
+
+241
+00:30:58.920 --> 00:31:01.909
+Sumit Gulwani: You can imagine the agent is actually run in a mode.
+
+242
+00:31:02.830 --> 00:31:08.460
+Sumit Gulwani: Where, and not too many, but when they have some reasonable decision points.
+
+243
+00:31:08.780 --> 00:31:12.219
+Sumit Gulwani: Then they are able to explore or create a tree of worksheets.
+
+244
+00:31:12.680 --> 00:31:19.210
+Sumit Gulwani: So, you use the term worksheet. The right technical term, at least in the Excel environment, is a spreadsheet.
+
+245
+00:31:19.450 --> 00:31:20.040
+Sadra Sabouri: Pretty…
+
+246
+00:31:20.040 --> 00:31:22.880
+Sumit Gulwani: And a spreadsheet is made up of multiple worksheets.
+
+247
+00:31:23.520 --> 00:31:27.180
+Sumit Gulwani: So if you see Excel spreadsheet, it has a bunch of tabs.
+
+248
+00:31:27.380 --> 00:31:28.090
+Sadra Sabouri: Yeah, yeah.
+
+249
+00:31:28.280 --> 00:31:30.139
+Sumit Gulwani: And each tab is called a worksheet.
+
+250
+00:31:30.350 --> 00:31:32.700
+Sumit Gulwani: And the entire document is called a spreadsheet.
+
+251
+00:31:33.080 --> 00:31:35.510
+Sadra Sabouri: The… the decision… the…
+
+252
+00:31:35.870 --> 00:31:44.009
+Sadra Sabouri: Decision tree that I mentioned also, refers to those tabs as worksheets, like, ending leaf of, of each, each,
+
+253
+00:31:44.340 --> 00:31:48.239
+Sadra Sabouri: Of trees is corresponding to one one worksheet by this definition.
+
+254
+00:31:48.240 --> 00:31:51.099
+Sumit Gulwani: But… but it can even be,
+
+255
+00:31:51.470 --> 00:32:08.080
+Sumit Gulwani: even the entire spreadsheet that the agent is computing. So maybe the decision points are such that, you know, following one decision point leads to creation of one worksheet, or one spreadsheet. Spreadsheet is a combination array, and the other one leads to another, you know, spreadsheet. So… so you'll have to, you know, decide… decide there.
+
+256
+00:32:08.340 --> 00:32:09.849
+Sadra Sabouri: Yeah, yeah, that's a challenge.
+
+257
+00:32:09.850 --> 00:32:11.740
+Sumit Gulwani: Right? Because a task might be
+
+258
+00:32:12.260 --> 00:32:31.140
+Sumit Gulwani: or create a spreadsheet where there's one worksheet for each… each team, right? Maybe there are five teams. But it is not clear to the… clear to the agent, oh, which teams are you talking about? Are you talking about cricket teams, or soccer teams, or whatever it is? And then it goes and creates, you know, two different spreadsheets. Each spreadsheet has, you know, five worksheets, and so on.
+
+259
+00:32:31.350 --> 00:32:42.449
+Sumit Gulwani: So I don't think so you might be able to leverage, you know, that thing as easily. Or maybe you can say that, no, you know, the output of an agent is always on one worksheet and so on. So if you make that assumption, then this thing might work.
+
+260
+00:32:42.610 --> 00:32:43.840
+Sadra Sabouri: Oops, yeah.
+
+261
+00:32:44.010 --> 00:32:46.839
+Sadra Sabouri: Or a good nicer slide, or…
+
+262
+00:32:47.120 --> 00:32:48.989
+Sumit Gulwani: Yeah, let's book here.
+
+263
+00:32:49.250 --> 00:33:01.279
+Sadra Sabouri: And based on those items, these were the research questions that we worked on. The first is to identify ways people actually do this verification.
+
+264
+00:33:01.400 --> 00:33:04.289
+Sadra Sabouri: if an AI agent is, is, is…
+
+265
+00:33:04.580 --> 00:33:07.120
+Sadra Sabouri: It's given to them, and then chain…
+
+266
+00:33:07.620 --> 00:33:16.559
+Sadra Sabouri: Evaluating the speed, accuracy rate of change touring mechanism, and the improvements on understanding of the changes.
+
+267
+00:33:17.070 --> 00:33:23.020
+Sadra Sabouri: after the… after the change to Ring, like, because of the change to Ring. And,
+
+268
+00:33:23.400 --> 00:33:35.289
+Sadra Sabouri: Then the, Effects of adaptive user intervention, on the… Agency and satisfaction.
+
+269
+00:33:38.920 --> 00:33:40.569
+Sadra Sabouri: On the satisfaction, basically.
+
+270
+00:33:41.360 --> 00:33:44.149
+Sadra Sabouri: And, the baby, we're gonna…
+
+271
+00:33:44.150 --> 00:33:46.950
+Sumit Gulwani: So if you go back, you know, go back to the previous slide,
+
+272
+00:33:54.890 --> 00:33:57.899
+Sumit Gulwani: So again, just, you know, maybe a little bit of a random thought here.
+
+273
+00:33:59.060 --> 00:34:03.040
+Sumit Gulwani: is that there are some parts of the task that I might care about
+
+274
+00:34:03.350 --> 00:34:09.779
+Sumit Gulwani: making sure that they are perfect, and some parts of a task, maybe I might not give too much attention to.
+
+275
+00:34:12.760 --> 00:34:13.540
+Sumit Gulwani: Boom.
+
+276
+00:34:18.409 --> 00:34:25.590
+Sumit Gulwani: And maybe the verification also needs to probably cater to that. So you talked about one dimension of a low-trust user and a high-trust user.
+
+277
+00:34:25.840 --> 00:34:28.349
+Sumit Gulwani: And another orthonal dimension might be…
+
+278
+00:34:28.510 --> 00:34:31.669
+Sumit Gulwani: That there are some parts of the task that need.
+
+279
+00:34:32.230 --> 00:34:36.179
+Sadra Sabouri: More detailed verification than the rest.
+
+280
+00:34:36.389 --> 00:34:40.840
+Sadra Sabouri: So, for example, whether, .
+
+281
+00:34:41.500 --> 00:34:44.570
+Sumit Gulwani: Chart is, you know, pulling in the right data.
+
+282
+00:34:44.719 --> 00:34:46.830
+Sumit Gulwani: is more important.
+
+283
+00:34:47.250 --> 00:34:55.979
+Sumit Gulwani: But whether the font size and the colors are exactly what I asked to do, Maybe less important.
+
+284
+00:34:58.710 --> 00:35:05.850
+Sadra Sabouri: To account for that, and also the, like, having the user agency, the way we are redesigning the…
+
+285
+00:35:06.320 --> 00:35:26.189
+Sadra Sabouri: the experiment, especially the user… usability study experiment, is that we have a planning phase which we give the… give user… give participant the task, and ask them what they want to do, so that they think aloud about what they're gonna do, and then they will work with, agents.
+
+286
+00:35:26.440 --> 00:35:35.000
+Sadra Sabouri: And then after a task, we ask for the sum… ask for them to explain the summary of what AI did, and also report the satisfaction.
+
+287
+00:35:35.380 --> 00:35:41.430
+Sadra Sabouri: So, do you think that that can, in a way, account for… for the…
+
+288
+00:35:42.280 --> 00:35:45.909
+Sadra Sabouri: Requirements that they mention in their planning, and
+
+289
+00:35:46.510 --> 00:35:51.209
+Sadra Sabouri: Then, how we can monitor this satisfaction of the requirements.
+
+290
+00:35:53.560 --> 00:35:55.810
+Sumit Gulwani: Okay, so just give me a moment while I look at this.
+
+291
+00:35:55.810 --> 00:35:56.480
+Sadra Sabouri: Okay.
+
+292
+00:36:41.190 --> 00:36:51.490
+Sumit Gulwani: Let me actually share, the two ideas from very… two very different… parts of my recent experiences.
+
+293
+00:36:51.910 --> 00:36:57.240
+Sumit Gulwani: And you can then see if it has any connection or relevance, you know, to this, right? You can then think…
+
+294
+00:36:58.950 --> 00:37:01.519
+Sumit Gulwani: So we, asked…
+
+295
+00:37:04.280 --> 00:37:11.730
+Sumit Gulwani: we went to some people, some experts, some domain experts, and asked them to give us some interesting tasks for Excel Agent.
+
+296
+00:37:11.970 --> 00:37:19.890
+Sumit Gulwani: in the context of, you know, finance domain. So we went to some finance experts. We wanted to understand their workflows, we wanted to get their tasks.
+
+297
+00:37:20.780 --> 00:37:29.000
+Sumit Gulwani: But when we ask them for the tasks, so a task would be a spreadsheet and a natural language description of what they want to do. But when we ask them for a task, we also ask them
+
+298
+00:37:29.350 --> 00:37:35.100
+Sumit Gulwani: How would you go about checking whether the agent did the right thing or not?
+
+299
+00:37:35.100 --> 00:37:35.830
+Sadra Sabouri: Yep.
+
+300
+00:37:38.730 --> 00:37:52.150
+Sumit Gulwani: Now, we did not run the agent for them at that point of time, because one thing we could have done is, we could have asked them to come up with their task, we could ask them to run XL Agent on it, and then look at the output of Excel Agent and tell us what parts it did right, what parts it did wrong.
+
+301
+00:37:52.410 --> 00:37:53.020
+Sadra Sabouri: Yep.
+
+302
+00:37:53.020 --> 00:37:56.690
+Sumit Gulwani: So that's one exercise we could have done, and in some cases, we also do that, right?
+
+303
+00:37:56.690 --> 00:38:01.880
+Sadra Sabouri: So you run the agent on the user's task, and ask the user to tell us.
+
+304
+00:38:01.990 --> 00:38:06.589
+Sumit Gulwani: what is good about the output of XL Agent, and what is not so good about the output of Excel Agent.
+
+305
+00:38:07.600 --> 00:38:10.890
+Sumit Gulwani: And the way I think, you know, your work connects to that is…
+
+306
+00:38:12.900 --> 00:38:20.550
+Sumit Gulwani: Then you… maybe the user still has to output, you know, what is good, what is not good, but you are now giving them a tooling which will make them easy to inspect.
+
+307
+00:38:20.890 --> 00:38:24.759
+Sumit Gulwani: So maybe this is a connection with that, right? This is the connection of how our study fits with
+
+308
+00:38:25.040 --> 00:38:27.110
+Sumit Gulwani: One common pattern that I see.
+
+309
+00:38:27.270 --> 00:38:44.730
+Sumit Gulwani: All around. Very important pattern, by the way, right? So, most of these companies, what are they trying to do? Right now, we're living in this data hole, right? So, most of the fight now is around which company can get, you know, what kind of valuable data. It's all a data game right now. It's not even as much of an algorithmic game. So, how is data being collected? Well.
+
+310
+00:38:44.940 --> 00:38:56.429
+Sumit Gulwani: One way that data is being collected is That you ask people to label the, output of…
+
+311
+00:38:56.540 --> 00:38:57.889
+Sumit Gulwani: Excel agent.
+
+312
+00:38:58.070 --> 00:39:03.379
+Sumit Gulwani: maybe it's not even their task, maybe someone else's task, right? But you are trying to use now human labor
+
+313
+00:39:04.140 --> 00:39:09.710
+Sumit Gulwani: To, to get labels on the quality of the agent.
+
+314
+00:39:10.890 --> 00:39:15.009
+Sumit Gulwani: Maybe that's another application of this, right? Of this work, which is.
+
+315
+00:39:15.010 --> 00:39:27.130
+Sadra Sabouri: I missed some points. So you talked about the pattern, I didn't get what was the pattern, and then you, then the last point was evaluating the quality of
+
+316
+00:39:27.820 --> 00:39:28.900
+Sadra Sabouri: Agents, right?
+
+317
+00:39:28.900 --> 00:39:35.040
+Sumit Gulwani: Yes, yes, so let me back up, let me start from scratch, right? So let me tell you another application of, you know, this perk.
+
+318
+00:39:35.040 --> 00:39:36.630
+Sadra Sabouri: That you should think about.
+
+319
+00:39:36.630 --> 00:39:45.000
+Sumit Gulwani: So right now, the application of this work is, how can a user be more confident whether the Excel agent did the task right or not?
+
+320
+00:39:46.220 --> 00:39:46.800
+Sadra Sabouri: P.S.
+
+321
+00:39:47.760 --> 00:39:49.639
+Sumit Gulwani: Here is another application of this world.
+
+322
+00:39:52.850 --> 00:39:59.210
+Sumit Gulwani: So the user here is a vendor who is getting paid to judge the output of Excel Agent.
+
+323
+00:39:59.370 --> 00:39:59.990
+Sadra Sabouri: Yo.
+
+324
+00:40:01.820 --> 00:40:06.069
+Sumit Gulwani: And it may not even be their task. It may be their task, it may not be their task.
+
+325
+00:40:06.810 --> 00:40:15.420
+Sumit Gulwani: So I go to a vendor, you know, these are very expensive people. I hear they're even paid, like, you know, $100, $200, $300 an hour.
+
+326
+00:40:16.390 --> 00:40:20.370
+Sumit Gulwani: In fact, I'm told that, you know, some people even left their full-time jobs.
+
+327
+00:40:20.720 --> 00:40:23.770
+Sadra Sabouri: Hundreds of thousands of dollars to become data labellers.
+
+328
+00:40:23.770 --> 00:40:28.359
+Sumit Gulwani: Because they know the domain, they are the domain experts.
+
+329
+00:40:28.500 --> 00:40:32.830
+Sadra Sabouri: And OpenAI, other companies, you know, paying them, you know, huge amounts of, you know, money.
+
+330
+00:40:33.450 --> 00:40:33.940
+Sadra Sabouri: Yeah.
+
+331
+00:40:34.720 --> 00:40:36.929
+Sumit Gulwani: Some thoughts for you as you first graduate.
+
+332
+00:40:37.670 --> 00:40:39.200
+Sumit Gulwani: Okay,
+
+333
+00:40:39.940 --> 00:40:47.309
+Sumit Gulwani: So now, your system can make the life of these people easy, right? Because what these people are doing is, they are evaluating the quality of
+
+334
+00:40:47.640 --> 00:40:49.870
+Sumit Gulwani: Excel agent, or any other agent.
+
+335
+00:40:50.940 --> 00:41:08.870
+Sumit Gulwani: So they look at the trajectory of Excel Agent, or any other agent, and they annotate the output. They will say that, you know, oh, this is something wrong that it did in its planning, or they will say the plan was correct, and this output object was correct, but they did not handle this case, you know, properly. Or they will come up with all kinds of annotations.
+
+336
+00:41:09.070 --> 00:41:12.869
+Sadra Sabouri: So, in some sense, they're trying to figure out what the agent did right, what the agent did wrong.
+
+337
+00:41:14.150 --> 00:41:24.450
+Sadra Sabouri: Yeah, exactly. This is actually one of the directions that I'm having for my thesis, which is, like, a scalable oversight. They call it a scalable oversight, for the tasks that
+
+338
+00:41:24.680 --> 00:41:29.520
+Sadra Sabouri: The challenge of how we can oversee AI's outputs.
+
+339
+00:41:29.520 --> 00:41:35.289
+Sumit Gulwani: Yes, yes, yes, yes, yes, exactly, right? So, scalable oversight, right? Very nice, very nice, right?
+
+340
+00:41:35.770 --> 00:41:40.939
+Sumit Gulwani: Okay, I'm not sure how… let me page back, right? But what I was saying was that this is one way.
+
+341
+00:41:41.200 --> 00:41:50.260
+Sumit Gulwani: we try to get data, or many, you know, AI companies are trying to get data from. This is one way we're doing that.
+
+342
+00:41:50.910 --> 00:41:56.950
+Sumit Gulwani: So, as I said, that this kind of tool might be useful, because it makes the life of these labelers easy.
+
+343
+00:41:57.170 --> 00:41:59.320
+Sumit Gulwani: Yeah. So I should think about that, okay.
+
+344
+00:41:59.650 --> 00:42:06.740
+Sumit Gulwani: The other way we try to get data is, we don't run the Excel agent. We just tell these people, oh, give us your tasks.
+
+345
+00:42:06.890 --> 00:42:10.550
+Sumit Gulwani: Give us your spreadsheet and your natural language queries.
+
+346
+00:42:11.550 --> 00:42:14.170
+Sumit Gulwani: But here, we also asked them for one more thing.
+
+347
+00:42:15.050 --> 00:42:23.800
+Sumit Gulwani: how would you know that Excel agent did the job correct? Or any agent did the job correct on this output? So what they will give us, they will give us a list of
+
+348
+00:42:25.940 --> 00:42:35.699
+Sumit Gulwani: subtasks, or rubrics, and they will tell us that make sure the system solves this problem by first solving task A, then task B, then task C,
+
+349
+00:42:36.320 --> 00:42:41.059
+Sumit Gulwani: Or, they would say, make sure
+
+350
+00:42:41.540 --> 00:42:48.880
+Sumit Gulwani: the system did, you know, X and Y, and the system did not do A and B,
+
+351
+00:42:49.110 --> 00:42:52.310
+Sumit Gulwani: And these are some things that you should not bother about.
+
+352
+00:42:52.620 --> 00:42:54.860
+Sumit Gulwani: So, I've seen different kinds of…
+
+353
+00:42:55.500 --> 00:42:58.629
+Sumit Gulwani: Mechanisms that these people have provided.
+
+354
+00:42:58.680 --> 00:43:16.869
+Sumit Gulwani: when they have been asked, oh, give us some tasks, and also tell us how should we judge the output of Excel Agent. Because Excel Agent is an evolving thing, and today your experience, you know, what you have may not be the one that will be there, you know, tomorrow, or any other problem change that happens, and so on. So instead, these people are giving us more
+
+355
+00:43:17.400 --> 00:43:23.689
+Sumit Gulwani: They're giving us artifacts that have a bigger shelf life, and these artifacts are around…
+
+356
+00:43:23.910 --> 00:43:36.280
+Sumit Gulwani: Oh, make sure that the system solves our tasks, you know, by solving these three subtasks, in that order. Or, make sure that the output has these properties, you know, P and Q, or make sure the output does not have these, you know, bad practices.
+
+357
+00:43:36.490 --> 00:43:44.510
+Sumit Gulwani: And they're also telling us that, you know, don't worry about these kinds of variations, and it is okay to go either ways. So this is the kind of data that these people actually gave us.
+
+358
+00:43:45.000 --> 00:43:47.869
+Sadra Sabouri: Okay, now, what is the relevance to this work, right?
+
+359
+00:43:47.890 --> 00:43:56.220
+Sumit Gulwani: So here, what I'm saying is, the user themselves might be able to Provide some extra annotations.
+
+360
+00:43:56.680 --> 00:43:58.869
+Sumit Gulwani: That would make this tool even more effective.
+
+361
+00:43:59.060 --> 00:44:10.459
+Sumit Gulwani: on whatever the tool is, right? So right now, you have this tooling API, or a touring, you know, idea, and the other idea that you showed me is a decision points, or whatever you have in this tool, right? But let's say you have some tool that makes the life of…
+
+362
+00:44:10.780 --> 00:44:13.840
+Sumit Gulwani: The… the user easy.
+
+363
+00:44:14.280 --> 00:44:22.470
+Sumit Gulwani: So I'm giving you two interesting ideas here, right? Idea number one, that your tool can also be useful for this other class of people who are these, you know, very well-paid data enablers.
+
+364
+00:44:22.860 --> 00:44:23.510
+Sadra Sabouri: Yeah.
+
+365
+00:44:24.220 --> 00:44:25.429
+Sumit Gulwani: Idea number two?
+
+366
+00:44:26.400 --> 00:44:36.780
+Sumit Gulwani: Maybe the user can provide some more information that is specific to verifying that particular task, because they know the semantics of the task, they know what is important about that task, and so on.
+
+367
+00:44:37.080 --> 00:44:37.550
+Sadra Sabouri: No.
+
+368
+00:44:37.960 --> 00:44:46.730
+Sumit Gulwani: And then, this system that you have becomes even more effective in guiding the user along those dimensions, right? Maybe the user can say that.
+
+369
+00:44:46.950 --> 00:44:48.059
+Sumit Gulwani: You know what?
+
+370
+00:44:48.240 --> 00:44:56.020
+Sumit Gulwani: Yes, you know, chart looks good, I don't really care about it, but making sure that the chart is connecting and reflecting the right data.
+
+371
+00:44:56.060 --> 00:45:14.429
+Sumit Gulwani: is most important. We have seen weird kinds of errors in charts, like, they look beautiful, but the data that they connect to and so on, you know, sometimes it's off by one error, things are shifted in weird ways, and so on. I think in my talk, I also made a joke about how OpenAI messed it up, you know, with one of the announcements when they got their charts wrong.
+
+372
+00:45:15.070 --> 00:45:18.670
+Sumit Gulwani: So, so here the user would say.
+
+373
+00:45:19.510 --> 00:45:25.359
+Sumit Gulwani: Okay, I have given you the task of making a correct and a beautiful chart.
+
+374
+00:45:26.010 --> 00:45:35.140
+Sumit Gulwani: But hey, don't worry about the beautiful part of it, just worry about the correctness part of it, and guide me, so it becomes easy for me to verify that the chart is pulling in the right data.
+
+375
+00:45:35.630 --> 00:45:43.739
+Sumit Gulwani: So maybe the right drive columns were computed, the right pivot table was computed, and that was what was, you know, bound to the chart.
+
+376
+00:45:44.230 --> 00:45:58.419
+Sumit Gulwani: Right? So the user can give you some extra information. In this case, the information of the form, I care about X, I don't care about Y, whatever, right? The user can say, these things are more important for me, and now you help the user guide decide. So, let's go back to my vacation planning example, right?
+
+377
+00:45:58.630 --> 00:46:02.619
+Sumit Gulwani: How would I, want to, check it?
+
+378
+00:46:03.120 --> 00:46:11.109
+Sumit Gulwani: Well… do I really care about all the temporary, you know, computations or the reasoning that that tool had?
+
+379
+00:46:11.330 --> 00:46:20.730
+Sumit Gulwani: maybe I don't really care about whether the schedule is the most optimal one or not, right? The most optimal schedule would be that I can walk between all those attractions with the least amount of walking distance.
+
+380
+00:46:21.030 --> 00:46:21.650
+Sadra Sabouri: Yeah.
+
+381
+00:46:22.090 --> 00:46:41.879
+Sumit Gulwani: Maybe that's not as important to me as just knowing that I cared about 3 attractions, the system has given me some scheme, some itinerary of those 3 attractions. I just need to make sure the walking times are accurate, and opening and closing times are okay. That's enough, right? But I asked the system to give me as optimal an itinerary as it can. That was my ask.
+
+382
+00:46:42.310 --> 00:47:00.110
+Sumit Gulwani: But what I want to verify is just the fact that they type check with respect to walking times and closing times. Maybe that's all I care about, in terms of my checking. So I don't need to walk through what all reasoning the system did in terms of, you know, coming up with the optimal, you know, itinerary or something.
+
+383
+00:47:02.450 --> 00:47:13.359
+Sadra Sabouri: Yeah, so it's very interesting, and the way I was, like, trying to formalize this is that you have some must-haves and some nice-to-haves.
+
+384
+00:47:13.360 --> 00:47:15.749
+Sumit Gulwani: A good way, yes. Must-have and nice-to-haves, yes.
+
+385
+00:47:15.750 --> 00:47:19.310
+Sadra Sabouri: For your rubric, basically, and you can either come up with them, or, like.
+
+386
+00:47:19.310 --> 00:47:30.879
+Sumit Gulwani: an agent can give you a storage… To make everything optional, right? Make everything optional. So if that… if all these, you know, belts and whistles that I'm talking about are not there, your system still works. It works like this.
+
+387
+00:47:31.120 --> 00:47:37.919
+Sumit Gulwani: But you can accommodate these interesting bells and whistles, which I am observing from my own experiences and by seeing people around me.
+
+388
+00:47:39.400 --> 00:47:40.130
+Sadra Sabouri: Yup.
+
+389
+00:47:41.020 --> 00:47:58.930
+Sadra Sabouri: Interesting. And, like, one interesting thing is that we did the, like, exact same thing that you said with the financial expert. We went to an interview with him, and I asked him, what's your day-to-day tasks, and what do you think agent can be applied to, and how do you verify? And,
+
+390
+00:48:00.630 --> 00:48:05.480
+Sadra Sabouri: Since it was only one person, we didn't find a pattern, but,
+
+391
+00:48:06.360 --> 00:48:25.099
+Sadra Sabouri: they were really interested in trying this, and the verification steps that they were providing wasn't very clear. Like, his answer was that I would verify the same way as I verify, like, a Python code. So very vague, and I think it's not the most optimal way.
+
+392
+00:48:26.350 --> 00:48:27.070
+Sadra Sabouri: Yeah.
+
+393
+00:48:30.450 --> 00:48:39.590
+Sumit Gulwani: Yes, so even one interesting aspect here is just a diff, right? You know, so the spreadsheet, or some spreadsheet was created, or maybe objects were edited and moved.
+
+394
+00:48:39.770 --> 00:48:43.850
+Sumit Gulwani: So I might need to be able to successfully characterize,
+
+395
+00:48:43.960 --> 00:48:47.439
+Sumit Gulwani: You know, all the new objects, or the new changes that happened to the spreadsheet.
+
+396
+00:48:49.470 --> 00:48:50.210
+Sadra Sabouri: Yep.
+
+397
+00:48:50.350 --> 00:48:58.980
+Sadra Sabouri: You mean, like, this tool can be used for showing changes to… Onboarding people, basically.
+
+398
+00:48:59.860 --> 00:49:00.550
+Sadra Sabouri: Yeah.
+
+399
+00:49:02.430 --> 00:49:03.730
+Sadra Sabouri: Yeah, these are good ideas.
+
+400
+00:49:03.920 --> 00:49:10.790
+Sumit Gulwani: Okay, so let's move on here. Oh, one other thing I want to realize, I want to tell you two things, right? I told you one thing, right, from where two ideas, you know, came.
+
+401
+00:49:11.150 --> 00:49:21.999
+Sumit Gulwani: The other thing is this, and maybe it connects to methodologies. It is not as much about the tooling, probably, or the features that you can provide with the tool, right? So let me give you an example.
+
+402
+00:49:23.030 --> 00:49:27.859
+Sumit Gulwani: So there's some work that I've been doing recently with some collaborators in Germany.
+
+403
+00:49:28.220 --> 00:49:29.500
+Sumit Gulwani: At MBA.
+
+404
+00:49:30.130 --> 00:49:36.719
+Sumit Gulwani: And this is around… making pictures. So how do you create, you know, beautiful pictures?
+
+405
+00:49:37.310 --> 00:49:41.890
+Sumit Gulwani: Maybe for your slides, for your posters.
+
+406
+00:49:43.010 --> 00:49:46.380
+Sumit Gulwani: And picture generation, image generation, is a creative task.
+
+407
+00:49:46.950 --> 00:49:47.600
+Sadra Sabouri: Yo.
+
+408
+00:49:48.450 --> 00:49:53.430
+Sumit Gulwani: So we had a study that we did where people just use ChatGPT directly.
+
+409
+00:49:54.180 --> 00:49:56.419
+Sumit Gulwani: And in the other study, they use our two.
+
+410
+00:49:57.900 --> 00:49:59.739
+Sumit Gulwani: So, the tool has two phases.
+
+411
+00:50:00.910 --> 00:50:03.109
+Sumit Gulwani: One is what is called divergent thinking.
+
+412
+00:50:04.160 --> 00:50:07.800
+Sumit Gulwani: So first, you will show them, you know, a very broad set of options.
+
+413
+00:50:10.030 --> 00:50:19.050
+Sumit Gulwani: And then once they pick one of those options, or maybe they see how the system is coming up with those broad options, and then they will define their own option.
+
+414
+00:50:19.680 --> 00:50:26.850
+Sumit Gulwani: Then you let them… Tailor the choices, And make smaller edits.
+
+415
+00:50:26.960 --> 00:50:33.229
+Sumit Gulwani: in the option that they have chosen, and this is called convergent thinking phase, right? So one is divergent, followed by convergent.
+
+416
+00:50:34.590 --> 00:50:37.179
+Sumit Gulwani: For example, you know, one of the exercises was…
+
+417
+00:50:37.300 --> 00:50:41.510
+Sumit Gulwani: That, oh, create a marketing poster for university students.
+
+418
+00:50:42.010 --> 00:50:45.500
+Sumit Gulwani: To encourage them not to spend too much time on their phones.
+
+419
+00:50:48.110 --> 00:50:49.310
+Sumit Gulwani: And…
+
+420
+00:50:49.820 --> 00:50:57.660
+Sumit Gulwani: And then the system comes up with, you know, this divergent thinking with different metaphors. So it uses metaphorical thinking, it leverages different metaphors.
+
+421
+00:50:57.830 --> 00:51:04.459
+Sumit Gulwani: to provide a bunch of options. I think one such option was that there was a bench.
+
+422
+00:51:04.870 --> 00:51:10.270
+Sumit Gulwani: And just people who are walking around the bench, but no one is sitting on the bench, essentially.
+
+423
+00:51:11.580 --> 00:51:29.119
+Sumit Gulwani: And then the user says that, okay, no, let's work on this option, right? This is looking good. And then they will iterate on things around that option. They will say that, oh, the background doesn't really look like it's a university campus, so make sure the building in the back, you know, looks like a library, things like that.
+
+424
+00:51:29.480 --> 00:51:40.770
+Sumit Gulwani: And even these suggestions are coming from the tool itself, of what kinds of changes you might want to make. But anyways, we had this tool like this, but the idea was the tool had two parts, divergent thinking, and then convergent thinking.
+
+425
+00:51:40.940 --> 00:51:48.669
+Sumit Gulwani: So here is the interesting thing that happened in the user story. Now, it's a tool that we have, you know, we have built good UI and so on, whatever, to let the user explore this.
+
+426
+00:51:48.910 --> 00:51:52.879
+Sumit Gulwani: But, here's what we observed. So, one user study was.
+
+427
+00:51:53.310 --> 00:51:56.440
+Sumit Gulwani: when they did ChatGPT, and then they used our tool.
+
+428
+00:51:57.010 --> 00:51:58.959
+Sumit Gulwani: And the other user study was…
+
+429
+00:51:59.230 --> 00:52:07.519
+Sumit Gulwani: or the other control experiment was, you know, we divided the population into two categories. The other category was, they use our tool first, and then they use ChatGPT.
+
+430
+00:52:07.820 --> 00:52:08.570
+Sadra Sabouri: Huh.
+
+431
+00:52:08.960 --> 00:52:13.760
+Sumit Gulwani: So what we find is that the people who use our tool first, and then they use ChatGPT,
+
+432
+00:52:14.080 --> 00:52:20.900
+Sumit Gulwani: But actually, using this idea of divergent and convergent thinking faces with ChatGPT directly.
+
+433
+00:52:21.180 --> 00:52:32.949
+Sumit Gulwani: So first, they would brainstorm with ChatGPT. Instead of trying to directly ask it to create an image, they would actually brainstorm and say, think about different metaphors that can be used, and give me, like, you know, 8 choices that I can explore.
+
+434
+00:52:33.170 --> 00:52:41.499
+Sumit Gulwani: And then they will pick one of those choice, or define one of their own, and then try to do convergent thinking, right? So even though we had built a tool.
+
+435
+00:52:41.690 --> 00:52:51.340
+Sumit Gulwani: the artifacts of that tool are also general ideas or methodologies that the user can learn from and follow up on their own. So that I thought was quite beautiful.
+
+436
+00:52:53.230 --> 00:52:58.809
+Sumit Gulwani: And this is how I'm differentiating a feature or tool that we can build versus
+
+437
+00:52:59.370 --> 00:53:03.729
+Sumit Gulwani: Versus, you know, what they can do on their own, even if they didn't have your tool, right?
+
+438
+00:53:03.850 --> 00:53:12.480
+Sumit Gulwani: So, for instance, if I were you, and, like, if I use… if I was one of your participants, and I used your tool, and you showed me this idea of touring.
+
+439
+00:53:12.530 --> 00:53:24.120
+Sumit Gulwani: Then what I would do is, you know, next time when I go back and I don't have your tool and so on, you know what I will do? I will work with Excel agent and say that, oh, after you're done computing your output, give me a touring experience.
+
+440
+00:53:24.450 --> 00:53:25.559
+Sadra Sabouri: Like, a step-by-step.
+
+441
+00:53:25.560 --> 00:53:28.020
+Sumit Gulwani: Right? Estep experience.
+
+442
+00:53:28.080 --> 00:53:37.339
+Sumit Gulwani: And if possible, even make a dynamic UI for me that can, you know, walk me through or whatever, right? I can try to come close to it. But you are right, I think that the simplest I can do is…
+
+443
+00:53:37.340 --> 00:53:48.169
+Sumit Gulwani: Give me a step-by-step experience to explain what are all outputs that you constructed, essentially, right? Just similar to the Turing experience and so on, right? And this gets down to…
+
+444
+00:53:48.430 --> 00:53:53.619
+Sumit Gulwani: methodologies, right? What methodologies you want to teach the user, and so on.
+
+445
+00:53:54.300 --> 00:53:58.309
+Sumit Gulwani: So think about your contributions, not just as a tooling contribution.
+
+446
+00:54:00.240 --> 00:54:06.069
+Sumit Gulwani: And it is completely okay for our tool to not have much value, because what is happening today is that ideas are more important.
+
+447
+00:54:06.510 --> 00:54:14.799
+Sumit Gulwani: As opposed to building artifacts, because anyone can build an artifact now if they have the right idea, right? Agents are becoming so powerful that they can just follow, you know, what you tell them.
+
+448
+00:54:15.680 --> 00:54:16.689
+Sadra Sabouri: That's true, yeah.
+
+449
+00:54:17.190 --> 00:54:24.319
+Sumit Gulwani: So… so think from that perspective as well, right? And some of the ideas that I was giving you from that perspective of methodology was…
+
+450
+00:54:24.780 --> 00:54:29.660
+Sumit Gulwani: that I can define my own rubrics and requirements, or my own grading scheme.
+
+451
+00:54:30.350 --> 00:54:36.589
+Sumit Gulwani: with the task, and then I can ask the agent to evaluate against that grading scheme.
+
+452
+00:54:37.670 --> 00:54:40.150
+Sumit Gulwani: Which is what some of our finance users were doing.
+
+453
+00:54:40.970 --> 00:54:41.520
+Sadra Sabouri: Yeah.
+
+454
+00:54:41.740 --> 00:54:44.969
+Sadra Sabouri: Yeah, this last point was really, really interesting.
+
+455
+00:54:45.260 --> 00:54:51.710
+Sadra Sabouri: I wasn't thinking about it that way. And by reading, do you have, like, an archive or draft of that?
+
+456
+00:54:51.710 --> 00:54:58.850
+Sumit Gulwani: Yes, for this paper, I have, right? No, I'll send it to you. The convergent-divergent thinking, we put a archived paper, I will send a link to it.
+
+457
+00:54:58.860 --> 00:55:10.430
+Sadra Sabouri: Yeah, because Otana and I are working on a different project, Critical Thinking and Creativity, for visual artists, which is, like, very relevant to that project.
+
+458
+00:55:10.850 --> 00:55:23.619
+Sumit Gulwani: Okay, very nice, very nice. You know, this is… this is very close to my heart. I would love to learn more about what you're doing here. Critical thinking is something that I keep continuing to discuss, you know, in my channels with different educators.
+
+459
+00:55:23.960 --> 00:55:27.569
+Sadra Sabouri: Yeah. Maybe we also can cancel everything.
+
+460
+00:55:28.240 --> 00:55:30.940
+Sumit Gulwani: Yes, I would love to, you know, hear more what you're doing there.
+
+461
+00:55:31.460 --> 00:55:33.450
+Sumit Gulwani: Yeah, Sujay, yeah.
+
+462
+00:55:34.340 --> 00:55:39.729
+Sujay Maladi: Yeah, I think this touring mechanism can solve some of the problems that you have mentioned.
+
+463
+00:55:40.390 --> 00:55:42.830
+Sujay Maladi: Can I share my screens?
+
+464
+00:55:43.630 --> 00:55:45.270
+Sadra Sabouri: Let me, stop this.
+
+465
+00:55:46.850 --> 00:55:49.820
+Sadra Sabouri: Oh, we only have 3 minutes, but I think, okay.
+
+466
+00:55:49.820 --> 00:55:50.739
+Sujay Maladi: I'm trying to…
+
+467
+00:55:51.620 --> 00:55:58.510
+Sadra Sabouri: We went through the main ideas. I think the last slide was… Limitations, yeah, which…
+
+468
+00:55:59.120 --> 00:56:01.499
+Sadra Sabouri: Should be updated based on the…
+
+469
+00:56:01.710 --> 00:56:04.220
+Sadra Sabouri: Lena, let me just quickly share the…
+
+470
+00:56:04.510 --> 00:56:09.209
+Sadra Sabouri: Yeah, okay, go ahead, go ahead. I can see the slide, right? I can see the last slide.
+
+471
+00:56:13.640 --> 00:56:17.730
+Sadra Sabouri: No, no, share it, that's fine, because we all…
+
+472
+00:56:17.730 --> 00:56:18.500
+Sujay Maladi: Welcome.
+
+473
+00:56:23.440 --> 00:56:26.629
+Sujay Maladi: So, you have mentioned, can you see my figures?
+
+474
+00:56:27.270 --> 00:56:28.020
+Sumit Gulwani: Yes, I can see.
+
+475
+00:56:28.620 --> 00:56:32.420
+Sujay Maladi: So, yeah, you mentioned about the example about the itinerary, right?
+
+476
+00:56:32.840 --> 00:56:35.709
+Sujay Maladi: So, in the touring, we can…
+
+477
+00:56:35.770 --> 00:56:52.710
+Sujay Maladi: include three parts, for the verification. One is preview of planned actions, next is the actual task, and then the verification, all of these completely in the, one step. So, yeah, let's say I gave a prompt to make a plan.
+
+478
+00:56:52.740 --> 00:56:58.369
+Sujay Maladi: For one day, the agent creates it, and in the same place, it also…
+
+479
+00:56:58.440 --> 00:57:02.700
+Sujay Maladi: Says that, according to the grading mechanism or something that you told.
+
+480
+00:57:03.000 --> 00:57:07.030
+Sujay Maladi: It says, here are the sources, Google Maps or websites, so that's.
+
+481
+00:57:07.030 --> 00:57:07.750
+Sumit Gulwani: Amazing.
+
+482
+00:57:07.750 --> 00:57:08.830
+Sujay Maladi: Those are okay.
+
+483
+00:57:09.880 --> 00:57:13.469
+Sujay Maladi: And if we want any changes, we can just use the contextual edit.
+
+484
+00:57:13.630 --> 00:57:16.720
+Sumit Gulwani: So let me tell you another interesting idea here, right?
+
+485
+00:57:16.980 --> 00:57:22.579
+Sumit Gulwani: So, verifying this is actually tedious.
+
+486
+00:57:22.920 --> 00:57:27.300
+Sumit Gulwani: So the user will have to, you know, go and, you know, check each of these things.
+
+487
+00:57:27.300 --> 00:57:28.040
+Sujay Maladi: Yeah.
+
+488
+00:57:28.980 --> 00:57:33.599
+Sumit Gulwani: What might be interesting is… If you use a completely different model.
+
+489
+00:57:33.840 --> 00:57:39.749
+Sumit Gulwani: Not the same model, different model. And Excel Agent allows you to do that. Excel Agent allows you to use two different models.
+
+490
+00:57:40.190 --> 00:57:44.730
+Sumit Gulwani: Underneath. One is the best in OpenAI model, the other one is the best in Cubic model.
+
+491
+00:57:45.300 --> 00:57:47.509
+Sumit Gulwani: And ask that model
+
+492
+00:57:47.950 --> 00:57:58.900
+Sumit Gulwani: To, or ask both of those models, right? That, what are the opening and closing hours of, you know, for this, and then compare their results.
+
+493
+00:57:59.020 --> 00:58:04.019
+Sumit Gulwani: So the hypothesis here is that it is going to be less likely for both of them to hallucinate the same thing.
+
+494
+00:58:04.750 --> 00:58:12.070
+Sumit Gulwani: And if both of them agree, I can be more confident that things are probably right. It's not a life or death situation, even if it is wrong, it's okay.
+
+495
+00:58:12.070 --> 00:58:18.079
+Sujay Maladi: Yeah, yeah. But one quick way for me to do all these, you know, check against web searches.
+
+496
+00:58:18.150 --> 00:58:24.449
+Sumit Gulwani: is to use two very different models and ask them to show me this. Now, I'm not asking the two models to generate the itinerary.
+
+497
+00:58:24.580 --> 00:58:39.199
+Sumit Gulwani: Because they might still generate, you know, different itineraries, and that's okay. But what I'm asking them to do is to agree on the closing and opening hours of each place. So that's an interesting insight here, that the task was to generate an itinerary.
+
+498
+00:58:39.560 --> 00:58:47.789
+Sumit Gulwani: I can use one model, I can use another model, their itineraries may not match, both of them might be fine, right? But how should I go about checking the itinerary? So here is my idea as a user.
+
+499
+00:58:48.110 --> 00:58:58.340
+Sumit Gulwani: My idea is that exactly what you were saying, right? That I want to make sure that the time in the itinerary matches with the opening and closing time, and the walking distances are accurate.
+
+500
+00:58:59.740 --> 00:59:15.179
+Sumit Gulwani: or the walking distances are such that the time difference between places takes that into account, right? So that's my verification logic. Now, how do I verify that, is the idea that you are showing me right now, right? No differences and so on. But even this can be automated.
+
+501
+00:59:15.180 --> 00:59:20.110
+Sumit Gulwani: by making this hypothesis that I can ask two models to, you know, independently compute this information for me.
+
+502
+00:59:20.740 --> 00:59:32.169
+Sumit Gulwani: If they agree, it's very unlikely that they both hallucinate the same way. For example, right? That's my creative intuition as a user, and that's what I would actually be doing. And if you can make my life easy to automate, you know, these things, you know, it'd be nice.
+
+503
+00:59:32.170 --> 00:59:32.730
+Sujay Maladi: Yeah.
+
+504
+00:59:33.240 --> 00:59:33.830
+Sadra Sabouri: Excellent.
+
+505
+00:59:34.240 --> 00:59:35.770
+Sujay Maladi: Also, for the…
+
+506
+00:59:35.950 --> 00:59:43.310
+Sujay Maladi: charts thingy that you don't, like, if you want to change the colors, in the tool, you can just directly press on the edit, change the colors.
+
+507
+00:59:43.310 --> 00:59:59.019
+Sumit Gulwani: Nice, I like this very much, I like this, yes, yes. So we need to provide, you know, easily editable aspects for many of these things. But how will this be implemented? Have you figured it out that this can be done much more efficiently, or is this a wrapper that you're going to be building, or…
+
+508
+01:00:00.090 --> 01:00:03.250
+Sujay Maladi: Go ahead, go ahead, Sarah.
+
+509
+01:00:03.250 --> 01:00:14.669
+Sadra Sabouri: So we have two approaches for now. One is, like, an add-in on top of, Excel, which Sujay is working on. The other one is having, like,
+
+510
+01:00:14.810 --> 01:00:18.580
+Sadra Sabouri: implementation from scratch, which I'm working on,
+
+511
+01:00:18.950 --> 01:00:21.990
+Sadra Sabouri: So that the agent is also on our side.
+
+512
+01:00:22.100 --> 01:00:31.630
+Sadra Sabouri: the first one has a better compatible… sorry, like a…
+
+513
+01:00:31.890 --> 01:00:42.050
+Sadra Sabouri: more powerful agent, because it's on top of Excel agents, let's say. The second one has more control over the process, which is better for the, like, studies that we wanted to plan.
+
+514
+01:00:42.050 --> 01:01:00.480
+Sumit Gulwani: So I hope you're realizing, right, that to implement any of these things today, you should be able to use the agent itself, right? Maybe it's Excel Agent, maybe it's some other agent, right? So you have a lot of power today to bring your ideas to life without having to do any or too much of your coding yourself, right? So one interesting thing here might be that many of these objects are rendered using code.
+
+515
+01:01:00.730 --> 01:01:12.759
+Sumit Gulwani: So if you look at the Excel agent directory, I'm not sure how much it exposes or not, but… or maybe you can explicitly ask it to generate the code. Maybe this is something that you can do. So let's say Excel Agent is not showing you the code that it used to generate the chart.
+
+516
+01:01:13.060 --> 01:01:13.420
+Sadra Sabouri: You can…
+
+517
+01:01:13.420 --> 01:01:18.809
+Sumit Gulwani: You can command it, that whenever you are, you know, generating a chart, give me the code.
+
+518
+01:01:19.130 --> 01:01:20.700
+Sumit Gulwani: To render their chart.
+
+519
+01:01:21.050 --> 01:01:27.660
+Sumit Gulwani: And then your edit operations can just directly manipulate that code. And hopefully manipulating that code is, you know, very easy and very fast.
+
+520
+01:01:27.840 --> 01:01:32.949
+Sumit Gulwani: Maybe you don't even need to use an agent there, it comes up with a binding already.
+
+521
+01:01:32.950 --> 01:01:37.279
+Sadra Sabouri: From code, you mean, like, the formula in cells, right?
+
+522
+01:01:37.740 --> 01:01:42.220
+Sumit Gulwani: So let's see how is the chart generated, right? So the way the chart is generated is.
+
+523
+01:01:42.660 --> 01:01:45.139
+Sumit Gulwani: So there is some object model inside Excel.
+
+524
+01:01:45.360 --> 01:01:48.250
+Sumit Gulwani: That is used to represent the chart. There's some object model.
+
+525
+01:01:48.470 --> 01:01:49.080
+Sadra Sabouri: Yep.
+
+526
+01:01:50.250 --> 01:01:51.090
+Sumit Gulwani: And…
+
+527
+01:01:51.740 --> 01:02:03.170
+Sumit Gulwani: the way you might have seen this object model getting manipulated is through the UI actions. So you can select different things in the UI. So I have a hard stop at 4.10, but I can chat until then.
+
+528
+01:02:03.170 --> 01:02:03.810
+Sadra Sabouri: Okay.
+
+529
+01:02:05.600 --> 01:02:12.589
+Sumit Gulwani: So, you can… you can control the object model using the UI actions, but there's also,
+
+530
+01:02:12.960 --> 01:02:19.199
+Sumit Gulwani: JavaScript-based API called OfficeJS that provides a programmatic way
+
+531
+01:02:19.660 --> 01:02:22.570
+Sumit Gulwani: To, manipulate that object model.
+
+532
+01:02:22.770 --> 01:02:24.959
+Sumit Gulwani: So, the object model of Excel.
+
+533
+01:02:25.250 --> 01:02:35.010
+Sumit Gulwani: can be manipulated using the UI, or using this programmatic layer that is there? So this programmatic layer is called OfficeJS. I think it's a public API that you can look at it.
+
+534
+01:02:35.050 --> 01:02:38.759
+Sadra Sabouri: So it's a JavaScript-based wrapper on top of the object model.
+
+535
+01:02:39.090 --> 01:02:54.230
+Sumit Gulwani: So Excel Agent is producing… it is not operating or doing UI actions. It's not a core kind of environment, a computer use agent. It's not a computer use agent. Excel Agent is actually generating code in Office.js, which is a programmatic wrapper, JavaScript-based wrapper.
+
+536
+01:02:54.320 --> 01:03:01.419
+Sumit Gulwani: on top of the Excel object model, the charting model in this case.
+
+537
+01:03:02.290 --> 01:03:12.339
+Sumit Gulwani: So, if you… if Excel Agent shows that code to you, right? So it is gen… I know that it is generating that code, that's how it renders the chart, right? But maybe it's not showing that code on the…
+
+538
+01:03:12.460 --> 01:03:17.930
+Sumit Gulwani: In the output. But you can ask it to give it to you, that… give that code to you, and maybe it will do it.
+
+539
+01:03:19.160 --> 01:03:23.899
+Sumit Gulwani: And if you know, you know, which of the parameters corresponds to the color.
+
+540
+01:03:24.370 --> 01:03:30.530
+Sumit Gulwani: Then you can imagine a UI that will allow the user to quickly, you know, change the color and so on.
+
+541
+01:03:31.410 --> 01:03:34.059
+Sumit Gulwani: Without doing any neural call, or a model call.
+
+542
+01:03:35.050 --> 01:03:43.690
+Sumit Gulwani: But, of course, you know, this is a very niche case. If you were to think about the generalization here, you'll have the… maybe you can ask the agent itself to come up with some mappings like that.
+
+543
+01:03:44.110 --> 01:03:53.940
+Sumit Gulwani: So what are some of the typical edit operations, and what do those edits correspond to in terms of what changes can be made in the code? If that subtask was done using code.
+
+544
+01:03:53.990 --> 01:04:07.339
+Sumit Gulwani: What that means is that it will give you an edit interface, which will be very prompt, low latency, the user makes a change immediately, you see the output immediately, and so on. But of course, it's not possible for all edits, but for some edits, it might be possible.
+
+545
+01:04:09.710 --> 01:04:20.140
+Sumit Gulwani: But just a thought. But because when we generate these kinds of edits, my question was, you know, how are you going to realize them? So you can either have the agent solve a subtask, you know, separately.
+
+546
+01:04:20.140 --> 01:04:34.890
+Sumit Gulwani: But you are still using the power of the language model, which is okay, right? It will take you, like, you know, 5, 6, 10 seconds, but that's okay. But if you want it, like, instantaneous, you know, interface, then it may still be possible with some kinds of edits.
+
+547
+01:04:34.960 --> 01:04:43.560
+Sumit Gulwani: but then you'll have to deal with this kind of complication, and you'll have to design some dynamic UIs and so on to allow those kinds of edits.
+
+548
+01:04:43.560 --> 01:04:46.989
+Sadra Sabouri: Okay, I get your point now. So you're referring to, like, how we can
+
+549
+01:04:47.540 --> 01:04:50.100
+Sadra Sabouri: Do some of those edits in place.
+
+550
+01:04:50.560 --> 01:04:51.640
+Sadra Sabouri: Basically, yeah.
+
+551
+01:04:53.930 --> 01:04:55.440
+Sadra Sabouri: Nice, thank you.
+
+552
+01:04:59.000 --> 01:04:59.750
+Sumit Gulwani: Okay.
+
+553
+01:04:59.890 --> 01:05:01.689
+Sumit Gulwani: Anything else?
+
+554
+01:05:02.770 --> 01:05:03.770
+Sadra Sabouri: Not from my side.
+
+555
+01:05:06.470 --> 01:05:15.639
+Sumit Gulwani: Okay, super. Okay then, thanks, Adra. Thanks, Sujay. Thanks, Athena. Have a great weekend, you folks, and let me know when you want to connect, connect next year.
+
+556
+01:05:15.640 --> 01:05:18.060
+Sadra Sabouri: Sure, sure, I will, I will email you. Thank you.
+
+557
+01:05:18.130 --> 01:05:19.050
+Athena: Thank you, Sumit.
+
+558
+01:05:19.630 --> 01:05:21.089
+Sadra Sabouri: Yes, okay, bye-bye. Bye.
+
+559
+01:05:21.090 --> 01:05:21.840
+Athena: Okay.
+
+560
+01:05:22.340 --> 01:05:24.279
+Sadra Sabouri: Auton, can you stay a little bit?
+
+561
+01:05:24.680 --> 01:05:25.280
+Athena: Sure.
+
+562
+01:05:27.990 --> 01:05:29.059
+Sadra Sabouri: Thank you, guys.
+
+563
+01:05:29.560 --> 01:05:37.030
+Sadra Sabouri: I was thinking of adding, some of the questions that the Sumit mentioned to the… let me stop the recording.
+

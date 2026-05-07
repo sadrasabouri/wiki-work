@@ -17,7 +17,7 @@ Drop in raw sources (transcripts, emails, documents). Ask questions. Get synthes
 ## How it works
 
 ```
-raw/          ← your source files go here (transcripts, emails, notes)
+raw-sources/  ← your source files go here (transcripts, emails, notes)
 wiki/         ← Claude maintains this: concept pages, people, projects, events, and views
 ```
 
@@ -33,12 +33,12 @@ This project runs on [Claude Code](https://claude.ai/code). Install the CLI and 
 
 **2. Drop in a source file**
 
-Put a meeting transcript, email export, or document in `raw/`. Markdown works best; `.eml`, `.vtt`, and `.docx` are supported but gitignored.
+Put a meeting transcript, email export, or document in `raw-sources/`. Markdown works best; `.eml`, `.vtt`, and `.docx` are supported but gitignored.
 
 **3. Ingest it**
 
 ```
-/ingest raw/your-file.md
+/ingest raw-sources/your-file.md
 ```
 
 Claude reads the source, extracts key ideas, writes wiki pages, and updates the index.
@@ -60,8 +60,8 @@ Answers come with `[[citations]]` back to source files.
 
 | Command | Example | What it does |
 |---------|---------|--------------|
-| `/ingest` | `/ingest raw/meeting-2026-05.md` | Read source, write wiki pages, update index |
-| `/purge` | `/purge raw/old-transcript.md` | Remove superseded claims when a source is retracted |
+| `/ingest` | `/ingest raw-sources/meeting-2026-05.md` | Read source, write wiki pages, update index |
+| `/purge` | `/purge raw-sources/old-transcript.md` | Remove superseded claims when a source is retracted |
 | `/lint` | `/lint` | Find broken links, orphan pages, stale claims |
 | `/trim` | `/trim` or `/trim views` | Remove deprecated concepts and superseded definitions; keeps only the latest framing of each idea |
 | `/clarify` | `/clarify` or `/clarify views` | Audit concept definitions and relationships: generates critical questions, you answer, wiki updates |
@@ -93,6 +93,6 @@ Every view command saves a Markdown file to `wiki/` — visible as a regular pag
 
 ## Privacy
 
-Raw sources stay in `raw/` and are never modified. If you need to share a KB without sharing private sources, use `/purge` to remove specific sources and regenerate affected pages.
+Raw sources stay in `raw-sources/` and are never modified. If you need to share a KB without sharing private sources, use `/purge` to remove specific sources and regenerate affected pages.
 
 For team use, the semi-private mashing pattern lets you filter a private 1:1 transcript so only the relevant, non-sensitive parts flow into the shared KB — without the full source ever touching the shared layer.
