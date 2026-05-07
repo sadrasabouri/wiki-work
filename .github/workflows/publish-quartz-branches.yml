@@ -161,6 +161,74 @@ jobs:
           fs.writeFileSync(layoutPath, patchedLayout)
           NODE
 
+          # Make sidebar navigation panels more compact without changing article typography.
+          node <<'NODE'
+          const fs = require("node:fs")
+
+          const compactExplorerStyles = `
+
+          /* wiki-work compact explorer typography */
+          button.mobile-explorer,
+          button.desktop-explorer {
+            & h2 {
+              font-size: 0.9rem;
+            }
+          }
+
+          .explorer-content {
+            font-size: 0.86rem;
+            line-height: 1.35rem;
+
+            & ul li > a {
+              line-height: 1.35rem;
+            }
+          }
+
+          .folder-container {
+            & div > a {
+              font-size: 0.86rem;
+              line-height: 1.35rem;
+            }
+
+            & div > button span {
+              font-size: 0.86rem;
+              line-height: 1.35rem;
+            }
+          }
+          `
+
+          const compactTocStyles = `
+
+          /* wiki-work compact toc typography */
+          button.toc-header {
+            & h3 {
+              font-size: 0.9rem;
+            }
+          }
+
+          ul.toc-content.overflow {
+            font-size: 0.86rem;
+            line-height: 1.35rem;
+
+            & > li > a {
+              line-height: 1.35rem;
+            }
+          }
+          `
+
+          const stylePatches = [
+            ["quartz/components/styles/explorer.scss", "wiki-work compact explorer typography", compactExplorerStyles],
+            ["quartz/components/styles/toc.scss", "wiki-work compact toc typography", compactTocStyles],
+          ]
+
+          for (const [stylePath, marker, styles] of stylePatches) {
+            const source = fs.readFileSync(stylePath, "utf8")
+            if (!source.includes(marker)) {
+              fs.writeFileSync(stylePath, source + styles)
+            }
+          }
+          NODE
+
           declare -A SEEN_SLUGS=()
           declare -a BUILT_BRANCHES=()
           declare -a BUILT_SLUGS=()
