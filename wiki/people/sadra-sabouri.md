@@ -18,7 +18,7 @@ In [[agent-traceability-steerability|Spreadsheet Verification]], Sadra is the pr
 
 In [[T10-2026-05-03|the May 3 sync]], demoed the wiki live to Sumit for the first time and applied the system to his cousin's chemistry PhD emails as a scaling test beyond the research project. Proposed knowledge graph (typed edges: source→relation→target) and event log as alternative foundational infrastructure views alongside wiki, in [[T12-2026-05-04-2|May 4]].
 
-First author of [[Auditing and Controlling AI Agent Actions in Spreadsheets|the Pista paper]] (arxiv 2604.20070) — the published output of the [[agent-traceability-steerability|Spreadsheet Verification]] project. His Sadra-notes document ([[Agent's Traceability and Steerability Project]]) frames the core problem: users are passive observers meeting agent output at end of execution, leading to a re-prompting loop.
+First author of [[Auditing and Controlling AI Agent Actions in Spreadsheets|the Pista paper]] (arxiv 2604.20070) — the published output of the [[agent-traceability-steerability|Spreadsheet Verification]] project. His Sadra-notes document ([[Pista Project]]) frames the core problem: users are passive observers meeting agent output at end of execution, leading to a re-prompting loop.
 
 In [[T15-2026-05-06|the May 6 sync]], mined 700 comments from Karpathy's GitHub gist — the origin point for the LLM-wiki pattern — categorizing related work into three groups: (I) software engineering, (II) researchers and ideators, (III) teams. Built the `/clarify` command: surfaces definitional gaps and relationship inconsistencies as critical questions; user answers; wiki updates accordingly.
 

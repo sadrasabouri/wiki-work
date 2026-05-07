@@ -4,7 +4,7 @@ tags: [concept]
 
 # Local-First KB
 
-A personal knowledge base architecture where private information is processed and indexed entirely on the user's device, then selectively merged with a shared organizational KB via a PR-like contribution model. Proposed by [[sadra-sabouri|Sadra]] in [[Personal Private Knowledge Management]] as the structural answer to the privacy problem.
+A personal knowledge base architecture where private information is processed and indexed entirely on the user's device, then selectively merged with a shared organizational KB via a PR-like contribution model. Proposed by [[sadra-sabouri|Sadra]] in [[Personal Knowledge Management]] as the structural answer to the privacy problem.
 
 ## The Architecture
 
@@ -25,7 +25,7 @@ The [[matvellosoknowledge]] GitHub project (by Eduardo Mello) implements this pa
 
 ## The RAG Critique
 
-matvellosoknowledge uses embeddings + cosine similarity for retrieval — the RAG pattern. Sadra's note identifies the structural weakness: "this makes the dependency uninterpretable compared to a graph structure." [[Personal Private Knowledge Management]]
+matvellosoknowledge uses embeddings + cosine similarity for retrieval — the RAG pattern. Sadra's note identifies the structural weakness: "this makes the dependency uninterpretable compared to a graph structure." [[Personal Knowledge Management]]
 
 The critique generalizes: RAG-based local KBs can retrieve relevant chunks, but cannot answer *why* two pieces of knowledge are related, or traverse a typed relation chain. The graph-structured wiki provides interpretable provenance — a traceable path from conclusion to source — that embeddings cannot.
 

@@ -22,7 +22,7 @@ Sumit extended this in [[Thursday demo]]: just as the future of coding involves 
 
 ## Local Branch Model
 
-The analogy extends to the personal ↔ org KB relationship. A personal private KB is a **local branch** — a fork of the org KB that the individual develops privately. When the user wants to contribute knowledge from private sources (1:1 transcripts, personal notes), they submit a PR: select what to include, filter what to exclude, and open for review. [[Personal Private Knowledge Management]]
+The analogy extends to the personal ↔ org KB relationship. A personal private KB is a **local branch** — a fork of the org KB that the individual develops privately. When the user wants to contribute knowledge from private sources (1:1 transcripts, personal notes), they submit a PR: select what to include, filter what to exclude, and open for review. [[Personal Knowledge Management]]
 
 This makes [[semi-private-mashing|Semi-Private Mashing]] concrete: the PR boundary is the filter. Only what's in the PR crosses from the private layer to the shared one. The org KB is the upstream main branch; each user maintains their own fork.
 

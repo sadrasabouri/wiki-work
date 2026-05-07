@@ -74,4 +74,4 @@ The [[agent-lens|Agent Lens]] framework: **stop** (execution pauses), **see** (F
 
 ## Sources
 
-[[T1-2026-02-20-2301|Feb 20]], [[T2-2026-03-04-1912|Mar 4]], [[T3-2026-03-11-1846|Mar 11]], [[T4-2026-03-16-2006|Mar 16]], [[Agent's Traceability and Steerability Project]], [[Auditing and Controlling AI Agent Actions in Spreadsheets]]
+[[T1-2026-02-20-2301|Feb 20]], [[T2-2026-03-04-1912|Mar 4]], [[T3-2026-03-11-1846|Mar 11]], [[T4-2026-03-16-2006|Mar 16]], [[Pista Project]], [[Auditing and Controlling AI Agent Actions in Spreadsheets]]
