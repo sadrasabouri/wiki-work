@@ -18,6 +18,7 @@ Answer this question using the wiki: $ARGUMENTS
    - Use inline `[[wikilinks]]` for every factual claim — no citation-free assertions
    - Explicitly flag anything that is uncertain, hedged, or from only a single source
    - Surface tensions or contradictions rather than papering over them
+   - If the answer contains any table or list, add **Provenance** as the first column — a `[[raw-sources/...]]` wikilink to the file the row came from, with `· Person` when a specific person introduced it
 
 5. If the answer reveals a gap — a concept that comes up but has no wiki page, or a connection not captured anywhere — note it at the end.
 

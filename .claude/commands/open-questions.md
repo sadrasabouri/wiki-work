@@ -28,16 +28,16 @@ Surface Open Questions for: $ARGUMENTS
 ## Open Questions: $ARGUMENTS
 
 ### Unresolved Design Questions
-- <Question> — raised in [[source]], no resolution found
+- <Question> — raised in [[raw-sources/path/to/file]] · Person, no resolution found
 
 ### Conceptual Tensions
-- <Tension between X and Y> — [[page-a]] says one thing, [[page-b]] implies another
+- <Tension between X and Y> — [[page-a]] says one thing, [[page-b]] implies another (sources: [[raw-source-a]], [[raw-source-b]])
 
 ### Missing Pages
 - `[[concept-name]]` — mentioned in [[page]], no page exists
 
 ### Potentially Stale Claims
-- [[page]] claims X, sourced from [[early-meeting]] — no later source confirms
+- [[page]] claims X, sourced from [[raw-sources/path/to/file]] · Person — no later source confirms
 ```
 
 End with a prioritized top-3: which open questions most need resolution before the next phase of work.

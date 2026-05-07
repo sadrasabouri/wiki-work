@@ -13,7 +13,7 @@ Generate presentation from template: $ARGUMENTS
 
 3. **Fill each section.** For every `## Section` in the template, execute its `> fill:` prompt against the wiki content. Each section becomes one slide:
    - Write 3–5 bullets drawn from specific wiki pages — concrete and grounded, not generic
-   - Cite the wiki source inline: `*[[source]]*`
+   - Cite the originating raw source inline: `*[[raw-sources/path/to/file]] · Person*` — use the transcript or document the claim came from, not just the wiki page that synthesized it
    - Add a `> speaker note:` line with what to say aloud (1–2 sentences max)
    - Preserve any static content in the template that is not inside a `> fill:` block
 

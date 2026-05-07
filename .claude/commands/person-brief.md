@@ -29,7 +29,7 @@ Parse the argument as `<person>: <topic>`. If no topic separator is present, pro
 
 ```markdown
 ### Direct Quotes
-- "[quote]" — [[raw-source]]
+- "[quote]" — [[raw-sources/path/to/file]]
 
 ### Open: What we don't know
 <Any aspect of their view that is missing from the record or genuinely unclear>

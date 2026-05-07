@@ -24,7 +24,7 @@ Produce a Timeline view for: $ARGUMENTS
 
 | Date | Development | Source |
 |------|-------------|--------|
-| YYYY-MM-DD | <what changed in one sentence> | [[event-page]] |
+| YYYY-MM-DD | <what changed in one sentence> | [[raw-sources/path/to/file]] · Person |
 ...
 
 ### Key Inflection Points

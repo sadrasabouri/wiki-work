@@ -20,9 +20,9 @@ Produce a Contribution Map for: $ARGUMENTS
 ```markdown
 ## Contribution Map: $ARGUMENTS
 
-| Person | Contribution | Date | Source |
-|--------|--------------|------|--------|
-| [[person]] | <what they introduced — one sentence> | YYYY-MM-DD | [[raw-source]] |
+| Provenance | Person | Contribution | Date |
+|-----------|--------|--------------|------|
+| [[raw-sources/path/to/file]] | [[person]] | <what they introduced — one sentence> | YYYY-MM-DD |
 ...
 
 ### Observations

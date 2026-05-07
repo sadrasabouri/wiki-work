@@ -23,7 +23,7 @@ If no date is provided, use 7 days before today.
 ## Digest — since $ARGUMENTS
 
 ### What's New
-- **[[concept/event]]** — <the insight in one sentence; what this changes or clarifies>
+- **[[concept/event]]** — <the insight in one sentence; what this changes or clarifies> · *[[raw-sources/path/to/file]] · Person*
 - ...
 
 ### Most Important Open Question
