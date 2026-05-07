@@ -1,5 +1,6 @@
 # Wiki Log
 
+## [2026-05-06] view:query | list of projects building upon Andrej Karpathy's wiki-llm idea
 ## [2026-05-06] view:timeline | views
 ## [2026-05-06] view:timeline | second brain
 
