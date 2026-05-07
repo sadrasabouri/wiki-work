@@ -22,9 +22,9 @@ Purge claims sourced from the meeting: $ARGUMENTS
 
 5. Edit affected pages. Never silently delete — either replace with the updated claim + new source, or add the ⚠️ flag.
 
-6. Regenerate stale views in `wiki/`:
-   - List all files in `wiki/` whose content cites the purged meeting or whose `target` matches any page modified in step 5.
-   - Re-run the view logic for each match and overwrite the file with updated content and a refreshed `generated` date.
+6. Review and update stale views in `views/`:
+   - List all files in `views/`. For each, check whether it cites the purged meeting or draws from any page modified in step 5.
+   - For every affected view, re-run its `prompt` frontmatter value against the updated wiki and overwrite the file with refreshed content and a new `generated` date.
 
 7. Append to `wiki/log.md`:
    ```

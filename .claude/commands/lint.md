@@ -26,12 +26,17 @@ Lint the wiki${ $ARGUMENTS ? " — scope: $ARGUMENTS" : " — full scan" }.
    Format: `I need your input before updating these: 1. [page] — [question] ...`
    After receiving answers, apply them.
 
-4. **Report and log:**
+4. **Review and update stale views in `views/`:**
+   - List all files in `views/`. For each, check whether any wiki page it draws from was updated in steps 1–2.
+   - For every affected view, re-run its `prompt` frontmatter value against the updated wiki and overwrite the file with refreshed content and a new `generated` date.
+
+5. **Report and log:**
    - One section per check: ✅ clean / ⚠️ updated / ❌ open
    - Append to `wiki/log.md`:
      ```
      ## [YYYY-MM-DD] lint | [scope or "full scan"]
      - Pages fixed: <list>
      - Pages updated: <list>
+     - Views updated: <list>
      - Open issues: <list>
      ```

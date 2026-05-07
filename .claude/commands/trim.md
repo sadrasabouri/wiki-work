@@ -31,12 +31,17 @@ Trim the wiki${ $ARGUMENTS ? " — scope: $ARGUMENTS" : " — full graph" }.
 
 5. **Update index.** Remove entries for deleted pages from `wiki/index.md`.
 
-6. **Report and log.** Append to `wiki/log.md`:
+6. **Review and update stale views in `views/`:**
+   - List all files in `views/`. For each, check whether it references any page deleted or merged in steps 3–4.
+   - For every affected view, re-run its `prompt` frontmatter value against the updated wiki and overwrite the file with refreshed content and a new `generated` date.
+
+7. **Report and log.** Append to `wiki/log.md`:
    ```
    ## [YYYY-MM-DD] trim | [scope or "full graph"]
    - Pages deleted: <list>
    - Sections removed: <list>
    - Links redirected: <list>
+   - Views updated: <list>
    - Clarifications applied: <list>
    ```
    Report back: what was removed and why, any redirects made, and open questions if any remain.
