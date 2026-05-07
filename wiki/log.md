@@ -1,5 +1,6 @@
 # Wiki Log
 
+## [2026-05-06] view:query | creative views people use against a KB
 ## [2026-05-06] view:query | entities mined for a KB depending on use goals
 ## [2026-05-06] view:query | list all possible sources of data that a knowledge base can use
 ## [2026-05-06] view:query | list of projects building upon Andrej Karpathy's wiki-llm idea
