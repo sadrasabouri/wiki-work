@@ -39,33 +39,3 @@ The summative N=16 result was striking: users who participated in execution dete
 
 ### 6. The Wiki Is Inspectable Agent Memory
 Pista makes one agent's *execution* inspectable. The wiki makes an agent's *memory* inspectable: every claim links to its raw source, the wiki itself is a DAG node. Combining: an agent answering questions from the wiki could surface which raw sources its claims came from at each step (semantic diff for retrieval). This is RAG with Pista-grade transparency — and it gives users the same step-level steerability over agent *reasoning* that Pista gives over agent *execution*. ⚠️ This claim crosses both projects but isn't yet articulated on either page.
-
-## A Talk Outline (One Possible Framing)
-
-If the goal is to "tie them down in a talk and discover new ideas," here's a structure that lands all of the above as one thesis:
-
-1. **The two projects look different.** Spreadsheet HCI; AI-powered KB. (Show the two paper titles.)
-2. **They are the same project.** Both are about making AI computation legible and steerable at the grain where it can still be redirected. Show the unifying DAG: nodes are data, edges are workflows.
-3. **The five shared mechanisms:** views, DAG, semantic diff, steerability at step boundaries, participation over review.
-4. **The empirical finding generalizes.** Pista's N=16 result on calibrated trust is not about spreadsheets. Sumit's connect-slop is the same paper, replicated outside the lab. The principle: continuous steering > post-hoc review, in any artifact.
-5. **Three concrete extensions** (pick the most provocative for the audience):
-   - Branching exploration for views (the vibe-session UX, settled)
-   - Stop/see/steer for ingest (fixes the slop problem)
-   - Semantic diff for retrieval (RAG with Pista-grade transparency)
-6. **Close on the audit cell.** The wiki provenance column we just added is the design primitive for making knowledge artifacts as auditable as a formula in a spreadsheet. The two projects converge into one design framework: artifact-agnostic infrastructure for steerable AI.
-
-## Tensions Worth Surfacing in the Talk
-
-- **Scale mismatch.** Pista's findings are validated at N=16 with a tight task definition. The KB operates on a continuously growing, fuzzy-bounded corpus. Whether continuous-steering UX scales to KB-sized DAGs is genuinely open — the [[T10-2026-05-03|May 3]] vibe-session UX gap is exactly this concern.
-- **Audience confusion risk.** Pista's framing is "spreadsheet agents"; the KB framing is "team knowledge." Spending half the talk arguing they are the same may lose listeners who came for one. Mitigation: lead with the unifying DAG, then show both projects as instances.
-- **Karpathy lineage muddies the unification.** The KB has a strong intellectual lineage ([[second-brain-code-method|BASB]] → Karpathy → Applied Compute) that does not apply to Pista. Don't try to make Pista fit that lineage; the unification is at the *mechanism* level (steerability over a DAG), not the *intellectual lineage* level.
-
-## Gaps Surfaced by This Synthesis
-
-These came up in writing this answer and are not yet captured in the wiki:
-
-- No page formalizes the **"both projects are instances of one design framework"** thesis — only the views connection is explicit. A new concept page (e.g., `[[steerable-ai-infrastructure]]`) could anchor talks like this.
-- The **Stop/See/Steer-for-ingest** idea is mentioned nowhere; it would be a natural follow-up paper.
-- The **Pista-grade transparency for RAG** idea generalizes to all retrieval-augmented agents and is not on either project page.
-
-If any of these would be useful, they could be filed as new wiki concept pages.
