@@ -98,6 +98,81 @@ jobs:
           }
           NODE
 
+          # Keep the Quartz explorer aligned with this repository's source-to-view flow.
+          node <<'NODE'
+          const fs = require("node:fs")
+
+          const layoutPath = "quartz.layout.ts"
+          let layout = fs.readFileSync(layoutPath, "utf8")
+
+          if (!layout.includes('import type { Options } from "./quartz/components/Explorer"')) {
+            layout = layout.replace(
+              'import { PageLayout, SharedLayout } from "./quartz/cfg"\n',
+              'import { PageLayout, SharedLayout } from "./quartz/cfg"\nimport type { Options } from "./quartz/components/Explorer"\n',
+            )
+          }
+
+          if (!layout.includes("const explorerSortFn")) {
+            layout = layout.replace(
+              'import * as Component from "./quartz/components"\n',
+              `import * as Component from "./quartz/components"
+
+          const explorerSortFn: Options["sortFn"] = (a, b) => {
+            const getConfiguredFolderRank = (folder: string) => {
+              switch (folder) {
+                case ".claude":
+                  return 0
+                case "templates":
+                  return 1
+                case "raw":
+                  return 2
+                case "wiki":
+                  return 3
+                case "views":
+                  return 4
+                default:
+                  return Number.POSITIVE_INFINITY
+              }
+            }
+
+            const getTopLevelFolderRank = (node: typeof a) => {
+              if (!node.isFolder) return Number.POSITIVE_INFINITY
+
+              const parts = node.slug.split("/")
+              if (parts.length !== 2 || parts[1] !== "index") return Number.POSITIVE_INFINITY
+
+              return getConfiguredFolderRank(parts[0])
+            }
+
+            const aRank = getTopLevelFolderRank(a)
+            const bRank = getTopLevelFolderRank(b)
+            if (aRank !== bRank) return aRank - bRank
+
+            if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
+              return a.displayName.localeCompare(b.displayName, undefined, {
+                numeric: true,
+                sensitivity: "base",
+              })
+            }
+
+            return !a.isFolder && b.isFolder ? 1 : -1
+          }
+          `,
+            )
+          }
+
+          const patchedLayout = layout.replaceAll(
+            "Component.Explorer()",
+            "Component.Explorer({ sortFn: explorerSortFn })",
+          )
+
+          if (patchedLayout === layout || !patchedLayout.includes("sortFn: explorerSortFn")) {
+            throw new Error("Could not patch Quartz layout explorer ordering.")
+          }
+
+          fs.writeFileSync(layoutPath, patchedLayout)
+          NODE
+
           declare -A SEEN_SLUGS=()
           declare -a BUILT_BRANCHES=()
           declare -a BUILT_SLUGS=()
