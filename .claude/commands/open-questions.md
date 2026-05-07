@@ -52,7 +52,7 @@ tags: [view, open-questions]
 generated: YYYY-MM-DD
 ---
 
-> [! ]-
+> [!note]-
 > prompt: *`/open-questions $ARGUMENTS`*
 ```
 

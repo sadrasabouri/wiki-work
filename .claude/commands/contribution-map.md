@@ -41,7 +41,7 @@ tags: [view, contribution-map]
 generated: YYYY-MM-DD
 ---
 
-> [! ]-
+> [!note]-
 > prompt: *`/contribution-map $ARGUMENTS`*
 ```
 

@@ -45,7 +45,7 @@ tags: [view, digest]
 generated: YYYY-MM-DD
 ---
 
-> [! ]-
+> [!note]-
 > prompt: *`/digest $ARGUMENTS`*
 ```
 

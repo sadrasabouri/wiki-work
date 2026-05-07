@@ -3,7 +3,7 @@
 generated: 2026-05-07
 ---
 
-> [! ]-
+> [!note]-
 > prompt: *`/query What ideas are common between the two projects in wiki/projects/? How are they connected, and what new ideas emerge from their intersection?`*
 
 ## Common Ideas — Ranked by Strength of Connection

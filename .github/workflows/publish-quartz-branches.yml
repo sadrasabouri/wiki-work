@@ -216,9 +216,34 @@ jobs:
           }
           `
 
+          const quietNoteCalloutStyles = `
+
+          /* wiki-work quieter note callouts */
+          .callout[data-callout="note"] {
+            --color: var(--darkgray);
+            --border: color-mix(in srgb, var(--gray) 18%, transparent);
+            --bg: color-mix(in srgb, var(--gray) 6%, transparent);
+          }
+
+          .callout[data-callout="note"] > .callout-title {
+            padding: 0.7rem 0;
+          }
+
+          .callout[data-callout="note"] .callout-title,
+          .callout[data-callout="note"] .callout-title-inner > p {
+            color: var(--darkgray);
+          }
+
+          .callout[data-callout="note"] .callout-icon,
+          .callout[data-callout="note"] .fold-callout-icon {
+            opacity: 0.55;
+          }
+          `
+
           const stylePatches = [
             ["quartz/components/styles/explorer.scss", "wiki-work compact explorer typography", compactExplorerStyles],
             ["quartz/components/styles/toc.scss", "wiki-work compact toc typography", compactTocStyles],
+            ["quartz/styles/callouts.scss", "wiki-work quieter note callouts", quietNoteCalloutStyles],
           ]
 
           for (const [stylePath, marker, styles] of stylePatches) {

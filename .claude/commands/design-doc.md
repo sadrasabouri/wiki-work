@@ -29,7 +29,7 @@ tags: [view, design-doc]
 generated: YYYY-MM-DD
 ---
 
-> [! ]-
+> [!note]-
 > prompt: *`/design-doc $ARGUMENTS`*
 ```
 

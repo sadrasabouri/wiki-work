@@ -34,7 +34,7 @@ tags: [view, query]
 generated: YYYY-MM-DD
 ---
 
-> [! ]-
+> [!note]-
 > prompt: *`/query $ARGUMENTS`*
 ```
 
