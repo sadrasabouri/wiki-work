@@ -137,7 +137,7 @@ jobs:
             if (aRank !== bRank) return aRank - bRank
 
             if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
-              return a.displayName.localeCompare(b.displayName, undefined, {
+              return a.slugSegment.localeCompare(b.slugSegment, undefined, {
                 numeric: true,
                 sensitivity: "base",
               })
