@@ -1,0 +1,10 @@
+/* Smaller font for file explorer items */
+.nav-file-title-content,
+.nav-folder-title-content {
+  font-size: 12px;
+}
+
+/* Smaller font for table of contents (outline panel) */
+.tree-item-self .tree-item-inner {
+  font-size: 12px;
+}
