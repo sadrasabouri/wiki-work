@@ -184,57 +184,57 @@ jobs:
           fs.writeFileSync(layoutPath, patchedLayout)
           NODE
 
-          # Make sidebar navigation panels more compact without changing article typography.
+          # Keep sidebar navigation readable without changing article typography.
           node <<'NODE'
           const fs = require("node:fs")
 
-          const compactExplorerStyles = `
+          const readableExplorerStyles = `
 
-          /* wiki-work compact explorer typography */
+          /* wiki-work readable explorer typography */
           button.mobile-explorer,
           button.desktop-explorer {
             & h2 {
-              font-size: 0.9rem;
+              font-size: 0.95rem;
             }
           }
 
           .explorer-content {
-            font-size: 0.86rem;
-            line-height: 1.35rem;
+            font-size: 0.92rem;
+            line-height: 1.55rem;
 
             & ul li > a {
-              line-height: 1.35rem;
+              line-height: 1.55rem;
             }
           }
 
           .folder-container {
             & div > a {
-              font-size: 0.86rem;
-              line-height: 1.35rem;
+              font-size: 0.92rem;
+              line-height: 1.55rem;
             }
 
             & div > button span {
-              font-size: 0.86rem;
-              line-height: 1.35rem;
+              font-size: 0.92rem;
+              line-height: 1.55rem;
             }
           }
           `
 
-          const compactTocStyles = `
+          const readableTocStyles = `
 
-          /* wiki-work compact toc typography */
+          /* wiki-work readable toc typography */
           button.toc-header {
             & h3 {
-              font-size: 0.9rem;
+              font-size: 0.95rem;
             }
           }
 
           ul.toc-content.overflow {
-            font-size: 0.86rem;
-            line-height: 1.35rem;
+            font-size: 0.92rem;
+            line-height: 1.55rem;
 
             & > li > a {
-              line-height: 1.35rem;
+              line-height: 1.55rem;
             }
           }
           `
@@ -264,8 +264,8 @@ jobs:
           `
 
           const stylePatches = [
-            ["quartz/components/styles/explorer.scss", "wiki-work compact explorer typography", compactExplorerStyles],
-            ["quartz/components/styles/toc.scss", "wiki-work compact toc typography", compactTocStyles],
+            ["quartz/components/styles/explorer.scss", "wiki-work readable explorer typography", readableExplorerStyles],
+            ["quartz/components/styles/toc.scss", "wiki-work readable toc typography", readableTocStyles],
             ["quartz/styles/callouts.scss", "wiki-work quieter note callouts", quietNoteCalloutStyles],
           ]
 
