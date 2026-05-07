@@ -1,5 +1,7 @@
 # Wiki Log
 
+## [2026-05-07] view:change-graph | ingest-diff-2026-05-07.md — T15-2026-05-06 changes as mermaid graph (added/changed/unchanged)
+
 ## [2026-05-07] ingest | T15-2026-05-06 (full transcript)
 - Pages created: wiki/concepts/stories.md, wiki/concepts/emergence-of-knowledge.md, wiki/concepts/version-sprawl.md
 - Pages updated: wiki/events/2026-05-06.md (substantial expansion: five-slide structure, three-layer architecture, generalization-level skill, sponsorship goal, slop-recovery moment, live-wiki demo, generational observation), wiki/people/sumit-gulwani.md (May 6 contributions: right-level-of-generality, three-layer arch, stories priority, version sprawl, demo strategy, sponsorship), wiki/people/souti-chattopadhyay.md (emergence-of-knowledge, cross-team contradictions, image-gen analogy, slop recovery move; appears-in updated), wiki/concepts/skills.md (template extraction at the right level of generality + Sumit's distillation/debate/refinement examples), wiki/projects/wiki-kb-project.md (three-layer architecture section; sources updated through May 6), wiki/index.md (3 new concepts; May 6 entry rewritten)
