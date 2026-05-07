@@ -84,10 +84,9 @@ workflow files into that branch or manually run the workflow from GitHub Actions
 
 ## Diff Sites
 
-A diff site renders the union of two branches' Markdown content with each page
-labelled by its diff status, similar to a GitHub `BASE...HEAD` compare view.
-List branch pairs in `.github/quartz-diff-pairs.txt`, one per line in
-`BASE...HEAD` form:
+A diff site renders the union of two branches' configured content paths and
+uses the root `index.md` as a simple file-level diff page. List branch pairs in
+`.github/quartz-diff-pairs.txt`, one per line in `BASE...HEAD` form:
 
 ```text
 main...v0.1
@@ -102,18 +101,19 @@ https://sadrasabouri.github.io/wiki-work/v0.1...main/
 ```
 
 The site is a normal Quartz build (search, backlinks, navigation all work).
-On top of that, the graph view colors every node by its status:
+The diff landing page shows counts and a table of added, changed, and deleted
+Markdown files, each linking to its rendered page. It also links to the GitHub
+compare view for the same branch pair.
+
+The graph view colors every Markdown node by file status:
 
 - green  — added on `HEAD`
 - orange — changed between `BASE` and `HEAD`
-- red    — deleted on `HEAD` (the page is still clickable; `BASE`'s content is shown with a banner)
+- red    — deleted on `HEAD` (the page is still clickable; `BASE`'s content is shown)
 - gray   — unchanged
 
-Status is decided by SHA-256 byte-level comparison of file contents. Pages
-shown for `added`, `changed`, and `deleted` files start with a callout banner
-identifying their status. Coloring is applied client-side from a JSON map
-embedded into each generated HTML page; the rest of the Quartz output is
-untouched.
+Status is decided by SHA-256 byte-level comparison of file contents. Coloring is
+applied client-side from a JSON map embedded into each generated HTML page.
 
 If either branch in a pair does not exist on origin, the workflow logs a
 warning and skips that pair instead of failing.

@@ -476,6 +476,9 @@ jobs:
           const headDir = process.env.DIFF_HEAD_DIR
           const outDir = process.env.DIFF_OUT_DIR
           const statusPath = process.env.DIFF_STATUS_JSON
+          const baseBranch = process.env.DIFF_BASE_BRANCH
+          const headBranch = process.env.DIFF_HEAD_BRANCH
+          const repository = process.env.GITHUB_REPOSITORY
           const contentPaths = fs
             .readFileSync(process.env.DIFF_CONTENT_PATHS_FILE, "utf8")
             .split("\n")
@@ -510,27 +513,45 @@ jobs:
             return crypto.createHash("sha256").update(fs.readFileSync(p)).digest("hex")
           }
 
-          function slugFromRel(rel) {
-            const noExt = rel.replace(/\.[^./\\]+$/, "")
-            return noExt.split(path.sep).join("/")
+          function getFileExtension(s) {
+            return s.match(/\.[A-Za-z0-9]+$/)?.[0]
           }
 
-          function injectBanner(filePath, status, baseBranch, headBranch) {
-            if (!filePath.endsWith(".md")) return
-            const labels = {
-              added: `> [!success] Added in \`${headBranch}\`\n> This page is new in this diff.\n\n`,
-              changed: `> [!info] Changed between \`${baseBranch}\` and \`${headBranch}\`\n> This page differs between the two branches; the rendered version is from \`${headBranch}\`.\n\n`,
-              deleted: `> [!warning] Deleted in \`${headBranch}\`\n> This page existed on \`${baseBranch}\` but was removed on \`${headBranch}\`.\n\n`,
+          function stripSlashes(s) {
+            if (s.startsWith("/")) s = s.substring(1)
+            if (s.endsWith("/")) s = s.slice(0, -1)
+            return s
+          }
+
+          function sluggify(s) {
+            return s
+              .split("/")
+              .map((segment) =>
+                segment
+                  .replace(/\s/g, "-")
+                  .replace(/&/g, "-and-")
+                  .replace(/%/g, "-percent")
+                  .replace(/\?/g, "")
+                  .replace(/#/g, ""),
+              )
+              .join("/")
+              .replace(/\/$/, "")
+          }
+
+          function slugifyFilePath(fp) {
+            fp = stripSlashes(fp)
+            let ext = getFileExtension(fp)
+            const withoutFileExt = fp.replace(new RegExp(ext + "$"), "")
+            if ([".md", ".html", undefined].includes(ext)) {
+              ext = ""
             }
-            const banner = labels[status]
-            if (!banner) return
-            const src = fs.readFileSync(filePath, "utf8")
-            const m = src.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/)
-            if (m) {
-              fs.writeFileSync(filePath, m[0] + banner + src.slice(m[0].length))
-            } else {
-              fs.writeFileSync(filePath, banner + src)
+
+            let slug = sluggify(withoutFileExt)
+            if (slug.endsWith("/_index")) {
+              slug = slug.replace(/_index$/, "index")
             }
+
+            return slug + ext
           }
 
           function copyFile(src, dest) {
@@ -538,9 +559,98 @@ jobs:
             fs.copyFileSync(src, dest)
           }
 
-          const baseBranch = process.env.DIFF_BASE_BRANCH
-          const headBranch = process.env.DIFF_HEAD_BRANCH
+          function shouldSkipRel(rel) {
+            const parts = rel.split(/[\\/]/)
+            return parts.includes("log") || parts.at(-1) === "log.md"
+          }
+
+          function escapeHtml(value) {
+            return value
+              .replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")
+              .replace(/"/g, "&quot;")
+          }
+
+          function fileLink(record) {
+            const label = `<code>${escapeHtml(record.rel)}</code>`
+            if (!record.markdown) return label
+            return `<a href="./${encodeURI(record.slug)}">${label}</a>`
+          }
+
+          function statusLabel(s) {
+            const labels = {
+              added: "Added",
+              changed: "Changed",
+              deleted: "Deleted",
+              unchanged: "Unchanged",
+            }
+            return labels[s] ?? s
+          }
+
+          function writeDiffIndex(records) {
+            const order = { added: 0, changed: 1, deleted: 2, unchanged: 3 }
+            const changedRecords = records
+              .filter((record) => record.status !== "unchanged")
+              .sort((a, b) => order[a.status] - order[b.status] || a.rel.localeCompare(b.rel))
+            const counts = records.reduce(
+              (acc, record) => {
+                acc[record.status] += 1
+                return acc
+              },
+              { added: 0, changed: 0, deleted: 0, unchanged: 0 },
+            )
+            const compareUrl = repository
+              ? `https://github.com/${repository}/compare/${encodeURIComponent(baseBranch)}...${encodeURIComponent(headBranch)}`
+              : ""
+
+            const lines = [
+              "---",
+              `title: ${JSON.stringify(`${baseBranch}...${headBranch}`)}`,
+              "---",
+              "",
+              `# Diff: \`${baseBranch}...${headBranch}\``,
+              "",
+              compareUrl ? `[Open GitHub compare](${compareUrl})` : "",
+              "",
+              "## Summary",
+              "",
+              "| Status | Markdown files |",
+              "| --- | ---: |",
+              `| Added | ${counts.added} |`,
+              `| Changed | ${counts.changed} |`,
+              `| Deleted | ${counts.deleted} |`,
+              `| Unchanged | ${counts.unchanged} |`,
+              "",
+              "## Files Changed",
+              "",
+            ]
+
+            if (changedRecords.length === 0) {
+              lines.push("No Markdown file changes in configured content paths.", "")
+            } else {
+              lines.push("| Status | File |", "| --- | --- |")
+              for (const record of changedRecords) {
+                lines.push(`| ${statusLabel(record.status)} | ${fileLink(record)} |`)
+              }
+              lines.push("")
+            }
+
+            lines.push(
+              "## Graph Colors",
+              "",
+              "- Green: added",
+              "- Orange: changed",
+              "- Red: deleted",
+              "- Gray: unchanged",
+              "",
+            )
+
+            fs.writeFileSync(path.join(outDir, "index.md"), lines.filter((line) => line !== null).join("\n"))
+          }
+
           const status = {}
+          const records = []
 
           for (const cp of contentPaths) {
             const baseFiles = collect(baseDir, cp)
@@ -548,6 +658,8 @@ jobs:
             const allRel = new Set([...baseFiles.keys(), ...headFiles.keys()])
 
             for (const rel of allRel) {
+              if (shouldSkipRel(rel)) continue
+
               const baseFile = baseFiles.get(rel)
               const headFile = headFiles.get(rel)
               const dest = path.join(outDir, rel)
@@ -566,14 +678,16 @@ jobs:
                 continue
               }
 
-              injectBanner(dest, s, baseBranch, headBranch)
-
-              if (rel.endsWith(".md")) {
-                status[slugFromRel(rel)] = s
+              const markdown = rel.endsWith(".md")
+              if (markdown) {
+                const slug = slugifyFilePath(rel)
+                records.push({ rel, status: s, markdown, slug })
+                status[slug] = s
               }
             }
           }
 
+          writeDiffIndex(records)
           fs.writeFileSync(statusPath, JSON.stringify(status, null, 2))
           NODE
 
