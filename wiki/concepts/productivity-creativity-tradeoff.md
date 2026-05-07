@@ -4,7 +4,7 @@ tags: [concept]
 
 # Productivity-Creativity Tradeoff
 
-LLMs make users more productive — more correct, more complete work — but reduce the time spent on idea generation and the number of "aha moments." Documented by [[athena-saghi|Athena Saghi]] in her creativity study, presented in [[GMT20260304-191231_Recording.transcript|the Mar 4 meeting]].
+LLMs make users more productive — more correct, more complete work — but reduce the time spent on idea generation and the number of "aha moments." Documented by [[athena-saghi|Athena Saghi]] in her creativity study, presented in [[T2-2026-03-04-1912|the Mar 4 meeting]].
 
 ## The Finding
 
@@ -21,7 +21,7 @@ The study used the Wallace model of creativity: preparation → incubation → i
 3. **Implementer** — AI executes human-specified plan
 4. **Co-pilot** — bidirectional real-time collaboration
 
-Current tools support 1–3 well. Mode 4 (co-pilot) requires [[bidirectional-collaboration|bidirectional collaboration]] and is largely unsolved. See also [[Souti-3Apr2026-TRANSCRIPT-Part1|the Apr 3 Part 1 meeting]] where Souti frames this as "AI supporting human creativity vs. AI closing the creativity gap."
+Current tools support 1–3 well. Mode 4 (co-pilot) requires [[bidirectional-collaboration|bidirectional collaboration]] and is largely unsolved. See also [[T5-2026-04-03-1|the Apr 3 Part 1 meeting]] where Souti frames this as "AI supporting human creativity vs. AI closing the creativity gap."
 
 ## Connection to the Wiki Project
 

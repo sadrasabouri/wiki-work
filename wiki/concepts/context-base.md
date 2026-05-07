@@ -4,7 +4,7 @@ tags: [concept]
 
 # Context Base vs. Knowledge Base
 
-A **context base** is an architecture for storing an enterprise's accumulated context so that AI agents can complete long-horizon, cross-application tasks autonomously. The term and architecture come from the Applied Compute paper [[Remember, Refine, Retrieve A Context Engine for Enterprise Agents]], which Sumit shared in [[Sadra-5May2026-TRANSCRIPT2|the May 5 sync]]. It is close to but distinct from the **knowledge base** this project builds.
+A **context base** is an architecture for storing an enterprise's accumulated context so that AI agents can complete long-horizon, cross-application tasks autonomously. The term and architecture come from the Applied Compute paper [[Remember, Refine, Retrieve A Context Engine for Enterprise Agents]], which Sumit shared in [[T14-2026-05-05-2|the May 5 sync]]. It is close to but distinct from the **knowledge base** this project builds.
 
 ## The Applied Compute Architecture (Context Base)
 
@@ -64,7 +64,7 @@ The Refine phase corresponds to the [[information-knowledge-pipeline|wiki layer]
 
 ## Convergent Framing of Related Work
 
-Sumit situates three pieces as convergent frames (from [[Sadra-5May2026-TRANSCRIPT2]]):
+Sumit situates three pieces as convergent frames (from [[T14-2026-05-05-2]]):
 
 1. **[[second-brain-code-method|Building a Second Brain / CODE]]** (Tiago Forte, pre-LLM) — personal PKM; capture, organize, distill, express
 2. **Karpathy's LLM-wiki** — immutable raw sources + LLM-maintained markdown wiki of entities and cross-references + schema; automates the "distill" step; critique of RAG: "LLM is rediscovering knowledge from scratch on every question. There is no accumulation"

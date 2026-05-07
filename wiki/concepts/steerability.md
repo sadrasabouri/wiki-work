@@ -4,7 +4,7 @@ tags: [concept]
 
 # Steerability
 
-The user's ability to redirect AI output at granular steps rather than only evaluating the final result. Coined by [[sumit-gulwani|Sumit Gulwani]] in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]] to replace "granular feedback" — feedback implies post-hoc correction; steerability implies real-time co-authorship.
+The user's ability to redirect AI output at granular steps rather than only evaluating the final result. Coined by [[sumit-gulwani|Sumit Gulwani]] in [[T4-2026-03-16-2006|the Mar 16 meeting]] to replace "granular feedback" — feedback implies post-hoc correction; steerability implies real-time co-authorship.
 
 ## Why the Rename Matters
 
@@ -16,7 +16,7 @@ Steerability is most meaningful at [[workflows|Workflow]] step boundaries. Multi
 
 ## The Gulf of Envisioning Obstacle
 
-A fundamental blocker: users cannot form stable mental models of non-deterministic AI capabilities — the [[gulf-of-envisioning|Gulf of Envisioning]]. If users don't know what the agent *can* do, they can't know when or how to steer. Preloaded Q&A and capability scaffolding were proposed as mitigations in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]] and revisited in [[Souti-3Apr2026-TRANSCRIPT-Part2|the Apr 3 Part 2 meeting]].
+A fundamental blocker: users cannot form stable mental models of non-deterministic AI capabilities — the [[gulf-of-envisioning|Gulf of Envisioning]]. If users don't know what the agent *can* do, they can't know when or how to steer. Preloaded Q&A and capability scaffolding were proposed as mitigations in [[T4-2026-03-16-2006|the Mar 16 meeting]] and revisited in [[T6-2026-04-03-2|the Apr 3 Part 2 meeting]].
 
 ## Empirical Validation: Calibrated Trust Through Participation
 

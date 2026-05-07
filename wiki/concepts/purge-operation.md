@@ -4,7 +4,7 @@ tags: [concept]
 
 # Purge Operation
 
-The operation of removing obsolete or superseded information from the KB when newer sources contradict or refine it. Named in [[Sadra-2May2026-TRANSCRIPT2|the May 2 evening meeting]] as a first-class KB operation alongside ingest and query.
+The operation of removing obsolete or superseded information from the KB when newer sources contradict or refine it. Named in [[T9-2026-05-02-2|the May 2 evening meeting]] as a first-class KB operation alongside ingest and query.
 
 ## Why Purge Is Necessary
 

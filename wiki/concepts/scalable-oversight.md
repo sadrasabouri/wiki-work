@@ -4,7 +4,7 @@ tags: [concept]
 
 # Scalable Oversight
 
-How humans maintain meaningful oversight of AI agents as AI capability grows beyond human ability to verify each step. The academic framing of the [[agent-traceability-steerability|Spreadsheet Verification]] problem, discussed in [[GMT20260220-230118_Recording.transcript|the Feb 20 meeting]].
+How humans maintain meaningful oversight of AI agents as AI capability grows beyond human ability to verify each step. The academic framing of the [[agent-traceability-steerability|Spreadsheet Verification]] problem, discussed in [[T1-2026-02-20-2301|the Feb 20 meeting]].
 
 ## The Core Tension
 

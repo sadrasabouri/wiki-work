@@ -4,7 +4,7 @@ tags: [concept]
 
 # Digital Twins
 
-The ultimate KB goal articulated by [[souti-chattopadhyay|Souti]]: capturing not just technical content but tacit knowledge, interaction styles, and emotional patterns — a model of a person that can answer "what would X think about Y?" First discussed in [[Sadra-1May2026-Transcript|the May 1 three-way sync]].
+The ultimate KB goal articulated by [[souti-chattopadhyay|Souti]]: capturing not just technical content but tacit knowledge, interaction styles, and emotional patterns — a model of a person that can answer "what would X think about Y?" First discussed in [[T7-2026-05-01|the May 1 three-way sync]].
 
 ## Beyond Document Storage
 

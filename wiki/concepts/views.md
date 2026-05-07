@@ -4,9 +4,9 @@ tags: [concept, core]
 
 # Views
 
-A **view** is a template with holes, where each hole is filled by executing a prompt against an optional specification of input sources. Each prompt can optionally be associated with a [[skills|skill]] that describes a better way to compute that piece. This is the most precise definition, settled in [[Sadra-5May2026-TRANSCRIPT2|the May 5 evening sync]]: "A view is a template. Its holes are filled by executing prompts against an optional specification of input sources. Each prompt can optionally be associated with a skill."
+A **view** is a template with holes, where each hole is filled by executing a prompt against an optional specification of input sources. Each prompt can optionally be associated with a [[skills|skill]] that describes a better way to compute that piece. This is the most precise definition, settled in [[T14-2026-05-05-2|the May 5 evening sync]]: "A view is a template. Its holes are filled by executing prompts against an optional specification of input sources. Each prompt can optionally be associated with a skill."
 
-Views define WHAT to show, not HOW to produce it (that's [[skills|Skills]] for per-prompt methodology and [[workflows|Workflows]] for data dependencies). Views are the central unifying concept across both [[wiki-kb-project|Wiki KB Project]] and [[agent-traceability-steerability|Spreadsheet Verification]]; Sumit drew this connection explicitly in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]].
+Views define WHAT to show, not HOW to produce it (that's [[skills|Skills]] for per-prompt methodology and [[workflows|Workflows]] for data dependencies). Views are the central unifying concept across both [[wiki-kb-project|Wiki KB Project]] and [[agent-traceability-steerability|Spreadsheet Verification]]; Sumit drew this connection explicitly in [[T4-2026-03-16-2006|the Mar 16 meeting]].
 
 ## Structure
 
@@ -16,11 +16,11 @@ A view has three layers:
 3. **Skills** — optional per-prompt methodology; without a skill, the agent chooses its own approach (see [[skills]])
 4. **Source selection** — optional specification of which raw sources feed which holes
 
-This layering was articulated in [[Thursday demo]], refined during [[Sadra-1May2026-Transcript|the May 1 three-way sync]], and made precise in [[Sadra-5May2026-TRANSCRIPT2|May 5]].
+This layering was articulated in [[Thursday demo]], refined during [[T7-2026-05-01|the May 1 three-way sync]], and made precise in [[T14-2026-05-05-2|May 5]].
 
 ## Document as View
 
-Every paragraph of a document can be a prompt in a view. Sumit articulated this in [[Sadra-5May2026-TRANSCRIPT2|the May 5 sync]] while describing his internal blog post: the motivating story section, the definitions section, the applications section — each is a prompt over the KB, optionally guided by a skill. A document authored this way becomes a living document: when new transcripts arrive, the document's prompts rerun and it updates. "I want this document also to be a view in some sense." This is the "recalc model taken to its extreme" — what dashboards and Excel formulas do for objective, code-expressible computation, views do for subjective and aesthetic content.
+Every paragraph of a document can be a prompt in a view. Sumit articulated this in [[T14-2026-05-05-2|the May 5 sync]] while describing his internal blog post: the motivating story section, the definitions section, the applications section — each is a prompt over the KB, optionally guided by a skill. A document authored this way becomes a living document: when new transcripts arrive, the document's prompts rerun and it updates. "I want this document also to be a view in some sense." This is the "recalc model taken to its extreme" — what dashboards and Excel formulas do for objective, code-expressible computation, views do for subjective and aesthetic content.
 
 ## Examples
 
@@ -41,9 +41,9 @@ A database view is a saved query over mutable data; a wiki view is a saved promp
 
 ## View Definition UX: Vibe Sessions and the FlashFill Analogy
 
-Sumit noted in [[Sadra-3May2026-TRANSCRIPT|the May 3 sync]] that defining the right view requires iteration: "the real experience is going to be that I'm trying to create some view, and it will take a lot of iteration before I land onto something that I like." The natural UX is a **vibe session** — an interactive back-and-forth that explores the right prompt and workflow. After the session, the user should be able to distill it into a reusable view definition. The current CLI lacks this facility.
+Sumit noted in [[T10-2026-05-03|the May 3 sync]] that defining the right view requires iteration: "the real experience is going to be that I'm trying to create some view, and it will take a lot of iteration before I land onto something that I like." The natural UX is a **vibe session** — an interactive back-and-forth that explores the right prompt and workflow. After the session, the user should be able to distill it into a reusable view definition. The current CLI lacks this facility.
 
-In [[Sadra-6May2026-Notes|the May 6 sync]], Sumit made the convergence mechanism concrete via the **FlashFill analogy**: FlashFill narrows a large space of possible transformation functions by accumulating input-output examples. The same principle applies to view authoring — each revision is a new example, narrowing the hypothesis space until the agent produces the right output. You don't specify the skill upfront; you accumulate examples until the view converges. This is a practical workflow for authoring both the template structure and the per-hole prompts.
+In [[T15-2026-05-06|the May 6 sync]], Sumit made the convergence mechanism concrete via the **FlashFill analogy**: FlashFill narrows a large space of possible transformation functions by accumulating input-output examples. The same principle applies to view authoring — each revision is a new example, narrowing the hypothesis space until the agent produces the right output. You don't specify the skill upfront; you accumulate examples until the view converges. This is a practical workflow for authoring both the template structure and the per-hole prompts.
 
 ## Embedded Views
 

@@ -10,7 +10,7 @@ The research tool ([[agent-lens|Agent Lens]], "Pista") addresses the [[scalable-
 
 ## Why Spreadsheets Specifically
 
-Spreadsheets are where process and artifact are inseparable. Every agent decision lands directly in cells the user owns, is accountable for, and must stand behind. There is no separate "running application" distinct from the code — unlike code agents, the computation *is* the artifact. Agents currently achieve only 44–70% success on real-world spreadsheet benchmarks and offer users little means to understand decisions or redirect them. Discussed in [[GMT20260220-230118_Recording.transcript|the Feb 20 meeting]].
+Spreadsheets are where process and artifact are inseparable. Every agent decision lands directly in cells the user owns, is accountable for, and must stand behind. There is no separate "running application" distinct from the code — unlike code agents, the computation *is* the artifact. Agents currently achieve only 44–70% success on real-world spreadsheet benchmarks and offer users little means to understand decisions or redirect them. Discussed in [[T1-2026-02-20-2301|the Feb 20 meeting]].
 
 ## Formative Study (N=8)
 
@@ -70,8 +70,8 @@ The [[agent-lens|Agent Lens]] framework: **stop** (execution pauses), **see** (F
 
 ## Connection to [[wiki-kb-project|Wiki KB Project]]
 
-[[sumit-gulwani|Sumit]] identified [[views|Views]] as the abstraction unifying both projects in [[GMT20260316-200648_Recording.transcript|Mar 16]]. The DAG view, step-by-step reveal, and formula-only view are all views of agent computation in the same sense that design docs and topic summaries are views of a knowledge corpus.
+[[sumit-gulwani|Sumit]] identified [[views|Views]] as the abstraction unifying both projects in [[T4-2026-03-16-2006|Mar 16]]. The DAG view, step-by-step reveal, and formula-only view are all views of agent computation in the same sense that design docs and topic summaries are views of a knowledge corpus.
 
 ## Sources
 
-[[GMT20260220-230118_Recording.transcript|Feb 20]], [[GMT20260304-191231_Recording.transcript|Mar 4]], [[GMT20260311-184637_Recording.transcript|Mar 11]], [[GMT20260316-200648_Recording.transcript|Mar 16]], [[Agent's Traceability and Steerability Project]], [[Auditing and Controlling AI Agent Actions in Spreadsheets]]
+[[T1-2026-02-20-2301|Feb 20]], [[T2-2026-03-04-1912|Mar 4]], [[T3-2026-03-11-1846|Mar 11]], [[T4-2026-03-16-2006|Mar 16]], [[Agent's Traceability and Steerability Project]], [[Auditing and Controlling AI Agent Actions in Spreadsheets]]

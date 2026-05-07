@@ -4,9 +4,9 @@ tags: [concept, core]
 
 # Skills
 
-A **skill** is a constructive specification of HOW to compute one prompt in a [[views|view]]. Where the view's template says *what* to produce and a prompt fills a hole, the skill tells the agent the methodology to use when filling that hole — rather than letting it choose freely. Terminology confirmed in [[Sadra-5May2026-TRANSCRIPT2|the May 5 evening sync]]: "We switched from workflows to using skills."
+A **skill** is a constructive specification of HOW to compute one prompt in a [[views|view]]. Where the view's template says *what* to produce and a prompt fills a hole, the skill tells the agent the methodology to use when filling that hole — rather than letting it choose freely. Terminology confirmed in [[T14-2026-05-05-2|the May 5 evening sync]]: "We switched from workflows to using skills."
 
-Skills were formerly called "creative workflows" in earlier sessions (e.g. [[Sadra-1May2026-Transcript|May 1]], [[Sadra-2May2026-TRANSCRIPT2|May 2 evening]]). The rename separates creative methodology (skills) from data dependencies (now the exclusive meaning of [[workflows]]).
+Skills were formerly called "creative workflows" in earlier sessions (e.g. [[T7-2026-05-01|May 1]], [[T9-2026-05-02-2|May 2 evening]]). The rename separates creative methodology (skills) from data dependencies (now the exclusive meaning of [[workflows]]).
 
 ## Where Skills Live
 
@@ -18,7 +18,7 @@ A skill says: "do grounded theory analysis" or "multi-pass summarization, 3 pass
 
 ## Why Skills Matter
 
-Sumit's "connect" (performance review) exercise in [[Sadra-5May2026-TRANSCRIPT|the May 5 morning sync]] demonstrated this gap: all raw sources were present, all prompts were supplied, but output was "AI slop" because no skill told the agent *how* to prioritize and synthesize. "Having raw sources and a processing pipeline is not going to be good enough."
+Sumit's "connect" (performance review) exercise in [[T13-2026-05-05-1|the May 5 morning sync]] demonstrated this gap: all raw sources were present, all prompts were supplied, but output was "AI slop" because no skill told the agent *how* to prioritize and synthesize. "Having raw sources and a processing pipeline is not going to be good enough."
 
 Skills encode the creative insight — the recognition that grounded theory applies to transcript summarization, or that a 3-pass compression produces materially better output than a single pass. These insights are the durable contribution; raw prompts are merely the delivery mechanism.
 

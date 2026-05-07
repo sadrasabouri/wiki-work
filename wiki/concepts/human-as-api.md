@@ -4,7 +4,7 @@ tags: [concept]
 
 # Human as API
 
-Modeling human supervision as a tool call in an agentic workflow. The human is not a passive observer but a callable resource: the agent requests input at defined decision points, the human responds, and the agent continues. Framed by [[souti-chattopadhyay|Souti]] using Paul Grice's maxims in [[Souti-3Apr2026-TRANSCRIPT-Part2|the Apr 3 Part 2 meeting]].
+Modeling human supervision as a tool call in an agentic workflow. The human is not a passive observer but a callable resource: the agent requests input at defined decision points, the human responds, and the agent continues. Framed by [[souti-chattopadhyay|Souti]] using Paul Grice's maxims in [[T6-2026-04-03-2|the Apr 3 Part 2 meeting]].
 
 ## Grice's Maxims as Interface Spec
 
@@ -26,4 +26,4 @@ Human-as-API is steerability from the agent's side: the agent creates steer poin
 
 ## In [[agent-traceability-steerability|Spreadsheet Verification]]
 
-The spreadsheet tool used human-as-API at [[dag-of-computation|DAG]] checkpoints: the agent pauses, presents the current computation step, and asks the human to confirm or correct before continuing. This was validated in the formative study described in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]].
+The spreadsheet tool used human-as-API at [[dag-of-computation|DAG]] checkpoints: the agent pauses, presents the current computation step, and asks the human to confirm or correct before continuing. This was validated in the formative study described in [[T4-2026-03-16-2006|the Mar 16 meeting]].

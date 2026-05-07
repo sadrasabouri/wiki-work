@@ -4,7 +4,7 @@ tags: [concept, core]
 
 # Information → Knowledge → Views Pipeline
 
-The three-layer architecture of the [[wiki-kb-project|Wiki KB Project]], crystallized in [[2026-05-03|the May 3 three-way sync]] ([[Sadra-3May2026-TRANSCRIPT]]):
+The three-layer architecture of the [[wiki-kb-project|Wiki KB Project]], crystallized in [[2026-05-03|the May 3 three-way sync]] ([[T10-2026-05-03]]):
 
 ```
 Raw Data (Information)  →  Wiki (Knowledge)  →  Views (Rendered Output)
@@ -22,7 +22,7 @@ Raw data can also come from upstream automated processes — a search query, a d
 
 The wiki is **knowledge**: processed, organized, cross-linked, typed by entity (people, concepts, events, projects). It is the **semantic index** of the raw corpus — the layer that makes efficient view computation possible.
 
-Sumit's framing from [[Sadra-3May2026-TRANSCRIPT|May 3]]: "Wiki is providing the right kinds of artifacts to do good indexing about different kinds of entities, such as people, topics, entities and so on." Not a vector index (mechanical, flat) but a semantic index (structured, typed, relational).
+Sumit's framing from [[T10-2026-05-03|May 3]]: "Wiki is providing the right kinds of artifacts to do good indexing about different kinds of entities, such as people, topics, entities and so on." Not a vector index (mechanical, flat) but a semantic index (structured, typed, relational).
 
 The wiki is also the **hot cache**: common intermediates that many views will query are precomputed once and reused. For a new entity type (e.g., "speaker style"), the wiki initially lacks entries; after one full-corpus ingest pass, the entity is cached and future views access it cheaply.
 

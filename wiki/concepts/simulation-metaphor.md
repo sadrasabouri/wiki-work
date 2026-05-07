@@ -6,7 +6,7 @@ tags: [concept]
 
 World progress = individual processing/choice-making + communication between people. A KB accelerates both dimensions simultaneously: it compresses the time each person spends processing information, and it reduces friction in transmitting knowledge between people.
 
-Articulated by [[sadra-sabouri|Sadra]] in [[Sadra-2May2026-TRANSCRIPT|the May 2 morning meeting]].
+Articulated by [[sadra-sabouri|Sadra]] in [[T8-2026-05-02-1|the May 2 morning meeting]].
 
 ## Why It Matters
 

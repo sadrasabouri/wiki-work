@@ -4,7 +4,7 @@ tags: [concept]
 
 # Agent Lens
 
-The framework name for the [[agent-traceability-steerability|Spreadsheet Verification]] tool (published as Pista — from Italian/Spanish *pista*: path, trail, clue), named in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]]. The three verbs: **stop** (pause execution), **see** (the [[dag-of-computation|DAG of computation]] and [[semantic-diff|semantic diff]]), **steer** (correct a step before it propagates).
+The framework name for the [[agent-traceability-steerability|Spreadsheet Verification]] tool (published as Pista — from Italian/Spanish *pista*: path, trail, clue), named in [[T4-2026-03-16-2006|the Mar 16 meeting]]. The three verbs: **stop** (pause execution), **see** (the [[dag-of-computation|DAG of computation]] and [[semantic-diff|semantic diff]]), **steer** (correct a step before it propagates).
 
 ## Seven Features (F1–F7)
 

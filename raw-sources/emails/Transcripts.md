@@ -21,8 +21,8 @@ Source: [[Transcripts.eml]]
 ## Attachments
 
 - Sadra-2May2026-AISummary.txt
-- Sadra-2May2026-TRANSCRIPT.docx
-- Sadra-2May2026-TRANSCRIPT-REFINED.docx
+- T8-2026-05-02-1.docx
+- T8-2026-05-02-1-REFINED.docx
 
 ## Body
 

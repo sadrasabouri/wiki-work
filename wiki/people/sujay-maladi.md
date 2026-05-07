@@ -8,4 +8,4 @@ Collaborator on [[agent-traceability-steerability|Spreadsheet Verification]]. Pa
 
 ## Appears In
 
-[[GMT20260220-230118_Recording.transcript|Feb 20]], [[GMT20260316-200648_Recording.transcript|Mar 16]]
+[[T1-2026-02-20-2301|Feb 20]], [[T4-2026-03-16-2006|Mar 16]]

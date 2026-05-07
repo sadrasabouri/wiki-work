@@ -1,6 +1,6 @@
 ---
 description: Purge or supersede claims in the wiki that are sourced from a specific meeting when that information is outdated, retracted, or invalidated by newer sources.
-argument-hint: <meeting-filename-or-date>  e.g. GMT20260316-200648_Recording.transcript or 2026-03-16
+argument-hint: <meeting-filename-or-date>  e.g. T4-2026-03-16-2006 or 2026-03-16
 ---
 
 Purge claims sourced from the meeting: $ARGUMENTS

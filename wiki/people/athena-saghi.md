@@ -4,7 +4,7 @@ tags: [person]
 
 # Athena Saghi
 
-Researcher (Zeinabsadat Saghi, goes by Athena). Led the creativity study whose findings were presented in [[GMT20260304-191231_Recording.transcript|the Mar 4 meeting]].
+Researcher (Zeinabsadat Saghi, goes by Athena). Led the creativity study whose findings were presented in [[T2-2026-03-04-1912|the Mar 4 meeting]].
 
 ## Intellectual Contributions
 
@@ -16,4 +16,4 @@ Co-authored [[Auditing and Controlling AI Agent Actions in Spreadsheets|the Pist
 
 ## Appears In
 
-[[GMT20260220-230118_Recording.transcript|Feb 20]], [[GMT20260304-191231_Recording.transcript|Mar 4]], [[Auditing and Controlling AI Agent Actions in Spreadsheets]]
+[[T1-2026-02-20-2301|Feb 20]], [[T2-2026-03-04-1912|Mar 4]], [[Auditing and Controlling AI Agent Actions in Spreadsheets]]

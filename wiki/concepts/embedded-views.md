@@ -6,7 +6,7 @@ tags: [concept]
 
 A design option for how [[views|Views]] are rendered: instead of generating standalone output files via CLI, views are **embedded inside existing applications** (Word, PowerPoint, Excel, Notion) as prompt-powered "holes" in a document template.
 
-Proposed by [[sumit-gulwani|Sumit]] in [[Sadra-3May2026-TRANSCRIPT|the May 3 sync]] as Option 2, contrasted with Option 1 (the current approach).
+Proposed by [[sumit-gulwani|Sumit]] in [[T10-2026-05-03|the May 3 sync]] as Option 2, contrasted with Option 1 (the current approach).
 
 ## Option 1 vs. Option 2
 

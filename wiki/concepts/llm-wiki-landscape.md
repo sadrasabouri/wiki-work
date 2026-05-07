@@ -18,7 +18,7 @@ The pattern originates from Andrej Karpathy's X post, which shared a prompt for 
 
 ## Applications in the Wild
 
-Sadra surveyed ~700 comments on Karpathy's GitHub gist in [[Sadra-6May2026-Notes|May 6]] and expanded the taxonomy in [[LLM-Wiki Related Works]]. Three distinct user segments have emerged, each solving a different problem:
+Sadra surveyed ~700 comments on Karpathy's GitHub gist in [[T15-2026-05-06|May 6]] and expanded the taxonomy in [[LLM-Wiki Related Works]]. Three distinct user segments have emerged, each solving a different problem:
 
 ### For Software Developers
 
@@ -88,7 +88,7 @@ All three critiques come from Anatoly Krasnovsky's public commentary on the llm-
 
 ## Karpathy Gist Comment Mining
 
-The Karpathy GitHub gist — the origin post for the LLM-wiki pattern — has accumulated ~700 public comments from practitioners. Sadra mined these in [[Sadra-6May2026-Notes|May 6]], categorizing related implementations into three groups:
+The Karpathy GitHub gist — the origin post for the LLM-wiki pattern — has accumulated ~700 public comments from practitioners. Sadra mined these in [[T15-2026-05-06|May 6]], categorizing related implementations into three groups:
 
 1. **Software engineering** — teams applying the wiki pattern to code-adjacent knowledge work (architecture decisions, incident postmortems, design docs)
 2. **Researchers and ideators** — individual practitioners building personal research KBs from papers, notes, and transcripts
@@ -98,7 +98,7 @@ This is the most direct empirical survey of where the ecosystem has gone from Ka
 
 ## Wiki vs. RAG: Compression as the Central Concern
 
-Sadra's interpretability argument — that wiki edges are typed and traversable while RAG similarity scores are opaque — received a refinement from Sumit in [[Sadra-6May2026-Notes|May 6]]: **data compression** is the more fundamental concern in RAG, not interpretability. A RAG index is a compressed representation of a corpus; the quality question is whether the compression preserves the semantics needed for downstream tasks.
+Sadra's interpretability argument — that wiki edges are typed and traversable while RAG similarity scores are opaque — received a refinement from Sumit in [[T15-2026-05-06|May 6]]: **data compression** is the more fundamental concern in RAG, not interpretability. A RAG index is a compressed representation of a corpus; the quality question is whether the compression preserves the semantics needed for downstream tasks.
 
 The synthesis: the wiki's advantage is that its compression model (entity extraction + typed relations) is *declarative* — inspectable, correctable, extensible. An embedding is not directly editable. The interpretability argument and the compression argument are the same point at different levels of abstraction.
 

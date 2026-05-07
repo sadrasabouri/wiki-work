@@ -6,7 +6,7 @@ tags: [concept]
 
 Users cannot form stable mental models of non-deterministic AI capabilities. The "gulf" is between what users imagine the AI can do and what it actually can do — and this gap is unstable because AI capabilities change unpredictably. Coined by Subramaniam et al. (Stanford, CHI).
 
-The concept appears in [[GMT20260316-200648_Recording.transcript|the Mar 16 meeting]] and is revisited in [[Souti-3Apr2026-TRANSCRIPT-Part2|the Apr 3 Part 2 meeting]].
+The concept appears in [[T4-2026-03-16-2006|the Mar 16 meeting]] and is revisited in [[T6-2026-04-03-2|the Apr 3 Part 2 meeting]].
 
 ## Why It Blocks [[steerability|Steerability]]
 
@@ -16,7 +16,7 @@ The concept appears in [[GMT20260316-200648_Recording.transcript|the Mar 16 meet
 
 - **Preloaded Q&A** — surfaces the agent's capabilities in the form of pre-answered questions the user might ask; validated as a user need in the Mar 16 formative study results
 - **Capability scaffolding** — explicit onboarding to help users build accurate mental models before interacting
-- **Forward deployment engineering** — deploying AI capability ahead of user mental model, then actively training the mental model to catch up; discussed in [[Souti-3Apr2026-TRANSCRIPT-Part2|Apr 3 Part 2]]
+- **Forward deployment engineering** — deploying AI capability ahead of user mental model, then actively training the mental model to catch up; discussed in [[T6-2026-04-03-2|Apr 3 Part 2]]
 
 ## Paper Extension: The Gap Recurs Throughout Execution
 

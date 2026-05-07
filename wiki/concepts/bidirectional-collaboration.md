@@ -4,7 +4,7 @@ tags: [concept]
 
 # Bidirectional Collaboration
 
-The identified gap in human-AI interaction: current systems are unidirectional (human instructs, AI executes) but the ideal is bidirectional (AI and human both propose, challenge, and initiate). Documented in [[athena-saghi|Athena]]'s creativity study presented in [[GMT20260304-191231_Recording.transcript|the Mar 4 meeting]] and reinforced in [[Souti-3Apr2026-TRANSCRIPT-Part1|the Apr 3 Part 1 meeting]].
+The identified gap in human-AI interaction: current systems are unidirectional (human instructs, AI executes) but the ideal is bidirectional (AI and human both propose, challenge, and initiate). Documented in [[athena-saghi|Athena]]'s creativity study presented in [[T2-2026-03-04-1912|the Mar 4 meeting]] and reinforced in [[T5-2026-04-03-1|the Apr 3 Part 1 meeting]].
 
 ## Current State
 

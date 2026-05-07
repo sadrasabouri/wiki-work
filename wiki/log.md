@@ -26,15 +26,15 @@ Sources ingested (13 files):
 - [[Transcripts]] — Teams custom summary as real-world view analogue; AI summary + refined transcript as view examples
 
 **Meeting Transcripts:**
-- [[GMT20260220-230118_Recording.transcript|Feb 20]] — spreadsheet verification kickoff, data-centric vs. process-centric, scalable oversight
-- [[GMT20260304-191231_Recording.transcript|Mar 4]] — creativity study, productivity-creativity tradeoff, Wallace model, four collaboration modes
-- [[GMT20260311-184637_Recording.transcript|Mar 11]] — co-design session planning, formative study, IRB
-- [[GMT20260316-200648_Recording.transcript|Mar 16]] — steerability coined, views as unifying concept, Agent Lens named, DAG view, Gulf of Envisioning
-- [[Sadra-1May2026-Transcript|May 1]] — three-way sync, views taxonomy, workflows as creative artifacts, digital twins, intermediate summaries
-- [[Sadra-2May2026-TRANSCRIPT|May 2 morning]] — simulation metaphor, temporal KB, percolation strategies
-- [[Sadra-2May2026-TRANSCRIPT2|May 2 evening]] — views/workflows distinction, purge operation named, provenance tracking, researcher agent as source
-- [[Souti-3Apr2026-TRANSCRIPT-Part1|Apr 3 Part 1]] — creativity in Excel, two AI roles, Torrance test
-- [[Souti-3Apr2026-TRANSCRIPT-Part2|Apr 3 Part 2]] — human-as-API, Grice's maxims, interaction.md, forward deployment, Gulf of Envisioning
+- [[T1-2026-02-20-2301|Feb 20]] — spreadsheet verification kickoff, data-centric vs. process-centric, scalable oversight
+- [[T2-2026-03-04-1912|Mar 4]] — creativity study, productivity-creativity tradeoff, Wallace model, four collaboration modes
+- [[T3-2026-03-11-1846|Mar 11]] — co-design session planning, formative study, IRB
+- [[T4-2026-03-16-2006|Mar 16]] — steerability coined, views as unifying concept, Agent Lens named, DAG view, Gulf of Envisioning
+- [[T7-2026-05-01|May 1]] — three-way sync, views taxonomy, workflows as creative artifacts, digital twins, intermediate summaries
+- [[T8-2026-05-02-1|May 2 morning]] — simulation metaphor, temporal KB, percolation strategies
+- [[T9-2026-05-02-2|May 2 evening]] — views/workflows distinction, purge operation named, provenance tracking, researcher agent as source
+- [[T5-2026-04-03-1|Apr 3 Part 1]] — creativity in Excel, two AI roles, Torrance test
+- [[T6-2026-04-03-2|Apr 3 Part 2]] — human-as-API, Grice's maxims, interaction.md, forward deployment, Gulf of Envisioning
 
 **Pages created:** 18 concepts, 5 people, 2 projects, 7 events, index, log
 
@@ -51,7 +51,7 @@ Sources ingested (13 files):
 - Pages updated: wiki/projects/wiki-kb-project.md, wiki/index.md
 - Views regenerated: none (no matching target frontmatter)
 
-## [2026-05-05] ingest | Sadra-3May2026-TRANSCRIPT, Sadra-4May2026-TRANSCRIPT2, Sadra-4May2026-TRANSCRIPT3
+## [2026-05-05] ingest | T10-2026-05-03, T11-2026-05-04-1, T12-2026-05-04-2
 - Pages created: wiki/events/2026-05-03.md, wiki/events/2026-05-04.md, wiki/concepts/information-knowledge-pipeline.md, wiki/concepts/living-system.md, wiki/concepts/embedded-views.md
 - Pages updated: wiki/concepts/dag-of-computation.md, wiki/concepts/temporal-knowledge.md, wiki/concepts/views.md, wiki/people/sumit-gulwani.md, wiki/people/souti-chattopadhyay.md, wiki/index.md
 - Views regenerated: none (no matching target frontmatter)
@@ -66,7 +66,7 @@ Sources ingested (13 files):
 - Pages updated: wiki/concepts/llm-wiki-landscape.md (historical roots section added), wiki/projects/wiki-kb-project.md (Intermediate Packets connection), wiki/index.md
 - Views regenerated: none (no matching target frontmatter)
 
-## [2026-05-05] ingest | Sadra-5May2026-TRANSCRIPT, Sadra-5May2026-TRANSCRIPT2
+## [2026-05-05] ingest | T13-2026-05-05-1, T14-2026-05-05-2
 - Pages created: wiki/events/2026-05-05.md, wiki/concepts/skills.md, wiki/concepts/context-base.md
 - Pages updated: wiki/concepts/views.md (template-with-holes definition; document-as-view), wiki/concepts/workflows.md (narrowed to data dependencies; skills rename noted), wiki/concepts/living-system.md (three anchor examples: dashboards, Excel formulas, Equals Copilot), wiki/people/sumit-gulwani.md (May 5 contributions + appearances), wiki/people/sadra-sabouri.md (May 5 appearances), wiki/index.md
 - Views regenerated: wiki/presentation-views-workflows.md (renamed to 3-word slug; audience updated to "distinguished AI practitioners"; restructured to 3 slides per Sumit's feedback)
@@ -95,7 +95,7 @@ Sources ingested (13 files):
 - Pages updated: wiki/concepts/context-base.md (Work IQ as productized context base), wiki/concepts/semi-private-mashing.md (Work IQ gap as concrete evidence), wiki/concepts/skills.md (Work IQ Business Skills as org-scale analogue), wiki/concepts/llm-wiki-landscape.md (Work IQ as Microsoft org-scale incumbent), wiki/index.md
 - Views regenerated: none (no matching target frontmatter)
 
-## [2026-05-06] ingest | Sadra-6May2026-Notes
+## [2026-05-06] ingest | T15-2026-05-06
 - Pages created: wiki/events/2026-05-06.md
 - Pages updated: wiki/concepts/views.md (FlashFill analogy added to vibe sessions section), wiki/concepts/llm-wiki-landscape.md (Karpathy gist 700-comment mining; wiki vs. RAG compression reframe), wiki/people/sumit-gulwani.md (May 6 contributions + appearances), wiki/people/sadra-sabouri.md (May 6 appearances), wiki/index.md
 - Views regenerated: none (no matching target frontmatter)

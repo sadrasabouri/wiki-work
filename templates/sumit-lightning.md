@@ -4,7 +4,7 @@ audience: distinguished AI practitioners and AI leaders at Microsoft
 duration: 10min
 concepts: views, skills, workflows, semi-private-mashing, llm-wiki-landscape, workiq, kb-as-codebase, living-system
 features: live views, organizational brain, semi-private mashing
-failure_story_source: Sadra-5May2026-TRANSCRIPT2
+failure_story_source: T14-2026-05-05-2
 examples_source: presentation-grounded-examples
 num_open_questions: 3
 self_referential: true
