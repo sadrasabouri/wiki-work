@@ -118,7 +118,7 @@ jobs:
               `import * as Component from "./quartz/components"
 
           const explorerSortFn: Options["sortFn"] = (a, b) => {
-            const folderOrder = [".claude", "templates", "raw", "wiki", "views"]
+            const folderOrder = [".claude", "templates", "raw-sources", "wiki", "views"]
             const aParts = a.isFolder ? a.slug.split("/") : []
             const bParts = b.isFolder ? b.slug.split("/") : []
             let aRank = Number.POSITIVE_INFINITY
