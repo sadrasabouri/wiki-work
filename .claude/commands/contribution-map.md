@@ -38,11 +38,10 @@ Create a short slug: **at most 3 words** from the argument, lowercase, joined wi
 ```yaml
 ---
 tags: [view, contribution-map]
-prompt: /contribution-map $ARGUMENTS
 generated: YYYY-MM-DD
 ---
 
-> *`/contribution-map $ARGUMENTS`*
+> prompt: *`/contribution-map $ARGUMENTS`*
 ```
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:contribution-map | $ARGUMENTS`

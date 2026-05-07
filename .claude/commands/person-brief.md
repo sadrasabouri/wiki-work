@@ -42,11 +42,10 @@ Create a short slug: **at most 3 words** from the argument, lowercase, joined wi
 ```yaml
 ---
 tags: [view, person-brief]
-prompt: /person-brief $ARGUMENTS
 generated: YYYY-MM-DD
 ---
 
-> *`/person-brief $ARGUMENTS`*
+> prompt: *`/person-brief $ARGUMENTS`*
 ```
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:person-brief | $ARGUMENTS`

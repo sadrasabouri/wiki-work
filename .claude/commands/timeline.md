@@ -40,11 +40,10 @@ Create a short slug: **at most 3 words** from the argument, lowercase, joined wi
 ```yaml
 ---
 tags: [view, timeline]
-prompt: /timeline $ARGUMENTS
 generated: YYYY-MM-DD
 ---
 
-> *`/timeline $ARGUMENTS`*
+> prompt: *`/timeline $ARGUMENTS`*
 ```
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:timeline | $ARGUMENTS`

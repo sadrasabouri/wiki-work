@@ -42,11 +42,10 @@ Save to `views/digest-<YYYY-MM-DD>.md` (using the argument date, or today's date
 ```yaml
 ---
 tags: [view, digest]
-prompt: /digest $ARGUMENTS
 generated: YYYY-MM-DD
 ---
 
-> *`/digest $ARGUMENTS`*
+> prompt: *`/digest $ARGUMENTS`*
 ```
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:digest | since $ARGUMENTS`

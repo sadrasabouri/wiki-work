@@ -30,11 +30,10 @@ Create a short slug: **at most 3 words** from the core subject of the question, 
 ```yaml
 ---
 tags: [view, query]
-prompt: /query $ARGUMENTS
 generated: YYYY-MM-DD
 ---
 
-> *`/query $ARGUMENTS`*
+> prompt: *`/query $ARGUMENTS`*
 ```
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:query | $ARGUMENTS`

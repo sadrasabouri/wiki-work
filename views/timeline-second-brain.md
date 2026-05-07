@@ -4,7 +4,7 @@ prompt: /timeline second brain
 generated: 2026-05-06
 ---
 
-> *`/timeline second brain`*
+> prompt: *`/timeline second brain`*
 
 ## Timeline: Second Brain
 
