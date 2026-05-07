@@ -24,7 +24,7 @@ Generate presentation from template: $ARGUMENTS
    ```
    Immediately after the frontmatter (before the first heading), add a collapsed prompt callout:
    ```
-   > [!note]-
+   > [! ]-
    > prompt: *`/presentation $ARGUMENTS`*
    ```
    Append to `wiki/log.md`:

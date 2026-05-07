@@ -45,7 +45,7 @@ tags: [view, person-brief]
 generated: YYYY-MM-DD
 ---
 
-> [!note]-
+> [! ]-
 > prompt: *`/person-brief $ARGUMENTS`*
 ```
 

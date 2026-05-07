@@ -43,7 +43,7 @@ tags: [view, timeline]
 generated: YYYY-MM-DD
 ---
 
-> [!note]-
+> [! ]-
 > prompt: *`/timeline $ARGUMENTS`*
 ```
 

@@ -4,7 +4,7 @@ prompt: /timeline second brain
 generated: 2026-05-06
 ---
 
-> [!note]-
+> [! ]-
 > prompt: *`/timeline second brain`*
 
 ## Timeline: Second Brain
