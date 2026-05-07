@@ -1,5 +1,6 @@
 # Wiki Log
 
+## [2026-05-07] view:query | What ideas are common between the two projects in wiki/projects/? How are they connected, and what new ideas emerge from their intersection?
 ## [2026-05-06] view:query | creative workflows for presentation generation
 ## [2026-05-06] view:query | creative views people use against a KB
 ## [2026-05-06] view:query | entities mined for a KB depending on use goals

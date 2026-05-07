@@ -1,0 +1,71 @@
+---
+# tags: [view, query]
+generated: 2026-05-07
+---
+
+> [! ]-
+> prompt: *`/query What ideas are common between the two projects in wiki/projects/? How are they connected, and what new ideas emerge from their intersection?`*
+
+## Common Ideas — Ranked by Strength of Connection
+
+| Provenance                                                                                | Idea                                         | In Pista                                                                     | In Wiki KB                                                                                   | Why this is the same idea                                                                                                                                                |
+| ----------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [[raw-sources/meeting-transcripts/T4-2026-03-16-2006]] · Sumit                            | **Views as the central abstraction**         | DAG view, step-by-step reveal, formula-only view of agent execution          | Design doc, timeline, contribution map, presentation, `wiki/index.md` itself                 | Both render computation differently for different audiences; both are templates with prompt-filled holes ([[views]])                                                     |
+| [[raw-sources/meeting-transcripts/T12-2026-05-04-2]] · Sumit                              | **DAG of Computation**                       | Per-cell dependency graph; "see" of stop/see/steer                           | Full-system provenance DAG (raw → wiki entities → views); "wiki is just another node"        | Same graph at different scales — Pista's DAG is a subgraph of the KB DAG ([[dag-of-computation]])                                                                        |
+| [[raw-sources/sources/Auditing and Controlling AI Agent Actions in Spreadsheets]] · Sadra | **Participation over post-hoc review**       | Trust accumulates *during* interaction, not from output quality (N=16 study) | PR model for KB updates; "AI slop vs. AI beauty"; humans steer what the KB accumulates       | Sumit's failed "connect" generation in [[T13-2026-05-05-1                                                                                                                |
+| [[raw-sources/meeting-transcripts/T4-2026-03-16-2006]] · Sumit                            | **Steerability at step boundaries**          | F4/F5 — localized edit and branching at each computation step                | Each prompt-hole in a view is a steer point; vibe session is steerability for view authoring | "Steerability is most meaningful at workflow step boundaries" — applies whether the workflow is a spreadsheet computation or a view-authoring session ([[steerability]]) |
+| [[raw-sources/sources/Auditing and Controlling AI Agent Actions in Spreadsheets]] · Sadra | **Semantic diff**                            | Surface the formula, not 500 highlighted cells                               | Surface the prompt + raw source that produced a section, not just rendered text              | Both surface computational *intent* over artifact surface; the principle is explicitly stated as domain-agnostic in the Pista paper ([[semantic-diff]])                  |
+| [[raw-sources/meeting-transcripts/T4-2026-03-16-2006]] · Sumit, Souti                     | **Gulf of Envisioning**                      | F7 — persistent scaffolding questions at every step                          | Vibe sessions; FlashFill convergence for view authoring                                      | Same diagnosis: users don't know what the system can do; static onboarding insufficient; need scaffolding at every interaction point ([[gulf-of-envisioning]])           |
+| [[raw-sources/meeting-transcripts/T9-2026-05-02-2]] · Sadra                               | **Provenance as first-class**                | Each cell traceable to the formula step that produced it                     | Each claim traceable to a raw-sources file; AI-generated content flagged                     | Same trust mechanism: artifacts are only legible if their lineage is inspectable ([[provenance-tracking]])                                                               |
+| [[raw-sources/meeting-transcripts/T14-2026-05-05-2]] · Sumit                              | **Workflows / Skills as creative artifacts** | The agent's underlying methodology is a first-class object                   | Per-prompt skills are a community gallery, not implementation details                        | Both projects treat HOW as worth capturing, not just WHAT ([[skills]], [[workflows]])                                                                                    |
+| [[raw-sources/emails/Presentation]] · Sadra                                               | **Self-referential application**             | Pista verifies AI-written spreadsheets analysts use                          | KB writes its own paper from transcripts of designing the KB                                 | Both projects use their own output as a stress test ([[self-referential-kb]])                                                                                            |
+
+## New Ideas That Emerge from the Intersection
+
+### 1. Stop / See / Steer for KB Ingestion
+Pista's framework was designed for *agent execution* in a spreadsheet. But [[ingest-operation|`/ingest`]] is itself an agent execution: a transcript comes in, the agent extracts entities, writes pages, updates the index. Today this happens silently. **Apply Pista to ingest:** pause at each extraction step, show the user the semantic diff ("this transcript adds these claims to these pages"), let them steer or branch before accepting. This is the same paper but generalized from spreadsheets to knowledge work — and it would directly fix Sumit's [[T13-2026-05-05-1|"AI slop"]] failure case from May 5.
+
+### 2. Branching Exploration for Views
+Pista's most-adopted feature was [[agent-traceability-steerability|F5 branching]] — 94% of participants used it, median 3 times per session. **Apply to views:** when a user disagrees with a slide, fork the view; original preserved, alternative regenerated from the steered state; displayed as a tree. Views become *explorable* rather than one-shot generations. This also gives a concrete answer to Sumit's vibe-session UX gap from [[T10-2026-05-03|May 3]] — branching IS the vibe session UX.
+
+### 3. The Audit Cell for Knowledge Work
+In Pista, every cell is auditable to its formula. In the KB, every claim should be auditable to its raw source. The provenance column we just added across all views is the early form of this. **The talk thesis:** oversight infrastructure for AI must be artifact-agnostic — the same "stop/see/steer + semantic diff + provenance" applies whether the artifact is a spreadsheet, a wiki page, or a presentation. The two projects are not separate research; they are two case studies of one design framework.
+
+### 4. Calibrated Trust via Continuous Steering Generalizes Beyond Excel
+The summative N=16 result was striking: users who participated in execution detected more issues *and* trusted the output more. Sumit's connect-generation failure shows the converse: he handed the model everything and asked for output — pure post-hoc review — and got slop he didn't trust. **Generalize:** any AI knowledge-work tool that outputs a complete artifact at the end is set up to fail on trust. The user must be steering during synthesis, not reviewing after. This is the link between the empirical Pista paper and Sumit's lived "AI slop" frustration; they are the same finding from different angles.
+
+### 5. Persistent Envisioning for View Authoring
+[[gulf-of-envisioning|The Gulf of Envisioning]] paper extension says scaffolding must be *per-step*, not just at task entry. Views currently violate this — you write the prompt once and hope. **Build it in:** at every fill-point, surface concrete prompt examples, similar past views, alternative skills, contrastive renderings. The Pista F7 → KB view-authoring port is direct.
+
+### 6. The Wiki Is Inspectable Agent Memory
+Pista makes one agent's *execution* inspectable. The wiki makes an agent's *memory* inspectable: every claim links to its raw source, the wiki itself is a DAG node. Combining: an agent answering questions from the wiki could surface which raw sources its claims came from at each step (semantic diff for retrieval). This is RAG with Pista-grade transparency — and it gives users the same step-level steerability over agent *reasoning* that Pista gives over agent *execution*. ⚠️ This claim crosses both projects but isn't yet articulated on either page.
+
+## A Talk Outline (One Possible Framing)
+
+If the goal is to "tie them down in a talk and discover new ideas," here's a structure that lands all of the above as one thesis:
+
+1. **The two projects look different.** Spreadsheet HCI; AI-powered KB. (Show the two paper titles.)
+2. **They are the same project.** Both are about making AI computation legible and steerable at the grain where it can still be redirected. Show the unifying DAG: nodes are data, edges are workflows.
+3. **The five shared mechanisms:** views, DAG, semantic diff, steerability at step boundaries, participation over review.
+4. **The empirical finding generalizes.** Pista's N=16 result on calibrated trust is not about spreadsheets. Sumit's connect-slop is the same paper, replicated outside the lab. The principle: continuous steering > post-hoc review, in any artifact.
+5. **Three concrete extensions** (pick the most provocative for the audience):
+   - Branching exploration for views (the vibe-session UX, settled)
+   - Stop/see/steer for ingest (fixes the slop problem)
+   - Semantic diff for retrieval (RAG with Pista-grade transparency)
+6. **Close on the audit cell.** The wiki provenance column we just added is the design primitive for making knowledge artifacts as auditable as a formula in a spreadsheet. The two projects converge into one design framework: artifact-agnostic infrastructure for steerable AI.
+
+## Tensions Worth Surfacing in the Talk
+
+- **Scale mismatch.** Pista's findings are validated at N=16 with a tight task definition. The KB operates on a continuously growing, fuzzy-bounded corpus. Whether continuous-steering UX scales to KB-sized DAGs is genuinely open — the [[T10-2026-05-03|May 3]] vibe-session UX gap is exactly this concern.
+- **Audience confusion risk.** Pista's framing is "spreadsheet agents"; the KB framing is "team knowledge." Spending half the talk arguing they are the same may lose listeners who came for one. Mitigation: lead with the unifying DAG, then show both projects as instances.
+- **Karpathy lineage muddies the unification.** The KB has a strong intellectual lineage ([[second-brain-code-method|BASB]] → Karpathy → Applied Compute) that does not apply to Pista. Don't try to make Pista fit that lineage; the unification is at the *mechanism* level (steerability over a DAG), not the *intellectual lineage* level.
+
+## Gaps Surfaced by This Synthesis
+
+These came up in writing this answer and are not yet captured in the wiki:
+
+- No page formalizes the **"both projects are instances of one design framework"** thesis — only the views connection is explicit. A new concept page (e.g., `[[steerable-ai-infrastructure]]`) could anchor talks like this.
+- The **Stop/See/Steer-for-ingest** idea is mentioned nowhere; it would be a natural follow-up paper.
+- The **Pista-grade transparency for RAG** idea generalizes to all retrieval-augmented agents and is not on either project page.
+
+If any of these would be useful, they could be filed as new wiki concept pages.
