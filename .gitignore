@@ -1,6 +1,6 @@
-raw/emails/*.eml
-raw/meeting-transcripts/*.vtt
-raw/meeting-transcripts/*.docx
+raw-sources/emails/*.eml
+raw-sources/meeting-transcripts/*.vtt
+raw-sources/meeting-transcripts/*.docx
 .obsidian/*
 !.obsidian/snippets/
 !.obsidian/snippets/views-color.css
