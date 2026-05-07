@@ -30,8 +30,6 @@ A **[[views|view]]** is a document where every section is a prompt executed agai
 - **Teams auto-summary → query view** — Teams generates one fixed post-meeting summary template. A live view extends this to user-definable queries run on demand across all meetings: "give me contradictions between two people." That query has no fixed-template answer; it requires a prompt over the whole corpus. *Sumit Gulwani — [[Transcripts]]*
 - **Sumit's connect as a view** — every section of the performance review (motivating story, definitions, applications) is a prompt guided by a [[skills|skill]] that encodes *how* to prioritize and synthesize, not just what to retrieve. When a new quarter's 1:1 transcripts are ingested, the review updates. The skill is precisely what was missing from the three-day attempt. *[[Sadra-5May2026-TRANSCRIPT2]]*
 
-The Excel analogy is precise: a formula cell is a saved computation, not a stored value. A view is a saved prompt, not a stored document. *[[living-system]]*
-
 > speaker note: Point at the slide: "this is a view. Every section you're reading is a hole filled by a prompt over the wiki. The connect is the same architecture." Pause. "That's feature one."
 
 ## Organizational Brain
@@ -44,7 +42,7 @@ Three queries that become possible, grounded in real conversations:
 - **"Identify two people in different orgs working on the same hidden problem and connect them."** — No org chart, directory, or email search returns this. It requires a knowledge layer that understands what people are *working on* across organizational boundaries, not just what files they have access to. *Sumit Gulwani — [[Sadra-5May2026-TRANSCRIPT2]]*
 - **Rework prevention** — "Tons of rework is happening that wouldn't be there if there was a common source of updating knowledge where individuals can contribute using their semi-private information." Work IQ can retrieve what already exists; it cannot surface what someone knows privately that would solve a colleague's problem three teams over. *Sadra Sabouri — [[Microsoft Tool For Idea Automation]]*
 
-[[workiq|Work IQ]] provides the data access and retrieval layer. What it lacks is the **knowledge layer** — structured, synthesized concept pages that persist what was learned — and a model for individuals to contribute upward selectively. That is the gap this project occupies above Work IQ. *[[workiq]]*
+[[workiq|Work IQ]] provides the data access and retrieval layer. What it lacks is the **knowledge layer** — structured, synthesized concept pages that persist what was learned — and a model for individuals to contribute upward selectively. That is the gap this project occupies above Work IQ.
 
 > speaker note: "Satya, imagine your power when the Microsoft brain comes up" — Sumit said this directly. Work IQ is the floor; the knowledge layer is the ceiling that doesn't exist yet. The three queries are what become possible above that ceiling.
 
