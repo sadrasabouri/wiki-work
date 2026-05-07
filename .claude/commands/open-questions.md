@@ -44,7 +44,7 @@ End with a prioritized top-3: which open questions most need resolution before t
 
 ## Save Output
 
-Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `views`, `wiki-kb`, `all`). Drop stop words and articles. Save to `views/open-questions-<slug>.md` with this frontmatter, followed immediately by a prompt indicator line before any content:
+Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `views`, `wiki-kb`, `all`). Drop stop words and articles. Save to `views/open-questions-<slug>.md` with this frontmatter, followed immediately by a collapsed prompt callout before any content:
 
 ```yaml
 ---
@@ -52,6 +52,7 @@ tags: [view, open-questions]
 generated: YYYY-MM-DD
 ---
 
+> [!note]-
 > prompt: *`/open-questions $ARGUMENTS`*
 ```
 

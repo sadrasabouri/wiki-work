@@ -33,7 +33,7 @@ Produce a Contribution Map for: $ARGUMENTS
 
 ## Save Output
 
-Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `views`, `wiki-kb`, `sumit`). Drop stop words and articles. Save to `views/contribution-map-<slug>.md` with this frontmatter, followed immediately by a prompt indicator line before any content:
+Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `views`, `wiki-kb`, `sumit`). Drop stop words and articles. Save to `views/contribution-map-<slug>.md` with this frontmatter, followed immediately by a collapsed prompt callout before any content:
 
 ```yaml
 ---
@@ -41,6 +41,7 @@ tags: [view, contribution-map]
 generated: YYYY-MM-DD
 ---
 
+> [!note]-
 > prompt: *`/contribution-map $ARGUMENTS`*
 ```
 

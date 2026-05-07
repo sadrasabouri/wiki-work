@@ -21,7 +21,7 @@ Generate a Design Document for: $ARGUMENTS
 
 ## Save Output
 
-Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `views`, `wiki-kb`, `agent-lens`). Drop stop words and articles. Save to `views/design-doc-<slug>.md` with this frontmatter, followed immediately by a prompt indicator line before any content:
+Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `views`, `wiki-kb`, `agent-lens`). Drop stop words and articles. Save to `views/design-doc-<slug>.md` with this frontmatter, followed immediately by a collapsed prompt callout before any content:
 
 ```yaml
 ---
@@ -29,6 +29,7 @@ tags: [view, design-doc]
 generated: YYYY-MM-DD
 ---
 
+> [!note]-
 > prompt: *`/design-doc $ARGUMENTS`*
 ```
 

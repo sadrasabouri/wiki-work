@@ -22,9 +22,10 @@ Generate presentation from template: $ARGUMENTS
    prompt: /presentation $ARGUMENTS
    generated: YYYY-MM-DD
    ```
-   Immediately after the frontmatter (before the first heading), add:
+   Immediately after the frontmatter (before the first heading), add a collapsed prompt callout:
    ```
-   > *`/presentation $ARGUMENTS`*
+   > [!note]-
+   > prompt: *`/presentation $ARGUMENTS`*
    ```
    Append to `wiki/log.md`:
    ```
