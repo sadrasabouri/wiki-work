@@ -20,6 +20,14 @@ Raised privacy concerns about [[semi-private-mashing|semi-private mashing]] in [
 
 In [[T10-2026-05-03|the May 3 sync]], proposed the graphical interface vision: an embedded agent + wiki where users select files, chat with the agent, and define/modify views without touching the CLI. "Figuring out like what are the views that are going to be useful — that's the research contribution."
 
+In [[T15-2026-05-06|the May 6 sync]], introduced **[[emergence-of-knowledge|emergence of knowledge]]** as a research direction Sumit had not encountered: ICLR-published network-analytic methods that model link fragility, divergence/convergence, and prediction of when teams are close to discovering new ideas. Sumit's response: *"the most interesting thing I have learned in a long time."* This generalizes views from descriptive ("what was discussed") to predictive ("what is about to emerge").
+
+Also raised the **cross-team contradiction** view in the same session: a wiki spanning multiple teams could surface where their concept maps disagree — diagnostic for organizational dynamics. Filed as a future application beyond the lightning talk's single-team scope.
+
+Drew the **image-generation re-iteration analogy** in the discussion of [[version-sprawl]]: changing one tree in a generated image shifts the whole image. Sumit countered that text is more constructive — you can pick parts — establishing why text-domain version sprawl is tractable in a way the image case isn't.
+
+Performed the **slop-recovery move** for Sumit's "two projects, new emergent idea" generation: pointed him to a sentence already in his own wiki page identifying views as the unifying abstraction. The save validated grounded-examples-first and provenance over greenfield generation.
+
 ## Appears In
 
-[[T1-2026-02-20-2301|Feb 20]], [[T2-2026-03-04-1912|Mar 4]], [[T3-2026-03-11-1846|Mar 11]], [[T4-2026-03-16-2006|Mar 16]], [[T5-2026-04-03-1|Apr 3 Part 1]], [[T6-2026-04-03-2|Apr 3 Part 2]], [[T7-2026-05-01|May 1]], [[T10-2026-05-03|May 3]]
+[[T1-2026-02-20-2301|Feb 20]], [[T2-2026-03-04-1912|Mar 4]], [[T3-2026-03-11-1846|Mar 11]], [[T4-2026-03-16-2006|Mar 16]], [[T5-2026-04-03-1|Apr 3 Part 1]], [[T6-2026-04-03-2|Apr 3 Part 2]], [[T7-2026-05-01|May 1]], [[T10-2026-05-03|May 3]], [[T15-2026-05-06|May 6]]

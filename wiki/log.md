@@ -1,5 +1,10 @@
 # Wiki Log
 
+## [2026-05-07] ingest | T15-2026-05-06 (full transcript)
+- Pages created: wiki/concepts/stories.md, wiki/concepts/emergence-of-knowledge.md, wiki/concepts/version-sprawl.md
+- Pages updated: wiki/events/2026-05-06.md (substantial expansion: five-slide structure, three-layer architecture, generalization-level skill, sponsorship goal, slop-recovery moment, live-wiki demo, generational observation), wiki/people/sumit-gulwani.md (May 6 contributions: right-level-of-generality, three-layer arch, stories priority, version sprawl, demo strategy, sponsorship), wiki/people/souti-chattopadhyay.md (emergence-of-knowledge, cross-team contradictions, image-gen analogy, slop recovery move; appears-in updated), wiki/concepts/skills.md (template extraction at the right level of generality + Sumit's distillation/debate/refinement examples), wiki/projects/wiki-kb-project.md (three-layer architecture section; sources updated through May 6), wiki/index.md (3 new concepts; May 6 entry rewritten)
+- Views regenerated: views/sumit-presentation/2. KB Raw Sources.md, views/sumit-presentation/4. Creative Views.md, views/sumit-presentation/5. Creative workflows.md, views/projects-intersection.md
+
 ## [2026-05-07] view:query | What ideas are common between the two projects in wiki/projects/? How are they connected, and what new ideas emerge from their intersection?
 ## [2026-05-06] view:query | creative workflows for presentation generation
 ## [2026-05-06] view:query | creative views people use against a KB

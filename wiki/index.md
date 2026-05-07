@@ -30,6 +30,9 @@
 - [[semantic-diff|Semantic Diff]] — design primitive for inspectable agents: surface the computational unit (formula, rule), not the artifact surface (highlighted cells); generalizes across spreadsheet, code, document agents
 - [[local-first-kb|Local-First KB]] — personal KB as local branch; private processing on-device; PR model for contributing to org KB; matvellosoknowledge as concrete RAG-based instantiation
 - [[workiq|Work IQ]] — Microsoft's org-scale context base (Data + Context + Skills/Tools); closest incumbent to the wiki project; gap: surface-level indexing, no knowledge layer, no semi-private contribution model
+- [[stories|Stories]] — atomic personal anecdotes preserved for cross-context reuse; top priority in Sumit's personal wiki, above concepts and people
+- [[emergence-of-knowledge|Emergence of Knowledge]] — network-analytic ICLR methods modeling when teams are *close to* discovering new ideas; predictive view, not descriptive
+- [[version-sprawl|Version Sprawl]] — HCI problem of managing parallel document versions during AI iteration; needs part-level versioning surface
 
 ## People
 
@@ -58,4 +61,4 @@
 - [[2026-05-03|May 3]] — Three-way sync; wiki demo to Sumit; semantic index framing; raw→knowledge→views pipeline; embedded views; Karpathy differentiator
 - [[2026-05-04|May 4]] — Two 1:1s; full-system provenance DAG; temporal source filtering; living system; everything-is-a-DAG; knowledge graph as alternative foundation
 - [[2026-05-05|May 5]] — AI slop diagnosis; workflows→skills rename; view = template with holes; workflow = data dependencies; context base vs. knowledge base; document as view; Satya pitch
-- [[2026-05-06|May 6]] — task division (Sadra: presentation, Sumit: pre-read); FlashFill analogy for view authoring; Karpathy gist 700-comment mining (3 categories); WorkIQ action item; wiki vs. RAG compression reframe
+- [[2026-05-06|May 6]] — task division; FlashFill analogy + right-level-of-generality skill; Karpathy gist 700-comment mining; three-layer architecture (raw/wiki/views as peers); five-slide live-wiki demo plan; sponsorship goal; stories as wiki content type; emergence-of-knowledge introduced; version-sprawl HCI problem named

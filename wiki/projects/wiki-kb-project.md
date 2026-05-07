@@ -22,6 +22,10 @@ The LLM-wiki pattern is rooted in the [[second-brain-code-method|Building a Seco
 
 AI critic [[gary-marcus|Gary Marcus]] argued in May 2026 that GenAI is net negative outside of coding and brainstorming. [[sumit-gulwani|Sumit]] forwarded this post noting "Our wiki kinda allows us to 'brainstorming'" ([[Presentation]]). The wiki project doesn't need to rebut Marcus — it operates within the domain he already grants legitimate. This is a stronger positioning move than arguing against the critique: the project lives inside the exception.
 
+## Three-Layer Architecture
+
+In [[T15-2026-05-06|the May 6 sync]], [[sumit-gulwani|Sumit]] insisted on a strict **three-layer architecture** with `raw/` `wiki/` `views/` as **peer top-level directories**, not nested. This mirrors the [[information-knowledge-pipeline|information→knowledge→views pipeline]]: raw sources are immutable inputs; the wiki is processed knowledge; views are purpose-specific renderings. Conflating layers in the file system conflates them in any reader's mental model. The repo was reorganized the same day.
+
 ## Self-Referential Nature
 
 The project is its own best use case — see [[self-referential-kb]]. The raw sources feeding this KB are the transcripts of the meetings that designed it. The presentation on Thursday is planned to be generated from the KB itself.
@@ -32,4 +36,4 @@ The project is its own best use case — see [[self-referential-kb]]. The raw so
 
 ## Sources
 
-Emails: [[Thursday demo]], [[Presentation]], [[misc thoughts]], [[Transcripts]]. Meetings: [[T7-2026-05-01|May 1]], [[T8-2026-05-02-1|May 2 morning]], [[T9-2026-05-02-2|May 2 evening]], [[T10-2026-05-03|May 3]], [[T11-2026-05-04-1|May 4a]], [[T12-2026-05-04-2|May 4b]].
+Emails: [[Thursday demo]], [[Presentation]], [[misc thoughts]], [[Transcripts]]. Meetings: [[T7-2026-05-01|May 1]], [[T8-2026-05-02-1|May 2 morning]], [[T9-2026-05-02-2|May 2 evening]], [[T10-2026-05-03|May 3]], [[T11-2026-05-04-1|May 4a]], [[T12-2026-05-04-2|May 4b]], [[T13-2026-05-05-1|May 5 morning]], [[T14-2026-05-05-2|May 5 evening]], [[T15-2026-05-06|May 6]].

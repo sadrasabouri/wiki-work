@@ -36,6 +36,18 @@ Sumit consistently finds the single abstraction that unifies superficially diffe
 
 In [[T15-2026-05-06|the May 6 sync]], shared his **document generation workflow** for the pre-read: start from the desired content outline (template), have an agent fill in each section (holes), merge short sections for balance. Introduced the **FlashFill analogy** for view authoring: accumulating input-output revision examples narrows the agent's hypothesis space toward the right output, the same way FlashFill converges on a transformation from examples. This is [[views|document-as-view]] instantiated in practice. Proposed applying the same approach to Sadra's presentation.
 
+Deepened the FlashFill analogy in the same session into the **right level of generality** [[skills|skill]]: extracting a template from an example is a program-ranking problem — too general loses the voice, too specific just copies. Group similar paragraphs *first* before generalizing; abstract some particulars but not others (e.g., keep "talk to Satya" concrete while generalizing "talk to person X"); re-run the generalized template against raw data. Sumit named this as his "biggest find" of the day.
+
+Insisted on the **three-layer architecture** as a top-level directory structure: `raw/` `wiki/` `views/` as peer folders, not nested. Conflating layers in the file system conflates them in the reader's mental model. The cleanup happened the same day.
+
+Revealed that his personal-wiki priorities invert the org-wiki defaults: **stories first**, then analogies, then visualizations / slide titles, *then* concepts and people. The kindergarten-drop-off anecdote — same story used in a scientific talk on AI edge cases — illustrates why stories deserve their own content type ([[stories]]).
+
+Confessed to the **[[version-sprawl]]** problem (V1/V2/M1/N1/T/S1 across ~20 doc versions) and named it as a real HCI design opportunity: a surface where the system understands per-part alternatives and maintains them hierarchically.
+
+Committed to projecting the **live wiki** during the talk rather than PowerPoint: *"the moment I have something real like this I'm showing, you know, that really gives people confidence."* The prompts are visible alongside each view — the prompt is part of the talk, not infrastructure. The opener will explicitly reveal the self-referential trick (see [[self-referential-kb]]).
+
+Stated the actual goal of the Thursday talk: **sponsorship**, not science. The audience owns Work IQ and Copilot Studio; the win condition is Satya redirecting them to engage with Sumit on this direction.
+
 Also offered a reframe of the wiki vs. RAG distinction: **data compression** is the more fundamental concern, not interpretability — a RAG index is a compressed corpus, and the question is whether compression preserves downstream task semantics. Encouraged Sadra to develop the interpretability argument further. [[T15-2026-05-06]]
 
 ## Appears In
