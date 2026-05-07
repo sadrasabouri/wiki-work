@@ -6,6 +6,8 @@ prompt: /presentation create a example list grounded with examples from transcri
 generated: 2026-05-06
 ---
 
+> *`/presentation templates/grounded-examples.md`*
+
 # Presentation: Grounded Examples — Views, Org Brain, Semi-Private Mashup
 
 ## Views, Not Documents

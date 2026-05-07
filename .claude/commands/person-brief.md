@@ -37,7 +37,7 @@ Parse the argument as `<person>: <topic>`. If no topic separator is present, pro
 
 ## Save Output
 
-Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `sumit-views`, `souti-creativity`). Replace `:` with `-`, drop stop words and articles. Save to `wiki/person-brief-<slug>.md` with this frontmatter:
+Create a short slug: **at most 3 words** from the argument, lowercase, joined with hyphens (e.g. `sumit-views`, `souti-creativity`). Replace `:` with `-`, drop stop words and articles. Save to `views/person-brief-<slug>.md` with this frontmatter, followed immediately by a prompt indicator line before any content:
 
 ```yaml
 ---
@@ -45,6 +45,8 @@ tags: [view, person-brief]
 prompt: /person-brief $ARGUMENTS
 generated: YYYY-MM-DD
 ---
+
+> *`/person-brief $ARGUMENTS`*
 ```
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:person-brief | $ARGUMENTS`

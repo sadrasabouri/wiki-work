@@ -7,6 +7,8 @@ generated: 2026-05-06
 prompt: /presentation templates/sumit-lightning.md
 ---
 
+> *`/presentation templates/sumit-lightning.md`*
+
 # Microsoft Lightning Talk — for distinguished AI practitioners and AI leaders at Microsoft
 
 ## The Gap

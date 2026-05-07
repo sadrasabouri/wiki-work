@@ -37,7 +37,7 @@ Keep the entire digest under 10 bullets. Density over completeness — if two en
 
 ## Save Output
 
-Save to `wiki/digest-<YYYY-MM-DD>.md` (using the argument date, or today's date if none given) with this frontmatter prepended:
+Save to `views/digest-<YYYY-MM-DD>.md` (using the argument date, or today's date if none given) with this frontmatter, followed immediately by a prompt indicator line before any content:
 
 ```yaml
 ---
@@ -45,6 +45,8 @@ tags: [view, digest]
 prompt: /digest $ARGUMENTS
 generated: YYYY-MM-DD
 ---
+
+> *`/digest $ARGUMENTS`*
 ```
 
 Append to `wiki/log.md`: `## [YYYY-MM-DD] view:digest | since $ARGUMENTS`

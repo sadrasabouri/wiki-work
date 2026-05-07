@@ -1,4 +1,5 @@
 # Paths copied from each branch into the Quartz content folder.
 wiki
+views
 raw
 .claude/commands

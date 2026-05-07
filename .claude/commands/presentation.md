@@ -17,10 +17,14 @@ Generate presentation from template: $ARGUMENTS
    - Add a `> speaker note:` line with what to say aloud (1–2 sentences max)
    - Preserve any static content in the template that is not inside a `> fill:` block
 
-4. **Save output.** Derive the output slug from the template filename (basename without extension). Write to `wiki/presentation-<slug>.md`. The output file's frontmatter must include all fields from the template frontmatter plus:
+4. **Save output.** Derive the output slug from the template filename (basename without extension). Write to `views/presentation-<slug>.md`. The output file's frontmatter must include all fields from the template frontmatter plus:
    ```
    prompt: /presentation $ARGUMENTS
    generated: YYYY-MM-DD
+   ```
+   Immediately after the frontmatter (before the first heading), add:
+   ```
+   > *`/presentation $ARGUMENTS`*
    ```
    Append to `wiki/log.md`:
    ```

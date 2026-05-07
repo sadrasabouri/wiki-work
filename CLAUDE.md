@@ -7,7 +7,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Personal knowledge base on the LLM Wiki pattern. **Domain:** AI-powered knowledge management (Sadra Sabouri, Sumit Gulwani, Souti Chattopadhyay).
 
 - `raw/` — immutable sources. Markdown extractions committed; binaries (`.eml`, `.vtt`, `.docx`) gitignored.
-- `wiki/` — LLM-maintained pages. `concepts/` `people/` `projects/` `events/` hold canonical knowledge. Generated view artifacts are stored at the `wiki/` root (blue in Obsidian).
+- `wiki/` — LLM-maintained pages. `concepts/` `people/` `projects/` `events/` hold canonical knowledge.
+- `views/` — generated view artifacts (presentations, timelines, queries, etc.). All view commands write here.
 - `.claude/commands/` — slash command implementations (full step-by-step instructions live there).
 
 ## Wiki Conventions
@@ -29,7 +30,7 @@ Personal knowledge base on the LLM Wiki pattern. **Domain:** AI-powered knowledg
 | `/trim` | `/trim [scope]` | Remove deprecated concepts, superseded definitions, and outdated framings; distinct from purge (source-targeted) and lint (non-destructive) |
 | `/clarify` | `/clarify [concept or "all"]` | Generate critical questions about definitions and concept relationships → user answers → wiki updated |
 
-### Views — output saved to `wiki/` root (blue in Obsidian)
+### Views — output saved to `views/`
 
 | Command | Argument | Output |
 |---------|----------|--------|
