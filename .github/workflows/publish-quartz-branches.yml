@@ -98,6 +98,29 @@ jobs:
           }
           NODE
 
+          # Quartz ignores a folder named "templates" by default; this repo publishes it.
+          node <<'NODE'
+          const fs = require("node:fs")
+
+          const configPath = "quartz.config.ts"
+          let config = fs.readFileSync(configPath, "utf8")
+          const ignorePatternsMatch = config.match(/ignorePatterns:\s*\[([^\]]*)\]/)
+
+          if (!ignorePatternsMatch) {
+            throw new Error("Could not find Quartz ignorePatterns config.")
+          }
+
+          const ignorePatterns = ignorePatternsMatch[1]
+            .split(",")
+            .map((entry) => entry.trim())
+            .filter(Boolean)
+            .filter((entry) => !/^["'`]templates["'`]$/.test(entry))
+
+          const patchedIgnorePatterns = `ignorePatterns: [${ignorePatterns.join(", ")}]`
+          config = config.replace(ignorePatternsMatch[0], patchedIgnorePatterns)
+          fs.writeFileSync(configPath, config)
+          NODE
+
           # Keep the Quartz explorer aligned with this repository's source-to-view flow.
           node <<'NODE'
           const fs = require("node:fs")
