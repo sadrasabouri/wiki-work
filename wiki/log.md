@@ -1,5 +1,9 @@
 # Wiki Log
 
+## [2026-05-13] view:query | for a fixed task of cerating a summary of a meeting transcript what are the creative workflows people can use
+
+## [2026-05-13] view:query | for a fixed task of creating a summary of a transcript
+
 ## [2026-05-13] view:brainstorm | whole wiki
 
 ## [2026-05-13] view:contribution-map | wiki-kb-project
