@@ -1,5 +1,7 @@
 # Wiki Log
 
+## [2026-05-13] view:brainstorm | whole wiki
+
 ## [2026-05-13] view:contribution-map | wiki-kb-project
 
 ## [2026-05-07] view:change-graph | ingest-diff-2026-05-07.md — T15-2026-05-06 changes as mermaid graph (added/changed/unchanged)

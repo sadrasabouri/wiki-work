@@ -42,3 +42,4 @@ Personal knowledge base on the LLM Wiki pattern. **Domain:** AI-powered knowledg
 | `/person-brief` | `Person: topic` | Narrative on a person's position and how it evolved |
 | `/presentation` | `<path-to-template>` | Fill a template file with wiki content; e.g. `/presentation .claude/templates/sumit-lightning.md` |
 | `/digest` | `YYYY-MM-DD` | ≤10 insight-bullets on what is new since that date |
+| `/brainstorm` | *(none — whole wiki)* | Wild new ideas: unexpected connections, unexplored implications, provocative hypotheses |
