@@ -57,6 +57,8 @@ A community library of skills is a natural extension: practitioners share skills
 
 **Real-world analogue at org scale:** [[workiq|Work IQ]]'s **Business skills** — "natural-language instructions that encode your organization's processes, policies, and domain knowledge in a format agents can interpret and execute" — are skills at the org-process level. Agents discover and apply them at runtime to ensure consistent behavior across the org. Same pattern as wiki skills, different scope: Work IQ skills encode org procedures; wiki skills encode per-prompt creative methodology. [[Work IQ overview]]
 
+**Another real-world analogue:** [[fabric-iq|Fabric IQ]]'s **operational agents** — published chat sessions that encode how to extract a specific insight from a data ontology — are a primitive skills-equivalent for structured data. Same reusability pattern applied to a fixed, typed knowledge graph rather than free-form wiki knowledge.
+
 **Real-world analogue in the wild:** [[matvellosoknowledge]] implements a skills-equivalent called **MY PREFERENCES.md** — a plain markdown file where users encode domain-specific extraction rules and hard constraints (e.g., "always extract action items from work emails," "never include prices in shopping summaries"). The agent uses it as part of the system prompt. This confirms the skills pattern is independently discoverable: when you build a serious personal KB, you end up needing a user-configurable methodology layer. [[Personal Knowledge Management]]
 
 ## Relation to Workflows

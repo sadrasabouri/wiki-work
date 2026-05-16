@@ -62,6 +62,8 @@ The Refine phase corresponds to the [[information-knowledge-pipeline|wiki layer]
 
 [[workiq|Work IQ]] (Microsoft 365) is the closest shipping product to the applied compute architecture: its Data layer = Remember, its semantic index = Refine, its Skills/Tools layer = Retrieve. Work IQ demonstrates the context base at org scale — grounding Copilot in all of M365 — but does not add the knowledge layer. It retrieves from documents; it does not synthesize concept pages or support personal→org knowledge contribution. See [[workiq]] for the full analysis.
 
+The broader [[microsoft-iq-stack|Microsoft IQ Stack]] extends this: [[foundry-iq|Foundry IQ]] adds a managed knowledge layer over unstructured content (agentic retrieval with citations); [[fabric-iq|Fabric IQ]] adds an ontology layer over structured business data. Together these three layers constitute Microsoft's production-scale instantiation of the context base — with the same gap the wiki project addresses: no synthesis, no temporal evolution tracking, no personal→org contribution model.
+
 ## Convergent Framing of Related Work
 
 Sumit situates three pieces as convergent frames (from [[T14-2026-05-05-2]]):

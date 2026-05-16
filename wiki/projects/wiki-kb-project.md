@@ -18,6 +18,13 @@ As articulated in [[Thursday demo]] and refined in [[T7-2026-05-01|the May 1 syn
 
 The LLM-wiki pattern is rooted in the [[second-brain-code-method|Building a Second Brain]] tradition (Tiago Forte's CODE method) and was popularized as an LLM-native workflow by Andrej Karpathy's X post — see [[llm-wiki-landscape|LLM-Wiki Landscape]] for the full ecosystem. The key differentiator from Karpathy's personal KB pattern: this project targets team/organizational knowledge, not personal notes — confirmed explicitly in [[T10-2026-05-03|the May 3 sync]] ("we never call it a personal knowledge base"). [[semi-private-mashing|Semi-private mashing]] is the mechanism that makes organizational scope possible.
 
+## Incumbent Comparison: Microsoft IQ Stack
+
+The closest incumbent system is the [[microsoft-iq-stack|Microsoft IQ Stack]] (Work IQ + Fabric IQ + Foundry IQ), which Microsoft positions as a three-layer enterprise intelligence architecture. Sadra's analysis in [[Microsoft Infrastructure for Organizational Brain]] identifies two structural gaps the IQ stack leaves open — and which this project is specifically designed to fill:
+
+1. **Transcript synthesis into named concepts.** [[foundry-iq|Foundry IQ]] can ingest meeting transcripts as retrieval documents, but surfaces them as chunks — it cannot extract named concepts, attribute them to people, or track how an idea evolved across sessions. This is the wiki's core synthesis operation.
+2. **Personal → organizational contribution (reverse link).** The IQ stack flows downward: org data enriches agents. There is no mechanism for an individual to push a private insight upward into the shared knowledge layer. [[semi-private-mashing|Semi-private mashing]] + the [[local-first-kb|local-first KB]] PR model are the wiki project's answer.
+
 ## External Positioning
 
 AI critic [[gary-marcus|Gary Marcus]] argued in May 2026 that GenAI is net negative outside of coding and brainstorming. [[sumit-gulwani|Sumit]] forwarded this post noting "Our wiki kinda allows us to 'brainstorming'" ([[Presentation]]). The wiki project doesn't need to rebut Marcus — it operates within the domain he already grants legitimate. This is a stronger positioning move than arguing against the critique: the project lives inside the exception.

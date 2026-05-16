@@ -1,5 +1,10 @@
 # Wiki Log
 
+## [2026-05-16] ingest | Demystifying Microsoft's AI Strategy, FabricIQ Reddit, What is Foundry IQ?, Work IQ MCP Server, Microsoft Infrastructure for Organizational Brain
+- Pages created: wiki/concepts/microsoft-iq-stack.md, wiki/concepts/fabric-iq.md, wiki/concepts/foundry-iq.md
+- Pages updated: wiki/concepts/workiq.md (MCP server detail, IQ stack cross-refs), wiki/concepts/semi-private-mashing.md (IQ stack gap articulation), wiki/concepts/skills.md (Fabric IQ operational agents analogue), wiki/concepts/context-base.md (IQ stack as productized context base), wiki/projects/wiki-kb-project.md (Incumbent Comparison section), wiki/index.md (4 new entries)
+- Views regenerated: views/brainstorm-2026-05-13.md (updated 2026-05-16: new IQ stack provocations, typed edges hypothesis, wiki-as-MCP implication, one-big-bet reframe)
+
 ## [2026-05-13] view:query | for a fixed task of cerating a summary of a meeting transcript what are the creative workflows people can use
 
 ## [2026-05-13] view:query | for a fixed task of creating a summary of a transcript

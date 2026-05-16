@@ -29,7 +29,10 @@
 - [[context-base|Context Base vs. Knowledge Base]] — Applied Compute's Remember→Refine→Retrieve architecture (empirically: 16.9% APEX improvement, reasoning-effort amortization); three structural gaps between code and knowledge work; contrast with this project's human-centered KB
 - [[semantic-diff|Semantic Diff]] — design primitive for inspectable agents: surface the computational unit (formula, rule), not the artifact surface (highlighted cells); generalizes across spreadsheet, code, document agents
 - [[local-first-kb|Local-First KB]] — personal KB as local branch; private processing on-device; PR model for contributing to org KB; matvellosoknowledge as concrete RAG-based instantiation
-- [[workiq|Work IQ]] — Microsoft's org-scale context base (Data + Context + Skills/Tools); closest incumbent to the wiki project; gap: surface-level indexing, no knowledge layer, no semi-private contribution model
+- [[workiq|Work IQ]] — Microsoft's org-scale context base (Data + Context + Skills/Tools); closest incumbent to the wiki project; gap: surface-level indexing, no knowledge layer, no semi-private contribution model; now ships as an MCP server (`@microsoft/workiq`)
+- [[microsoft-iq-stack|Microsoft IQ Stack]] — three-layer enterprise AI architecture (Work + Fabric + Foundry IQ) plus build/governance tools; two structural gaps vs. the wiki project: transcript synthesis and personal→org contribution
+- [[fabric-iq|Fabric IQ]] — structured-data intelligence layer; ontology/knowledge-graph over OneLake; operational agents as reusable prompts (cf. skills); narrow scope is key practitioner lesson
+- [[foundry-iq|Foundry IQ]] — managed knowledge layer for unstructured content; agentic retrieval (query decomposition → parallel search → rerank → citations); permission-aware at query time
 - [[stories|Stories]] — atomic personal anecdotes preserved for cross-context reuse; top priority in Sumit's personal wiki, above concepts and people
 - [[emergence-of-knowledge|Emergence of Knowledge]] — network-analytic ICLR methods modeling when teams are *close to* discovering new ideas; predictive view, not descriptive
 - [[version-sprawl|Version Sprawl]] — HCI problem of managing parallel document versions during AI iteration; needs part-level versioning surface

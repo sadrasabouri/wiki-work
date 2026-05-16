@@ -4,7 +4,7 @@ tags: [concept]
 
 # Work IQ
 
-Microsoft's "intelligence layer" that grounds Microsoft 365 Copilot in enterprise data, context, and execution. The closest existing Microsoft product to what the [[wiki-kb-project|Wiki KB Project]] is building — and the sharpest illustration of what it is missing. Documented in [[Work IQ overview]]; Sadra's analysis in [[Microsoft Tool For Idea Automation]].
+Microsoft's **collaboration-context intelligence layer** — the top layer of the [[microsoft-iq-stack|Microsoft IQ Stack]], above [[fabric-iq|Fabric IQ]] (structured data) and [[foundry-iq|Foundry IQ]] (unstructured knowledge). Grounds Microsoft 365 Copilot in how *this organization* works: who collaborates with whom, what workflows exist, what patterns emerge from meetings and emails. The closest existing Microsoft product to what the [[wiki-kb-project|Wiki KB Project]] is building — and the sharpest illustration of what it is missing. Documented in [[Work IQ overview]] and [[microsoftwork-iq MCP Server and CLI for accessing Work IQ]]; Sadra's analysis in [[Microsoft Tool For Idea Automation]] and [[Microsoft Infrastructure for Organizational Brain]].
 
 ## What Work IQ Does
 
@@ -39,6 +39,17 @@ Work IQ is a productized instantiation of the [[context-base|context base]] arch
 | Retrieve | Skills/Tools layer (agents query at runtime) |
 
 The KB project's position: Work IQ handles the context base layer well. The wiki adds the missing **knowledge layer** — structured, typed, human-reviewed concept pages — on top, and adds **semi-private mashing** as the mechanism for personal→org knowledge flow.
+
+## Work IQ as MCP Server
+
+Work IQ is now accessible programmatically as an MCP server and CLI (`@microsoft/workiq` npm package, documented in [[microsoftwork-iq MCP Server and CLI for accessing Work IQ]]). This makes it natively composable with any MCP-compatible coding agent or IDE. Supported queries: emails, meetings, documents, Teams messages, people.
+
+Three plugins in the public repo:
+- **workiq** — core M365 natural-language queries
+- **microsoft-365-agents-toolkit** — scaffolding, manifest authoring, eval workflows for M365 declarative agents
+- **workiq-productivity** — read-only insights: email triage, meeting costs, org charts, channel audits
+
+Key friction: requires tenant admin consent. Work IQ MCP tools require administrative rights on the M365 tenant — a significant enterprise deployment hurdle not visible in the architectural description.
 
 ## Business Skills as a Skills Analogue
 
