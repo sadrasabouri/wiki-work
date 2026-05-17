@@ -1,6 +1,6 @@
 ---
 tags: [view, brainstorm]
-generated: 2026-05-16 (updated 2026-05-16: TypeAgent/Structured RAG added)
+generated: "2026-05-16 (updated 2026-05-16: TypeAgent/Structured RAG added)"
 ---
 
 > [!note]-
