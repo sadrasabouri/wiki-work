@@ -1,5 +1,9 @@
 # Wiki Log
 
+## [2026-05-16] view:design-doc | Synthesis IQ — wiki-kb-project as native Microsoft IQ stack extension
+- Output: views/synthesis-iq-proposal.md
+- Synthesis IQ framed as fourth IQ layer (above Foundry IQ); native component mapping (TypeAgent, Azure AI Search, Foundry IQ, Work IQ MCP, Purview, SharePoint, Copilot Studio, Entra); 5 open questions
+
 ## [2026-05-16] ingest | TypeAgent, TypeAgent - KnowPro, TypeAgent - KnowPro - Memory, Security Filter Pattern - Azure AI Search, Microsoft Infrastructure for Organizational Brain (update)
 - Pages created: wiki/concepts/structured-rag.md, wiki/concepts/typeagent.md, wiki/concepts/security-filter-pattern.md
 - Pages updated: wiki/concepts/foundry-iq.md (Security Filter Pattern as legacy precursor; TypeAgent/Structured RAG as research direction), wiki/concepts/microsoft-iq-stack.md (TypeAgent research frontier section), wiki/projects/wiki-kb-project.md (TypeAgent/Structured RAG comparison section), wiki/index.md (3 new entries)
