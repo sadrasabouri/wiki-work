@@ -27,6 +27,12 @@ A first-class capability: Foundry IQ synchronizes access control lists (ACLs) fr
 
 This is a partial solution to the [[semi-private-mashing|Semi-Private Mashing]] problem: Foundry IQ respects existing permissions, but it cannot selectively filter private content that lives outside existing ACLs (e.g., personal notes or 1:1 transcripts that the author wants to partially share). The semi-private mashing problem is about *author-controlled* partial sharing, not just ACL-controlled access.
 
+The predecessor to Foundry IQ's identity-aware retrieval is the [[security-filter-pattern|Security Filter Pattern]] for Azure AI Search — a lower-level, manually-managed technique where developers store group IDs in each document and inject OData `search.in()` filters at query time. Foundry IQ automates what the Security Filter Pattern required explicit schema design and query injection to achieve.
+
+### Conversation Retrieval: The TypeAgent Research Direction
+
+Foundry IQ ingests documents (including transcripts) and retrieves chunks. Microsoft Research is exploring a fundamentally different retrieval model for conversational data through [[typeagent|TypeAgent]] and its [[structured-rag|Structured RAG]] approach: rather than embedding conversation turns as vectors, Structured RAG extracts entity/topic trees into an inverted index, enabling precise structural queries ("what email did Kevin send Satya about AI models?"). This is explicitly positioned as the next step beyond Azure AI Search's inverted-index infrastructure. Neither Foundry IQ nor Structured RAG, however, synthesizes named concepts that evolve across meetings — that remains the wiki pattern's distinctive contribution.
+
 ## Contrast with the Wiki Project's Knowledge Layer
 
 Both Foundry IQ and the wiki project build a knowledge layer over raw content. The structural difference:

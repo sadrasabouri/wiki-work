@@ -45,3 +45,7 @@ Work IQ's "Business skills" — natural-language org-process instructions agents
 ## Connection to Fabric IQ's "Operational Agents"
 
 Fabric IQ lets users publish their chat sessions with data agents as **operational agents** — reusable prompts others can run. This is functionally a primitive version of [[skills]]: it captures a methodology for extracting insight from a data lake and makes it reusable. The difference is that Fabric IQ operational agents operate over a fixed ontology of structured data, while wiki skills encode creative reasoning over free-form knowledge.
+
+## The Research Frontier: TypeAgent and Structured RAG
+
+Beyond the three shipping IQ layers, Microsoft Research is exploring a personal-agent architecture called [[typeagent|TypeAgent]] that directly targets the IQ stack's gap in *conversational* retrieval. TypeAgent's [[structured-rag|Structured RAG]] replaces vector embeddings with an inverted index over entity/topic trees extracted from conversation turns — explicitly building on the Azure AI Search inverted-index infrastructure (the [[security-filter-pattern|Security Filter Pattern]] era). TypeAgent is not positioned as a fourth IQ layer; it is a research prototype for individual-level, conversation-scale memory. It does not close the two structural gaps identified in [[Microsoft Infrastructure for Organizational Brain]] (transcript→concept synthesis; personal→org reverse contribution), but it does represent Microsoft's most serious effort to date on conversational recall.

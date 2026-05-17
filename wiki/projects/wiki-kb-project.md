@@ -25,6 +25,14 @@ The closest incumbent system is the [[microsoft-iq-stack|Microsoft IQ Stack]] (W
 1. **Transcript synthesis into named concepts.** [[foundry-iq|Foundry IQ]] can ingest meeting transcripts as retrieval documents, but surfaces them as chunks — it cannot extract named concepts, attribute them to people, or track how an idea evolved across sessions. This is the wiki's core synthesis operation.
 2. **Personal → organizational contribution (reverse link).** The IQ stack flows downward: org data enriches agents. There is no mechanism for an individual to push a private insight upward into the shared knowledge layer. [[semi-private-mashing|Semi-private mashing]] + the [[local-first-kb|local-first KB]] PR model are the wiki project's answer.
 
+## Incumbent Comparison: TypeAgent and Structured RAG
+
+Microsoft Research's [[typeagent|TypeAgent]] project is the most technically proximate system to the wiki pattern's transcript-processing goal. Its [[structured-rag|Structured RAG]] engine indexes conversation turns by extracting entity/topic trees into an inverted index, enabling precise structural queries over arbitrarily large conversation corpora without forgetting older information — addressing classic RAG's memory-loss problem.
+
+The critical distinction: Structured RAG maximizes **recall** (what was said, by automated extraction); the wiki pattern maximizes **insight depth** (what it means, by human synthesis). TypeAgent answers "what books did we talk about?" The wiki answers "how has our framing of transcript synthesis as a contribution changed across May's meetings?"
+
+TypeAgent also has no equivalent to [[semi-private-mashing|semi-private mashing]] — it does not address how personal conversation memory contributes to shared organizational knowledge. The two structural gaps (transcript→concept synthesis; personal→org contribution) remain open in TypeAgent, confirming they are the wiki project's genuinely uncontested claims.
+
 ## External Positioning
 
 AI critic [[gary-marcus|Gary Marcus]] argued in May 2026 that GenAI is net negative outside of coding and brainstorming. [[sumit-gulwani|Sumit]] forwarded this post noting "Our wiki kinda allows us to 'brainstorming'" ([[Presentation]]). The wiki project doesn't need to rebut Marcus — it operates within the domain he already grants legitimate. This is a stronger positioning move than arguing against the critique: the project lives inside the exception.

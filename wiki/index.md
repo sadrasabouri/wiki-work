@@ -33,6 +33,9 @@
 - [[microsoft-iq-stack|Microsoft IQ Stack]] — three-layer enterprise AI architecture (Work + Fabric + Foundry IQ) plus build/governance tools; two structural gaps vs. the wiki project: transcript synthesis and personal→org contribution
 - [[fabric-iq|Fabric IQ]] — structured-data intelligence layer; ontology/knowledge-graph over OneLake; operational agents as reusable prompts (cf. skills); narrow scope is key practitioner lesson
 - [[foundry-iq|Foundry IQ]] — managed knowledge layer for unstructured content; agentic retrieval (query decomposition → parallel search → rerank → citations); permission-aware at query time
+- [[structured-rag|Structured RAG]] — Microsoft Research's inverted-index-based conversation memory; entity/topic extraction + scope/tree-pattern queries; 6 advantages over classic RAG; implemented in KnowPro; complement (not competitor) to the wiki pattern
+- [[typeagent|TypeAgent]] — Microsoft Research personal agent; AMP architecture (Actions+Memory+Plans); three distill/density/collaboration principles; TypeAgent Cache, Dispatcher, KnowPro; research prototype only
+- [[security-filter-pattern|Security Filter Pattern]] — Azure AI Search document-level access control via OData search.in() filter; legacy precursor to Foundry IQ's identity-aware retrieval; three authorization patterns compared
 - [[stories|Stories]] — atomic personal anecdotes preserved for cross-context reuse; top priority in Sumit's personal wiki, above concepts and people
 - [[emergence-of-knowledge|Emergence of Knowledge]] — network-analytic ICLR methods modeling when teams are *close to* discovering new ideas; predictive view, not descriptive
 - [[version-sprawl|Version Sprawl]] — HCI problem of managing parallel document versions during AI iteration; needs part-level versioning surface

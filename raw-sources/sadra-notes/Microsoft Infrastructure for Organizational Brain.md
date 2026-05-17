@@ -3,6 +3,10 @@
 + Foundry IQ: Integrating organizational knowledge such as documents, policies, manuals, FAQs, contracts, wikis, and other unstructured information [[What is Foundry IQ?]].
 This post ([[Demystifying Microsoft’s AI Strategy Work IQ, Fabric IQ, Foundry IQ, and More]]) summarizes these three concepts
 
+Azure AI search is the legacy version of this IQ system (mostly similar to Foundry IQ), for dealing with the personal information what Azure AI search used to have is a capability called [[Security Filter Pattern - Azure AI Search]] that lets user search within he boundry of "valid" documents.
+
+In addition to that Microsoft is working on a research tool to optimize retrieval over raw sources like . It part of the personal LLM structure [[TypeAgent]] that is named [[TypeAgent - KnowPro]]. In high level they're implementing structured RAG on conversation data. It's a research prototype and it's still under-development. Here in this document [[TypeAgent - KnowPro - Memory]] they described how the memory structure works.
+
 The differences I see between [[wiki-kb-project]] and these systems are two main idea (which are both powered by agents)
-1. Utilizing transcripts information to inform Foundry IQ; how enriched that could be. before agents we could not extract meaningful information from it, now we can
-2. Lost connection between personal knowledge and organization knowledge. We want to track individuals to contribute to organization knowledge (reverse link that FoundryIQ + WorkIQ + FabricIQ has)
+1. Utilizing transcripts information to inform the organization knowledge. how enriched that could be. before agents we could not extract meaningful information from it, now we can
+2. Lost connection between personal knowledge and organization knowledge. We want to track individuals to contribute to organization knowledge (reverse link that FoundryIQ + WorkIQ + FabricIQ has).
